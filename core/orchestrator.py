@@ -26,6 +26,7 @@ from core.predictor import processar_previsoes
 from core.executor import processar_planos_acao
 from core.arbitrage import processar_arbitragem
 from agents.scraper import buscar_precos_revenda
+from core.executor_real import gerar_execucao_real
 
 
 def log(msg: str) -> None:
@@ -152,6 +153,19 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     eventos_finais = processar_arbitragem(eventos_com_arbitragem, apenas_comprar=True)
     log(f"   -> Arbitragem detectada para {len(eventos_finais)} eventos")
     
+    log("Gerando execuções reais...")
+    for item in eventos_finais:
+        if item.get("acao_final") == "COMPRAR":
+            evento = item.get("evento", {})
+            analise = item.get("analise", {})
+            previsao = item.get("previsao", {})
+            plano_acao = item.get("plano_acao", {})
+            
+            execucao = gerar_execucao_real(evento, analise, previsao, plano_acao)
+            item["execucao"] = execucao
+    
+    log(f"   -> Execuções geradas para {sum(1 for i in eventos_finais if i.get('acao_final') == 'COMPRAR')} eventos")
+    
     final_path = os.path.join(os.path.dirname(__file__), "..", "data", "final.json")
     salvar_json(eventos_finais, final_path)
     log(f"   -> Salvo em {final_path}")
@@ -169,9 +183,10 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
         acao = item.get("acao_final", "IGNORAR")
         plano_acao = item.get("plano_acao", {})
         arbitragem = item.get("arbitragem", {})
+        execucao = item.get("execucao", {})
         salvar_evento_no_historico(evento, analise, auditoria, acao)
         
-        enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao, arbitragem)
+        enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao, arbitragem, execucao)
         if enviado:
             log(f"   -> Alerta enviado para: {evento.get('nome', 'N/A')}")
     

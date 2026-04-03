@@ -57,8 +57,15 @@ def marcar_notificado(evento_id: str) -> None:
     salvar_notificados(notificados)
 
 
-def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: Optional[Dict] = None, arbitragem: Optional[Dict] = None) -> str:
-    """Formata mensagem de alerta."""
+def formatar_mensagem(
+    evento: dict, 
+    analise: dict, 
+    auditoria: dict, 
+    plano_acao: Optional[Dict] = None, 
+    arbitragem: Optional[Dict] = None,
+    execucao: Optional[Dict] = None
+) -> tuple[str, list]:
+    """Formata mensagem de alerta com inline keyboard opcional."""
     nome = evento.get("nome", "N/A")
     artista = evento.get("artista", "N/A")
     data = evento.get("data", "N/A")
@@ -70,21 +77,74 @@ def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: 
     confianca = auditoria.get("confianca", 0)
     comentario = auditoria.get("comentario", "")[:100]
     
-    mensagem = f"""🚨 <b>OPORTUNIDADE DETECTADA</b>
+    previsao_score = 0
+    previsao_prob = 0
+    if execucao:
+        previsao_score = execucao.get("score", 0)
+        previsao_prob = execucao.get("probabilidade_esgotar", 0)
+    
+    prioridade = ""
+    if execucao and execucao.get("prioridade"):
+        p = execucao["prioridade"]
+        if p == "alta":
+            prioridade = " 🔴 ALTA"
+        elif p == "média":
+            prioridade = " 🟡 MÉDIA"
+        else:
+            prioridade = " 🟢 BAIXA"
+    
+    emoji_urgencia = ""
+    if execucao and execucao.get("urgencia"):
+        emoji_urgencia = " ⏰ URGENTE"
+    
+    mensagem = f"""🚨 <b>OPORTUNIDADE REAL{prioridade}{emoji_urgencia}</b>
 
 📌 <b>Evento:</b> {nome}
 🎤 <b>Artista:</b> {artista}
 📅 <b>Data:</b> {data}
 📍 <b>Cidade:</b> {cidade}
-🌐 <b>Site:</b> {fonte}
-🔗 <b>Link:</b> {link}
 
 ⭐ <b>Nota:</b> {nota:.1f}/10
-🎯 <b>Confiança:</b> {confianca}/10
+🎯 <b>Confiança:</b> {confianca}/10"""
+
+    if previsao_score > 0:
+        mensagem += f"""
+📈 <b>Score Valorização:</b> {previsao_score}/10
+⚡ <b>Prob. Esgotamento:</b> {previsao_prob}%"""
+
+    mensagem += f"""
 
 ✅ <b>AÇÃO: COMPRAR</b>
 
 <i>{comentario}...</i>"""
+    
+    inline_buttons = []
+    
+    if execucao and execucao.get("link_direto"):
+        link_compra = execucao["link_direto"]
+        plataforma = execucao.get("melhor_plataforma", "site")
+        preco = execucao.get("preco_estimado", 0)
+        
+        qtd = 1
+        if plano_acao and plano_acao.get("quantidade"):
+            qtd = plano_acao["quantidade"].get("recomendado", 1)
+        
+        if preco > 0:
+            mensagem += f"""
+
+💰 <b>LINK DIRETO</b>
+🔗 Plataforma: {plataforma}
+💵 Preço estimado: R$ {preco:.2f}
+📊 Qtd: {qtd} ingresso(s)"""
+        else:
+            mensagem += f"""
+
+🔗 <b>Link direto:</b> {link_compra}"""
+        
+        inline_buttons.append([
+            {"text": "💰 COMPRAR AGORA", "url": link_compra},
+            {"text": "📋 Ver detalhes", "url": link or link_compra}
+        ])
     
     if plano_acao and plano_acao.get("comprar"):
         qtd = plano_acao.get("quantidade", {})
@@ -120,12 +180,19 @@ def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: 
 📊 Spread: {spread:.1f}%
 💵 Lucro: R$ {lucro:.2f}"""
     
-    return mensagem
+    return mensagem, inline_buttons
 
 
-def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Optional[Dict] = None, arbitragem: Optional[Dict] = None) -> bool:
+def enviar_alerta(
+    evento: dict, 
+    analise: dict, 
+    auditoria: dict, 
+    plano_acao: Optional[Dict] = None, 
+    arbitragem: Optional[Dict] = None,
+    execucao: Optional[Dict] = None
+) -> bool:
     """
-    Envia alerta via Telegram.
+    Envia alerta via Telegram com inline keyboard opcional.
     
     Args:
         evento: Dados do evento
@@ -133,6 +200,7 @@ def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Opti
         auditoria: Dados da auditoria
         plano_acao: Dados do plano de ação (opcional)
         arbitragem: Dados da arbitragem (opcional)
+        execucao: Dados de execução (opcional)
     
     Returns:
         True se enviado com sucesso
@@ -143,7 +211,7 @@ def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Opti
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
         return False
     
-    mensagem = formatar_mensagem(evento, analise, auditoria, plano_acao, arbitragem)
+    mensagem, inline_buttons = formatar_mensagem(evento, analise, auditoria, plano_acao, arbitragem, execucao)
     
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     
@@ -152,6 +220,11 @@ def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Opti
         "text": mensagem,
         "parse_mode": "HTML"
     }
+    
+    if inline_buttons:
+        payload["reply_markup"] = {
+            "inline_keyboard": inline_buttons
+        }
     
     try:
         response = requests.post(url, json=payload, timeout=15)
@@ -165,7 +238,15 @@ def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Opti
         return False
 
 
-def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao: str, plano_acao: Optional[Dict] = None, arbitragem: Optional[Dict] = None) -> bool:
+def verificar_e_enviar_alerta(
+    evento: dict, 
+    analise: dict, 
+    auditoria: dict, 
+    acao: str, 
+    plano_acao: Optional[Dict] = None, 
+    arbitragem: Optional[Dict] = None,
+    execucao: Optional[Dict] = None
+) -> bool:
     """
     Verifica critérios e envia alerta se necessário.
     
@@ -176,6 +257,7 @@ def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao
         acao: Ação final (COMPRAR, MONITORAR, IGNORAR)
         plano_acao: Dados do plano de ação (opcional)
         arbitragem: Dados da arbitragem (opcional)
+        execucao: Dados de execução (opcional)
     
     Returns:
         True se alerta foi enviado
@@ -197,7 +279,7 @@ def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao
     if ja_notificado(evento_id):
         return False
     
-    sucesso = enviar_alerta(evento, analise, auditoria, plano_acao, arbitragem)
+    sucesso = enviar_alerta(evento, analise, auditoria, plano_acao, arbitragem, execucao)
     
     if sucesso:
         marcar_notificado(evento_id)

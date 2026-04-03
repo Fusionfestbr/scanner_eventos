@@ -436,6 +436,28 @@
             letter-spacing: 0.5px;
         }
 
+        .urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-left: 6px;
+        }
+
+        .urgency-badge.alta {
+            background: linear-gradient(135deg, var(--red), #dc2626);
+            color: white;
+        }
+
+        .urgency-badge.media {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+        }
+
         .artist-name {
             font-size: 13px;
             color: var(--text-muted);
@@ -488,6 +510,26 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        .btn-comprar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--green), #059669);
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-comprar:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
         }
 
         .action-comprar {
@@ -783,6 +825,7 @@
                         <th>Spread</th>
                         <th>Decisão</th>
                         <th>Ação</th>
+                        <th>Compra</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -795,6 +838,13 @@
                                     {{ evento.evento.nome[:50] }}{% if evento.evento.nome|length > 50 %}...{% endif %}
                                     {% if evento.compra_agressiva %}
                                     <span class="hot-badge"><i class="fas fa-fire"></i> HOT</span>
+                                    {% endif %}
+                                    {% if evento.execucao and evento.execucao.prioridade %}
+                                    {% if evento.execucao.prioridade == 'alta' %}
+                                    <span class="urgency-badge alta"><i class="fas fa-bolt"></i> ALTA PRIORIDADE</span>
+                                    {% elif evento.execucao.prioridade == 'média' %}
+                                    <span class="urgency-badge media"><i class="fas fa-exclamation"></i> MÉDIA</span>
+                                    {% endif %}
                                     {% endif %}
                                 </span>
                                 <span class="artist-name">{{ evento.evento.artista }}</span>
@@ -824,6 +874,13 @@
                         <td class="score {{ spread_class }}">{{ "%.1f"|format(spread) }}%</td>
                         <td class="decisao">{{ evento.auditoria.decisao | default('N/A') }}</td>
                         <td><span class="action-tag action-{{ evento.acao_final|lower }}">{{ evento.acao_final }}</span></td>
+                        <td>
+                            {% if evento.acao_final == 'COMPRAR' and evento.execucao and evento.execucao.link_direto %}
+                            <a href="{{ evento.execucao.link_direto }}" target="_blank" class="btn-comprar" title="Ir para compra">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                            {% endif %}
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>
