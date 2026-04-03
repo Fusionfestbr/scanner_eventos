@@ -91,6 +91,25 @@ def filtrar_eventos_novos(eventos: list[dict]) -> list[dict]:
     return eventos_novos
 
 
+def calcular_intervalo(qtd_eventos: int) -> int:
+    """
+    Calcula intervalo baseado no volume de eventos.
+    
+    Returns:
+        Intervalo em minutos
+    """
+    if qtd_eventos >= 100:
+        return 60
+    elif qtd_eventos >= 50:
+        return 45
+    elif qtd_eventos >= 20:
+        return 30
+    elif qtd_eventos >= 10:
+        return 20
+    else:
+        return 15
+
+
 def executar_ciclo() -> dict:
     """Executa um ciclo do pipeline."""
     inicio = datetime.now()
@@ -179,7 +198,7 @@ def executar_loop(intervalo_minutos: int | None = None):
     signal.signal(signal.SIGTERM, signal_handler)
     
     print("=" * 50)
-    print("  SCANNER DE EVENTOS - SCHEDULER")
+    print("  Fusion Revenda Master - SCHEDULER")
     print("=" * 50)
     print(f"  Intervalo: {intervalo_minutos} minutos")
     print(f"  Pressione CTRL+C para parar")
@@ -190,17 +209,21 @@ def executar_loop(intervalo_minutos: int | None = None):
             try:
                 resultado = executar_ciclo()
                 
+                qtd_coletados = resultado.get("coletados", 0)
+                intervalo_dinamico = calcular_intervalo(qtd_coletados)
+                
                 save_last_run({
                     "ultimo_ciclo": resultado,
                     "proximo_ciclo": datetime.now().isoformat(),
-                    "intervalo_minutos": intervalo_minutos
+                    "intervalo_minutos": intervalo_dinamico
                 })
                 
-                print(f"\n  Último run: {resultado.get('timestamp', '')}")
+                print(f"\n  Ultimo run: {resultado.get('timestamp', '')}")
+                print(f"  Intervalo ajustado: {intervalo_dinamico}min (baseado em {qtd_coletados} eventos)")
                 
                 if running:
-                    segundos = intervalo_minutos * 60
-                    print(f"  Próximo ciclo em {intervalo_minutos}min...")
+                    segundos = intervalo_dinamico * 60
+                    print(f"  Proximo ciclo em {intervalo_dinamico}min...")
                     time.sleep(segundos)
                     
             except Exception as e:

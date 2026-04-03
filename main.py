@@ -15,6 +15,7 @@ from core.learning import (
     registrar_resultado
 )
 from core.ranking import gerar_ranking, salvar_ranking
+from core.notifier import testar_conexao, enviar_alerta
 from config import INTERVALO_MINUTOS
 
 
@@ -32,6 +33,10 @@ def main():
     
     if "--register" in args:
         registrar_resultado_manual()
+        return
+    
+    if "--test-telegram" in args:
+        testar_conexao_telegram()
         return
     
     if "--daemon" in args:
@@ -107,10 +112,28 @@ def registrar_resultado_manual():
     print("-"*50 + "\n")
 
 
+def testar_conexao_telegram():
+    """Testa conexão com Telegram."""
+    print("\n" + "="*50)
+    print("  TESTE DE CONEXÃO TELEGRAM")
+    print("="*50 + "\n")
+    
+    from core.notifier import testar_conexao
+    
+    sucesso = testar_conexao()
+    
+    if sucesso:
+        print("\n  Telegram conectado com sucesso!")
+    else:
+        print("\n  Falha na conexão com Telegram.")
+    
+    print("-"*50 + "\n")
+
+
 def executar_pipeline_normal():
     """Executa o pipeline normal."""
     print("\n" + "="*50)
-    print("  SCANNER DE EVENTOS - Pipeline de Dados")
+    print("  Fusion Revenda Master - Pipeline de Dados")
     print("="*50 + "\n")
     
     qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, score = executar_pipeline()

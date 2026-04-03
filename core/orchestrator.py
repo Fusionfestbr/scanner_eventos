@@ -12,6 +12,7 @@ from agents.analista import analisar_eventos
 from agents.auditor import auditar_eventos
 from core.decision import processar_decisoes
 from core.learning import salvar_evento_no_historico
+from core.ranking import gerar_ranking, salvar_ranking
 from core.data_quality import (
     filtrar_eventos_validos,
     calcular_score,
@@ -19,6 +20,7 @@ from core.data_quality import (
     checar_fallback,
     salvar_rejeitados
 )
+from core.notifier import verificar_e_enviar_alerta
 from config import FALLBACK_ENABLED
 
 
@@ -75,18 +77,8 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     qualidade_aceitavel, msg_qualidade = verificar_qualidade(qtd_validos_qc, qtd_coletados)
     print(f"   {msg_qualidade}")
     
-    fallback_permitido = False
     if not qualidade_aceitavel:
-        print(f"   [ALERTA] Qualidade abaixo do mínimo!")
-        if FALLBACK_ENABLED:
-            print(f"   -> Fallback ativado (use dados simulados)")
-            from agents.coletor import coletar_eventos_simulados
-            eventos_validos_qc = coletar_eventos_simulados()
-            qtd_validos_qc = len(eventos_validos_qc)
-            print(f"   -> Usando {qtd_validos_qc} eventos simulados")
-            fallback_permitido = True
-        else:
-            print(f"   -> Fallback desabilitado. Processando apenas {qtd_validos_qc} eventos.")
+        print(f"   [ALERTA] Qualidade abaixo do mínimo! Processando apenas {qtd_validos_qc} eventos.")
     
     log("3/7 - Carregando dados para validação...")
     log(f"   -> {qtd_validos_qc} eventos para validar")
@@ -122,6 +114,11 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     salvar_json(eventos_finais, final_path)
     log(f"   -> Salvo em {final_path}")
     
+    log("Gerando ranking...")
+    ranking = gerar_ranking(eventos_finais)
+    salvar_ranking(ranking)
+    log(f"   -> Ranking gerado com {len(ranking)} eventos")
+    
     log("Salvando no histórico...")
     for item in eventos_finais:
         evento = item.get("evento", {})
@@ -129,6 +126,11 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
         auditoria = item.get("auditoria", {})
         acao = item.get("acao_final", "IGNORAR")
         salvar_evento_no_historico(evento, analise, auditoria, acao)
+        
+        enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao)
+        if enviado:
+            log(f"   -> Alerta enviado para: {evento.get('nome', 'N/A')}")
+    
     log(f"   -> {qtd_finais} eventos salvos no histórico")
     
     log("=== PIPELINE CONCLUÍDO ===")

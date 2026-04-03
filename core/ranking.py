@@ -19,8 +19,9 @@ def gerar_ranking(eventos: List[dict]) -> List[dict]:
     """
     Ordena eventos por:
     1. acao_final (COMPRAR > MONITORAR > IGNORAR)
-    2. nota_final (maior primeiro)
-    3. confianca (maior primeiro)
+    2. score_valorizacao (maior primeiro)
+    3. nota_final (maior primeiro)
+    4. confianca (maior primeiro)
     
     Returns:
         Lista ordenada de eventos
@@ -29,10 +30,11 @@ def gerar_ranking(eventos: List[dict]) -> List[dict]:
         acao = item.get("acao_final", "IGNORAR")
         nota = item.get("analise", {}).get("nota_final", 0)
         confianca = item.get("auditoria", {}).get("confianca", 0)
+        score_val = item.get("previsao", {}).get("score_valorizacao", 0)
         
         peso_acao = PESO_ACAO.get(acao, 0)
         
-        return (peso_acao, nota, confianca)
+        return (peso_acao, score_val, nota, confianca)
     
     ranking = sorted(eventos, key=chave_ordenacao, reverse=True)
     

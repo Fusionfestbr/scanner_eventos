@@ -1,28 +1,2154 @@
 [
   {
     "evento": {
-      "nome": "Curso de Energia Solar no Rio de Janeiro RJ nos dias  24/04 e 25/04/2026",
+      "nome": "Visitante!",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Visitante!",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 6,
+      "potencial_revenda": 8,
+      "nota_final": 6.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "ART BBQ",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "ART BBQ",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Samba do Eugênio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9
+    }
+  },
+  {
+    "evento": {
+      "nome": "Arena 7 Meridional",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Arena 7 Meridional",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Criolo 50 Encerramento da Turnê",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Criolo 50 Encerramento da Turnê",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 7,
+      "potencial_revenda": 9,
+      "nota_final": 8.4
+    }
+  },
+  {
+    "evento": {
+      "nome": "Léo Santana e Turma do Pagode",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Léo Santana e Turma do Pagode",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Naiara Azevedo Lançamento do DVD 15 Anos de História",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Naiara Azevedo Lançamento do DVD 15 Anos de História, Artista: Various Artists",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Samba no Juventus com Fundo de Quintal, Marquinhos e Tiee",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Samba no Juventus",
+      "artistas": [
+        "Fundo de Quintal",
+        "Marquinhos",
+        "Tiee"
+      ],
+      "artista_varios": true,
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 8,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Ebony KM2 Deluxe, A Tour",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Ebony KM2 Deluxe, A Tour",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "ParkShoppingCanoas",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "ParkShoppingCanoas",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 8,
+      "potencial_revenda": 6,
+      "nota_final": 6.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Centro de Convenções UFOP",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Centro de Convenções UFOP",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Stone House",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Stone House",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Leonardo Uma História Sem Fim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Leonardo Uma História Sem Fim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Maiara & Maraisa e Léo Santana",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Maiara & Maraisa e Léo Santana",
+      "artistas": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 9,
+      "escassez": 7,
+      "publico": 10,
+      "potencial_revenda": 8,
+      "nota_final": 8.6
+    }
+  },
+  {
+    "evento": {
+      "nome": "Forró Só Presta Assim com Fernandinha e Eduardinho",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Forró Só Presta Assim",
+      "artistas": [
+        "Fernandinha",
+        "Eduardinho",
+        "Various Artists"
+      ],
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Mercado de Santa Tereza",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Mercado de Santa Tereza",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 6,
+      "escassez": 4,
+      "publico": 7,
+      "potencial_revenda": 8,
+      "nota_final": 6.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Leonardo Uma História Sem Fim Data Extra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Leonardo Uma História Sem Fim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Lucas Morato Gravação Audiovisual",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Lucas Morato Gravação Audiovisual",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Gravação DVD Netto Brito, Pra Encher e Derramar 7",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Gravação DVD Netto Brito, Pra Encher e Derramar 7",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 7,
+      "potencial_revenda": 9,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Lançamento da Festa do Peão de Barretos 2026 com Matheus & Kauan",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Lançamento da Festa do Peão de Barretos 2026",
+      "artista": "Matheus & Kauan, Artista: Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Marina Sena Coisas Naturais",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Marina Sena Coisas Naturais",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Israel & Rodolffo Turnê IMPULSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Israel & Rodolffo Turnê IMPULSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Shopping Cidade da Serra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Shopping Cidade da Serra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 6,
+      "escassez": 4,
+      "publico": 7,
+      "potencial_revenda": 8,
+      "nota_final": 6.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Fresno Carta de Adeus",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Fresno Carta de Adeus",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "7 Minutoz",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "7 Minutoz",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 7,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Joelma Isso é Calypso",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Joelma Isso é Calypso",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Léo Magalhães",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Léo Magalhães",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Pablo e Zezo",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Pablo e Zezo",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Tardezinha do Arrocha com Pablo e Asas Livre",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Tardezinha do Arrocha com Pablo e Asas Livre",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Filipe Ret Turnê Nume",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Filipe Ret Turnê Nume",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 9,
+      "nota_final": 9.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Sunset do Gigante com Léo Santana",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Sunset do Gigante com Léo Santana",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Majur, Gira Mundo",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Majur",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "As Vozes Péricles e Ferrugem",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "As Vozes Péricles e Ferrugem",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "As Vozes Péricles e Ferrugem Gravação de DVD",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "As Vozes Péricles e Ferrugem Gravação de DVD",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Baile do Brime",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Baile do Brime",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Hugo & Guilherme",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Hugo & Guilherme",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "As Vozes Péricles e Ferrugem Gravação de DVD Data Extra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "As Vozes Péricles e Ferrugem Gravação de DVD Data Extra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Deva Premal & Miten",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Deva Premal & Miten",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Batuke do Pretinho com Participação de Roberta Sá e Marcelo D2",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Batuke do Pretinho",
+      "artistas": [
+        "Various Artists",
+        "Roberta Sá",
+        "Marcelo D2"
+      ],
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Tork N Roll",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 6,
+      "publico": 7,
+      "potencial_revenda": 9
+    }
+  },
+  {
+    "evento": {
+      "nome": "Henrique & Diego",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Henrique & Diego",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.4
+    }
+  },
+  {
+    "evento": {
+      "nome": "Pixote, Vitinho e Jeito Moleque",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Pixote, Vitinho e Jeito Moleque",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Gilsons Eu vejo luz",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Gilsons Eu vejo luz",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Ill Nino, Hed P.E e Primer 55",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Ill Nino, Hed P.E e Primer 55",
+      "artistas": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Sacadura 154",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "B Day Duquesa, Universo de Pam Grier",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "B Day Duquesa, Universo de Pam Grier",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Bruna Louise, Meus 15 Anos Sessão 20h00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Bruna Louise, Meus 15 Anos Sessão 20h00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "horario": "20:00",
+      "hype": 9,
+      "escassez": 7,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Mister Rock",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Mister Rock",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Fred & Fabrício no Aniversário do Villa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Fred & Fabrício no Aniversário do Villa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "É Claro Que É Rock 2026 Passo Fundo\nArena Clube Comercial\nPasso Fundo • RS\n25 de abril\n20:00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "É Claro Que É Rock 2026 Passo Fundo",
+      "local": "Arena Clube Comercial",
+      "cidade": "Passo Fundo",
+      "estado": "RS",
+      "data": "2026-05-03",
+      "horario": "20:00",
+      "artistas": "Various Artists",
+      "pais": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Warung Day Festival 2026\nPedreira Paulo Leminski\nCuritiba • PR\n02 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Warung Day Festival 2026",
+      "local": "Pedreira Paulo Leminski, Curitiba • PR",
+      "data": "2026-05-03",
+      "artistas": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 8,
+      "potencial_revenda": 6,
+      "nota_final": 6.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "CAPITAL INICIAL | Balneário Camboriú - SC | Music Park BC |...\nLIVE - Music Park BC\nBalneário Cambor",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "28ª Festa da Cebola | Luan Santana\nParque da Cebola\nItuporanga • SC\n10 de abril\n00:00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "28ª Festa da Cebola | Luan Santana",
+      "local": "Parque da Cebola",
+      "cidade": "Ituporanga",
+      "estado": "SC",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "pais": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Dilsinho em Lages\nParque de Exposições Conta Dinheiro\nLages • SC\n10 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Dilsinho em Lages",
+      "local": "Parque de Exposições Conta Dinheiro, Lages • SC",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.13
+    }
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: Revisiting Creedence | Grande Florianópol...\nArena Opus\nSão José • SC\n20 de a",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Revisiting Creedence",
+      "local": "Arena Opus, São José • SC",
+      "data": "2026-05-03",
+      "pais": "Brasil",
+      "artista": "Various Artists",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira\nExpo Center Norte\nSão Paulo • SP\n24 a 26 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Arnold 2026 | Feira",
+      "local": "Expo Center Norte",
+      "cidade": "São Paulo • SP",
+      "data_inicio": "2026-04-24",
+      "data_fim": "2026-04-26",
+      "artista": "Various Artists",
+      "ano": 2026,
+      "pais": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira + Bodybuilding\nExpo Center Norte\nSão Paulo • SP\n24 a 26 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Arnold 2026 | Feira + Bodybuilding",
+      "local": "Expo Center Norte",
+      "cidade": "São Paulo • SP",
+      "data_inicio": "2026-04-24",
+      "data_fim": "2026-04-26",
+      "artistas": "Various Artists",
+      "data_final": "2026-05-03",
+      "pais": "Brasil",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 9.2
+    }
+  },
+  {
+    "evento": {
+      "nome": "Gramado Summit 2026\nSerra Park - Gramado/RS\nGramado • RS\n06 a 08 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Gramado Summit 2026",
+      "local": "Serra Park - Gramado/RS",
+      "cidade": "Gramado • RS",
+      "datas": "06 a 08 de maio, 2026-05-03",
+      "artistas": "Various Artists",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Empreende Brazil Conference 2026 | SC\nArena Opus\nSão José • SC\n22 a 23 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Empreende Brazil Conference 2026 | SC",
+      "local": "Arena Opus",
+      "cidade": "São José",
+      "estado": "SC",
+      "datas": "22 a 23 de maio, 2026-05-03",
+      "artistas": "Various Artists",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Pouso Ale...\nSummit Hall\nPouso Alegre • MG\n07 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Atração Internacional: DIRE STRAITS LEGACY",
+      "local": "Summit Hall",
+      "ponto_de_venda": "Pouso Alegre • MG",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.33
+    }
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Divinópoli...\nDivinópolis Clube\nDivinópolis • MG\n08 de",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Atração Internacional: DIRE STRAITS LEGACY",
+      "local": "Divinópoli Clube",
+      "cidade": "Divinópolis",
+      "estado": "MG",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "pais": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Belo Horiz...\nBeFly Hall\nBelo Horizonte • MG\n09 de mai",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Atração Internacional: DIRE STRAITS LEGACY",
+      "local": "BeFly Hall",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.166666666666666
+    }
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: Dire Straits Legacy em Campos dos Goytac...\nFundação Rural de Campos\nCampos d",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Atração Internacional: Dire Straits Legacy em Campos dos Goytacazes",
+      "organizador": "Fundação Rural de Campos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Eventos Esportivos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Eventos Esportivos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "notas": [
+        9,
+        7,
+        8,
+        6
+      ],
+      "nota_final": 7.5,
+      "hype": 9,
+      "escassez": 7,
+      "publico": 8,
+      "potencial_revenda": 6
+    }
+  },
+  {
+    "evento": {
+      "nome": "Google Play",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://play.google.com/store/apps/details?id=br.com.blueticket"
+    },
+    "analise": {
+      "evento": "Google Play",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "FEV\n27\n2027\nLaura Pausini - 2027\nSão Paulo, SP\nMercado Livre Arena Pacaembu",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "analise": {
+      "evento": "FEV",
+      "data": "2027-05-03",
+      "artista": "Laura Pausini",
+      "local": "Mercado Livre Arena Pacaembu",
+      "cidade": "São Paulo, SP",
+      "pais": "Brasil",
+      "artistas_adicionais": "Various Artists",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "OUT\n30\n2026\nJorja Smith\nSão Paulo, SP\nEspaço Unimed",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "AGO\n16\n2026\nDPR CREAM & DPR ARTIC\nSão Paulo, SP\nAudio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "analise": {
+      "evento": "AGO",
+      "data": "2026-05-03",
+      "local": "São Paulo, SP",
+      "artistas": [
+        "DPR CREAM",
+        "DPR ARTIC"
+      ],
+      "genero": "Audio, Artista: Various Artists",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "MAI\n26\n2026\nPomme\nSão Paulo, SP\nTeatro Renault",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "analise": {
+      "evento": "MAI",
+      "data": "2026-05-03",
+      "local": "Teatro Renault",
+      "cidade": "São Paulo, SP",
+      "pais": "Brasil",
+      "artistas": "Various Artists",
+      "ano": 2026,
+      "hype": 7,
+      "escassez": 3,
+      "publico": 8,
+      "potencial_revenda": 6,
+      "nota_final": 6.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "DATAS\nDIVERSAS\n\nShrek - O Musical\nSão Paulo, SP\nTeatro Renault",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/shrek-o-musical-12763"
+    },
+    "analise": {
+      "evento": "Shrek - O Musical",
+      "localizacao": "São Paulo, SP",
+      "teatro": "Teatro Renault",
+      "artistas": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "eventos corporativos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://www.ticketsforfun.com.br/"
+    },
+    "analise": {
+      "evento": "eventos corporativos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DOS CAMPOS/SP\nMirage Circus\n12",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "Mirage Circus",
+      "localizacao": "SAO JOSE DOS CAMPOS/SP",
+      "artistas": [
+        "Various Artists"
+      ],
+      "data": "2026-04-12",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 5,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "FORTALEZA/CE\nShows Henrique & Juliano\n05",
+      "artista": "Various Artists",
+      "data": "2026-12-05",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "FORTALEZA/CE",
+      "artistas": [
+        "Henrique & Juliano",
+        "Various Artists"
+      ],
+      "data": "2026-12-05",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "ARIQUEMES/RO\nRodeios\nDE 01",
+      "artista": "Various Artists",
+      "data": "2026-08-01",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "ARIOQUEMES/RO",
+      "tipo": "Rodeios",
+      "data": "2026-08-01",
+      "artistas": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "VITORIA/ES\nBrava Stage Club\n04",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "VITORIA/ES",
+      "local": "Brava Stage Club",
+      "data": "2026-04-04",
+      "artistas": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DO RIO PRETO/SP\nRegistro Histórico - Grupo VIP | SJRP\n12",
+      "artista": "Various Artists",
+      "data": "2026-09-12",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "BALNEARIO GAIVOTA/SC\nMailing Lagoa - Panda\n05",
+      "artista": "Various Artists",
+      "data": "2026-04-05",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "BALNEARIO GAIVOTA/SC",
+      "mailing": "Lagoa - Panda",
+      "data": "2026-04-05",
+      "artista": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 3,
+      "publico": 8,
+      "potencial_revenda": 7,
+      "nota_final": 7.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "ALFENAS/MG\nVelório do Carneiro 2026\n11",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8
+    }
+  },
+  {
+    "evento": {
+      "nome": "MACAPA/AP\nQuintal do TG\n12",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "MACAPA/AP",
+      "local": "Quintal do TG",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 3,
+      "publico": 8,
+      "potencial_revenda": 7,
+      "nota_final": 7.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "BRASILIA/DF\nNo Pelo 360 - Brasília/DF\n06",
+      "artista": "Various Artists",
+      "data": "2026-06-06",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "BRASILIA/DF",
+      "local": "No Pelo 360 - Brasília/DF",
+      "data": "2026-06-06",
+      "artista": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DO RIO PRETO/SP\nHenrique e Juliano | São José do Rio Preto\n25",
       "artista": "Various Artists",
       "data": "2026-04-25",
       "cidade": "Brasil",
-      "fonte": "eventbrite",
-      "url": "https://www.eventbrite.com.br/e/curso-de-energia-solar-no-rio-de-janeiro-rj-nos-dias-2404-e-25042026-tickets-1970288356513?aff=ebdssbcitybrowse"
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
     },
     "analise": {
-      "evento": "Curso de Energia Solar",
-      "localizacao": "Rio de Janeiro RJ",
-      "datas": [
-        "24/04/2026",
-        "25/04/2026"
+      "evento": "SAO JOSE DO RIO PRETO/SP",
+      "artistas": [
+        "Henrique e Juliano",
+        "Various Artists"
       ],
+      "data": "2026-04-25",
+      "cidade": "São José do Rio Preto",
+      "pais": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "HORTOLANDIA/SP\nFesta do Peão de Hortolândia 2026\nDE 08",
       "artista": "Various Artists",
-      "data_formato": "2026-04-25",
+      "data": "2026-05-08",
       "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "Festa do Peão de Hortolândia 2026",
+      "local": "HORTOLANDIA/SP",
+      "data": "2026-05-08",
+      "artistas": [
+        "Various Artists"
+      ],
       "hype": 6,
       "escassez": 3,
       "publico": 7,
+      "potencial_revenda": 5,
+      "nota_final": 5.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "PAGOCOPA",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "q2ingressos",
+      "url": "https://q2ingressos.com.br/"
+    },
+    "analise": {
+      "evento": "PAGOCOPA",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
       "potencial_revenda": 8,
-      "nota_final": 6.67
+      "nota_final": 8.2
+    }
+  },
+  {
+    "evento": {
+      "nome": "Mano Brown – MB10 Convida Rae...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/mano-brown-mb10-convida-rael-e-rincon-sapiencia-15816"
+    },
+    "analise": {
+      "evento": "Mano Brown – MB10 Convida Rae..., Artista: Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "A Última Sessão de Freud",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/a-ultima-sessao-de-freud-15630"
+    },
+    "analise": {
+      "evento": "A Última Sessão de Freud",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Paralamas do Sucesso e Biquin...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "analise": {
+      "evento": "Paralamas do Sucesso e Biquini Misturado",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 9,
+      "nota_final": 8.4
+    }
+  },
+  {
+    "evento": {
+      "nome": "Smith Kotzen",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/pr/curitiba/smith-kotzen-15598"
+    },
+    "analise": {
+      "evento": "Smith Kotzen",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Vitinho, Yan e Landim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/vitinho-yan-e-landim-15783"
+    },
+    "analise": {
+      "evento": "Vitinho, Yan e Landim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "A Culpa é dos Amigos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/a-culpa-e-dos-amigos-15126"
+    },
+    "analise": {
+      "evento": "A Culpa é dos Amigos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Estacionamento Vibra São Paul...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/estacionamento-vibra-sao-paulo-2026-15406"
+    },
+    "analise": {
+      "evento": "Estacionamento Vibra São Paulo",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Hermanoteu na Terra de Godah",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/hermanoteu-na-terra-de-godah-15738"
+    },
+    "analise": {
+      "evento": "Hermanoteu na Terra de Godah",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Carol Biazin",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/pe/recife/carol-biazin-15840"
+    },
+    "analise": {
+      "evento": "Carol Biazin",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Elton John Diamonds",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/elton-john-diamonds-15779"
+    },
+    "analise": {
+      "evento": "Elton John Diamonds",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 9,
+      "nota_final": 9.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Kysha e Mine – Lançamento Bes...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/kysha-e-mine-lancamento-best-friends-forever-15807"
+    },
+    "analise": {
+      "evento": "Kysha e Mine – Lançamento Bes...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Caso Bizarro: Ao Vivo no Teat...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/caso-bizarro-ao-vivo-no-teatro-16019"
+    },
+    "analise": {
+      "evento": "Caso Bizarro: Ao Vivo no Teat...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Projeto Seis e Meia apresenta...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rn/natal/projeto-seis-e-meia-apresenta-jane-duboc-e-nico-rezende-15795"
+    },
+    "analise": {
+      "evento": "Projeto Seis e Meia apresenta...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Humorfobia com Carioca, Bola ...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/humorfobia-com-carioca-bola-e-victor-sarro-15697"
+    },
+    "analise": {
+      "evento": "Humorfobia com Carioca, Bola ...,",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 7,
+      "nota_final": 7.25
+    }
+  },
+  {
+    "evento": {
+      "nome": "Ney Matogrosso - Bloco na Rua",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rs/porto-alegre/ney-matogrosso-bloco-na-rua-14634"
+    },
+    "analise": {
+      "evento": "Ney Matogrosso - Bloco na Rua",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Gongada Drag",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/gongada-drag-15662"
+    },
+    "analise": {
+      "evento": "Gongada Drag",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Chatô e os Diários Associados...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/chato-e-os-diarios-associados-100-anos-de-paixao-15752"
+    },
+    "analise": {
+      "evento": "Chatô e os Diários Associados...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.1
     }
   }
 ]

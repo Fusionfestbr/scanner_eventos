@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "evento": {
+      "nome": "Show Metallica",
+      "artista": "Metallica",
+      "data": "2025-01-10",
+      "cidade": "São Paulo",
+      "fonte": "simulado",
+      "url": "https://metallica.com"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T09:28:04.019081"
+  },
+  {
+    "evento": {
+      "nome": "Festival de Verão",
+      "artista": "Various Artists",
+      "data": "2025-12-20",
+      "cidade": "Salvador",
+      "fonte": "simulado",
+      "url": "https://festivaldeverao.com"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T09:28:04.019094"
+  }
+]

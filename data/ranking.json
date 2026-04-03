@@ -1,34 +1,997 @@
 [
   {
     "evento": {
-      "nome": "Curso de Energia Solar no Rio de Janeiro RJ nos dias  24/04 e 25/04/2026",
+      "nome": "Arnold 2026 | Feira + Bodybuilding\nExpo Center Norte\nSão Paulo • SP\n24 a 26 de abril",
       "artista": "Various Artists",
-      "data": "2026-04-25",
+      "data": "2026-05-03",
       "cidade": "Brasil",
-      "fonte": "eventbrite",
-      "url": "https://www.eventbrite.com.br/e/curso-de-energia-solar-no-rio-de-janeiro-rj-nos-dias-2404-e-25042026-tickets-1970288356513?aff=ebdssbcitybrowse"
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
     },
     "analise": {
-      "evento": "Curso de Energia Solar",
-      "localizacao": "Rio de Janeiro RJ",
-      "datas": [
-        "24/04/2026",
-        "25/04/2026"
-      ],
+      "evento": "Arnold 2026 | Feira + Bodybuilding",
+      "local": "Expo Center Norte",
+      "cidade": "São Paulo • SP",
+      "data_inicio": "2026-04-24",
+      "data_fim": "2026-04-26",
+      "artistas": "Various Artists",
+      "data_final": "2026-05-03",
+      "pais": "Brasil",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 9.2
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype e publikco elevados). No entanto, a data é em 2026, o que representa um horizonte temporal longo. É crucial monitorar a evolução do mercado de eventos e a concorrência para avaliar se o evento ainda será relevante no momento da tomada de decisão final. A escassez e potencial de revenda também são fatores positivos, mas a distância temporal exige cautela."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 1
+  },
+  {
+    "evento": {
+      "nome": "Filipe Ret Turnê Nume",
       "artista": "Various Artists",
-      "data_formato": "2026-04-25",
+      "data": "2026-05-03",
       "cidade": "Brasil",
-      "hype": 6,
-      "escassez": 3,
-      "publico": 7,
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Filipe Ret Turnê Nume",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 9,
+      "nota_final": 9.0
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 9,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento 'Filipe Ret Turnê Nume' em 2026. As notas elevadas (hype, escassez, publikco, potencial_revenda) e a nota final de 9.0 sugerem uma forte demanda e um retorno positivo do investimento. A data futura (2026) requer monitoramento contínuo para avaliar se o interesse permanece alto."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 2
+  },
+  {
+    "evento": {
+      "nome": "Elton John Diamonds",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/elton-john-diamonds-15779"
+    },
+    "analise": {
+      "evento": "Elton John Diamonds",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 9,
+      "nota_final": 9.0
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento 'Elton John Diamonds' em 2026. A combinação de hype, escassez, público amplo e potencial de revenda, juntamente com uma nota final de 9.0, sugere que é um investimento promissor.  Considerando a data distante (2026), o monitoramento contínuo da evolução do mercado e do artista é recomendado."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 3
+  },
+  {
+    "evento": {
+      "nome": "Maiara & Maraisa e Léo Santana",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Maiara & Maraisa e Léo Santana",
+      "artistas": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 9,
+      "escassez": 7,
+      "publico": 10,
       "potencial_revenda": 8,
-      "nota_final": 6.67
+      "nota_final": 8.6
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento. A combinação de artistas populares (Maiara & Maraisa, Léo Santana) e a nota final elevada justificam uma compra. A data futura (2026-05-03) requer monitoramento contínuo para garantir que as tendências do mercado não mudem drasticamente."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 4
+  },
+  {
+    "evento": {
+      "nome": "Bruna Louise, Meus 15 Anos Sessão 20h00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Bruna Louise, Meus 15 Anos Sessão 20h00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "horario": "20:00",
+      "hype": 9,
+      "escassez": 7,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.5
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento Bruna Louise 'Meus 15 Anos' em 2026. Os fatores de hype, escassez e potencial de revenda são particularmente fortes. A data futura (2026) requer monitoramento contínuo para avaliar a evolução do interesse e da relevância."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 5
+  },
+  {
+    "evento": {
+      "nome": "Paralamas do Sucesso e Biquin...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "analise": {
+      "evento": "Paralamas do Sucesso e Biquini Misturado",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 9,
+      "nota_final": 8.4
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento. A data (2026-05-03) é suficientemente distante para permitir uma avaliação mais precisa do mercado e das tendências. As notas de hype, escassez, publikco, potencial_revenda e nota_final sugerem um investimento promissor."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 6
+  },
+  {
+    "evento": {
+      "nome": "Hugo & Guilherme",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Hugo & Guilherme",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, escassez, publikco e potencial de revenda). A data de 2026-05-03 ainda é suficientemente distante para permitir uma avaliação mais precisa, mas a pontuação geral justifica o investimento. Monitorar de perto a evolução do hype e da disponibilidade de ingressos."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 7
+  },
+  {
+    "evento": {
+      "nome": "BRASILIA/DF\nNo Pelo 360 - Brasília/DF\n06",
+      "artista": "Various Artists",
+      "data": "2026-06-06",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "BRASILIA/DF",
+      "local": "No Pelo 360 - Brasília/DF",
+      "data": "2026-06-06",
+      "artista": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, escassez, publikco e potencial de revenda). A data de 2026-06-06 ainda é relevante para a tomada de decisão. Recomenda-se comprar, mantendo uma confiança moderada na análise."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 8
+  },
+  {
+    "evento": {
+      "nome": "Hermanoteu na Terra de Godah",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/hermanoteu-na-terra-de-godah-15738"
+    },
+    "analise": {
+      "evento": "Hermanoteu na Terra de Godah",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, escassez, publikco, potencial de revenda) e uma nota final alta. A data de 2026 pode ser considerada distante, mas a análise em si é sólida para um investimento inicial. Monitorar o desenvolvimento do hype e da escassez nos meses seguintes seria recomendado."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 9
+  },
+  {
+    "evento": {
+      "nome": "Léo Santana e Turma do Pagode",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Léo Santana e Turma do Pagode",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento está marcado para 2026, o que representa um horizonte de tempo considerável. Embora os fatores de hype, escassez e publikco sejam positivos, a distância temporal exige uma análise mais cuidadosa. A nota final (8.1) é promissora, mas a relevância do evento em 2026 precisa ser confirmada com dados adicionais sobre o artista e o mercado de eventos."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 10
+  },
+  {
+    "evento": {
+      "nome": "Lançamento da Festa do Peão de Barretos 2026 com Matheus & Kauan",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Lançamento da Festa do Peão de Barretos 2026",
+      "artista": "Matheus & Kauan, Artista: Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento é distante (2026) e a análise de hype/publikco é alta, indicando potencial. No entanto, a data distante exige monitoramento para avaliar se o cenário do mercado de eventos e a relevância do artista permanecem consistentes. A falta de informações sobre o público-alvo e a estratégia de marketing da produção requer mais investigação antes de uma decisão de compra."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 11
+  },
+  {
+    "evento": {
+      "nome": "Sunset do Gigante com Léo Santana",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Sunset do Gigante com Léo Santana",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os fatores de hype, escassez e publikco sejam positivos, a data distante exige uma análise mais aprofundada antes de tomar uma decisão definitiva de compra. A nota final (8.1) indica potencial, mas a incerteza da data requer cautela."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 12
+  },
+  {
+    "evento": {
+      "nome": "Majur, Gira Mundo",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Majur",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento Majur em 2026 apresenta um alto potencial de hype e escassez, o que é positivo. No entanto, a data distante (2026) diminui a relevância imediata. A nota final de 8.1 justifica uma análise mais aprofundada antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 13
+  },
+  {
+    "evento": {
+      "nome": "As Vozes Péricles e Ferrugem",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "As Vozes Péricles e Ferrugem",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os fatores de hype, escassez e publikco sejam positivos, a data distante exige uma avaliação mais cuidadosa do cenário futuro do mercado de eventos e da relevância contínua dos artistas envolvidos. A nota final (8.1) indica potencial, mas o monitoramento é recomendado para avaliar se as condições permanecem favoráveis."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 14
+  },
+  {
+    "evento": {
+      "nome": "Deva Premal & Miten",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Deva Premal & Miten",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. Embora as métricas de hype, escassez e potencial de revenda sejam altas, a data futura exige uma análise mais cuidadosa antes de tomar uma decisão definitiva de compra. Monitorar o desenvolvimento do evento e o interesse do público seria prudente."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 15
+  },
+  {
+    "evento": {
+      "nome": "Batuke do Pretinho com Participação de Roberta Sá e Marcelo D2",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Batuke do Pretinho",
+      "artistas": [
+        "Various Artists",
+        "Roberta Sá",
+        "Marcelo D2"
+      ],
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os fatores de hype, escassez e publikco sejam positivos, a data distante exige uma avaliação mais cuidadosa do cenário futuro do mercado de eventos e da relevância contínua dos artistas envolvidos. A nota final (8.1) indica potencial, mas o monitoramento é recomendado para avaliar se as condições permanecem favoráveis."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 16
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira\nExpo Center Norte\nSão Paulo • SP\n24 a 26 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Arnold 2026 | Feira",
+      "local": "Expo Center Norte",
+      "cidade": "São Paulo • SP",
+      "data_inicio": "2026-04-24",
+      "data_fim": "2026-04-26",
+      "artista": "Various Artists",
+      "ano": 2026,
+      "pais": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026. Embora os indicadores de hype, escassez e publikco sejam altos, a data distante exige uma avaliação mais cuidadosa do cenário futuro do mercado de eventos e da relevância contínua do tema 'Various Artists'. Monitorar o desenvolvimento do evento nos próximos meses é recomendado."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 17
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Divinópoli...\nDivinópolis Clube\nDivinópolis • MG\n08 de",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Atração Internacional: DIRE STRAITS LEGACY",
+      "local": "Divinópoli Clube",
+      "cidade": "Divinópolis",
+      "estado": "MG",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "pais": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial (hype, publikco, etc.), mas a data de 2026 levanta questões sobre relevância atual. A escassez e o potencial de revenda são fatores positivos, justificando uma avaliação mais cuidadosa antes de uma decisão de compra."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 18
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: Dire Straits Legacy em Campos dos Goytac...\nFundação Rural de Campos\nCampos d",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Atração Internacional: Dire Straits Legacy em Campos dos Goytacazes",
+      "organizador": "Fundação Rural de Campos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, publikco, potencial de revenda). No entanto, a data é em 2026, o que torna a relevância do evento questionável. Recomenda-se monitorar a evolução da situação e o interesse do público antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 19
+  },
+  {
+    "evento": {
+      "nome": "FORTALEZA/CE\nShows Henrique & Juliano\n05",
+      "artista": "Various Artists",
+      "data": "2026-12-05",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "FORTALEZA/CE",
+      "artistas": [
+        "Henrique & Juliano",
+        "Various Artists"
+      ],
+      "data": "2026-12-05",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype e publikco elevados). No entanto, a data é em 2026, o que representa um horizonte temporal muito longo. É crucial monitorar a evolução do mercado e a confirmação da realização do evento antes de tomar uma decisão definitiva de compra. A escassez e o potencial de revenda também são fatores positivos, mas a distância no tempo exige cautela."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 20
+  },
+  {
+    "evento": {
+      "nome": "VITORIA/ES\nBrava Stage Club\n04",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "VITORIA/ES",
+      "local": "Brava Stage Club",
+      "data": "2026-04-04",
+      "artistas": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento está programado para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, publikco, potencial revenda) sejam altos, a distância da data e a natureza de 'Various Artists' exigem monitoramento contínuo para avaliar se as tendências do mercado permanecem favoráveis e se há novos eventos similares surgindo."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 21
+  },
+  {
+    "evento": {
+      "nome": "Kysha e Mine – Lançamento Bes...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/kysha-e-mine-lancamento-best-friends-forever-15807"
+    },
+    "analise": {
+      "evento": "Kysha e Mine – Lançamento Bes...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. Embora os indicadores de hype, escassez e publikco sejam altos, a data futura exige uma análise mais cuidadosa antes de tomar uma decisão definitiva de compra. Monitorar o desenvolvimento do evento e as tendências do mercado é recomendado."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 22
+  },
+  {
+    "evento": {
+      "nome": "Ill Nino, Hed P.E e Primer 55",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Ill Nino, Hed P.E e Primer 55",
+      "artistas": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento Ill Nino com artistas como Hed P.E e Primer 55 em 2026. Os fatores de hype, escassez, publikco e potencial de revenda são extremamente positivos, justificando uma compra. A nota final de 8.0 reforça essa avaliação."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 23
+  },
+  {
+    "evento": {
+      "nome": "OUT\n30\n2026\nJorja Smith\nSão Paulo, SP\nEspaço Unimed",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento. A data (2026-05-03) é considerável, mas a combinação de hype, escassez, publikco e potencial de revenda justifica uma compra. É importante monitorar a evolução do mercado e da artista."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 24
+  },
+  {
+    "evento": {
+      "nome": "AGO\n16\n2026\nDPR CREAM & DPR ARTIC\nSão Paulo, SP\nAudio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "analise": {
+      "evento": "AGO",
+      "data": "2026-05-03",
+      "local": "São Paulo, SP",
+      "artistas": [
+        "DPR CREAM",
+        "DPR ARTIC"
+      ],
+      "genero": "Audio, Artista: Various Artists",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento DPR CREAM & DPR ARTIC em São Paulo em 2026 apresenta um alto potencial de revenda (9) e hype (7), indicando interesse significativo. No entanto, a data é distante (2026), o que exige monitoramento para avaliar se as condições do mercado e a relevância do evento permanecem favoráveis. A nota final de 8.0 sugere um bom potencial, mas a incerteza temporal justifica uma abordagem cautelosa."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 25
+  },
+  {
+    "evento": {
+      "nome": "ARIQUEMES/RO\nRodeios\nDE 01",
+      "artista": "Various Artists",
+      "data": "2026-08-01",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "ARIOQUEMES/RO",
+      "tipo": "Rodeios",
+      "data": "2026-08-01",
+      "artistas": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento ARIQUEMES/RO em 2026. No entanto, a data é distante e o mercado de eventos pode mudar significativamente. Recomenda-se monitorar a evolução do cenário e a confirmação das métricas (hype, escassez, etc.) antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 26
+  },
+  {
+    "evento": {
+      "nome": "Carol Biazin",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/pe/recife/carol-biazin-15840"
+    },
+    "analise": {
+      "evento": "Carol Biazin",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento Carol Biazin em 2026. As notas de hype, escassez e potencial de revenda são particularmente fortes. A data futura (2026) requer monitoramento contínuo para avaliar a evolução do interesse e da relevância."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 27
+  },
+  {
+    "evento": {
+      "nome": "Criolo 50 Encerramento da Turnê",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Criolo 50 Encerramento da Turnê",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 7,
+      "potencial_revenda": 9,
+      "nota_final": 8.4
     },
     "auditoria": {
       "decisao": "MONITORAR",
       "confianca": 6,
       "erro_detectado": false,
-      "comentario": "O evento é para 2026, o que o torna distante. A análise indica um potencial considerável (hype, publikco, potencial de revenda), mas a data futura exige cautela. Recomenda-se monitorar a evolução do mercado e o interesse do público antes de tomar uma decisão definitiva de compra."
+      "comentario": "O evento é significativamente no futuro (2026). Embora os fatores de hype e escassez sejam altos, a data distante exige uma análise mais cuidadosa. A relevância do evento em 2026 deve ser confirmada antes de tomar uma decisão definitiva."
     },
     "acao_final": "MONITORAR",
     "razao": "Nota média",
@@ -36,6 +999,2556 @@
       "min_nota_comprar": 7.7,
       "min_confianca": 7.0
     },
-    "posicao": 1
+    "compra_agressiva": false,
+    "posicao": 28
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Pouso Ale...\nSummit Hall\nPouso Alegre • MG\n07 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Atração Internacional: DIRE STRAITS LEGACY",
+      "local": "Summit Hall",
+      "ponto_de_venda": "Pouso Alegre • MG",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.33
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, escassez, publikco, potencial revenda), mas a data de 2026 é significativamente distante. É crucial monitorar o cenário futuro e a evolução do artista para reavaliar a decisão."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 29
+  },
+  {
+    "evento": {
+      "nome": "PAGOCOPA",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "q2ingressos",
+      "url": "https://q2ingressos.com.br/"
+    },
+    "analise": {
+      "evento": "PAGOCOPA",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.2
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento PAGOCOPA em 2026 apresenta um alto potencial de hype e escassez, o que é positivo. No entanto, a data distante (2026) diminui a relevância imediata da análise. É crucial monitorar o desenvolvimento do evento e as tendências do mercado para determinar se o investimento ainda é adequado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 30
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Belo Horiz...\nBeFly Hall\nBelo Horizonte • MG\n09 de mai",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Atração Internacional: DIRE STRAITS LEGACY",
+      "local": "BeFly Hall",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.166666666666666
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de hype e demanda, mas a data do evento (2026-05-03) é significativamente distante. É crucial monitorar o desenvolvimento da situação para avaliar se o interesse persiste e se novas informações surgem que justifiquem uma compra ou investimento maior."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 31
+  },
+  {
+    "evento": {
+      "nome": "Naiara Azevedo Lançamento do DVD 15 Anos de História",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Naiara Azevedo Lançamento do DVD 15 Anos de História, Artista: Various Artists",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. Embora os indicadores (hype, escassez, etc.) sejam positivos, a data futura e a natureza de um lançamento de DVD de artistas variados requerem uma análise mais aprofundada antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 32
+  },
+  {
+    "evento": {
+      "nome": "Leonardo Uma História Sem Fim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Leonardo Uma História Sem Fim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, escassez, publikco, potencial revenda). No entanto, a data do evento é em 2026, o que representa um horizonte temporal distante. É crucial monitorar a evolução da análise e as tendências do mercado até uma data mais próxima para determinar se o investimento ainda é válido."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 33
+  },
+  {
+    "evento": {
+      "nome": "Leonardo Uma História Sem Fim Data Extra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Leonardo Uma História Sem Fim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. Embora os indicadores de hype, escassez e publikco sejam altos, a data futura exige uma análise mais aprofundada antes de tomar uma decisão definitiva de compra. Monitorar o desenvolvimento do evento e as tendências do mercado é recomendado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 34
+  },
+  {
+    "evento": {
+      "nome": "Gravação DVD Netto Brito, Pra Encher e Derramar 7",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Gravação DVD Netto Brito, Pra Encher e Derramar 7",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 7,
+      "potencial_revenda": 9,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026. A análise parece razoável considerando os fatores de hype, escassez e potencial de revenda. No entanto, a data futura exige uma monitoração mais cuidadosa para avaliar se o interesse e a relevância do evento permanecem constantes."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 35
+  },
+  {
+    "evento": {
+      "nome": "Israel & Rodolffo Turnê IMPULSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Israel & Rodolffo Turnê IMPULSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise parece razoável considerando os fatores de hype, escassez e publikco. No entanto, a data do evento (2026-05-03) é significativamente distante, o que diminui a relevância atual da análise. Recomenda-se monitorar a evolução da situação até um período mais próximo ao evento."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 36
+  },
+  {
+    "evento": {
+      "nome": "Tardezinha do Arrocha com Pablo e Asas Livre",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Tardezinha do Arrocha com Pablo e Asas Livre",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype e publikco elevados). No entanto, a data de 2026 requer uma avaliação mais profunda do cenário do mercado de eventos e da relevância contínua dos artistas envolvidos. A escassez e o potencial de revenda também são positivos, mas a nota final de 8.1 sugere que o evento pode não ser tão único quanto parece, justificando uma postura de monitoramento."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 37
+  },
+  {
+    "evento": {
+      "nome": "Baile do Brime",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Baile do Brime",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento Baile do Brime em 2026 apresenta um alto potencial de hype e escassez, o que justifica uma análise mais aprofundada. Apesar das notas positivas, a data distante (2026) diminui a relevância imediata da análise. É crucial monitorar a evolução do evento e as tendências do mercado para determinar se o investimento ainda é viável."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 38
+  },
+  {
+    "evento": {
+      "nome": "DATAS\nDIVERSAS\n\nShrek - O Musical\nSão Paulo, SP\nTeatro Renault",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/shrek-o-musical-12763"
+    },
+    "analise": {
+      "evento": "Shrek - O Musical",
+      "localizacao": "São Paulo, SP",
+      "teatro": "Teatro Renault",
+      "artistas": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam positivos, a distância da data requer uma análise mais aprofundada antes de tomar uma decisão definitiva de compra. É importante monitorar a evolução do mercado e a confirmação das informações."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 39
+  },
+  {
+    "evento": {
+      "nome": "Mano Brown – MB10 Convida Rae...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/mano-brown-mb10-convida-rael-e-rincon-sapiencia-15816"
+    },
+    "analise": {
+      "evento": "Mano Brown – MB10 Convida Rae..., Artista: Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, publikco, etc.). No entanto, a data de 2026-05-03 é significativamente distante. É crucial monitorar o cenário do mercado de eventos e a evolução da popularidade do artista para determinar se o investimento ainda será relevante no futuro. A escassez e potencial de revenda são fatores positivos que justificam uma observação contínua."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 40
+  },
+  {
+    "evento": {
+      "nome": "A Última Sessão de Freud",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/a-ultima-sessao-de-freud-15630"
+    },
+    "analise": {
+      "evento": "A Última Sessão de Freud",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna altamente especulativo. Apesar dos altos scores de hype e escassez, a data futura e a natureza do evento (uma sessão com 'Various Artists') requerem monitoramento cuidadoso antes de uma decisão de compra definitiva."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 41
+  },
+  {
+    "evento": {
+      "nome": "Caso Bizarro: Ao Vivo no Teat...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/caso-bizarro-ao-vivo-no-teatro-16019"
+    },
+    "analise": {
+      "evento": "Caso Bizarro: Ao Vivo no Teat...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é em 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a data distante exige uma análise mais aprofundada antes de tomar uma decisão definitiva de compra. Monitorar o desenvolvimento do evento e as tendências do mercado é recomendado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 42
+  },
+  {
+    "evento": {
+      "nome": "Ney Matogrosso - Bloco na Rua",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rs/porto-alegre/ney-matogrosso-bloco-na-rua-14634"
+    },
+    "analise": {
+      "evento": "Ney Matogrosso - Bloco na Rua",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, publikco, etc.). No entanto, a data de 2026-05-03 é significativamente distante. É crucial monitorar o cenário futuro para avaliar se o interesse e a relevância do evento permanecem consistentes. A escassez (7) também merece atenção, pois pode mudar com o tempo."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 43
+  },
+  {
+    "evento": {
+      "nome": "Chatô e os Diários Associados...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/chato-e-os-diarios-associados-100-anos-de-paixao-15752"
+    },
+    "analise": {
+      "evento": "Chatô e os Diários Associados...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.1
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância temporal exige uma análise mais cuidadosa antes de tomar uma decisão definitiva de compra. A relevância do mercado de eventos também deve ser considerada."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 44
+  },
+  {
+    "evento": {
+      "nome": "As Vozes Péricles e Ferrugem Gravação de DVD",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "As Vozes Péricles e Ferrugem Gravação de DVD",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é em 2026, o que o torna altamente especulativo. Embora os fatores de hype, escassez e potencial de revenda sejam altos, a data futura exige uma avaliação mais cuidadosa. A nota final de 8.0 ainda indica um certo potencial, mas a necessidade de monitorar o desenvolvimento do evento é crucial."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 45
+  },
+  {
+    "evento": {
+      "nome": "As Vozes Péricles e Ferrugem Gravação de DVD Data Extra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "As Vozes Péricles e Ferrugem Gravação de DVD Data Extra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é em 2026, o que o torna altamente especulativo. Embora os fatores de hype, escassez e potencial de revenda sejam altos, a data futura exige uma análise mais cuidadosa antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 46
+  },
+  {
+    "evento": {
+      "nome": "B Day Duquesa, Universo de Pam Grier",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "B Day Duquesa, Universo de Pam Grier",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, publikco, potencial_revenda) sejam altos, a distância temporal exige uma análise mais profunda antes de tomar uma decisão definitiva de compra. A relevância do universo de Pam Grier e a natureza 'various artists' também precisam ser investigadas para garantir o apelo do evento."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 47
+  },
+  {
+    "evento": {
+      "nome": "ART BBQ",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "ART BBQ",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento ART BBQ em 2026 apresenta um alto potencial de revenda (9) e forte hype (7), indicando interesse significativo. No entanto, a data distante (2026) diminui a relevância imediata e justifica uma avaliação mais cuidadosa antes de uma decisão de compra. A escassez (6) e o publikco (8) são fatores positivos, mas a falta de informações sobre os artistas específicos e o público-alvo requer maior investigação."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 48
+  },
+  {
+    "evento": {
+      "nome": "Centro de Convenções UFOP",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Centro de Convenções UFOP",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de revenda e popularidade (hype e publikco), mas a data do evento (2026-05-03) é significativamente distante. É crucial monitorar o cenário futuro para avaliar se a relevância do evento permanece alta, considerando as mudanças no mercado de eventos e preferências do público."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 49
+  },
+  {
+    "evento": {
+      "nome": "Stone House",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Stone House",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento Stone House em 2026 apresenta um alto potencial de revenda (9) e forte hype (7), indicando interesse significativo. No entanto, a data é distante, o que exige monitoramento para avaliar a evolução do mercado e a manutenção da relevância do evento."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 50
+  },
+  {
+    "evento": {
+      "nome": "Mister Rock",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Mister Rock",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento 'Mister Rock' em 2026 apresenta um alto potencial de revenda (9) e forte engajamento do público (hype=7, publikco=8). No entanto, a data distante (2026) e a natureza de um artista com diversas participações podem indicar incertezas. Recomenda-se monitorar o desenvolvimento do evento e as tendências do mercado antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 51
+  },
+  {
+    "evento": {
+      "nome": "Fred & Fabrício no Aniversário do Villa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Fred & Fabrício no Aniversário do Villa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. A análise indica um bom potencial (hype, escassez, publikco, potencial revenda), mas a data futura exige cautela e monitoramento contínuo para avaliar se as condições de mercado permanecem favoráveis."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 52
+  },
+  {
+    "evento": {
+      "nome": "É Claro Que É Rock 2026 Passo Fundo\nArena Clube Comercial\nPasso Fundo • RS\n25 de abril\n20:00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "É Claro Que É Rock 2026 Passo Fundo",
+      "local": "Arena Clube Comercial",
+      "cidade": "Passo Fundo",
+      "estado": "RS",
+      "data": "2026-05-03",
+      "horario": "20:00",
+      "artistas": "Various Artists",
+      "pais": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, publikco, potencial revenda) sejam positivos, a distância da data requer uma análise mais aprofundada antes de tomar uma decisão definitiva de compra. A relevância do evento deve ser reavaliada periodicamente."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 53
+  },
+  {
+    "evento": {
+      "nome": "eventos corporativos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://www.ticketsforfun.com.br/"
+    },
+    "analise": {
+      "evento": "eventos corporativos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento de 2026-05-03 com diversos artistas no Brasil apresenta um alto potencial de revenda e popularidade (hype e publikco elevados). No entanto, a data é distante, o que exige monitoramento para avaliar se as tendências atuais permanecem relevantes. A nota final de 7.8 indica um bom potencial, mas não justifica uma compra imediata."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 54
+  },
+  {
+    "evento": {
+      "nome": "Smith Kotzen",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/pr/curitiba/smith-kotzen-15598"
+    },
+    "analise": {
+      "evento": "Smith Kotzen",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento Smith Kotzen em 2026 apresenta um alto potencial de revenda (9) e forte hype (7), indicando interesse significativo. No entanto, a data distante (2026) exige cautela. A escassez (6) e o publikco (8) são positivos, mas a nota final (7.8) sugere que é preciso monitorar a evolução do evento e as tendências de mercado antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 55
+  },
+  {
+    "evento": {
+      "nome": "Projeto Seis e Meia apresenta...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rn/natal/projeto-seis-e-meia-apresenta-jane-duboc-e-nico-rezende-15795"
+    },
+    "analise": {
+      "evento": "Projeto Seis e Meia apresenta...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. Embora os indicadores de hype, escassez e potencial de revenda sejam altos, a data futura exige uma análise mais cuidadosa antes de tomar uma decisão definitiva de compra. A nota final de 7.8 indica um bom potencial, mas o risco temporal justifica a monitoração."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 56
+  },
+  {
+    "evento": {
+      "nome": "Forró Só Presta Assim com Fernandinha e Eduardinho",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Forró Só Presta Assim",
+      "artistas": [
+        "Fernandinha",
+        "Eduardinho",
+        "Various Artists"
+      ],
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna altamente especulativo. Embora os artistas sejam conhecidos e as métricas de hype e potencial de revenda sejam altas, a data distante exige uma análise mais cuidadosa. A escassez (6) também é um fator a ser considerado com cautela devido ao longo período até a realização."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 57
+  },
+  {
+    "evento": {
+      "nome": "Lucas Morato Gravação Audiovisual",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Lucas Morato Gravação Audiovisual",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. Embora os indicadores de hype, escassez e potencial de revenda sejam altos, a data futura exige uma análise mais cuidadosa antes de tomar uma decisão definitiva de compra. Monitorar o desenvolvimento do evento e as tendências do mercado é recomendado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 58
+  },
+  {
+    "evento": {
+      "nome": "Gilsons Eu vejo luz",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Gilsons Eu vejo luz",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está programado para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância da data e a falta de informações adicionais sobre a promoção e o artista tornam a decisão de 'COMPRAR' arriscada. Monitorar a evolução do hype e a confirmação de detalhes é recomendado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 59
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: Revisiting Creedence | Grande Florianópol...\nArena Opus\nSão José • SC\n20 de a",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Revisiting Creedence",
+      "local": "Arena Opus, São José • SC",
+      "data": "2026-05-03",
+      "pais": "Brasil",
+      "artista": "Various Artists",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de revenda e interesse público (hype e publikco elevados). No entanto, a data do evento é em 2026, o que levanta questões sobre relevância atual. Recomenda-se monitorar a evolução da demanda e a confirmação da organização do evento antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 60
+  },
+  {
+    "evento": {
+      "nome": "Vitinho, Yan e Landim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/vitinho-yan-e-landim-15783"
+    },
+    "analise": {
+      "evento": "Vitinho, Yan e Landim",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de venda (potencial_revenda=9) e hype significativo (hype=7), mas a data do evento (2026-05-03) é consideravelmente distante. A escassez (6) também contribui, mas o futuro incerto do evento requer monitoramento contínuo para avaliar se as condições permanecem favoráveis."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 61
+  },
+  {
+    "evento": {
+      "nome": "Estacionamento Vibra São Paul...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/estacionamento-vibra-sao-paulo-2026-15406"
+    },
+    "analise": {
+      "evento": "Estacionamento Vibra São Paulo",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está programado para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância da data e a falta de informações adicionais sobre o evento (artistas específicos, local, público-alvo) justificam uma avaliação mais cuidadosa antes de tomar uma decisão definitiva de compra. Monitorar o desenvolvimento do evento é recomendado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 62
+  },
+  {
+    "evento": {
+      "nome": "Gongada Drag",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/gongada-drag-15662"
+    },
+    "analise": {
+      "evento": "Gongada Drag",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.75
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento 'Gongada Drag' em 2026 apresenta um alto potencial de revenda (9) e forte hype (7), indicando interesse significativo. No entanto, a data futura (2026) exige cautela. A escassez (6) e o publikco (8) são positivos, mas a nota final (7.75) sugere que é preciso monitorar a evolução do evento e o mercado antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 63
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DO RIO PRETO/SP\nHenrique e Juliano | São José do Rio Preto\n25",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "SAO JOSE DO RIO PRETO/SP",
+      "artistas": [
+        "Henrique e Juliano",
+        "Various Artists"
+      ],
+      "data": "2026-04-25",
+      "cidade": "São José do Rio Preto",
+      "pais": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com alto potencial de sucesso (hype, escassez, publikco e potencial de revenda). A data de 2026-04-25 ainda é relevante para avaliação, considerando o horizonte de planejamento de eventos. Recomenda-se compra, mantendo a confiança em torno de 8 devido à natureza especulativa da previsão."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 64
+  },
+  {
+    "evento": {
+      "nome": "Arena 7 Meridional",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Arena 7 Meridional",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está programado para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância da data requer uma análise mais cuidadosa e monitoramento contínuo das tendências do mercado e da popularidade dos artistas envolvidos."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 65
+  },
+  {
+    "evento": {
+      "nome": "Samba no Juventus com Fundo de Quintal, Marquinhos e Tiee",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Samba no Juventus",
+      "artistas": [
+        "Fundo de Quintal",
+        "Marquinhos",
+        "Tiee"
+      ],
+      "artista_varios": true,
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 8,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância da data e a falta de informações adicionais sobre a promoção exigem uma avaliação mais cuidadosa antes de tomar uma decisão definitiva de compra. A nota final de 7.5 sugere potencial, mas o monitoramento é recomendado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 66
+  },
+  {
+    "evento": {
+      "nome": "Ebony KM2 Deluxe, A Tour",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Ebony KM2 Deluxe, A Tour",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está programado para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, publikco, potencial_revenda) sejam altos, a distância temporal exige uma análise mais cuidadosa e monitoramento contínuo das tendências do mercado e da performance do artista antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 67
+  },
+  {
+    "evento": {
+      "nome": "Marina Sena Coisas Naturais",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Marina Sena Coisas Naturais",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, publikco, etc.) sejam positivos, a distância temporal exige uma análise mais cuidadosa e monitoramento contínuo da evolução do mercado e do artista antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 68
+  },
+  {
+    "evento": {
+      "nome": "Fresno Carta de Adeus",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Fresno Carta de Adeus",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é em 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância temporal levanta questões sobre a relevância do evento no presente. Recomenda-se monitorar a evolução da análise e o cenário do mercado antes de tomar uma decisão definitiva."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 69
+  },
+  {
+    "evento": {
+      "nome": "7 Minutoz",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "7 Minutoz",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 7,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento '7 Minutoz' em 2026 apresenta um alto potencial de revenda (9) e hype (8), mas a escassez (6) é moderada. A nota final (7.5) indica uma oportunidade promissora, mas a data distante exige monitoramento para avaliar a evolução do interesse e o cenário competitivo."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 70
+  },
+  {
+    "evento": {
+      "nome": "Joelma Isso é Calypso",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Joelma Isso é Calypso",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os fatores de hype, escassez e publikco sejam positivos, a data distante exige uma análise mais aprofundada antes de tomar uma decisão definitiva de compra. A nota final de 7.5 indica potencial, mas a incerteza da data justifica a monitoração contínua."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 71
+  },
+  {
+    "evento": {
+      "nome": "Léo Magalhães",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Léo Magalhães",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância temporal exige uma análise mais cuidadosa e monitoramento contínuo da evolução do mercado e do artista."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 72
+  },
+  {
+    "evento": {
+      "nome": "Pablo e Zezo",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Pablo e Zezo",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está programado para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam positivos, a distância temporal exige uma análise mais cuidadosa e monitoramento contínuo da evolução do mercado e do artista antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 73
+  },
+  {
+    "evento": {
+      "nome": "Pixote, Vitinho e Jeito Moleque",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Pixote, Vitinho e Jeito Moleque",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise parece razoável considerando os valores de hype, escassez e potencial de revenda. No entanto, a data do evento (2026-05-03) é significativamente distante no futuro, o que diminui a relevância atual da análise. Recomenda-se monitorar a evolução da situação e a confirmação de informações sobre os artistas e a data."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 74
+  },
+  {
+    "evento": {
+      "nome": "Gramado Summit 2026\nSerra Park - Gramado/RS\nGramado • RS\n06 a 08 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Gramado Summit 2026",
+      "local": "Serra Park - Gramado/RS",
+      "cidade": "Gramado • RS",
+      "datas": "06 a 08 de maio, 2026-05-03",
+      "artistas": "Various Artists",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso (hype, escassez, publikco, potencial revenda), mas a data do evento é 2026. É crucial monitorar o cenário futuro e a evolução da competição para determinar se o evento ainda será relevante no momento da tomada de decisão."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 75
+  },
+  {
+    "evento": {
+      "nome": "Empreende Brazil Conference 2026 | SC\nArena Opus\nSão José • SC\n22 a 23 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Empreende Brazil Conference 2026 | SC",
+      "local": "Arena Opus",
+      "cidade": "São José",
+      "estado": "SC",
+      "datas": "22 a 23 de maio, 2026-05-03",
+      "artistas": "Various Artists",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso (hype, escassez, publikco, potencial revenda), mas a data do evento é 2026. É crucial monitorar o cenário futuro e a evolução da competição para avaliar se o evento ainda será relevante no momento da tomada de decisão final. A nota final de 7.5 justifica um acompanhamento próximo."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 76
+  },
+  {
+    "evento": {
+      "nome": "Eventos Esportivos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Eventos Esportivos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "notas": [
+        9,
+        7,
+        8,
+        6
+      ],
+      "nota_final": 7.5,
+      "hype": 9,
+      "escassez": 7,
+      "publico": 8,
+      "potencial_revenda": 6
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento em 2026 apresenta um hype considerável e escassez, indicando potencial de interesse. No entanto, a data distante exige monitoramento para avaliar a evolução do mercado e o impacto da concorrência. A nota final de 7.5 é razoável, mas a incerteza temporal justifica uma abordagem cautelosa."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 77
+  },
+  {
+    "evento": {
+      "nome": "Google Play",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://play.google.com/store/apps/details?id=br.com.blueticket"
+    },
+    "analise": {
+      "evento": "Google Play",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que representa um horizonte de tempo muito longo. Embora os fatores de hype, escassez e potencial de revenda sejam altos, a data distante exige uma análise mais cuidadosa. A nota final de 7.5 ainda indica interesse, mas a falta de informações concretas sobre o evento (como artistas confirmados ou local) justifica uma postura de monitoramento."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 78
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DOS CAMPOS/SP\nMirage Circus\n12",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "Mirage Circus",
+      "localizacao": "SAO JOSE DOS CAMPOS/SP",
+      "artistas": [
+        "Various Artists"
+      ],
+      "data": "2026-04-12",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 5,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento 'Mirage Circus' em 2026 apresenta um alto potencial de revenda (9) e hype (7), indicando interesse significativo. No entanto, a data é distante, o que exige monitoramento para avaliar se as condições do mercado permanecem favoráveis. A nota final de 7.5 justifica uma análise mais aprofundada antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 79
+  },
+  {
+    "evento": {
+      "nome": "A Culpa é dos Amigos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/a-culpa-e-dos-amigos-15126"
+    },
+    "analise": {
+      "evento": "A Culpa é dos Amigos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está marcado para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância temporal exige uma análise mais cuidadosa. A relevância do evento em 2026 é questionável e a decisão de 'COMPRAR' seria arriscada. Monitorar a evolução da situação e o interesse público nos próximos meses é recomendado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 80
+  },
+  {
+    "evento": {
+      "nome": "Henrique & Diego",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Henrique & Diego",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.4
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está programado para 2026, o que representa um horizonte de tempo considerável. Embora os indicadores (hype, escassez, etc.) sejam altos, a distância da data requer uma análise mais cuidadosa e monitoramento contínuo das tendências do mercado e da performance do artista."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 81
+  },
+  {
+    "evento": {
+      "nome": "Humorfobia com Carioca, Bola ...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/humorfobia-com-carioca-bola-e-victor-sarro-15697"
+    },
+    "analise": {
+      "evento": "Humorfobia com Carioca, Bola ...,",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 7,
+      "nota_final": 7.25
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com potencial de sucesso (hype alto, publikco alto), mas a data de 2026-05-03 é significativamente distante. A escassez e o potencial de revenda são bons indicadores, mas a falta de informações específicas sobre o artista 'Various Artists' e a localização 'Brasil' requerem monitoramento para avaliar se a relevância do evento permanece alta à medida que a data se aproxima."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 82
+  },
+  {
+    "evento": {
+      "nome": "BALNEARIO GAIVOTA/SC\nMailing Lagoa - Panda\n05",
+      "artista": "Various Artists",
+      "data": "2026-04-05",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "BALNEARIO GAIVOTA/SC",
+      "mailing": "Lagoa - Panda",
+      "data": "2026-04-05",
+      "artista": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 3,
+      "publico": 8,
+      "potencial_revenda": 7,
+      "nota_final": 7.0
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é para 2026, o que o torna distante. A análise indica um bom potencial (hype, revenda), mas a data de realização exige cautela e monitoramento contínuo para avaliar se as condições do mercado permanecem favoráveis."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 83
+  },
+  {
+    "evento": {
+      "nome": "MACAPA/AP\nQuintal do TG\n12",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "MACAPA/AP",
+      "local": "Quintal do TG",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 3,
+      "publico": 8,
+      "potencial_revenda": 7,
+      "nota_final": 7.0
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento MACAPA/AP em 2026 apresenta um hype e potencial de revenda consideráveis. No entanto, a data distante (2026) e a falta de informações adicionais sobre o line-up e organização levam a uma avaliação cautelosa. Recomenda-se monitorar o desenvolvimento do evento para determinar se os fatores iniciais permanecem relevantes."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 84
+  },
+  {
+    "evento": {
+      "nome": "Visitante!",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Visitante!",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 6,
+      "potencial_revenda": 8,
+      "nota_final": 6.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é em 2026, o que representa um horizonte de tempo considerável. Embora os fatores de hype, escassez e potencial de revenda sejam positivos, a data distante exige uma análise mais profunda da viabilidade do evento e das tendências futuras do mercado de eventos no Brasil. A nota final de 6.5 indica um potencial, mas não justifica uma compra imediata."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 85
+  },
+  {
+    "evento": {
+      "nome": "ParkShoppingCanoas",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "ParkShoppingCanoas",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 8,
+      "potencial_revenda": 6,
+      "nota_final": 6.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está marcado para 2026, o que o torna distante e com menor probabilidade de gerar retorno imediato. A análise indica um potencial considerável (hype, publikco, etc.), mas a data futura exige cautela. Recomenda-se monitorar a evolução do evento e das tendências do mercado até o momento da decisão final."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 86
+  },
+  {
+    "evento": {
+      "nome": "Mercado de Santa Tereza",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Mercado de Santa Tereza",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 6,
+      "escassez": 4,
+      "publico": 7,
+      "potencial_revenda": 8,
+      "nota_final": 6.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com potencial de sucesso (hype alto, escassez, publikco e potencial de revenda). No entanto, a data é em 2026, o que torna a relevância do evento questionável. Recomenda-se monitorar a evolução da análise e o cenário do mercado de eventos para determinar se o investimento ainda é válido."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 87
+  },
+  {
+    "evento": {
+      "nome": "Shopping Cidade da Serra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "evento": "Shopping Cidade da Serra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "hype": 6,
+      "escassez": 4,
+      "publico": 7,
+      "potencial_revenda": 8,
+      "nota_final": 6.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com potencial de sucesso (alta notas em hype, escassez e potencial de revenda). No entanto, a data é 2026-05-03, o que representa um horizonte temporal muito longo. É crucial monitorar a evolução do mercado, tendências futuras e a concorrência para determinar se o evento ainda será relevante no momento da realização. A nota final de 6.5 sugere um nível de risco moderado."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 88
+  },
+  {
+    "evento": {
+      "nome": "Warung Day Festival 2026\nPedreira Paulo Leminski\nCuritiba • PR\n02 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Warung Day Festival 2026",
+      "local": "Pedreira Paulo Leminski, Curitiba • PR",
+      "data": "2026-05-03",
+      "artistas": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 7,
+      "escassez": 4,
+      "publico": 8,
+      "potencial_revenda": 6,
+      "nota_final": 6.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento está programado para 2026, o que representa um horizonte de tempo considerável. Embora os fatores 'hype', 'escassez', 'publikco' e 'potencial_revenda' sejam positivos, a distância da data requer uma análise mais profunda antes de tomar uma decisão definitiva de compra. A nota final de 6.5 indica um potencial, mas não garante o sucesso. É crucial verificar tendências atuais do mercado de música e eventos em Curitiba para determinar se o evento ainda é relevante no momento da sua realização."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 89
+  },
+  {
+    "evento": {
+      "nome": "MAI\n26\n2026\nPomme\nSão Paulo, SP\nTeatro Renault",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "analise": {
+      "evento": "MAI",
+      "data": "2026-05-03",
+      "local": "Teatro Renault",
+      "cidade": "São Paulo, SP",
+      "pais": "Brasil",
+      "artistas": "Various Artists",
+      "ano": 2026,
+      "hype": 7,
+      "escassez": 3,
+      "publico": 8,
+      "potencial_revenda": 6,
+      "nota_final": 6.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento MAI em 2026 apresenta um hype razoável e potencial de venda, mas a data é distante. A nota final de 6.5 indica que requer monitoramento para avaliar se o interesse e as condições do mercado mudam significativamente até a data do evento."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 90
+  },
+  {
+    "evento": {
+      "nome": "Dilsinho em Lages\nParque de Exposições Conta Dinheiro\nLages • SC\n10 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "Dilsinho em Lages",
+      "local": "Parque de Exposições Conta Dinheiro, Lages • SC",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "cidade": "Brasil",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.13
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": true,
+      "comentario": "A data do evento (2026-05-03) é significativamente distante da data de análise (10 de abril). O hype e outros fatores são altos, mas a distância temporal levanta questões sobre relevância futura. É crucial monitorar o desenvolvimento do evento e avaliar se os fatores permanecem consistentes com o tempo."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Erro detectado na análise",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 91
+  },
+  {
+    "evento": {
+      "nome": "28ª Festa da Cebola | Luan Santana\nParque da Cebola\nItuporanga • SC\n10 de abril\n00:00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "evento": "28ª Festa da Cebola | Luan Santana",
+      "local": "Parque da Cebola",
+      "cidade": "Ituporanga",
+      "estado": "SC",
+      "data": "2026-05-03",
+      "artista": "Various Artists",
+      "pais": "Brasil",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": true,
+      "comentario": "A análise apresenta inconsistências significativas. A data do evento (10 de abril) é muito anterior à data indicada na análise (2026-05-03). O hype e o potencial de revenda são altos, mas a data desatualizada levanta sérias dúvidas sobre a relevância do evento no mercado atual. Recomenda-se monitorar a situação para verificar se há alguma mudança ou atualização da informação."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Erro detectado na análise",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 92
+  },
+  {
+    "evento": {
+      "nome": "FEV\n27\n2027\nLaura Pausini - 2027\nSão Paulo, SP\nMercado Livre Arena Pacaembu",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "analise": {
+      "evento": "FEV",
+      "data": "2027-05-03",
+      "artista": "Laura Pausini",
+      "local": "Mercado Livre Arena Pacaembu",
+      "cidade": "São Paulo, SP",
+      "pais": "Brasil",
+      "artistas_adicionais": "Various Artists",
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": true,
+      "comentario": "A data do evento (2027) é inconsistente com a data da análise (2026-05-03). Além disso, o 'hype' e 'publikco' são altos, mas a nota final de 7.5 parece baixa considerando esses fatores. Recomenda-se monitorar a evolução do evento e confirmar a data antes de tomar uma decisão definitiva."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Erro detectado na análise",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 93
+  },
+  {
+    "evento": {
+      "nome": "HORTOLANDIA/SP\nFesta do Peão de Hortolândia 2026\nDE 08",
+      "artista": "Various Artists",
+      "data": "2026-05-08",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "evento": "Festa do Peão de Hortolândia 2026",
+      "local": "HORTOLANDIA/SP",
+      "data": "2026-05-08",
+      "artistas": [
+        "Various Artists"
+      ],
+      "hype": 6,
+      "escassez": 3,
+      "publico": 7,
+      "potencial_revenda": 5,
+      "nota_final": 5.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um evento com potencial, mas a data de 2026 é significativamente distante. É crucial monitorar o desenvolvimento do evento e as tendências do mercado para avaliar sua relevância futura. O hype e o publikco são positivos, mas a escassez e o potencial de revenda são moderados."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Nota insuficiente",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 94
+  },
+  {
+    "evento": {
+      "nome": "Samba do Eugênio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de revenda e popularidade (hype e publikco elevados), mas a data do evento (2026-05-03) é significativamente distante. A escassez também contribui para o interesse, porém, a relevância futura do evento precisa ser avaliada com mais cautela. Recomenda-se monitorar de perto a evolução da análise e o cenário do mercado de eventos até uma data mais próxima."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Nota insuficiente",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 95
+  },
+  {
+    "evento": {
+      "nome": "Tork N Roll",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 6,
+      "publico": 7,
+      "potencial_revenda": 9
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento 'Tork N Roll' em 2026 apresenta um alto potencial de revenda (9) e hype (8), indicando interesse significativo. No entanto, a data distante (2026) e a falta de informações adicionais sobre o artista e a cidade exigem monitoramento contínuo para avaliar a evolução do interesse e a relevância do evento."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Nota insuficiente",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 96
+  },
+  {
+    "evento": {
+      "nome": "ALFENAS/MG\nVelório do Carneiro 2026\n11",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento é altamente especulativo devido à data futura (2026). Embora os fatores de hype e publikco sejam altos, a escassez e o potencial de revenda são moderados. A nota final de 0 sugere que mais dados e uma análise de risco mais profunda seriam necessários antes de tomar uma decisão de compra. Monitorar o desenvolvimento do evento é recomendado."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Nota insuficiente",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 97
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DO RIO PRETO/SP\nRegistro Histórico - Grupo VIP | SJRP\n12",
+      "artista": "Various Artists",
+      "data": "2026-09-12",
+      "cidade": "Brasil",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 5,
+      "erro_detectado": false,
+      "comentario": "A análise é muito superficial. A data do evento (2026-09-12) está significativamente no futuro e o hype atual para este evento é incerto. Requer mais dados sobre a atração, público-alvo e tendências do mercado de eventos para uma avaliação mais precisa.  A nota final de 0 não fornece informações suficientes."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Nota insuficiente",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 98
+  },
+  {
+    "evento": {
+      "nome": "Sacadura 154",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    },
+    "auditoria": {
+      "decisao": "IGNORAR",
+      "confianca": 2,
+      "erro_detectado": true,
+      "comentario": "A análise é excessivamente pessimista. O evento 'Various Artists' em 2026, mesmo que no Brasil, apresenta um alto potencial de interesse, especialmente considerando a falta de dados sobre hype, escassez ou público-alvo. A nota final de 0 é inadequada e sugere uma avaliação superficial.  A data distante (2026) também diminui a relevância imediata da análise."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Erro detectado na análise",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 99
+  },
+  {
+    "evento": {
+      "nome": "CAPITAL INICIAL | Balneário Camboriú - SC | Music Park BC |...\nLIVE - Music Park BC\nBalneário Cambor",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Brasil",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    },
+    "auditoria": {
+      "decisao": "IGNORAR",
+      "confianca": 2,
+      "erro_detectado": true,
+      "comentario": "A análise indica um evento com baixíssima probabilidade de sucesso (hype=0, escassez=0, etc.) e data futura (2026-05-03). A relevância do evento é questionável considerando a data. Recomenda-se ignorar."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Erro detectado na análise",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "posicao": 100
   }
 ]
