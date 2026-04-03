@@ -23,6 +23,7 @@ from core.data_quality import (
 from core.notifier import verificar_e_enviar_alerta
 from config import FALLBACK_ENABLED
 from core.predictor import processar_previsoes
+from core.executor import processar_planos_acao
 
 
 def log(msg: str) -> None:
@@ -115,6 +116,10 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     eventos_finais = processar_previsoes(eventos_finais)
     log(f"   -> Previsões geradas para {len(eventos_finais)} eventos")
     
+    log("Gerando planos de ação...")
+    eventos_finais = processar_planos_acao(eventos_finais)
+    log(f"   -> Planos de ação gerados para {len(eventos_finais)} eventos")
+    
     final_path = os.path.join(os.path.dirname(__file__), "..", "data", "final.json")
     salvar_json(eventos_finais, final_path)
     log(f"   -> Salvo em {final_path}")
@@ -130,9 +135,10 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
         analise = item.get("analise", {})
         auditoria = item.get("auditoria", {})
         acao = item.get("acao_final", "IGNORAR")
+        plano_acao = item.get("plano_acao", {})
         salvar_evento_no_historico(evento, analise, auditoria, acao)
         
-        enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao)
+        enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao)
         if enviado:
             log(f"   -> Alerta enviado para: {evento.get('nome', 'N/A')}")
     

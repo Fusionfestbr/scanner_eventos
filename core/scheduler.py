@@ -12,6 +12,7 @@ from pathlib import Path
 from config import INTERVALO_MINUTOS, LOCK_FILE, LAST_RUN_FILE
 from core.orchestrator import executar_pipeline
 from core.learning import carregar_historico
+from core.executor import processar_planos_acao, reavaliar_planos
 
 
 running = True
@@ -142,19 +143,26 @@ def executar_ciclo() -> dict:
     from agents.analista import analisar_eventos
     from agents.auditor import auditar_eventos
     from core.decision import processar_decisoes
+    from core.predictor import processar_previsoes
     from core.learning import salvar_evento_no_historico
+    from core.notifier import verificar_e_enviar_alerta
     
     eventos_validados = validar_eventos(eventos_novos)
     eventos_analisados = analisar_eventos(eventos_validados)
     eventos_auditados = auditar_eventos(eventos_analisados)
     eventos_finais = processar_decisoes(eventos_auditados)
     
+    eventos_finais = processar_previsoes(eventos_finais)
+    eventos_finais = processar_planos_acao(eventos_finais)
+    
     for item in eventos_finais:
         evento = item.get("evento", {})
         analise = item.get("analise", {})
         auditoria = item.get("auditoria", {})
         acao = item.get("acao_final", "IGNORAR")
+        plano_acao = item.get("plano_acao", {})
         salvar_evento_no_historico(evento, analise, auditoria, acao)
+        verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao)
     
     compras = sum(1 for e in eventos_finais if e.get("acao_final") == "COMPRAR")
     monitorar = sum(1 for e in eventos_finais if e.get("acao_final") == "MONITORAR")
@@ -179,16 +187,19 @@ def executar_ciclo() -> dict:
     }
 
 
-def executar_loop(intervalo_minutos: int | None = None):
+def executar_loop(intervalo_minutos: int | None = None, reavaliar_horas: int = 6):
     """
     Executa o loop de scheduler.
     
     Args:
         intervalo_minutos: Intervalo entre execuções (default: config.INTERVALO_MINUTOS)
+        reavaliar_horas: Frequência de reavaliação em horas (default: 6h)
     """
     global running
     
     intervalo_minutos = intervalo_minutos or INTERVALO_MINUTOS
+    ciclos_para_reavaliar = max(1, (reavaliar_horas * 60) // intervalo_minutos)
+    ciclo_atual = 0
     
     if not acquire_lock():
         print("[ERROR] Scheduler já está rodando!")
@@ -201,11 +212,17 @@ def executar_loop(intervalo_minutos: int | None = None):
     print("  Fusion Revenda Master - SCHEDULER")
     print("=" * 50)
     print(f"  Intervalo: {intervalo_minutos} minutos")
+    print(f"  Reavaliação: a cada {reavaliar_horas}h ({ciclos_para_reavaliar} ciclos)")
     print(f"  Pressione CTRL+C para parar")
     print("=" * 50)
     
     try:
         while running:
+            ciclo_atual += 1
+            
+            if ciclo_atual % ciclos_para_reavaliar == 0:
+                reavaliar_eventos_comprados()
+            
             try:
                 resultado = executar_ciclo()
                 
@@ -245,3 +262,40 @@ def stop_scheduler():
             print(f"Erro ao parar: {e}")
     else:
         print("Scheduler não está rodando.")
+
+
+def reavaliar_eventos_comprados():
+    """
+    Reavalia planos de ação de eventos com COMPRAR.
+    Deve ser chamado periodicamente (ex: a cada 6h).
+    """
+    from core.learning import carregar_historico
+    from core.predictor import processar_previsoes
+    
+    print("\n[Reavaliação] Verificando eventos comprados...")
+    
+    historico = carregar_historico()
+    eventos_comprar = [h for h in historico if h.get("acao_final") == "COMPRAR"]
+    
+    if not eventos_comprar:
+        print("  Nenhum evento COMPRAR no histórico.")
+        return
+    
+    print(f"  {len(eventos_comprar)} eventos COMPRAR para reavaliar")
+    
+    eventos_atualizados = reavaliar_planos(eventos_comprar)
+    
+    alterados = [e for e in eventos_atualizados 
+                 if e.get("plano_acao", {}).get("alterou_estrategia")]
+    
+    if alterados:
+        print(f"  {len(alterados)} alterações de estratégia detectadas")
+        for e in alterados:
+            evento_nome = e.get("evento", e.get("evento", {}))
+            nova_estrategia = e.get("plano_acao", {}).get("estrategia_saida")
+            print(f"    - {evento_nome.get('nome', 'N/A')}: {nova_estrategia}")
+    else:
+        print("  Nenhuma alteração necessária.")
+    
+    from core.learning import salvar_historico
+    salvar_historico(eventos_atualizados)

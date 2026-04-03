@@ -385,9 +385,13 @@
             letter-spacing: 0.5px;
         }
 
-        .tag-alto { background: rgba(16, 185, 129, 0.15); color: var(--green); }
-        .tag-medio, .tag-médio { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
-        .tag-baixo { background: rgba(100, 116, 139, 0.15); color: var(--text-dim); }
+        .tag-alto, .tag-premium { background: rgba(16, 185, 129, 0.15); color: var(--green); }
+        .tag-medio, .tag-médio, .tag-gradual { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
+        .tag-baixo, .tag-rápida, .tag-rapida { background: rgba(100, 116, 139, 0.15); color: var(--text-dim); }
+        
+        .tag-agora { background: rgba(239, 68, 68, 0.15); color: var(--red); }
+        .tag-monitorar { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+        .tag-aguardar { background: rgba(100, 116, 139, 0.15); color: var(--text-dim); }
 
         .decisao {
             color: var(--text-muted);
@@ -572,7 +576,9 @@
                         <th>Nota</th>
                         <th>Score</th>
                         <th>Esgotar</th>
-                        <th>Volume</th>
+                        <th>Qtd</th>
+                        <th>Timing</th>
+                        <th>Estratégia</th>
                         <th>Decisão</th>
                         <th>Ação</th>
                     </tr>
@@ -598,8 +604,14 @@
                         {% set score = evento.previsao.score_valorizacao if evento.previsao else 0 %}
                         {% set score_class = 'score-high' if score >= 7 else ('score-mid' if score >= 5 else 'score-low') %}
                         <td class="score {{ score_class }}">{{ "%.1f"|format(score) }}</td>
-                        <td class="mono">{{ "%.0f"|format(evento.previsao.probabilidade_esgotar if evento.previsao else 0) }}%</td>
-                        <td><span class="tag tag-{{ evento.previsao.recomendacao_volume if evento.previsao else 'baixo' }}">{{ evento.previsao.recomendacao_volume if evento.previsao else '-' }}</span></td>
+                        {% set prob = evento.previsao.probabilidade_esgotar if evento.previsao else 0 %}
+                        {% set qtd_nivel = evento.plano_acao.quantidade.nivel if evento.plano_acao and evento.plano_acao.quantidade else 'baixo' %}
+                        {% set momento = evento.plano_acao.momento_compra if evento.plano_acao else 'aguardar' %}
+                        {% set estrategia = evento.plano_acao.estrategia_saida if evento.plano_acao else 'rápida' %}
+                        <td class="mono">{{ "%.0f"|format(prob) }}%</td>
+                        <td><span class="tag tag-{{ qtd_nivel }}">{{ evento.plano_acao.quantidade.recomendado if evento.plano_acao and evento.plano_acao.quantidade else '-' }}</span></td>
+                        <td><span class="tag tag-{{ 'alto' if momento == 'agora' else ('medio' if momento == 'monitorar' else 'baixo') }}">{{ momento }}</span></td>
+                        <td><span class="tag tag-{{ estrategia }}">{{ estrategia }}</span></td>
                         <td class="decisao">{{ evento.auditoria.decisao | default('N/A') }}</td>
                         <td><span class="action-tag action-{{ evento.acao_final|lower }}">{{ evento.acao_final }}</span></td>
                     </tr>

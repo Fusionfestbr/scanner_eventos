@@ -6,7 +6,7 @@ import json
 import os
 import requests
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Dict
 
 from config import (
     TELEGRAM_TOKEN,
@@ -57,7 +57,7 @@ def marcar_notificado(evento_id: str) -> None:
     salvar_notificados(notificados)
 
 
-def formatar_mensagem(evento: dict, analise: dict, auditoria: dict) -> str:
+def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: Optional[Dict] = None) -> str:
     """Formata mensagem de alerta."""
     nome = evento.get("nome", "N/A")
     artista = evento.get("artista", "N/A")
@@ -82,12 +82,36 @@ def formatar_mensagem(evento: dict, analise: dict, auditoria: dict) -> str:
 
 <i>{comentario}...</i>"""
     
+    if plano_acao and plano_acao.get("comprar"):
+        qtd = plano_acao.get("quantidade", {})
+        momento = plano_acao.get("momento_compra", "N/A")
+        estrategia = plano_acao.get("estrategia_saida", "N/A")
+        preco_alvo = plano_acao.get("preco_alvo_venda", 0)
+        margem = plano_acao.get("margem_estimada", "0%")
+        
+        qtd_recomendada = qtd.get("recomendado", "N/A") if isinstance(qtd, dict) else qtd
+        
+        mensagem += f"""
+
+💰 <b>SUGESTÃO DE COMPRA</b>
+📊 Qtd recomendada: {qtd_recomendada} ingresso(s)
+⏰ Timing: {momento}
+📈 Estratégia saída: {estrategia}
+🎯 Preço alvo venda: R$ {preco_alvo:.2f}
+💵 Margem estimada: {margem}"""
+    
     return mensagem
 
 
-def enviar_alerta(evento: dict, analise: dict, auditoria: dict) -> bool:
+def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Optional[Dict] = None) -> bool:
     """
     Envia alerta via Telegram.
+    
+    Args:
+        evento: Dados do evento
+        analise: Dados da análise
+        auditoria: Dados da auditoria
+        plano_acao: Dados do plano de ação (opcional)
     
     Returns:
         True se enviado com sucesso
@@ -120,9 +144,16 @@ def enviar_alerta(evento: dict, analise: dict, auditoria: dict) -> bool:
         return False
 
 
-def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao: str) -> bool:
+def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao: str, plano_acao: Optional[Dict] = None) -> bool:
     """
     Verifica critérios e envia alerta se necessário.
+    
+    Args:
+        evento: Dados do evento
+        analise: Dados da análise
+        auditoria: Dados da auditoria
+        acao: Ação final (COMPRAR, MONITORAR, IGNORAR)
+        plano_acao: Dados do plano de ação (opcional)
     
     Returns:
         True se alerta foi enviado
@@ -144,7 +175,7 @@ def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao
     if ja_notificado(evento_id):
         return False
     
-    sucesso = enviar_alerta(evento, analise, auditoria)
+    sucesso = enviar_alerta(evento, analise, auditoria, plano_acao)
     
     if sucesso:
         marcar_notificado(evento_id)
