@@ -216,6 +216,590 @@
     "url": "https://www.ticketmaster.com.br/event/zayn"
   },
   {
+    "nome": "Churrasquinho Menos é Mais - Belém",
+    "artista": "Various Artists",
+    "data": "2026-05-30",
+    "cidade": "Churrasquinho Menos é Mais - Belém",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Churrasquinho Menos é Mais - Vila Velha",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "Churrasquinho Menos é Mais - Vila Velha",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "BUDWEISER APRESENTA: GINGA SÃO PAULO",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "BUDWEISER APRESENTA: GINGA SÃO PAULO",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Camarote Fanzone - Liniker - Bye Bye - Caju",
+    "artista": "Various Artists",
+    "data": "2026-07-11",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Semana Santa dos Milagres 2026",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Churrasquinho Menos é Mais - Ribeirão Preto",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Bonjour Party",
+    "artista": "Various Artists",
+    "data": "2026-04-25",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Churrasquinho Menos é Mais - Fortaleza",
+    "artista": "Various Artists",
+    "data": "2026-05-02",
+    "cidade": "Churrasquinho Menos é Mais - Fortaleza",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "ARENA BRASILEIRA 2...",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "BUDWEISER APRESENT...",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "São Paulo",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "House & Friends",
+    "artista": "Various Artists",
+    "data": "2026-04-17",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "PsyLove - Terras O...",
+    "artista": "Various Artists",
+    "data": "2026-04-18",
+    "cidade": "Rio de Janeiro",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "18.04 | HIGH CLUB ...",
+    "artista": "Various Artists",
+    "data": "2026-04-18",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Selvagem @ Barra-c...",
+    "artista": "Various Artists",
+    "data": "2026-04-18",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Semana Movida | 31...",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "03. ABR. FESTIVAL ...",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "FESTA UNDR _ NA AR...",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "Arca - São Paulo",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "03 E 04/04 - FERIA...",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Laroc Guarujá apre...",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "D-EDGE RIO apresen...",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "D-EDGE RIO apresen...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "NAVE D-EDGE SP pre...",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "04.04 | FESTA TACA...",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "SUPERAFTER D-EDGE ...",
+    "artista": "Various Artists",
+    "data": "2026-04-05",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "VINTAGE CULTURE HO...",
+    "artista": "Various Artists",
+    "data": "2026-04-05",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "05.04 | HIGH POOL ...",
+    "artista": "Various Artists",
+    "data": "2026-04-05",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Hospedagem We Love...",
+    "artista": "Various Artists",
+    "data": "2026-04-09",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "11.04 | HIGH CLUB ...",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "12.04 | FESTA VERT...",
+    "artista": "Various Artists",
+    "data": "2026-04-12",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "FESTA BLACK PRIDE ...",
+    "artista": "Various Artists",
+    "data": "2026-06-05",
+    "cidade": "São Paulo",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Village 2026 : Seu...",
+    "artista": "Various Artists",
+    "data": "2026-06-05",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Village 2026 : Lui...",
+    "artista": "Various Artists",
+    "data": "2026-06-12",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Village 2026 : BRA...",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Circo Spacial - SP...",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Semana Santa dos M...",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "OPEN VIBE :: A Sem...",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "48• Expoam Mococa",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "AFROGROOVE - BELO ...",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Intense Bubbles",
+    "artista": "Various Artists",
+    "data": "2026-04-12",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Festival Zepinho",
+    "artista": "Various Artists",
+    "data": "2026-04-26",
+    "cidade": "Shopping RioMar Fo...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Festival Forró na ...",
+    "artista": "Various Artists",
+    "data": "2026-04-30",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "FLAGRA: VITA'S HOU...",
+    "artista": "Various Artists",
+    "data": "2026-05-08",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Baile do Perna - 2...",
+    "artista": "Various Artists",
+    "data": "2026-05-09",
+    "cidade": "São Paulo",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Spirit",
+    "artista": "Various Artists",
+    "data": "2026-05-16",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Gostoso BsB",
+    "artista": "Various Artists",
+    "data": "2026-05-16",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Village 2026 : FUN...",
+    "artista": "Various Artists",
+    "data": "2026-06-04",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Só Track Boa Festi...",
+    "artista": "Various Artists",
+    "data": "2026-06-05",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Gerações - Curitib...",
+    "artista": "Various Artists",
+    "data": "2026-05-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Festival Repique |...",
+    "artista": "Various Artists",
+    "data": "2026-05-09",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "DIOGO NOGUEIRA INF...",
+    "artista": "Various Artists",
+    "data": "2026-05-09",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Capital do Samba 2...",
+    "artista": "Various Artists",
+    "data": "2026-05-16",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Arraiá da Fundição...",
+    "artista": "Various Artists",
+    "data": "2026-05-22",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Santa Maré",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Na Vila - Blumenau",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "Na Vila - Blumenau",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Exc Rio",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "Exc Rio",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "SORRISO MAROTO | P...",
+    "artista": "Various Artists",
+    "data": "2026-04-05",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "SAMBA INDEPENDENTE...",
+    "artista": "Various Artists",
+    "data": "2026-04-09",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Churrasquinho Meno...",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "ohf-osasco-nuwance",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "VIBE TERAPÊUTICA",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "PRAINHA CLUB SUEL...",
+    "artista": "Various Artists",
+    "data": "2026-04-12",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "ENCONTRIN DAS QUIN...",
+    "artista": "Various Artists",
+    "data": "2026-04-16",
+    "cidade": "Villa, Planetário ...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "FEIJOADA DO THIAGO...",
+    "artista": "Various Artists",
+    "data": "2026-04-25",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Roda do Partido 20...",
+    "artista": "Various Artists",
+    "data": "2026-04-25",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Boteco do Zezo",
+    "artista": "Various Artists",
+    "data": "2026-05-03",
+    "cidade": "Vila Sítio São Joã...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Vila Sítio São Joã...",
+    "artista": "Various Artists",
+    "data": "2026-05-28",
+    "cidade": "Vila Sítio São Joã...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "#ESTUDEOFUNK SESSI...",
+    "artista": "Various Artists",
+    "data": "2026-04-17",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "GÁVEA SAMBA CLUBE",
+    "artista": "Various Artists",
+    "data": "2026-04-17",
+    "cidade": "Villa, Planetário ...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "SEMANA SANTA - WE ...",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "ARQ Uberlandia",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "ARQ Ribeirão Preto",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "CURADORIA",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "Villa, Planetário ...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "COSTELADA AMAZON B...",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "MARIROOTS SÓ PEDRA...",
+    "artista": "Various Artists",
+    "data": "2026-04-24",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
     "nome": "SPIN DOCTORS + SMASH MOUTH",
     "artista": "Various Artists",
     "data": "2026-04-30",
@@ -352,28 +936,548 @@
     "url": "https://www.blueticket.com.br/evento/38008/empreende-brazil-conference-2026-sc"
   },
   {
-    "nome": "OUT",
+    "nome": "MC GP - OFICINA",
     "artista": "Various Artists",
-    "data": "2026-10-30",
-    "cidade": "",
-    "fonte": "ticketsforfun",
-    "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    "data": "2026-04-03",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/mc-gp-oficina-03-de-abril"
   },
   {
-    "nome": "AGO",
+    "nome": "03 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "TATURANA COM GREG",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/taturana-com-greg-03-de-abril"
+  },
+  {
+    "nome": "BAILE DAS RELIQUIAS COM DEDE E NEGO BLUE",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/baile-das-reliquias-com-dede-e-nego-blue-04-de-abril"
+  },
+  {
+    "nome": "04 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SÁBADO COM LUCAS AKIRA E FÁBIO",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/sabado-com-lucas-akira-e-fabio-04-de-abril"
+  },
+  {
+    "nome": "SUZANO MUSIC FESTIVAL 2026 - PASSAPORTE",
+    "artista": "Various Artists",
+    "data": "2026-04-09",
+    "cidade": "Suzano - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-passaporte-09-de-abril"
+  },
+  {
+    "nome": "09 de Abril a 12 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-09",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SUZANO MUSIC FESTIVAL 2026 | LEONARDO + KAIQUE E FELIPE + THIAGO CARVALHO",
+    "artista": "Various Artists",
+    "data": "2026-08-20",
+    "cidade": "Suzano - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-leonardo-kaique-e-felipe-thiago-carvalho-09-de-abril"
+  },
+  {
+    "nome": "09 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-09",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SUZANO MUSIC FESTIVAL 2026 | MURILO HUFF + THIAGO E GRACIANO",
+    "artista": "Various Artists",
+    "data": "2026-08-20",
+    "cidade": "Suzano - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-murilo-huff-thiago-e-graciano-10-de-abril"
+  },
+  {
+    "nome": "10 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-10",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SEXTOU DO VILLA COM MARCELINHO FREITAS",
+    "artista": "Various Artists",
+    "data": "2026-04-10",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/sextou-do-villa-com-sampa-crew-e-marcelinho-freitas-10-de-abril"
+  },
+  {
+    "nome": "GERIATRICUS EM PIRACICABA",
+    "artista": "Various Artists",
+    "data": "2026-04-10",
+    "cidade": "Piracicaba - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/geriatricus-em-piracicaba-10-de-abril"
+  },
+  {
+    "nome": "11 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "DESPEDIDA DO PACA",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/despedida-do-paca-11-de-abril"
+  },
+  {
+    "nome": "GERIATRICUS EM SOROCABA",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "Sorocaba - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/geriatricus-em-sorocaba-11-de-abril"
+  },
+  {
+    "nome": "53ª EXPOAGRO ITAPETININGA 2026",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "Itapetininga - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/53a-expoagro-itapetininga-2026"
+  },
+  {
+    "nome": "11 de Abril a 20 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "53ª EXPOAGRO ITAPETININGA 2026 - SOLIDÁRIO",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "Itapetininga - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/53a-expoagro-itapetininga-2026-solidario"
+  },
+  {
+    "nome": "BAILE DA TROPA COM TRAPLAUDO",
+    "artista": "Various Artists",
+    "data": "2026-04-11",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/baile-da-tropa-com-traplaudo-11-de-abril"
+  },
+  {
+    "nome": "AS GUERREIRAS DO KPOP - TEATRO UNIVAP",
+    "artista": "Various Artists",
+    "data": "2026-04-12",
+    "cidade": "São José dos Campos - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/as-guerreiras-do-kpop-teatro-univap-12-de-abril"
+  },
+  {
+    "nome": "12 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-12",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SUZANO MUSIC FESTIVAL 2026 | ROUPA NOVA + ACOUSTIX",
+    "artista": "Various Artists",
+    "data": "2026-11-20",
+    "cidade": "Suzano - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-roupa-nova-acoustix-12-de-abril"
+  },
+  {
+    "nome": "SEGUNDA FORROZEIRA COM KELVI PABLO E CHICÃO DOS TECLADOS",
+    "artista": "Various Artists",
+    "data": "2026-04-13",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/segunda-forrozeira-com-kelvi-pablo-e-chicao-dos-teclados-13-de-abril"
+  },
+  {
+    "nome": "13 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-13",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "ROLAND-GARROS JUNIOR SERIES BY RENAULT 2026",
+    "artista": "Various Artists",
+    "data": "2026-06-20",
+    "cidade": "São Paulo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/roland-garros-junior-series-by-renault-2026-15-de-abril"
+  },
+  {
+    "nome": "15 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-15",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "16 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-16",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "17 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-17",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "18 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-18",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "O MAIS AMADO DO BRASIL",
+    "artista": "Various Artists",
+    "data": "2026-04-18",
+    "cidade": "Guarulhos - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/o-mais-amado-do-brasil-18-de-abril"
+  },
+  {
+    "nome": "BAILE DA TROPA COM NILO",
+    "artista": "Various Artists",
+    "data": "2026-04-18",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/baile-da-tropa-com-nilo-18-de-abril"
+  },
+  {
+    "nome": "19 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-19",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SERESTA & SOFRÊNCIA COM THIAGO AQUINO E ANDERSON O GAROTINHO",
+    "artista": "Various Artists",
+    "data": "2026-04-19",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/seresta-e-sofrencia-com-thiago-aquino-e-anderson-o-garotinho-19-de-abril"
+  },
+  {
+    "nome": "SEGUNDA FORROZEIRA COM OS MENINOS DE BARÃO",
+    "artista": "Various Artists",
+    "data": "2026-04-20",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/segunda-forrrozeira-com-os-meninos-de-barao-20-de-abril"
+  },
+  {
+    "nome": "20 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-20",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "FUNK IN VILLA COM JVILLA",
+    "artista": "Various Artists",
+    "data": "2026-04-20",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/funk-in-villa-com-jvilla-20-de-abril"
+  },
+  {
+    "nome": "SEXTOU DO VILLA",
+    "artista": "Various Artists",
+    "data": "2026-04-24",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/sextou-do-villa-24-de-abril"
+  },
+  {
+    "nome": "24 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-24",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "BAILE DO HOMI",
+    "artista": "Various Artists",
+    "data": "2026-04-30",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/baile-do-homi-30-de-abril"
+  },
+  {
+    "nome": "30 de Abril",
+    "artista": "Various Artists",
+    "data": "2026-04-30",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "VITA'S HOUSE - OFICINA",
+    "artista": "Various Artists",
+    "data": "2026-04-30",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/vita-s-house-oficina-30-de-abril"
+  },
+  {
+    "nome": "SEXTA PRIME COM THEUZINHO",
+    "artista": "Various Artists",
+    "data": "2026-05-01",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/sexta-prime-com-theuzinho-01-de-maio"
+  },
+  {
+    "nome": "01 de Maio",
+    "artista": "Various Artists",
+    "data": "2026-05-01",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "A ÚNICA CASA SHOW",
+    "artista": "Various Artists",
+    "data": "2026-05-08",
+    "cidade": "Ribeirão Preto - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/08-05-a-unica-casa-show-26-de-marco"
+  },
+  {
+    "nome": "08 de Maio",
+    "artista": "Various Artists",
+    "data": "2026-05-08",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "BRAVOS ITACURUÇA",
+    "artista": "Various Artists",
+    "data": "2026-05-09",
+    "cidade": "Cunha - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/bravos-itacuruca-09-de-maio"
+  },
+  {
+    "nome": "09 de Maio",
+    "artista": "Various Artists",
+    "data": "2026-05-09",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SHOW INIMIGOS DA HP",
+    "artista": "Various Artists",
+    "data": "2026-05-09",
+    "cidade": "São Paulo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/show-inimigos-da-hp-09-de-maio"
+  },
+  {
+    "nome": "JAPA NK NO VILLA JARDIM",
+    "artista": "Various Artists",
+    "data": "2026-05-15",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/japa-nk-no-villa-jardim-15-de-maio"
+  },
+  {
+    "nome": "15 de Maio",
+    "artista": "Various Artists",
+    "data": "2026-05-15",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SÁBADO PRIME COM MC MENO K",
+    "artista": "Various Artists",
+    "data": "2026-05-16",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/sabado-prime-com-mc-meno-k-16-de-maio"
+  },
+  {
+    "nome": "16 de Maio",
+    "artista": "Various Artists",
+    "data": "2026-05-16",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "DEIXA SE ENVOLVER",
+    "artista": "Various Artists",
+    "data": "2026-05-23",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/deixa-se-envolver-23-de-maio"
+  },
+  {
+    "nome": "23 de Maio",
+    "artista": "Various Artists",
+    "data": "2026-05-23",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "BEEF TOUR - 10 ANOS - BAURU",
+    "artista": "Various Artists",
+    "data": "2026-05-30",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/beef-tour-10-anos-bauru-30-de-maio"
+  },
+  {
+    "nome": "30 de Maio",
+    "artista": "Various Artists",
+    "data": "2026-05-30",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "ONEWAY ANIVERSARIO 42 ANOS",
+    "artista": "Various Artists",
+    "data": "2026-05-30",
+    "cidade": "Guarulhos - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/oneway-aniversario-42-anos-30-de-maio"
+  },
+  {
+    "nome": "DEIXA ROLAR - FABINHO AO VIVO",
+    "artista": "Various Artists",
+    "data": "2026-05-30",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/deixa-rolar-oficina-fabinho-ao-vivo-30-de-maio"
+  },
+  {
+    "nome": "GERIATRICUS EM PRESIDENTE PRUDENTE",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "Presidente Prudente - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/geriatricus-em-presidente-prudente-13-de-junho"
+  },
+  {
+    "nome": "13 de Junho",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "BEEF TOUR - 10 ANOS - ITAPETININGA",
+    "artista": "Various Artists",
+    "data": "2026-08-08",
+    "cidade": "Itapetininga - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/beef-tour-10-anos-itapetininga-08-de-agosto"
+  },
+  {
+    "nome": "08 de Agosto",
+    "artista": "Various Artists",
+    "data": "2026-08-08",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
+  },
+  {
+    "nome": "SEMINÁRIO TÉCNICO BUAKAW",
+    "artista": "Various Artists",
+    "data": "2026-08-16",
+    "cidade": "Mogi das Cruzes - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/16-08-seminario-tecnico-buakaw-16-de-agosto"
+  },
+  {
+    "nome": "16 de Agosto",
     "artista": "Various Artists",
     "data": "2026-08-16",
     "cidade": "",
-    "fonte": "ticketsforfun",
-    "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
   },
   {
-    "nome": "MAI",
+    "nome": "BEEF TOUR - 10 ANOS - PRESIDENTE PRUDENTE",
     "artista": "Various Artists",
-    "data": "2026-05-26",
+    "data": "2026-10-17",
+    "cidade": "Presidente Prudente - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/beef-tour-10-anos-presidente-prudente-17-de-outubro"
+  },
+  {
+    "nome": "17 de Outubro",
+    "artista": "Various Artists",
+    "data": "2026-10-17",
     "cidade": "",
-    "fonte": "ticketsforfun",
-    "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/"
   },
   {
     "nome": "SEX",

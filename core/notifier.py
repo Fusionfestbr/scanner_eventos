@@ -63,6 +63,8 @@ def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: 
     artista = evento.get("artista", "N/A")
     data = evento.get("data", "N/A")
     cidade = evento.get("cidade", "N/A")
+    fonte = evento.get("fonte", "N/A")
+    link = evento.get("link", "")
     
     nota = analise.get("nota_final", 0)
     confianca = auditoria.get("confianca", 0)
@@ -74,6 +76,8 @@ def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: 
 🎤 <b>Artista:</b> {artista}
 📅 <b>Data:</b> {data}
 📍 <b>Cidade:</b> {cidade}
+🌐 <b>Site:</b> {fonte}
+🔗 <b>Link:</b> {link}
 
 ⭐ <b>Nota:</b> {nota:.1f}/10
 🎯 <b>Confiança:</b> {confianca}/10
