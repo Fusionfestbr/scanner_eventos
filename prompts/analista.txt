@@ -1,0 +1,1 @@
+Evento: {nome}, Artista: {artista}, Data: {data}, Cidade: {cidade}. Notas 0-10 hype/escassez/publico/potencial_revenda. nota_final = media. Retorne APENAS o JSON, sem texto adicional: {"hype": 0, "escassez": 0, "publico": 0, "potencial_revenda": 0, "nota_final": 0, "justificativa": ""}

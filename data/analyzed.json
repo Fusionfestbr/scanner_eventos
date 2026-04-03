@@ -1,0 +1,40 @@
+[
+  {
+    "evento": {
+      "nome": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-09-15",
+      "cidade": "Rio de Janeiro",
+      "fonte": "simulado",
+      "url": "https://rockinrio.com"
+    },
+    "analise": {
+      "evento": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-09-15",
+      "cidade": "Rio de Janeiro",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 9.2
+    }
+  },
+  {
+    "evento": {
+      "nome": "Lollapalooza Brasil",
+      "artista": "Various Artists",
+      "data": "2026-05-28",
+      "cidade": "São Paulo",
+      "fonte": "simulado",
+      "url": "https://lollapaloozabr.com"
+    },
+    "analise": {
+      "hype": 9,
+      "escassez": 7,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 8.6
+    }
+  }
+]

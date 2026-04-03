@@ -8,6 +8,7 @@ from datetime import datetime
 
 from agents.coletor import coletar_eventos
 from agents.validador import validar_eventos
+from agents.analista import analisar_eventos
 
 
 def log(msg: str) -> None:
@@ -31,16 +32,16 @@ def carregar_json(filepath: str) -> list:
         return json.load(f)
 
 
-def executar_pipeline() -> tuple[int, int]:
+def executar_pipeline() -> tuple[int, int, int]:
     """
     Executa o pipeline completo.
     
     Returns:
-        Tupla com (qtd_coletados, qtd_validados)
+        Tupla com (qtd_coletados, qtd_validados, qtd_analisados)
     """
     log("=== INICIANDO PIPELINE DE EVENTOS ===")
     
-    log("1/4 - Coletando eventos...")
+    log("1/5 - Coletando eventos...")
     eventos_coletados = coletar_eventos()
     qtd_coletados = len(eventos_coletados)
     log(f"   -> Coletados {qtd_coletados} eventos")
@@ -49,11 +50,11 @@ def executar_pipeline() -> tuple[int, int]:
     salvar_json(eventos_coletados, raw_path)
     log(f"   -> Salvo em {raw_path}")
     
-    log("2/4 - Carregando dados brutos...")
+    log("2/5 - Carregando dados brutos...")
     eventos_brutos = carregar_json(raw_path)
     log(f"   -> Carregados {len(eventos_brutos)} eventos")
     
-    log("3/4 - Validando eventos...")
+    log("3/5 - Validando eventos...")
     eventos_validados = validar_eventos(eventos_brutos)
     qtd_validados = len(eventos_validados)
     log(f"   -> {qtd_validados} eventos válidos")
@@ -62,6 +63,15 @@ def executar_pipeline() -> tuple[int, int]:
     salvar_json(eventos_validados, clean_path)
     log(f"   -> Salvo em {clean_path}")
     
+    log("4/4 - Analisando eventos com IA...")
+    eventos_analisados = analisar_eventos(eventos_validados)
+    qtd_analisados = len(eventos_analisados)
+    log(f"   -> {qtd_analisados} eventos analisados")
+    
+    analyzed_path = os.path.join(os.path.dirname(__file__), "..", "data", "analyzed.json")
+    salvar_json(eventos_analisados, analyzed_path)
+    log(f"   -> Salvo em {analyzed_path}")
+    
     log("=== PIPELINE CONCLUÍDO ===")
     
-    return qtd_coletados, qtd_validados
+    return qtd_coletados, qtd_validados, qtd_analisados
