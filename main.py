@@ -7,12 +7,14 @@ import os
 import sys
 
 from core.orchestrator import executar_pipeline
+from core.scheduler import executar_loop, stop_scheduler
 from core.learning import (
     calcular_metricas,
     obter_thresholds,
     mostrar_historico,
     registrar_resultado
 )
+from config import INTERVALO_MINUTOS
 
 
 def main():
@@ -29,6 +31,16 @@ def main():
     
     if "--register" in args:
         registrar_resultado_manual()
+        return
+    
+    if "--daemon" in args:
+        idx = args.index("--daemon")
+        intervalo = int(args[idx + 1]) if idx + 1 < len(args) else INTERVALO_MINUTOS
+        executar_loop(intervalo)
+        return
+    
+    if "--stop" in args:
+        stop_scheduler()
         return
     
     executar_pipeline_normal()
@@ -100,7 +112,7 @@ def executar_pipeline_normal():
     print("  SCANNER DE EVENTOS - Pipeline de Dados")
     print("="*50 + "\n")
     
-    qtd_coletados, qtd_validados, qtd_analisados, qtd_finais = executar_pipeline()
+    qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, score = executar_pipeline()
     
     final_path = os.path.join(os.path.dirname(__file__), "data", "final.json")
     if os.path.exists(final_path):
@@ -145,6 +157,7 @@ def executar_pipeline_normal():
         
         thresholds = obter_thresholds()
         print(f"\n  Thresholds usados: nota>={thresholds['min_nota_comprar']}, confianca>={thresholds['min_confianca']}")
+        print(f"\n  Score de qualidade: {score}%")
     
     print("\n" + "-"*50)
     print("RESUMO DO PIPELINE:")
@@ -152,6 +165,7 @@ def executar_pipeline_normal():
     print(f"  Eventos limpos:     {qtd_validados}")
     print(f"  Eventos analisados: {qtd_analisados}")
     print(f"  Decisoes tomadas:   {qtd_finais}")
+    print(f"  Qualidade dados:    {score}%")
     print("-"*50 + "\n")
 
 

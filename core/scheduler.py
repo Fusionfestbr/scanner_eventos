@@ -1,0 +1,224 @@
+"""
+Scheduler para execução automática do pipeline.
+"""
+import json
+import os
+import signal
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
+
+from config import INTERVALO_MINUTOS, LOCK_FILE, LAST_RUN_FILE
+from core.orchestrator import executar_pipeline
+from core.learning import carregar_historico
+
+
+running = True
+
+
+def signal_handler(sig, frame):
+    """Handler para Ctrl+C graceful."""
+    global running
+    print("\n\n[Scheduler] Parando gracefully...")
+    running = False
+
+
+def acquire_lock() -> bool:
+    """Adquire lock para evitar execução duplicada."""
+    if os.path.exists(LOCK_FILE):
+        try:
+            with open(LOCK_FILE, "r") as f:
+                pid = int(f.read().strip())
+            if os.name == 'nt':
+                try:
+                    import psutil
+                    if psutil.pid_exists(pid):
+                        return False
+                except ImportError:
+                    pass
+            return False
+        except (ValueError, IOError):
+            pass
+    
+    os.makedirs(os.path.dirname(LOCK_FILE), exist_ok=True)
+    with open(LOCK_FILE, "w") as f:
+        f.write(str(os.getpid()))
+    return True
+
+
+def release_lock():
+    """Libera lock."""
+    try:
+        os.remove(LOCK_FILE)
+    except FileNotFoundError:
+        pass
+
+
+def save_last_run(dados: dict):
+    """Salva informações do último run."""
+    os.makedirs(os.path.dirname(LAST_RUN_FILE), exist_ok=True)
+    with open(LAST_RUN_FILE, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=2)
+
+
+def load_last_run() -> dict:
+    """Carrega informações do último run."""
+    if not os.path.exists(LAST_RUN_FILE):
+        return {}
+    try:
+        with open(LAST_RUN_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return {}
+
+
+def filtrar_eventos_novos(eventos: list[dict]) -> list[dict]:
+    """Filtra eventos que já estão no histórico."""
+    historico = carregar_historico()
+    
+    existentes = set()
+    for item in historico:
+        key = f"{item.get('evento', '')}_{item.get('data', '')}"
+        existentes.add(key)
+    
+    eventos_novos = []
+    for evento in eventos:
+        key = f"{evento.get('nome', '')}_{evento.get('data', '')}"
+        if key not in existentes:
+            eventos_novos.append(evento)
+    
+    return eventos_novos
+
+
+def executar_ciclo() -> dict:
+    """Executa um ciclo do pipeline."""
+    inicio = datetime.now()
+    
+    print(f"\n[{inicio.strftime('%Y-%m-%d %H:%M:%S')}] === INICIO DO CICLO ===")
+    
+    from agents.coletor import coletar_eventos
+    from config import MODO_COLETA
+    
+    print(f"  Modo de coleta: {MODO_COLETA}")
+    
+    eventos_coletados = coletar_eventos()
+    total_coletados = len(eventos_coletados)
+    print(f"  Eventos coletados: {total_coletados}")
+    
+    eventos_novos = filtrar_eventos_novos(eventos_coletados)
+    print(f"  Eventos novos: {len(eventos_novos)}")
+    
+    if not eventos_novos:
+        print("  Nenhum evento novo para processar.")
+        return {
+            "timestamp": inicio.isoformat(),
+            "coletados": total_coletados,
+            "novos": 0,
+            "processados": 0,
+            "status": "sem_novos"
+        }
+    
+    from agents.validador import validar_eventos
+    from agents.analista import analisar_eventos
+    from agents.auditor import auditar_eventos
+    from core.decision import processar_decisoes
+    from core.learning import salvar_evento_no_historico
+    
+    eventos_validados = validar_eventos(eventos_novos)
+    eventos_analisados = analisar_eventos(eventos_validados)
+    eventos_auditados = auditar_eventos(eventos_analisados)
+    eventos_finais = processar_decisoes(eventos_auditados)
+    
+    for item in eventos_finais:
+        evento = item.get("evento", {})
+        analise = item.get("analise", {})
+        auditoria = item.get("auditoria", {})
+        acao = item.get("acao_final", "IGNORAR")
+        salvar_evento_no_historico(evento, analise, auditoria, acao)
+    
+    compras = sum(1 for e in eventos_finais if e.get("acao_final") == "COMPRAR")
+    monitorar = sum(1 for e in eventos_finais if e.get("acao_final") == "MONITORAR")
+    ignorar = sum(1 for e in eventos_finais if e.get("acao_final") == "IGNORAR")
+    
+    print(f"  Pipeline: {len(eventos_finais)} processados")
+    print(f"  Decisões: COMPRAR({compras}), MONITORAR({monitorar}), IGNORAR({ignorar})")
+    
+    fim = datetime.now()
+    duracao = (fim - inicio).total_seconds()
+    
+    return {
+        "timestamp": inicio.isoformat(),
+        "coletados": total_coletados,
+        "novos": len(eventos_novos),
+        "processados": len(eventos_finais),
+        "comprar": compras,
+        "monitorar": monitorar,
+        "ignorar": ignorar,
+        "duracao_segundos": duracao,
+        "status": "sucesso"
+    }
+
+
+def executar_loop(intervalo_minutos: int | None = None):
+    """
+    Executa o loop de scheduler.
+    
+    Args:
+        intervalo_minutos: Intervalo entre execuções (default: config.INTERVALO_MINUTOS)
+    """
+    global running
+    
+    intervalo_minutos = intervalo_minutos or INTERVALO_MINUTOS
+    
+    if not acquire_lock():
+        print("[ERROR] Scheduler já está rodando!")
+        sys.exit(1)
+    
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
+    
+    print("=" * 50)
+    print("  SCANNER DE EVENTOS - SCHEDULER")
+    print("=" * 50)
+    print(f"  Intervalo: {intervalo_minutos} minutos")
+    print(f"  Pressione CTRL+C para parar")
+    print("=" * 50)
+    
+    try:
+        while running:
+            try:
+                resultado = executar_ciclo()
+                
+                save_last_run({
+                    "ultimo_ciclo": resultado,
+                    "proximo_ciclo": datetime.now().isoformat(),
+                    "intervalo_minutos": intervalo_minutos
+                })
+                
+                print(f"\n  Último run: {resultado.get('timestamp', '')}")
+                
+                if running:
+                    segundos = intervalo_minutos * 60
+                    print(f"  Próximo ciclo em {intervalo_minutos}min...")
+                    time.sleep(segundos)
+                    
+            except Exception as e:
+                print(f"  [ERRO] Ciclo falhou: {e}")
+                time.sleep(60)
+                
+    finally:
+        release_lock()
+        print("\n[Scheduler] Encerrado.")
+
+
+def stop_scheduler():
+    """Para o scheduler."""
+    if os.path.exists(LOCK_FILE):
+        try:
+            os.remove(LOCK_FILE)
+            print("Scheduler parado.")
+        except Exception as e:
+            print(f"Erro ao parar: {e}")
+    else:
+        print("Scheduler não está rodando.")

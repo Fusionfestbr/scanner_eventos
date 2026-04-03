@@ -12,6 +12,14 @@ from agents.analista import analisar_eventos
 from agents.auditor import auditar_eventos
 from core.decision import processar_decisoes
 from core.learning import salvar_evento_no_historico
+from core.data_quality import (
+    filtrar_eventos_validos,
+    calcular_score,
+    verificar_qualidade,
+    checar_fallback,
+    salvar_rejeitados
+)
+from config import FALLBACK_ENABLED
 
 
 def log(msg: str) -> None:
@@ -35,16 +43,16 @@ def carregar_json(filepath: str) -> list:
         return json.load(f)
 
 
-def executar_pipeline() -> tuple[int, int, int, int]:
+def executar_pipeline() -> tuple[int, int, int, int, int]:
     """
     Executa o pipeline completo.
     
     Returns:
-        Tupla com (qtd_coletados, qtd_validados, qtd_analisados, qtd_finais)
+        Tupla com (qtd_coletados, qtd_validos_quality, qtd_analisados, qtd_finais, qualidade_score)
     """
     log("=== INICIANDO PIPELINE DE EVENTOS ===")
     
-    log("1/6 - Coletando eventos...")
+    log("1/7 - Coletando eventos...")
     eventos_coletados = coletar_eventos()
     qtd_coletados = len(eventos_coletados)
     log(f"   -> Coletados {qtd_coletados} eventos")
@@ -53,12 +61,38 @@ def executar_pipeline() -> tuple[int, int, int, int]:
     salvar_json(eventos_coletados, raw_path)
     log(f"   -> Salvo em {raw_path}")
     
-    log("2/6 - Carregando dados brutos...")
-    eventos_brutos = carregar_json(raw_path)
-    log(f"   -> Carregados {len(eventos_brutos)} eventos")
+    log("2/7 - Verificando qualidade dos dados...")
+    eventos_validos_qc, eventos_rejeitados = filtrar_eventos_validos(eventos_coletados)
+    qtd_validos_qc = len(eventos_validos_qc)
     
-    log("3/6 - Validando eventos...")
-    eventos_validados = validar_eventos(eventos_brutos)
+    score = calcular_score(qtd_validos_qc, qtd_coletados)
+    log(f"   -> {qtd_validos_qc}/{qtd_coletados} válidos ({score['score']}%)")
+    
+    if eventos_rejeitados:
+        salvar_rejeitados(eventos_rejeitados)
+        log(f"   -> {len(eventos_rejeitados)} eventos rejeitados salvos em rejected.json")
+    
+    qualidade_aceitavel, msg_qualidade = verificar_qualidade(qtd_validos_qc, qtd_coletados)
+    print(f"   {msg_qualidade}")
+    
+    fallback_permitido = False
+    if not qualidade_aceitavel:
+        print(f"   [ALERTA] Qualidade abaixo do mínimo!")
+        if FALLBACK_ENABLED:
+            print(f"   -> Fallback ativado (use dados simulados)")
+            from agents.coletor import coletar_eventos_simulados
+            eventos_validos_qc = coletar_eventos_simulados()
+            qtd_validos_qc = len(eventos_validos_qc)
+            print(f"   -> Usando {qtd_validos_qc} eventos simulados")
+            fallback_permitido = True
+        else:
+            print(f"   -> Fallback desabilitado. Processando apenas {qtd_validos_qc} eventos.")
+    
+    log("3/7 - Carregando dados para validação...")
+    log(f"   -> {qtd_validos_qc} eventos para validar")
+    
+    log("4/7 - Validando eventos...")
+    eventos_validados = validar_eventos(eventos_validos_qc)
     qtd_validados = len(eventos_validados)
     log(f"   -> {qtd_validados} eventos válidos")
     
@@ -66,7 +100,7 @@ def executar_pipeline() -> tuple[int, int, int, int]:
     salvar_json(eventos_validados, clean_path)
     log(f"   -> Salvo em {clean_path}")
     
-    log("4/6 - Analisando eventos com IA...")
+    log("5/7 - Analisando eventos com IA...")
     eventos_analisados = analisar_eventos(eventos_validados)
     qtd_analisados = len(eventos_analisados)
     log(f"   -> {qtd_analisados} eventos analisados")
@@ -75,11 +109,11 @@ def executar_pipeline() -> tuple[int, int, int, int]:
     salvar_json(eventos_analisados, analyzed_path)
     log(f"   -> Salvo em {analyzed_path}")
     
-    log("5/6 - Auditando eventos...")
+    log("6/7 - Auditando eventos...")
     eventos_auditados = auditar_eventos(eventos_analisados)
     log(f"   -> {len(eventos_auditados)} eventos auditados")
     
-    log("6/6 - Tomando decisões...")
+    log("7/7 - Tomando decisões...")
     eventos_finais = processar_decisoes(eventos_auditados)
     qtd_finais = len(eventos_finais)
     log(f"   -> {qtd_finais} decisões tomadas")
@@ -99,4 +133,4 @@ def executar_pipeline() -> tuple[int, int, int, int]:
     
     log("=== PIPELINE CONCLUÍDO ===")
     
-    return qtd_coletados, qtd_validados, qtd_analisados, qtd_finais
+    return qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, score['score']

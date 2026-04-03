@@ -1,98 +1,28 @@
 [
   {
     "evento": {
-      "nome": "Rock in Rio 2026",
+      "nome": "Curso de Energia Solar no Rio de Janeiro RJ nos dias  24/04 e 25/04/2026",
       "artista": "Various Artists",
-      "data": "2026-09-15",
-      "cidade": "Rio de Janeiro",
-      "fonte": "simulado",
-      "url": "https://rockinrio.com"
+      "data": "2026-04-25",
+      "cidade": "Brasil",
+      "fonte": "eventbrite",
+      "url": "https://www.eventbrite.com.br/e/curso-de-energia-solar-no-rio-de-janeiro-rj-nos-dias-2404-e-25042026-tickets-1970288356513?aff=ebdssbcitybrowse"
     },
     "analise": {
-      "evento": "Rock in Rio 2026",
+      "evento": "Curso de Energia Solar",
+      "localizacao": "Rio de Janeiro RJ",
+      "datas": [
+        "24/04/2026",
+        "25/04/2026"
+      ],
       "artista": "Various Artists",
-      "data": "2026-09-15",
-      "cidade": "Rio de Janeiro",
-      "hype": 9,
-      "escassez": 8,
-      "publico": 10,
-      "potencial_revenda": 9,
-      "nota_final": 9.2
-    }
-  },
-  {
-    "evento": {
-      "nome": "Lollapalooza Brasil",
-      "artista": "Various Artists",
-      "data": "2026-05-28",
-      "cidade": "São Paulo",
-      "fonte": "simulado",
-      "url": "https://lollapaloozabr.com"
-    },
-    "analise": {
-      "hype": 9,
-      "escassez": 7,
-      "publico": 10,
-      "potencial_revenda": 9,
-      "nota_final": 8.6
-    }
-  },
-  {
-    "evento": {
-      "nome": "Show Taylor Swift",
-      "artista": "Taylor Swift",
-      "data": "2026-06-20",
-      "cidade": "São Paulo",
-      "fonte": "simulado",
-      "url": "https://taylorswift.com"
-    },
-    "analise": {
-      "hype": 10,
-      "escassez": 9,
-      "publico": 10,
-      "potencial_revenda": 10
-    }
-  },
-  {
-    "evento": {
-      "nome": "Festival Tomorrowland",
-      "artista": "Various Artists",
-      "data": "2026-07-15",
-      "cidade": "São Paulo",
-      "fonte": "simulado",
-      "url": "https://tomorrowland.com"
-    },
-    "analise": {
-      "evento": "Tomorrowland",
-      "artista": "Various Artists",
-      "data": "2026-07-15",
-      "cidade": "São Paulo",
-      "hype": 9,
-      "escassez": 10,
-      "publico": 10,
-      "potencial_revenda": 10,
-      "nota_final": 9.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "Show Beyoncé",
-      "artista": "Beyoncé",
-      "data": "2026-08-10",
-      "cidade": "Rio de Janeiro",
-      "fonte": "simulado",
-      "url": "https://beyonce.com"
-    },
-    "analise": {
-      "evento": "Show Beyoncé",
-      "artista": "Beyoncé",
-      "data": "2026-08-10",
-      "cidade": "Rio de Janeiro",
-      "hype": 9,
-      "escassez": 9,
-      "publico": 10,
-      "potencial_revenda": 10,
-      "nota_final": 9.5
+      "data_formato": "2026-04-25",
+      "cidade": "Brasil",
+      "hype": 6,
+      "escassez": 3,
+      "publico": 7,
+      "potencial_revenda": 8,
+      "nota_final": 6.67
     }
   }
 ]

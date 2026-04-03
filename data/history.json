@@ -68,5 +68,19 @@
     "resultado_real": null,
     "data_decisao": "2026-04-03T08:58:18.538871",
     "data_registro": "2026-04-03T08:58:18.538875"
+  },
+  {
+    "id": "Curso_de_Energia_Solar_no_Rio_de_Janeiro_RJ_nos_dias__24/04_e_25/04/2026_2026-04-25",
+    "evento": "Curso de Energia Solar no Rio de Janeiro RJ nos dias  24/04 e 25/04/2026",
+    "artista": "Various Artists",
+    "data": "2026-04-25",
+    "cidade": "Brasil",
+    "nota_final": 6.67,
+    "decisao": "MONITORAR",
+    "confianca": 6,
+    "acao_final": "MONITORAR",
+    "resultado_real": null,
+    "data_decisao": "2026-04-03T09:12:57.042143",
+    "data_registro": "2026-04-03T09:12:57.042149"
   }
 ]

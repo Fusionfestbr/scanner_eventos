@@ -1,18 +1,36 @@
 """
 Agente coletor de eventos.
-Simula coleta de eventos (hardcoded para esta fase).
+Suporta modo simulado (fallback) e real (scraper).
 """
-from datetime import datetime
+from config import MODO_COLETA
+from agents.scraper import buscar_eventos_reais
 
 
-def coletar_eventos() -> list[dict]:
+def coletar_eventos(modo: str | None = None) -> list[dict]:
     """
     Retorna lista de eventos coletados.
-    Inclui cenários diversos para teste:
-    - eventos futuros válidos
-    - eventos passados
-    - eventos duplicados
-    - eventos com dados inválidos
+    
+    Args:
+        modo: "simulado" ou "real" (default: config.MODO_COLETA)
+    
+    Returns:
+        Lista de eventos
+    """
+    modo = modo or MODO_COLETA
+    
+    if modo == "real":
+        eventos = buscar_eventos_reais()
+        eventos_validos = [e for e in eventos if e.get("data")]
+        if eventos_validos:
+            return eventos_validos
+        print("   [WARN] Scraping não retornou eventos válidos, usando modo simulado")
+    
+    return coletar_eventos_simulados()
+
+
+def coletar_eventos_simulados() -> list[dict]:
+    """
+    Retorna lista de eventos simulados (fallback).
     """
     eventos = [
         {"nome": "Rock in Rio 2026", "artista": "Various Artists", "data": "2026-09-15", "cidade": "Rio de Janeiro", "fonte": "simulado", "url": "https://rockinrio.com"},
