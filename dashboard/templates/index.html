@@ -6,6 +6,7 @@
     <title>Fusion Revenda Master</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
             --bg-dark: #0a0a0f;
@@ -52,6 +53,61 @@
             margin-bottom: 50px;
             padding-bottom: 30px;
             border-bottom: 1px solid var(--border);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .collect-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--green), #059669);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .collect-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+
+        .collect-btn.loading {
+            background: linear-gradient(135deg, var(--cyan), #0891b2);
+            cursor: not-allowed;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--bg-card);
+            z-index: 1000;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .progress-bar.active {
+            transform: translateY(0);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--green), var(--cyan));
+            width: 0%;
+            transition: width 0.3s ease;
         }
 
         .brand {
@@ -577,7 +633,37 @@
             gap: 10px;
         }
 
-        .footer i { color: var(--accent); }
+        .tabs {
+            display: flex;
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .tab.active {
+            background: var(--accent-glow);
+            color: var(--accent-light);
+            box-shadow: 0 2px 8px rgba(168, 85, 247, 0.2);
+        }
+
+        .tab:hover {
+            color: var(--text);
+        }
 
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
@@ -597,7 +683,34 @@
         .stat-card:nth-child(4) { animation-delay: 0.25s; }
         .stat-card:nth-child(5) { animation-delay: 0.3s; }
 
-        .content-panel { animation: fadeInUp 0.5s ease forwards; animation-delay: 0.4s; opacity: 0; }
+        .charts-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            height: 300px;
+        }
+
+        .chart-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chart-title i {
+            color: var(--accent);
+        }
 
         @media (max-width: 1200px) {
             .stats-grid { grid-template-columns: repeat(3, 1fr); }
@@ -616,22 +729,32 @@
 <body>
     <div class="app-container">
         <header class="header">
-            <div class="brand">
-                <div class="brand-icon">
-                    <i class="fas fa-atom"></i>
-                </div>
-                <div class="brand-text">
-                    <h1>Fusion Revenda</h1>
-                    <span>Scanner de Oportunidades</span>
+            <div class="header-left">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h1>Fusion Revenda</h1>
+                        <span>Scanner de Oportunidades</span>
+                    </div>
                 </div>
             </div>
             <div class="header-right">
+                <button class="collect-btn" id="collectBtn">
+                    <i class="fas fa-play"></i>
+                    <span>Iniciar Coleta</span>
+                </button>
                 <div class="status-badge">
                     <span class="status-dot"></span>
-                    <span>Live · 30s</span>
+                    <span id="statusText">Live · 30s</span>
                 </div>
             </div>
         </header>
+
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
 
         <div class="stats-grid">
             <div class="stat-card total">
@@ -668,6 +791,30 @@
                 </div>
                 <div class="stat-value">{{ estatisticas.nota_media }}</div>
                 <div class="stat-label">Nota Média</div>
+            </div>
+        </div>
+
+        <!-- Abas -->
+        <div class="tabs">
+            <button class="tab active" data-tab="oportunidades">Oportunidades</button>
+            <button class="tab" data-tab="todos">Todos os Eventos</button>
+        </div>
+
+        <!-- Gráficos -->
+        <div class="charts-section">
+            <div class="chart-container">
+                <div class="chart-title">
+                    <i class="fas fa-chart-pie"></i>
+                    Distribuição de Ações
+                </div>
+                <canvas id="actionsChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <div class="chart-title">
+                    <i class="fas fa-chart-line"></i>
+                    Evolução de Notas (30 dias)
+                </div>
+                <canvas id="notesChart"></canvas>
             </div>
         </div>
 
@@ -792,16 +939,28 @@
             </div>
 
             <div class="filter-bar">
-                <a href="/?acao=todos" class="filter-pill {{ 'active' if filtro == 'todos' else '' }}">
-                    <i class="fas fa-border-all"></i> Todos
+                <!-- Filtros Temporais -->
+                <a href="/?periodo=todos&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_periodo == 'todos' else '' }}">
+                    <i class="fas fa-calendar-alt"></i> Todas as Datas
                 </a>
-                <a href="/?acao=COMPRAR" class="filter-pill {{ 'active' if filtro == 'COMPRAR' else '' }}">
+                <a href="/?periodo=semana&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_periodo == 'semana' else '' }}">
+                    <i class="fas fa-calendar-week"></i> Esta Semana
+                </a>
+                <a href="/?periodo=mes&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_periodo == 'mes' else '' }}">
+                    <i class="fas fa-calendar"></i> Este Mês
+                </a>
+                
+                <!-- Filtros de Ação -->
+                <a href="/?acao=todos&periodo={{ filtro_periodo }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'todos' else '' }}">
+                    <i class="fas fa-border-all"></i> Todas Ações
+                </a>
+                <a href="/?acao=COMPRAR&periodo={{ filtro_periodo }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'COMPRAR' else '' }}">
                     <i class="fas fa-bolt"></i> Comprar
                 </a>
-                <a href="/?acao=MONITORAR" class="filter-pill {{ 'active' if filtro == 'MONITORAR' else '' }}">
+                <a href="/?acao=MONITORAR&periodo={{ filtro_periodo }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'MONITORAR' else '' }}">
                     <i class="fas fa-satellite-dish"></i> Monitorar
                 </a>
-                <a href="/?acao=IGNORAR" class="filter-pill {{ 'active' if filtro == 'IGNORAR' else '' }}">
+                <a href="/?acao=IGNORAR&periodo={{ filtro_periodo }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'IGNORAR' else '' }}">
                     <i class="fas fa-ban"></i> Ignorar
                 </a>
             </div>
@@ -898,5 +1057,168 @@
             Atualização automática · a cada 30 segundos
         </footer>
     </div>
+
+    <script>
+        // Dados das estatísticas
+        const statsData = {
+            comprar: {{ estatisticas.comprar }},
+            monitorar: {{ estatisticas.monitorar }},
+            ignorar: {{ estatisticas.ignorar }}
+        };
+
+        // Gráfico de ações
+        const actionsCtx = document.getElementById('actionsChart').getContext('2d');
+        const actionsChart = new Chart(actionsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Comprar', 'Monitorar', 'Ignorar'],
+                datasets: [{
+                    data: [statsData.comprar, statsData.monitorar, statsData.ignorar],
+                    backgroundColor: [
+                        'rgba(16, 185, 129, 0.8)',
+                        'rgba(6, 182, 212, 0.8)',
+                        'rgba(239, 68, 68, 0.8)'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#f1f5f9',
+                            font: { size: 12 }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico de notas (simulado com dados históricos)
+        const notesCtx = document.getElementById('notesChart').getContext('2d');
+        const notesChart = new Chart(notesCtx, {
+            type: 'line',
+            data: {
+                labels: Array.from({length: 30}, (_, i) => `${30-i} dias atrás`),
+                datasets: [{
+                    label: 'Nota Média',
+                    data: Array.from({length: 30}, () => Math.random() * 2 + 7), // Dados simulados
+                    borderColor: 'rgba(168, 85, 247, 1)',
+                    backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 5,
+                        max: 10,
+                        grid: { color: 'rgba(255,255,255,0.1)' },
+                        ticks: { color: '#94a3b8' }
+                    },
+                    x: {
+                        grid: { color: 'rgba(255,255,255,0.1)' },
+                        ticks: { color: '#94a3b8', maxTicksLimit: 7 }
+                    }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+
+        // Botão de coleta
+        const collectBtn = document.getElementById('collectBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progressFill = document.getElementById('progressFill');
+        const statusText = document.getElementById('statusText');
+
+        collectBtn.addEventListener('click', async () => {
+            if (collectBtn.classList.contains('loading')) return;
+
+            collectBtn.classList.add('loading');
+            collectBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Coletando...</span>';
+            progressBar.classList.add('active');
+            progressFill.style.width = '0%';
+
+            try {
+                const response = await fetch('/run-pipeline', { method: 'POST' });
+                const data = await response.json();
+                
+                if (data.status === 'iniciado') {
+                    // Monitorar progresso
+                    monitorProgress();
+                }
+            } catch (error) {
+                console.error('Erro ao iniciar coleta:', error);
+                resetCollectButton();
+            }
+        });
+
+        function monitorProgress() {
+            const interval = setInterval(async () => {
+                try {
+                    const response = await fetch('/api/coleta-status');
+                    const status = await response.json();
+                    
+                    progressFill.style.width = status.progresso + '%';
+                    statusText.textContent = status.mensagem;
+                    
+                    if (status.progresso >= 100) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            progressBar.classList.remove('active');
+                            resetCollectButton();
+                            location.reload(); // Recarregar página após conclusão
+                        }, 1000);
+                    }
+                } catch (error) {
+                    console.error('Erro ao verificar progresso:', error);
+                }
+            }, 1000);
+        }
+
+        function resetCollectButton() {
+            collectBtn.classList.remove('loading');
+            collectBtn.innerHTML = '<i class="fas fa-play"></i><span>Iniciar Coleta</span>';
+        }
+
+        // Abas
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.dataset.tab;
+                window.location.href = `/?aba=${tabName}&periodo={{ filtro_periodo }}&acao={{ filtro_acao }}`;
+            });
+        });
+
+        // Auto-refresh a cada 30 segundos
+        setInterval(() => {
+            fetch('/api/events')
+                .then(response => response.json())
+                .then(data => {
+                    // Atualizar estatísticas se necessário
+                    updateStats(data.estatisticas);
+                })
+                .catch(error => console.error('Erro no auto-refresh:', error));
+        }, 30000);
+
+        function updateStats(newStats) {
+            // Atualizar gráficos com novos dados
+            actionsChart.data.datasets[0].data = [
+                newStats.comprar,
+                newStats.monitorar, 
+                newStats.ignorar
+            ];
+            actionsChart.update();
+        }
+    </script>
 </body>
 </html>

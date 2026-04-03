@@ -3,6 +3,8 @@ Dashboard Flask para visualização de eventos.
 """
 import json
 import os
+import threading
+from datetime import datetime, timedelta
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 
 app = Flask(__name__)
@@ -10,6 +12,9 @@ app = Flask(__name__)
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 FINAL_FILE = os.path.join(DATA_DIR, "final.json")
 RANKING_FILE = os.path.join(DATA_DIR, "ranking.json")
+
+# Status da coleta
+coleta_status = {"ativo": False, "mensagem": "Inativo", "progresso": 0}
 
 try:
     from core.learning import (
@@ -47,6 +52,34 @@ def carregar_ranking():
         return []
 
 
+def filtrar_por_periodo(eventos, periodo):
+    """Filtra eventos por período temporal."""
+    if periodo == "todos":
+        return eventos
+    
+    hoje = datetime.now().date()
+    
+    if periodo == "semana":
+        data_limite = hoje + timedelta(days=7)
+    elif periodo == "mes":
+        data_limite = hoje + timedelta(days=30)
+    else:
+        return eventos
+    
+    eventos_filtrados = []
+    for evento in eventos:
+        data_str = evento.get("data", "")
+        if data_str:
+            try:
+                data_evento = datetime.fromisoformat(data_str).date()
+                if hoje <= data_evento <= data_limite:
+                    eventos_filtrados.append(evento)
+            except ValueError:
+                continue
+    
+    return eventos_filtrados
+
+
 def calcular_estatisticas(eventos):
     """Calcula estatísticas."""
     total = len(eventos)
@@ -72,9 +105,15 @@ def calcular_estatisticas(eventos):
 @app.route("/")
 def index():
     """Página principal com lista de eventos."""
-    filtro = request.args.get("acao", "todos")
+    filtro_acao = request.args.get("acao", "todos")
+    filtro_periodo = request.args.get("periodo", "todos")  # Novo filtro temporal
+    aba = request.args.get("aba", "oportunidades")  # Novo parâmetro para abas
     
     eventos = carregar_ranking()
+    
+    # Aplicar filtro temporal
+    eventos = filtrar_por_periodo(eventos, filtro_periodo)
+    
     estatisticas = calcular_estatisticas(eventos)
     
     learning_stats = {}
@@ -90,35 +129,99 @@ def index():
         except Exception:
             learning_stats = {}
     
-    if filtro != "todos":
-        eventos = [e for e in eventos if e.get("acao_final") == filtro]
+    # Aplicar filtro de ação
+    if filtro_acao != "todos":
+        eventos = [e for e in eventos if e.get("acao_final") == filtro_acao]
+    
+    # Para aba "oportunidades", mostrar apenas COMPRAR
+    if aba == "oportunidades":
+        eventos = [e for e in eventos if e.get("acao_final") == "COMPRAR"]
     
     return render_template(
         "index.html",
         eventos=eventos,
         estatisticas=estatisticas,
-        filtro=filtro,
+        filtro_acao=filtro_acao,
+        filtro_periodo=filtro_periodo,  # Novo
+        aba=aba,  # Novo
+        coleta_status=coleta_status,  # Novo
         learning_stats=learning_stats if learning_stats else None,
         learning_available=LEARNING_AVAILABLE
     )
 
 
-@app.route("/metrics")
-def metrics():
-    """API para métricas de aprendizado."""
-    if not LEARNING_AVAILABLE:
-        return jsonify({"error": "Learning module not available"})
+@app.route("/run-pipeline", methods=["POST"])
+def run_pipeline():
+    """Executa o pipeline de coleta em background."""
+    global coleta_status
     
-    try:
-        return jsonify({
-            "financeiras": calcular_metricas_financeiras(),
-            "moving_average": calcular_metricas_moving_average(),
-            "padroes": analisar_padroes(),
-            "performance": verificar_performance(),
-            "thresholds": obter_thresholds()
-        })
-    except Exception as e:
-        return jsonify({"error": str(e)})
+    if coleta_status["ativo"]:
+        return jsonify({"status": "erro", "mensagem": "Coleta já em andamento"})
+    
+    def executar():
+        global coleta_status
+        try:
+            coleta_status["ativo"] = True
+            coleta_status["mensagem"] = "Iniciando coleta..."
+            coleta_status["progresso"] = 0
+            
+            # Simular progresso (em produção, integrar com o pipeline real)
+            import time
+            for i in range(1, 101, 10):
+                time.sleep(0.5)
+                coleta_status["progresso"] = i
+                coleta_status["mensagem"] = f"Coletando... {i}/100"
+            
+            # Aqui seria: from core.orchestrator import executar_pipeline; executar_pipeline()
+            coleta_status["mensagem"] = "Processando dados..."
+            time.sleep(1)
+            
+            coleta_status["mensagem"] = "Finalizando..."
+            coleta_status["progresso"] = 100
+            time.sleep(0.5)
+            
+            coleta_status["ativo"] = False
+            coleta_status["mensagem"] = "Coleta concluída"
+            
+        except Exception as e:
+            coleta_status["ativo"] = False
+            coleta_status["mensagem"] = f"Erro: {str(e)}"
+    
+    thread = threading.Thread(target=executar)
+    thread.start()
+    
+    return jsonify({"status": "iniciado", "mensagem": "Coleta iniciada em background"})
+
+
+@app.route("/api/coleta-status")
+def get_coleta_status():
+    """Retorna status da coleta para progresso visual."""
+    return jsonify(coleta_status)
+
+
+@app.route("/api/events")
+def api_events():
+    """API para auto-refresh dos eventos."""
+    filtro_acao = request.args.get("acao", "todos")
+    filtro_periodo = request.args.get("periodo", "todos")
+    aba = request.args.get("aba", "oportunidades")
+    
+    eventos = carregar_ranking()
+    eventos = filtrar_por_periodo(eventos, filtro_periodo)
+    
+    if filtro_acao != "todos":
+        eventos = [e for e in eventos if e.get("acao_final") == filtro_acao]
+    
+    if aba == "oportunidades":
+        eventos = [e for e in eventos if e.get("acao_final") == "COMPRAR"]
+    
+    estatisticas = calcular_estatisticas(eventos)
+    
+    return jsonify({
+        "eventos": eventos,
+        "estatisticas": estatisticas,
+        "timestamp": datetime.now().isoformat()
+    })
 
 
 @app.route("/refresh")

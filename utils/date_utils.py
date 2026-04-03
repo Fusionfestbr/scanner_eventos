@@ -11,7 +11,10 @@ def validar_data(data_str: str) -> bool:
         "%Y-%m-%d",
         "%d/%m/%Y",
         "%d-%m-%Y",
-        "%Y/%m/%d"
+        "%Y/%m/%d",
+        "%d %m %Y",  # Novos formatos
+        "%d de %B de %Y",
+        "%B de %Y",
     ]
     for fmt in formatos:
         try:
@@ -38,6 +41,9 @@ def converter_data(data_str: str) -> date | None:
         ("%d/%m/%Y", "%Y-%m-%d"),
         ("%d-%m-%Y", "%Y-%m-%d"),
         ("%Y/%m/%d", "%Y-%m-%d"),
+        ("%d %m %Y", "%d %m %Y"),  # Novos formatos
+        ("%d de %B de %Y", "%d de %B de %Y"),
+        ("%B de %Y", "%B de %Y"),
     ]
     for input_fmt, _ in formatos:
         try:

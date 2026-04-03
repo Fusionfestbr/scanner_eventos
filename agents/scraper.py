@@ -460,6 +460,28 @@ def _clean_event_name(nome: str, local: str) -> tuple:
     nome_original = nome
     local_encontrado = local
     
+    # Remove common unwanted text patterns
+    unwanted_patterns = [
+        r'\s*\|\s*COMPRAR\s*$',
+        r'\s*\|\s*MONITORAR\s*$',
+        r'\s*\|\s*IGNORAR\s*$',
+        r'\s*-\s*COMPRAR\s*$',
+        r'\s*-\s*MONITORAR\s*$',
+        r'\s*-\s*IGNORAR\s*$',
+        r'\s*SAIBA MAIS\s*$',
+        r'\s*VER DETALHES\s*$',
+        r'\s*CLIQUE AQUI\s*$',
+        r'\s*INGRESSOS\s*$',
+        r'\s*TICKETS?\s*$',
+        r'\s*EVENTO\s*$',
+        r'\s*SHOW\s*$',
+        r'\s*APRESENTAÇÃO\s*$',
+        r'\s*ESPECTÁCULO\s*$',
+    ]
+    
+    for pattern in unwanted_patterns:
+        nome = re.sub(pattern, '', nome, flags=re.IGNORECASE).strip()
+    
     lines = nome.split("\n")
     if len(lines) > 1:
         nome_evento = lines[0].strip()
@@ -485,7 +507,8 @@ def _clean_event_name(nome: str, local: str) -> tuple:
                 continue
             
             # Skip button-like lines
-            if line.lower() in ['comprar', 'monitorar', 'ignorar', 'saiba mais', 'ver', 'mais']:
+            button_words = ['comprar', 'monitorar', 'ignorar', 'saiba mais', 'ver', 'mais', 'clique aqui', 'acessar', 'ingressos', 'tickets']
+            if any(word in line_lower for word in button_words):
                 continue
             
             valid_lines.append(line)
@@ -792,20 +815,56 @@ def _extract_date_from_text(text: str) -> str:
         (r'(\d{1,2})[-](\d{1,2})[-](\d{4})', '%d-%m-%Y'),
         (r'(\d{1,2})[-](\d{1,2})[-](\d{2})', '%d-%m-%y'),
         (r'(\d{4})[-](\d{2})[-](\d{2})', '%Y-%m-%d'),
+        # Novos formatos adicionados
+        (r'(\d{1,2})\s+de\s+(\w+)\s+de\s+(\d{4})', None),  # 28 de outubro de 2026
+        (r'(\d{1,2})\s+a\s+(\d{1,2})\s+de\s+(\w+)\s+de\s+(\d{4})', None),  # 3 a 21 de junho de 2026
+        (r'(\w+)\s+de\s+(\d{4})', None),  # outubro de 2026
+        (r'(\d{1,2})[,]\s*(\d{1,2})\s*e\s*(\d{1,2})\s+de\s+(\w+)', None),  # 28, 30 e 31 de outubro
     ]
     
     for pattern, fmt in patterns:
-        match = re.search(pattern, text)
+        match = re.search(pattern, text, re.IGNORECASE)
         if match:
             try:
-                from datetime import datetime
-                if '%y' in fmt:
+                if fmt == '%Y-%m-%d':
+                    return match.group()
+                elif fmt in ['%d/%m/%Y', '%d-%m-%Y']:
+                    return f"{match.group(3)}-{match.group(2)}-{match.group(1)}"
+                elif fmt == '%d/%m/%y':
                     year = int(match.group(3))
                     year = 2000 + year if year < 50 else 1900 + year
-                    dt = datetime(year, int(match.group(2)), int(match.group(1)))
+                    return f"{year}-{match.group(2)}-{match.group(1)}"
+                elif fmt == '%d-%m-%y':
+                    year = int(match.group(3))
+                    year = 2000 + year if year < 50 else 1900 + year
+                    return f"{year}-{match.group(2)}-{match.group(1)}"
                 else:
-                    dt = datetime.strptime(match.group(0), fmt)
-                return dt.strftime("%Y-%m-%d")
+                    # Para formatos com meses em português
+                    if 'de' in pattern and len(match.groups()) >= 3:
+                        dia = match.group(1).zfill(2)
+                        mes_nome = match.group(2).lower()
+                        ano = match.group(3)
+                        
+                        meses = {
+                            "janeiro": "01", "fevereiro": "02", "março": "03", "abril": "04",
+                            "maio": "05", "junho": "06", "julho": "07", "agosto": "08",
+                            "setembro": "09", "outubro": "10", "novembro": "11", "dezembro": "12"
+                        }
+                        
+                        mes = meses.get(mes_nome, "01")
+                        return f"{ano}-{mes}-{dia}"
+                    elif len(match.groups()) == 2:  # mês de ano
+                        mes_nome = match.group(1).lower()
+                        ano = match.group(2)
+                        
+                        meses = {
+                            "janeiro": "01", "fevereiro": "02", "março": "03", "abril": "04",
+                            "maio": "05", "junho": "06", "julho": "07", "agosto": "08",
+                            "setembro": "09", "outubro": "10", "novembro": "11", "dezembro": "12"
+                        }
+                        
+                        mes = meses.get(mes_nome, "01")
+                        return f"{ano}-{mes}-01"  # Primeiro dia do mês
             except:
                 continue
     
@@ -895,7 +954,7 @@ def padronizar_eventos(eventos: list[dict]) -> list[dict]:
             "artista": evento.get("artista", "Various Artists"),
             "data": data,
             "cidade": evento.get("cidade", "Brasil"),
-            "fonte": evento.get("fonte", "web"),
+            "fonte": evento.get("fonte", "web"),  # Garantir que fonte nunca seja perdida
             "url": evento.get("url", "")
         }
         eventos_padronizados.append(evento_padrao)

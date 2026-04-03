@@ -3,7 +3,7 @@
     "evento": {
       "nome": "BTS WORLD TOUR ARIRANG",
       "artista": "Various Artists",
-      "data": "2026-10-28",
+      "data": "2026-10-31",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/bts-world-tour-arirang"
@@ -20,7 +20,7 @@
     "evento": {
       "nome": "NBA House 2026",
       "artista": "Various Artists",
-      "data": "2026-06-20",
+      "data": "2026-06-21",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/nbahouse"
@@ -36,33 +36,65 @@
     "evento": {
       "nome": "Rock in Rio 2026",
       "artista": "Various Artists",
-      "data": "2026-09-20",
+      "data": "2026-09-13",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/rockinrio"
     },
     "analise": {
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
+      "evento": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-09-13",
+      "cidade": null,
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
       "potencial_revenda": 9,
-      "nota_final": 8.5
+      "nota_final": 9.2
     }
   },
   {
     "evento": {
       "nome": "Suhai Festival Interlagos 2026",
       "artista": "Various Artists",
-      "data": "2026-08-20",
+      "data": "2026-08-01",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/suhai-festival-de-interlagos-2026"
     },
     "analise": {
-      "evento": "Suhai Festival Interlagos 2026",
+      "hype": 7,
+      "escassez": 5,
+      "publico": 9,
+      "potencial_revenda": 8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Lollapalooza Brasil 2027",
       "artista": "Various Artists",
-      "data": "2026-08-20",
-      "cidade": null,
+      "data": "2027-03-21",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/lollapaloozabr"
+    },
+    "analise": {
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
+      "potencial_revenda": 10
+    }
+  },
+  {
+    "evento": {
+      "nome": "Henry & Klauss: Masters of Magic World Tour 2026",
+      "artista": "Various Artists",
+      "data": "2026-06-28",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/henry-e-klauss"
+    },
+    "analise": {
       "hype": 7,
       "escassez": 6,
       "publico": 8,
@@ -72,26 +104,9 @@
   },
   {
     "evento": {
-      "nome": "Henry & Klauss: Masters of Magic World Tour 2026",
-      "artista": "Various Artists",
-      "data": "2026-05-20",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/henry-e-klauss"
-    },
-    "analise": {
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
-      "potencial_revenda": 8,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "João Rock 2026",
       "artista": "Various Artists",
-      "data": "2026-08-20",
+      "data": "2026-08-01",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/joao-rock"
@@ -100,14 +115,14 @@
       "hype": 8,
       "escassez": 7,
       "publico": 9,
-      "potencial_revenda": 9
+      "potencial_revenda": 8
     }
   },
   {
     "evento": {
       "nome": "CA7RIEL & Paco Amoroso: Free Spirits World Tour",
       "artista": "Various Artists",
-      "data": "2026-11-07",
+      "data": "2026-11-01",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/ca7riel-e-paco-amoroso"
@@ -115,7 +130,7 @@
     "analise": {
       "evento": "CA7RIEL & Paco Amoroso: Free Spirits World Tour",
       "artista": "Various Artists",
-      "data": "2026-11-07",
+      "data": "2026-11-01",
       "cidade": null,
       "hype": 8,
       "escassez": 7,
@@ -128,7 +143,7 @@
     "evento": {
       "nome": "Bienal do Livro Bahia 2026 - Salvador",
       "artista": "Various Artists",
-      "data": "2026-04-20",
+      "data": "2026-04-21",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/bienal-do-livro-bahia-2026"
@@ -136,7 +151,7 @@
     "analise": {
       "evento": "Bienal do Livro Bahia 2026",
       "artista": "Various Artists",
-      "data": "2026-04-20",
+      "data": "2026-04-21",
       "cidade": "Salvador",
       "hype": 7,
       "escassez": 6,
@@ -187,7 +202,7 @@
     "evento": {
       "nome": "Harry Styles: Together, Together",
       "artista": "Various Artists",
-      "data": "2026-07-20",
+      "data": "2026-07-01",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/harry-styles"
@@ -288,7 +303,7 @@
     "evento": {
       "nome": "Vibra São Paulo",
       "artista": "Various Artists",
-      "data": "2026-05-20",
+      "data": "2026-05-01",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/turne-tres-gracas"
@@ -296,20 +311,20 @@
     "analise": {
       "evento": "Vibra São Paulo",
       "artista": "Various Artists",
-      "data": "2026-05-20",
+      "data": "2026-05-01",
       "cidade": null,
-      "hype": 8,
-      "escassez": 7,
+      "hype": 9,
+      "escassez": 8,
       "publico": 9,
       "potencial_revenda": 9,
-      "nota_final": 8.4
+      "nota_final": 9.0
     }
   },
   {
     "evento": {
       "nome": "Autódromo de Interlagos",
       "artista": "Various Artists",
-      "data": "2026-07-06",
+      "data": "2026-07-12",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/fiawecsaopaulo"
@@ -362,7 +377,7 @@
     "evento": {
       "nome": "Farmasi Arena",
       "artista": "Various Artists",
-      "data": "2026-08-20",
+      "data": "2026-08-11",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/rosalia"
@@ -370,7 +385,7 @@
     "analise": {
       "evento": "Farmasi Arena",
       "artista": "Various Artists",
-      "data": "2026-08-20",
+      "data": "2026-08-11",
       "cidade": null,
       "hype": 7,
       "escassez": 6,
@@ -404,19 +419,20 @@
     "evento": {
       "nome": "Curitiba",
       "artista": "Various Artists",
-      "data": "2026-04-20",
+      "data": "2026-04-24",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/venda-geral-the-lumineers-the-automatic-world-tour-2026-curitiba"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "evento": "Various Artists",
+      "localizacao": "Curitiba",
+      "data": "2026-04-24",
+      "hype": 7,
+      "escassez": 5,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
     }
   },
   {
@@ -441,6 +457,22 @@
   },
   {
     "evento": {
+      "nome": "Teatro Ruth Escobar",
+      "artista": "Various Artists",
+      "data": "2026-04-26",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/aladdin-teatro-ruth-escobar"
+    },
+    "analise": {
+      "hype": 6,
+      "escassez": 3,
+      "publico": 7,
+      "potencial_revenda": 8
+    }
+  },
+  {
+    "evento": {
       "nome": "Audio",
       "artista": "Various Artists",
       "data": "2026-04-08",
@@ -460,26 +492,9 @@
   },
   {
     "evento": {
-      "nome": "The Lumineers: The Automatic World Tour",
-      "artista": "Various Artists",
-      "data": "2026-04-20",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/the-lumineers"
-    },
-    "analise": {
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
-      "potencial_revenda": 9,
-      "nota_final": 8.5
-    }
-  },
-  {
-    "evento": {
       "nome": "ZAYN: The Konnakol Tour",
       "artista": "Various Artists",
-      "data": "2026-10-20",
+      "data": "2026-10-01",
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/zayn"
@@ -487,13 +502,13 @@
     "analise": {
       "evento": "ZAYN: The Konnakol Tour",
       "artista": "Various Artists",
-      "data": "2026-10-20",
+      "data": "2026-10-01",
       "cidade": null,
       "hype": 8,
       "escassez": 7,
       "publico": 9,
       "potencial_revenda": 8,
-      "nota_final": 8.13
+      "nota_final": 8.25
     }
   },
   {
@@ -969,7 +984,15 @@
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "hype": 7
+      "evento": "HIGH POOL ...,",
+      "artista": "Various Artists",
+      "data": "2026-04-05",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
     }
   },
   {
@@ -1000,10 +1023,9 @@
     },
     "analise": {
       "hype": 7,
-      "escassez": 5,
+      "escassez": 6,
       "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
+      "potencial_revenda": 9
     }
   },
   {
@@ -1024,7 +1046,7 @@
       "escassez": 6,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 8.0
+      "nota_final": 7.5
     }
   },
   {
@@ -1098,23 +1120,6 @@
   },
   {
     "evento": {
-      "nome": "Circo Spacial - SP...",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "hype": 7,
-      "escassez": 8,
-      "publico": 9,
-      "potencial_revenda": 9,
-      "nota_final": 8.5
-    }
-  },
-  {
-    "evento": {
       "nome": "Semana Santa dos M...",
       "artista": "Various Artists",
       "data": "2026-04-03",
@@ -1127,6 +1132,23 @@
       "escassez": 6,
       "publico": 8,
       "potencial_revenda": 9
+    }
+  },
+  {
+    "evento": {
+      "nome": "Circo Spacial - SP...",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
     }
   },
   {
@@ -1452,27 +1474,6 @@
   },
   {
     "evento": {
-      "nome": "Santa Maré",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "evento": "Santa Maré",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "Na Vila - Blumenau",
       "artista": "Various Artists",
       "data": "2026-04-03",
@@ -1511,6 +1512,27 @@
       "publico": 8,
       "potencial_revenda": 9,
       "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "Santa Maré",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "evento": "Santa Maré",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
     }
   },
   {
@@ -1561,10 +1583,10 @@
     },
     "analise": {
       "hype": 5,
-      "escassez": 3,
+      "escassez": 2,
       "publico": 7,
       "potencial_revenda": 6,
-      "nota_final": 5.5
+      "nota_final": 5.4
     }
   },
   {
@@ -1583,14 +1605,14 @@
       "cidade": null,
       "notas": [
         8,
-        7,
         9,
+        7,
         6
       ],
       "nota_final": 7.5,
       "hype": 8,
-      "escassez": 7,
-      "publico": 9,
+      "escassez": 9,
+      "publico": 7,
       "potencial_revenda": 6
     }
   },
@@ -1631,10 +1653,15 @@
       "url": "https://www.ingresse.com/"
     },
     "analise": {
+      "evento": "PRAINHA CLUB SUEL...",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": null,
       "hype": 7,
-      "escassez": 3,
+      "escassez": 6,
       "publico": 8,
-      "potencial_revenda": 7
+      "potencial_revenda": 9,
+      "nota_final": 8.0
     }
   },
   {
@@ -1682,7 +1709,7 @@
     },
     "analise": {
       "hype": 8,
-      "escassez": 7,
+      "escassez": 6,
       "publico": 9,
       "potencial_revenda": 8
     }
@@ -1865,15 +1892,10 @@
       "url": "https://bileto.sympla.com.br/event/115855"
     },
     "analise": {
-      "evento": "SPIN DOCTORS + SMASH MOUTH",
-      "artista": "Various Artists",
-      "data": "2026-04-30",
-      "cidade": null,
       "hype": 8,
       "escassez": 7,
       "publico": 9,
-      "potencial_revenda": 8,
-      "nota_final": 8.1
+      "potencial_revenda": 8
     }
   },
   {
@@ -1887,10 +1909,10 @@
     },
     "analise": {
       "hype": 7,
-      "escassez": 6,
+      "escassez": 3,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 8.0
+      "nota_final": 7.5
     }
   },
   {
@@ -1956,10 +1978,13 @@
       "url": "https://bileto.sympla.com.br/event/114439"
     },
     "analise": {
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
-      "potencial_revenda": 8
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -2216,7 +2241,6 @@
     "analise": {
       "evento": "Various Artists",
       "data": "2026-04-03",
-      "cidade": null,
       "hype": 7,
       "escassez": 6,
       "publico": 8,
@@ -2282,7 +2306,7 @@
       "escassez": 6,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 7.5
+      "nota_final": 7.8
     }
   },
   {
@@ -2325,7 +2349,7 @@
       "escassez": 7,
       "publico": 9,
       "potencial_revenda": 8,
-      "nota_final": 8.2
+      "nota_final": 8.25
     }
   },
   {
@@ -2339,14 +2363,13 @@
     },
     "analise": {
       "evento": "Various Artists",
-      "data_inicio": "2026-04-09",
-      "data_fim": "2026-04-12",
+      "datas": "2026-04-09 to 2026-04-12",
       "cidade": null,
       "hype": 7,
       "escassez": 6,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 8.0
+      "nota_final": 7.5
     }
   },
   {
@@ -2476,10 +2499,10 @@
       "data": "2026-04-10",
       "cidade": "Piracicaba - SP",
       "hype": 7,
-      "escassez": 3,
+      "escassez": 5,
       "publico": 8,
-      "potencial_revenda": 7,
-      "nota_final": 7.0
+      "potencial_revenda": 9,
+      "nota_final": 7.5
     }
   },
   {
@@ -2568,8 +2591,8 @@
       "evento": "Various Artists",
       "datas": "2026-04-11 to 2026-04-20",
       "cidade": null,
-      "hype": 7,
-      "escassez": 6,
+      "hype": 6,
+      "escassez": 7,
       "publico": 8,
       "potencial_revenda": 9,
       "nota_final": 7.5
@@ -2627,10 +2650,16 @@
       "url": "https://www.bilheteriadigital.com/as-guerreiras-do-kpop-teatro-univap-12-de-abril"
     },
     "analise": {
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
-      "potencial_revenda": 9
+      "evento": "AS GUERREIRAS DO KPOP",
+      "local": "TEATRO UNIVAP",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "São José dos Campos - SP",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 7,
+      "potencial_revenda": 9,
+      "nota_final": 8.5
     }
   },
   {
@@ -2858,7 +2887,7 @@
       "escassez": 6,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 7.8
+      "nota_final": 7.83
     }
   },
   {
@@ -2999,9 +3028,9 @@
       "data": "2026-04-24",
       "cidade": null,
       "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 8,
       "nota_final": 8.0
     }
   },
@@ -3254,9 +3283,7 @@
     },
     "analise": {
       "evento": "SÁBADO PRIME",
-      "artistas": [
-        "MC MENO K"
-      ],
+      "artista": "MC MENO K",
       "artistas_variados": true,
       "data": "2026-05-16",
       "cidade": "São Bernardo do Campo - SP",
@@ -3568,6 +3595,27 @@
       "publico": 8,
       "potencial_revenda": 9,
       "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "16/04/2026",
+      "artista": "Various Artists",
+      "data": "2026-04-16",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/gravacao-do-dvd-paula-fernandes-15925"
+    },
+    "analise": {
+      "data": "2026-04-16",
+      "artista": "Various Artists",
+      "evento": "16/04/2026",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 7.8
     }
   },
   {
