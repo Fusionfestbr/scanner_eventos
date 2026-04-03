@@ -1,0 +1,158 @@
+[
+  {
+    "evento": {
+      "nome": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-09-15",
+      "cidade": "Rio de Janeiro",
+      "fonte": "simulado",
+      "url": "https://rockinrio.com"
+    },
+    "analise": {
+      "evento": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-09-15",
+      "cidade": "Rio de Janeiro",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 9.2
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 9,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o Rock in Rio 2026. As notas de hype, escassez, publikco e potencial de revenda são consistentemente altas, justificando uma compra. A data (2026-09-15) é suficientemente distante para permitir a consolidação da análise."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=8.0, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 8.0,
+      "min_confianca": 7.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Lollapalooza Brasil",
+      "artista": "Various Artists",
+      "data": "2026-05-28",
+      "cidade": "São Paulo",
+      "fonte": "simulado",
+      "url": "https://lollapaloozabr.com"
+    },
+    "analise": {
+      "hype": 9,
+      "escassez": 7,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 8.6
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 7,
+      "erro_detectado": false,
+      "comentario": "O evento Lollapalooza Brasil em 2026 apresenta um alto potencial de hype e escassez, o que justifica uma análise mais aprofundada. Apesar da alta nota final (8.6), a data distante (2026) exige cautela. É crucial monitorar a evolução do mercado e a confirmação das atrações para reavaliar a decisão."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=8.0, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 8.0,
+      "min_confianca": 7.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Show Taylor Swift",
+      "artista": "Taylor Swift",
+      "data": "2026-06-20",
+      "cidade": "São Paulo",
+      "fonte": "simulado",
+      "url": "https://taylorswift.com"
+    },
+    "analise": {
+      "hype": 10,
+      "escassez": 9,
+      "publico": 10,
+      "potencial_revenda": 10
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 8,
+      "erro_detectado": false,
+      "comentario": "A análise parece razoável considerando o hype e a escassez esperados para um show da Taylor Swift. A data de 2026 pode ser considerada um risco, mas o potencial de revenda e o público amplo justificam a compra. Monitorar a evolução do hype e a disponibilidade de ingressos é recomendado."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Nota insuficiente",
+    "thresholds_usados": {
+      "min_nota_comprar": 8.0,
+      "min_confianca": 7.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Festival Tomorrowland",
+      "artista": "Various Artists",
+      "data": "2026-07-15",
+      "cidade": "São Paulo",
+      "fonte": "simulado",
+      "url": "https://tomorrowland.com"
+    },
+    "analise": {
+      "evento": "Tomorrowland",
+      "artista": "Various Artists",
+      "data": "2026-07-15",
+      "cidade": "São Paulo",
+      "hype": 9,
+      "escassez": 10,
+      "publico": 10,
+      "potencial_revenda": 10,
+      "nota_final": 9.5
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 9,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o Tomorrowland em São Paulo em 2026. Hype, escassez e publikco elevados, juntamente com alto potencial de revenda, justificam a compra. A data futura (2026) requer monitoramento contínuo da evolução do mercado e das tendências."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=8.0, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 8.0,
+      "min_confianca": 7.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Show Beyoncé",
+      "artista": "Beyoncé",
+      "data": "2026-08-10",
+      "cidade": "Rio de Janeiro",
+      "fonte": "simulado",
+      "url": "https://beyonce.com"
+    },
+    "analise": {
+      "evento": "Show Beyoncé",
+      "artista": "Beyoncé",
+      "data": "2026-08-10",
+      "cidade": "Rio de Janeiro",
+      "hype": 9,
+      "escassez": 9,
+      "publico": 10,
+      "potencial_revenda": 10,
+      "nota_final": 9.5
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 9,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento. A data (2026) é considerável, mas a combinação de fatores como hype, escassez, público amplo e potencial de revenda justifica uma compra estratégica."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=8.0, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 8.0,
+      "min_confianca": 7.0
+    }
+  }
+]

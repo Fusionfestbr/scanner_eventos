@@ -113,15 +113,12 @@ def analisar_evento(evento: dict) -> dict:
     messages = construir_prompt_evento(evento)
     
     resposta = chamar_llm(messages)
-    print(f"   [DEBUG] Resposta: {resposta[:150] if resposta else 'None'}")
     
     if resposta:
         analise = extrair_json(resposta)
         if analise:
-            print(f"   [OK] Analise obtida")
             return analise
     
-    print(f"   [FALHA] Usando analise padrao")
     return {
         "hype": 0,
         "escassez": 0,

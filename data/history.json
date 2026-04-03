@@ -1,0 +1,72 @@
+[
+  {
+    "id": "Rock_in_Rio_2026_2026-09-15",
+    "evento": "Rock in Rio 2026",
+    "artista": "Various Artists",
+    "data": "2026-09-15",
+    "cidade": "Rio de Janeiro",
+    "nota_final": 9.2,
+    "decisao": "COMPRAR",
+    "confianca": 9,
+    "acao_final": "COMPRAR",
+    "resultado_real": "valorizou",
+    "data_decisao": "2026-04-03T08:58:18.514308",
+    "data_registro": "2026-04-03T08:58:34.375274"
+  },
+  {
+    "id": "Lollapalooza_Brasil_2026-05-28",
+    "evento": "Lollapalooza Brasil",
+    "artista": "Various Artists",
+    "data": "2026-05-28",
+    "cidade": "São Paulo",
+    "nota_final": 8.6,
+    "decisao": "MONITORAR",
+    "confianca": 7,
+    "acao_final": "COMPRAR",
+    "resultado_real": "valorizou",
+    "data_decisao": "2026-04-03T08:58:18.521178",
+    "data_registro": "2026-04-03T08:58:34.382811"
+  },
+  {
+    "id": "Show_Taylor_Swift_2026-06-20",
+    "evento": "Show Taylor Swift",
+    "artista": "Taylor Swift",
+    "data": "2026-06-20",
+    "cidade": "São Paulo",
+    "nota_final": 0,
+    "decisao": "COMPRAR",
+    "confianca": 8,
+    "acao_final": "IGNORAR",
+    "resultado_real": "nao_valorizou",
+    "data_decisao": "2026-04-03T08:58:18.527391",
+    "data_registro": "2026-04-03T08:58:34.389480"
+  },
+  {
+    "id": "Festival_Tomorrowland_2026-07-15",
+    "evento": "Festival Tomorrowland",
+    "artista": "Various Artists",
+    "data": "2026-07-15",
+    "cidade": "São Paulo",
+    "nota_final": 9.5,
+    "decisao": "COMPRAR",
+    "confianca": 9,
+    "acao_final": "COMPRAR",
+    "resultado_real": "valorizou",
+    "data_decisao": "2026-04-03T08:58:18.533669",
+    "data_registro": "2026-04-03T08:58:34.395074"
+  },
+  {
+    "id": "Show_Beyoncé_2026-08-10",
+    "evento": "Show Beyoncé",
+    "artista": "Beyoncé",
+    "data": "2026-08-10",
+    "cidade": "Rio de Janeiro",
+    "nota_final": 9.5,
+    "decisao": "COMPRAR",
+    "confianca": 9,
+    "acao_final": "COMPRAR",
+    "resultado_real": null,
+    "data_decisao": "2026-04-03T08:58:18.538871",
+    "data_registro": "2026-04-03T08:58:18.538875"
+  }
+]

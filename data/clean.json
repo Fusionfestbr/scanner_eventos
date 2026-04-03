@@ -14,5 +14,29 @@
     "cidade": "São Paulo",
     "fonte": "simulado",
     "url": "https://lollapaloozabr.com"
+  },
+  {
+    "nome": "Show Taylor Swift",
+    "artista": "Taylor Swift",
+    "data": "2026-06-20",
+    "cidade": "São Paulo",
+    "fonte": "simulado",
+    "url": "https://taylorswift.com"
+  },
+  {
+    "nome": "Festival Tomorrowland",
+    "artista": "Various Artists",
+    "data": "2026-07-15",
+    "cidade": "São Paulo",
+    "fonte": "simulado",
+    "url": "https://tomorrowland.com"
+  },
+  {
+    "nome": "Show Beyoncé",
+    "artista": "Beyoncé",
+    "data": "2026-08-10",
+    "cidade": "Rio de Janeiro",
+    "fonte": "simulado",
+    "url": "https://beyonce.com"
   }
 ]

@@ -1,0 +1,12 @@
+Você é um auditor especializado em tomada de decisão no mercado de eventos.
+
+Revise a análise abaixo e verifique:
+- se as notas fazem sentido
+- se há inconsistências
+- se o evento ainda é relevante (baseado na data)
+
+Evento: {nome}, Artista: {artista}, Data: {data}, Cidade: {cidade}
+Análise: hype={hype}, escassez={escassez}, publikco={publico}, potencial_revenda={potencial_revenda}, nota_final={nota_final}
+
+Retorne APENAS JSON válido:
+{"decisao": "COMPRAR" | "MONITORAR" | "IGNORAR", "confianca": 0-10, "erro_detectado": true/false, "comentario": ""}
