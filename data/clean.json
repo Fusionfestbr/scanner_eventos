@@ -1,0 +1,18 @@
+[
+  {
+    "nome": "Rock in Rio 2026",
+    "artista": "Various Artists",
+    "data": "2026-09-15",
+    "cidade": "Rio de Janeiro",
+    "fonte": "simulado",
+    "url": "https://rockinrio.com"
+  },
+  {
+    "nome": "Lollapalooza Brasil",
+    "artista": "Various Artists",
+    "data": "2026-05-28",
+    "cidade": "São Paulo",
+    "fonte": "simulado",
+    "url": "https://lollapaloozabr.com"
+  }
+]
