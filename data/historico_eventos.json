@@ -1,1 +1,152 @@
-[]
+[
+  {
+    "nome_evento": "Rock in Rio 2026",
+    "artista": "Various Artists",
+    "data_evento": "2026-09-04",
+    "preco_inicial": 300,
+    "preco_maximo_revenda": 2500,
+    "esgotou": true,
+    "dias_para_esgotar": 5,
+    "data_registro": "2026-01-15T10:00:00"
+  },
+  {
+    "nome_evento": "Luan Santana",
+    "artista": "Luan Santana",
+    "data_evento": "2026-04-10",
+    "preco_inicial": 150,
+    "preco_maximo_revenda": 400,
+    "esgotou": true,
+    "dias_para_esgotar": 8,
+    "data_registro": "2026-01-10T10:00:00"
+  },
+  {
+    "nome_evento": "Marilia Mendonça - Lives",
+    "artista": "Marilia Mendonça",
+    "data_evento": "2025-12-15",
+    "preco_inicial": 100,
+    "preco_maximo_revenda": 800,
+    "esgotou": true,
+    "dias_para_esgotar": 2,
+    "data_registro": "2025-11-01T10:00:00"
+  },
+  {
+    "nome_evento": "Coldplay - Music of the Spheres",
+    "artista": "Coldplay",
+    "data_evento": "2025-09-15",
+    "preco_inicial": 350,
+    "preco_maximo_revenda": 3500,
+    "esgotou": true,
+    "dias_para_esgotar": 3,
+    "data_registro": "2025-05-20T10:00:00"
+  },
+  {
+    "nome_evento": "Jorge e Mateus",
+    "artista": "Jorge e Mateus",
+    "data_evento": "2026-03-20",
+    "preco_inicial": 180,
+    "preco_maximo_revenda": 350,
+    "esgotou": true,
+    "dias_para_esgotar": 10,
+    "data_registro": "2026-01-05T10:00:00"
+  },
+  {
+    "nome_evento": "Henrique e Juliano",
+    "artista": "Henrique e Juliano",
+    "data_evento": "2026-02-28",
+    "preco_inicial": 120,
+    "preco_maximo_revenda": 280,
+    "esgotou": false,
+    "dias_para_esgotar": 0,
+    "data_registro": "2025-12-15T10:00:00"
+  },
+  {
+    "nome_evento": "Maiara e Maraisa",
+    "artista": "Maiara e Maraisa",
+    "data_evento": "2026-05-10",
+    "preco_inicial": 130,
+    "preco_maximo_revenda": 320,
+    "esgotou": true,
+    "dias_para_esgotar": 7,
+    "data_registro": "2026-02-01T10:00:00"
+  },
+  {
+    "nome_evento": "Gustavo Lima",
+    "artista": "Gustavo Lima",
+    "data_evento": "2026-04-15",
+    "preco_inicial": 140,
+    "preco_maximo_revenda": 380,
+    "esgotou": true,
+    "dias_para_esgotar": 6,
+    "data_registro": "2026-01-20T10:00:00"
+  },
+  {
+    "nome_evento": "Capital Inicial",
+    "artista": "Capital Inicial",
+    "data_evento": "2026-05-02",
+    "preco_inicial": 150,
+    "preco_maximo_revenda": 300,
+    "esgotou": false,
+    "dias_para_esgotar": 0,
+    "data_registro": "2026-03-01T10:00:00"
+  },
+  {
+    "nome_evento": "Elton John",
+    "artista": "Elton John",
+    "data_evento": "2025-10-15",
+    "preco_inicial": 400,
+    "preco_maximo_revenda": 2200,
+    "esgotou": true,
+    "dias_para_esgotar": 4,
+    "data_registro": "2025-06-10T10:00:00"
+  },
+  {
+    "nome_evento": "Filipe Ret",
+    "artista": "Filipe Ret",
+    "data_evento": "2026-04-20",
+    "preco_inicial": 100,
+    "preco_maximo_revenda": 450,
+    "esgotou": true,
+    "dias_para_esgotar": 5,
+    "data_registro": "2026-03-01T10:00:00"
+  },
+  {
+    "nome_evento": "Anitta - The Blossom Tour",
+    "artista": "Anitta",
+    "data_evento": "2026-06-01",
+    "preco_inicial": 180,
+    "preco_maximo_revenda": 600,
+    "esgotou": true,
+    "dias_para_esgotar": 4,
+    "data_registro": "2026-04-01T10:00:00"
+  },
+  {
+    "nome_evento": "Warung Day Festival",
+    "artista": "Various Artists",
+    "data_evento": "2026-05-02",
+    "preco_inicial": 200,
+    "preco_maximo_revenda": 800,
+    "esgotou": true,
+    "dias_para_esgotar": 3,
+    "data_registro": "2026-03-15T10:00:00"
+  },
+  {
+    "nome_evento": "Arnold Sports Festival",
+    "artista": "Various Artists",
+    "data_evento": "2026-04-24",
+    "preco_inicial": 250,
+    "preco_maximo_revenda": 500,
+    "esgotou": true,
+    "dias_para_esgotar": 10,
+    "data_registro": "2026-02-20T10:00:00"
+  },
+  {
+    "nome_evento": "Pablo Vittar",
+    "artista": "Pabllo Vittar",
+    "data_evento": "2026-03-25",
+    "preco_inicial": 150,
+    "preco_maximo_revenda": 400,
+    "esgotou": true,
+    "dias_para_esgotar": 6,
+    "data_registro": "2026-02-15T10:00:00"
+  }
+]

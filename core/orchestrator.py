@@ -22,6 +22,7 @@ from core.data_quality import (
 )
 from core.notifier import verificar_e_enviar_alerta
 from config import FALLBACK_ENABLED
+from core.predictor import processar_previsoes
 
 
 def log(msg: str) -> None:
@@ -109,6 +110,10 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     eventos_finais = processar_decisoes(eventos_auditados)
     qtd_finais = len(eventos_finais)
     log(f"   -> {qtd_finais} decisões tomadas")
+    
+    log("Gerando previsões de valorização...")
+    eventos_finais = processar_previsoes(eventos_finais)
+    log(f"   -> Previsões geradas para {len(eventos_finais)} eventos")
     
     final_path = os.path.join(os.path.dirname(__file__), "..", "data", "final.json")
     salvar_json(eventos_finais, final_path)

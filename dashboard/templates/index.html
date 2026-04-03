@@ -386,7 +386,7 @@
         }
 
         .tag-alto { background: rgba(16, 185, 129, 0.15); color: var(--green); }
-        .tag-medio { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
+        .tag-medio, .tag-médio { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
         .tag-baixo { background: rgba(100, 116, 139, 0.15); color: var(--text-dim); }
 
         .decisao {
@@ -570,6 +570,9 @@
                         <th>Data</th>
                         <th>Cidade</th>
                         <th>Nota</th>
+                        <th>Score</th>
+                        <th>Esgotar</th>
+                        <th>Volume</th>
                         <th>Decisão</th>
                         <th>Ação</th>
                     </tr>
@@ -581,7 +584,7 @@
                         <td>
                             <div class="event-info">
                                 <span class="event-name">
-                                    {{ evento.evento.nome[:60] }}{% if evento.evento.nome|length > 60 %}...{% endif %}
+                                    {{ evento.evento.nome[:50] }}{% if evento.evento.nome|length > 50 %}...{% endif %}
                                     {% if evento.compra_agressiva %}
                                     <span class="hot-badge"><i class="fas fa-fire"></i> HOT</span>
                                     {% endif %}
@@ -590,8 +593,13 @@
                             </div>
                         </td>
                         <td class="mono">{{ evento.evento.data }}</td>
-                        <td class="mono">{{ evento.evento.cidade }}</td>
+                        <td class="mono">{{ evento.evento.cidade[:20] }}</td>
                         <td class="score" style="color: var(--accent-light)">{{ "%.1f"|format(evento.analise.nota_final | default(0)) }}</td>
+                        {% set score = evento.previsao.score_valorizacao if evento.previsao else 0 %}
+                        {% set score_class = 'score-high' if score >= 7 else ('score-mid' if score >= 5 else 'score-low') %}
+                        <td class="score {{ score_class }}">{{ "%.1f"|format(score) }}</td>
+                        <td class="mono">{{ "%.0f"|format(evento.previsao.probabilidade_esgotar if evento.previsao else 0) }}%</td>
+                        <td><span class="tag tag-{{ evento.previsao.recomendacao_volume if evento.previsao else 'baixo' }}">{{ evento.previsao.recomendacao_volume if evento.previsao else '-' }}</span></td>
                         <td class="decisao">{{ evento.auditoria.decisao | default('N/A') }}</td>
                         <td><span class="action-tag action-{{ evento.acao_final|lower }}">{{ evento.acao_final }}</span></td>
                     </tr>

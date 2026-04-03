@@ -21,72 +21,72 @@ REJECTED_LOG_ENABLED = True
 SITES_CONFIG = {
     "ticketmaster": {
         "url": "https://www.ticketmaster.com.br/",
-        "timeout": 20,
+        "timeout": 30,
         "prioridade": "alta"
     },
     "ingresse": {
         "url": "https://www.ingresse.com/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "alta"
     },
     "sympla": {
         "url": "https://www.sympla.com.br/eventos",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "alta"
     },
     "ticket360": {
         "url": "https://www.ticket360.com.br/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "alta"
     },
     "eventim": {
         "url": "https://www.eventim.com.br/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "media"
     },
     "blueticket": {
         "url": "https://www.blueticket.com.br/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "media"
     },
     "livepass": {
         "url": "https://www.livepass.com.br/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "media"
     },
     "bilheteriadigital": {
         "url": "https://www.bilheteriadigital.com/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "media"
     },
     "ticketsforfun": {
         "url": "https://www.ticketsforfun.com.br/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "baixa"
     },
     "guicheweb": {
         "url": "https://www.guicheweb.com.br/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "baixa"
     },
     "q2ingressos": {
         "url": "https://q2ingressos.com.br/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "baixa"
     },
     "uhuu": {
         "url": "https://uhuu.com/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "baixa"
     },
     "zigtickets": {
         "url": "https://zig.tickets/pt-BR",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "baixa"
     },
     "betimelapse": {
         "url": "https://betimelapse.com.br/",
-        "timeout": 15,
+        "timeout": 30,
         "prioridade": "baixa"
     }
 }

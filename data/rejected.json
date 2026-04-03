@@ -22,5 +22,1661 @@
     },
     "motivo": "data inválida: data passada",
     "timestamp": "2026-04-03T09:28:04.019094"
+  },
+  {
+    "evento": {
+      "nome": "Visitante!",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.151945"
+  },
+  {
+    "evento": {
+      "nome": "Mentari Ocean Club",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.151999"
+  },
+  {
+    "evento": {
+      "nome": "Espaço Unimed",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152022"
+  },
+  {
+    "evento": {
+      "nome": "CTN",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152037"
+  },
+  {
+    "evento": {
+      "nome": "Villa Country",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152053"
+  },
+  {
+    "evento": {
+      "nome": "Clube Atlético Juventus",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152067"
+  },
+  {
+    "evento": {
+      "nome": "Audio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152080"
+  },
+  {
+    "evento": {
+      "nome": "Estância Alto da Serra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152117"
+  },
+  {
+    "evento": {
+      "nome": "Good Show",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152130"
+  },
+  {
+    "evento": {
+      "nome": "Varanda Estaiada",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152178"
+  },
+  {
+    "evento": {
+      "nome": "Vivo Rio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152203"
+  },
+  {
+    "evento": {
+      "nome": "É Claro Que É Rock 2026 Passo Fundo\nArena Clube Comercial\nPasso Fundo • RS\n25 de abril\n20:00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39335/e-claro-que-e-rock-2026-passo-fundo"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152345"
+  },
+  {
+    "evento": {
+      "nome": "Warung Day Festival 2026\nPedreira Paulo Leminski\nCuritiba • PR\n02 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39353/warung-day-festival-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152352"
+  },
+  {
+    "evento": {
+      "nome": "CAPITAL INICIAL | Balneário Camboriú - SC | Music Park BC |...\nLIVE - Music Park BC\nBalneário Cambor",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39715/capital-inicial-balneario-camboriu-sc-music-park-bc-04042026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152359"
+  },
+  {
+    "evento": {
+      "nome": "28ª Festa da Cebola | Luan Santana\nParque da Cebola\nItuporanga • SC\n10 de abril\n00:00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40153/28a-festa-da-cebola-luan-santana"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152366"
+  },
+  {
+    "evento": {
+      "nome": "Dilsinho em Lages\nParque de Exposições Conta Dinheiro\nLages • SC\n10 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40171/dilsinho-em-lages"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152373"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: Revisiting Creedence | Grande Florianópol...\nArena Opus\nSão José • SC\n20 de a",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39908/atracao-internacional-revisiting-creedence-grande-florianopolis-sc"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152380"
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira\nExpo Center Norte\nSão Paulo • SP\n24 a 26 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39354/arnold-2026-feira"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152387"
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira + Bodybuilding\nExpo Center Norte\nSão Paulo • SP\n24 a 26 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39355/arnold-2026-feira-bodybuilding"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152393"
+  },
+  {
+    "evento": {
+      "nome": "Gramado Summit 2026\nSerra Park - Gramado/RS\nGramado • RS\n06 a 08 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/37982/gramado-summit-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152400"
+  },
+  {
+    "evento": {
+      "nome": "Empreende Brazil Conference 2026 | SC\nArena Opus\nSão José • SC\n22 a 23 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/38008/empreende-brazil-conference-2026-sc"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152407"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Pouso Ale...\nSummit Hall\nPouso Alegre • MG\n07 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40256/atracao-internacional-dire-straits-legacy-em-pouso-alegre-mg"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152414"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Divinópoli...\nDivinópolis Clube\nDivinópolis • MG\n08 de",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40328/atracao-internacional-dire-straits-legacy-em-divinopolis-mg"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152421"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Belo Horiz...\nBeFly Hall\nBelo Horizonte • MG\n09 de mai",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40324/atracao-internacional-dire-straits-legacy-em-belo-horizonte-mg"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152428"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: Dire Straits Legacy em Campos dos Goytac...\nFundação Rural de Campos\nCampos d",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40370/atracao-internacional-dire-straits-legacy-em-campos-dos-goytacazes-rj"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152434"
+  },
+  {
+    "evento": {
+      "nome": "Eventos Esportivos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/produto/eventos-esportivos"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152441"
+  },
+  {
+    "evento": {
+      "nome": "Google Play",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://play.google.com/store/apps/details?id=br.com.blueticket"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152448"
+  },
+  {
+    "evento": {
+      "nome": "FEV\n27\n2027\nLaura Pausini - 2027\nSão Paulo, SP\nMercado Livre Arena Pacaembu",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152454"
+  },
+  {
+    "evento": {
+      "nome": "OUT\n30\n2026\nJorja Smith\nSão Paulo, SP\nEspaço Unimed",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152461"
+  },
+  {
+    "evento": {
+      "nome": "AGO\n16\n2026\nDPR CREAM & DPR ARTIC\nSão Paulo, SP\nAudio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152468"
+  },
+  {
+    "evento": {
+      "nome": "MAI\n26\n2026\nPomme\nSão Paulo, SP\nTeatro Renault",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152475"
+  },
+  {
+    "evento": {
+      "nome": "DATAS\nDIVERSAS\n\nShrek - O Musical\nSão Paulo, SP\nTeatro Renault",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/shrek-o-musical-12763"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152481"
+  },
+  {
+    "evento": {
+      "nome": "eventos corporativos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://www.ticketsforfun.com.br/comercial/eventos-corporativos"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152488"
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DOS CAMPOS/SP\nMirage Circus\n12",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1688&link=https://www.guicheweb.com.br/circo-mirage-circus-sao-jose-dos-campos-sp-12abr-as-20h30_50759"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152495"
+  },
+  {
+    "evento": {
+      "nome": "FORTALEZA/CE\nShows Henrique & Juliano\n05",
+      "artista": "Various Artists",
+      "data": "2026-12-05",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1225&link=https://www.guicheweb.com.br/manifesto-musical-fortaleza_49751"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152502"
+  },
+  {
+    "evento": {
+      "nome": "ARIQUEMES/RO\nRodeios\nDE 01",
+      "artista": "Various Artists",
+      "data": "2026-08-01",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1107&link=https://www.guicheweb.com.br/41-expoari_45139"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152509"
+  },
+  {
+    "evento": {
+      "nome": "VITORIA/ES\nBrava Stage Club\n04",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1727&link=https://www.guicheweb.com.br/brava-stage-club_50915"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152516"
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DO RIO PRETO/SP\nRegistro Histórico - Grupo VIP | SJRP\n12",
+      "artista": "Various Artists",
+      "data": "2026-09-12",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1722&link=https://www.guicheweb.com.br/teste-evento-modelo-apresentacao-de-sistema_25876"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152523"
+  },
+  {
+    "evento": {
+      "nome": "BALNEARIO GAIVOTA/SC\nMailing Lagoa - Panda\n05",
+      "artista": "Various Artists",
+      "data": "2026-04-05",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1726&link=https://www.guicheweb.com.br/mailing-lagoa-panda_50618"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152529"
+  },
+  {
+    "evento": {
+      "nome": "ALFENAS/MG\nVelório do Carneiro 2026\n11",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1664&link=https://www.guicheweb.com.br/velorio-do-carneiro-2026_48755"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152536"
+  },
+  {
+    "evento": {
+      "nome": "MACAPA/AP\nQuintal do TG\n12",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1728&link=https://www.guicheweb.com.br/quintal-do-tg_50876"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152543"
+  },
+  {
+    "evento": {
+      "nome": "BRASILIA/DF\nNo Pelo 360 - Brasília/DF\n06",
+      "artista": "Various Artists",
+      "data": "2026-06-06",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1704&link=https://www.guicheweb.com.br/no-pelo-360-brasilia_50738"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152550"
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DO RIO PRETO/SP\nHenrique e Juliano | São José do Rio Preto\n25",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1665&link=https://www.guicheweb.com.br/henrique-e-juliano--sao-jose-do-rio-preto_49021"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152556"
+  },
+  {
+    "evento": {
+      "nome": "HORTOLANDIA/SP\nFesta do Peão de Hortolândia 2026\nDE 08",
+      "artista": "Various Artists",
+      "data": "2026-05-08",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1691&link=https://www.guicheweb.com.br/festa-do-peao-de-hortolandia-2026_50085"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.152563"
+  },
+  {
+    "evento": {
+      "nome": "TOKA CLUB (10.04) GABRIEL PENSADOR\n\n10 ABR 2026\n\nRua Carlos Marcondes, 501, Jardim Limoeiro, São Jos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/toka-club-1004-gabriel-pensador"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154151"
+  },
+  {
+    "evento": {
+      "nome": "Felipe Araújo\n\n25 ABR 2026\n\nJundiaí, MANSÃO\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/felipe-araujo"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154159"
+  },
+  {
+    "evento": {
+      "nome": "Universo Alegria Esteio\n\n26 ABR 2026\n\nParque Exposições Assis Brasil, 0 - Novo Esteio, Esteio, RS -",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/universo-alegria-esteio"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154165"
+  },
+  {
+    "evento": {
+      "nome": "Vibra Rock 2026\n\n02 MAI 2026\n\nVitória, Praça do Papa\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/vibra-rock-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154172"
+  },
+  {
+    "evento": {
+      "nome": "Terraviva Festival\n\n02 MAI\n03 MAI 2026\n\nPirassununga, Fazenda Bons Ventos\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/terraviva-festival"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154179"
+  },
+  {
+    "evento": {
+      "nome": "EU SOU A HISTÓRIA - ESAH\n\n02 MAI 2026\n\nVila Velha, Parque da Prainha\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/eu-sou-a-historia-esah"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154186"
+  },
+  {
+    "evento": {
+      "nome": "MAESTRIA\n\n09 MAI 2026\n\nCariacica, Estádio Kleber Andrade\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/maestria"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154192"
+  },
+  {
+    "evento": {
+      "nome": "CELEIRO FESTIVAL - CURITIBA\n\n14 MAI\n17 MAI 2026\n\nCuritiba, Pedreira Paulo Leminski\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/celeiro-festival-curitiba"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154199"
+  },
+  {
+    "evento": {
+      "nome": "AEROROCK\n\n11 JUL 2026\n\nVitória, Espaço Patrick Ribeiro - Aeroporto de Vitória\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/aerorock"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154209"
+  },
+  {
+    "evento": {
+      "nome": "Eco Parque - Arraial D'Ajuda - Abril e Maio 2026\n\n01 ABR\n03 MAI 2026\n\nPorto Seguro, Eco Parque - Arr",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/eco-parque-arraial-dajuda-abril-e-maio-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154216"
+  },
+  {
+    "evento": {
+      "nome": "Festival da Cultura Nerd 2026\n26 SET\n27 SET 2026\nMaceió, Centro de Convenções de Maceió",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/festival-da-cultura-nerd-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154222"
+  },
+  {
+    "evento": {
+      "nome": "Bloco do Boi 2026\n21 JUN 2026\nItapetinga, Bosque da Lagoa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/bloco-do-boi-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154229"
+  },
+  {
+    "evento": {
+      "nome": "BAILE DA TAIPA\n03 ABR 2026\nPorto Seguro, Casa de Taipa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/baile-da-taipa"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154236"
+  },
+  {
+    "evento": {
+      "nome": "PAGODE DA TAIPA - 04/04\n04 ABR 2026\nPorto Seguro, Casa de Taipa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/pagode-da-taipa-0404"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154243"
+  },
+  {
+    "evento": {
+      "nome": "SANTO LUAU - CABANA AREA BEACH 04/04\n04 ABR 2026\nAv. Beira Mar, 6900 - Porto Seguro, Porto Seguro, B",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/santo-luau-cabana-area-beach-0404"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154249"
+  },
+  {
+    "evento": {
+      "nome": "VAQUEJADA PARQUE LAERTÃO\n11 ABR 2026\nCORRENTINA, PARQUE DE VAQUEJADA LAERTÃO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/vaquejada-parque-laertao"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154256"
+  },
+  {
+    "evento": {
+      "nome": "Eco Parque - Arraial D'Ajuda - Junho 2026\n11 JUN\n27 JUN 2026\nPorto Seguro, Eco Parque - Arraial D'Aj",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/eco-parque-arraial-dajuda-junho-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154263"
+  },
+  {
+    "evento": {
+      "nome": "SEMANA SANTA !!\n04 ABR 2026\nPorto Seguro, Morocha Club",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/semana-santa"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154270"
+  },
+  {
+    "evento": {
+      "nome": "FAZENDA PARK NOVA CONQUISTA 25º EDIÇÃO\n04 ABR\n05 ABR 2026\nUBATÃ, FAZENDA PARK",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/fazenda-park-nova-conquista-25-edicao"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154276"
+  },
+  {
+    "evento": {
+      "nome": "LUAU - CABANA AREA BEACH 18/04\n18 ABR 2026\nAv. Beira Mar, 6900, Porto Seguro, Porto Seguro, BA - 458",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/luau-cabana-area-beach-18-04"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154283"
+  },
+  {
+    "evento": {
+      "nome": "BONJOUR PARTY",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/bonjour-party/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154290"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026\n% OFF\nMac DeMarco Brasil\n\nVárias Cidades",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/mac-demarco-brasil/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154297"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026\n% OFF\nTeora Páscoa Funk Fro...\n\nImbituba/SC",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/teora-pascoa-funk-from-brazil/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154303"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026\n% OFF\nUNDR ARCA SP\n\nSão Paulo/SP",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/undr-arca-sp/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154310"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026\n% OFF\nSurreal Park Soul Fes...\n\nCamboriú/SC",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/surreal-park-soul-festival/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:29:01.154316"
+  },
+  {
+    "evento": {
+      "nome": "Visitante!",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303353"
+  },
+  {
+    "evento": {
+      "nome": "Mentari Ocean Club",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303421"
+  },
+  {
+    "evento": {
+      "nome": "Espaço Unimed",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303449"
+  },
+  {
+    "evento": {
+      "nome": "CTN",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303469"
+  },
+  {
+    "evento": {
+      "nome": "Villa Country",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303488"
+  },
+  {
+    "evento": {
+      "nome": "Clube Atlético Juventus",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303505"
+  },
+  {
+    "evento": {
+      "nome": "Audio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303522"
+  },
+  {
+    "evento": {
+      "nome": "Estância Alto da Serra",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303570"
+  },
+  {
+    "evento": {
+      "nome": "Good Show",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303633"
+  },
+  {
+    "evento": {
+      "nome": "Varanda Estaiada",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303718"
+  },
+  {
+    "evento": {
+      "nome": "Vivo Rio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticket360",
+      "url": "https://www.ticket360.com.br/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303752"
+  },
+  {
+    "evento": {
+      "nome": "É Claro Que É Rock 2026 Passo Fundo\nArena Clube Comercial\nPasso Fundo • RS\n25 de abril\n20:00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39335/e-claro-que-e-rock-2026-passo-fundo"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303935"
+  },
+  {
+    "evento": {
+      "nome": "Warung Day Festival 2026\nPedreira Paulo Leminski\nCuritiba • PR\n02 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39353/warung-day-festival-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303944"
+  },
+  {
+    "evento": {
+      "nome": "CAPITAL INICIAL | Balneário Camboriú - SC | Music Park BC |...\nLIVE - Music Park BC\nBalneário Cambor",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39715/capital-inicial-balneario-camboriu-sc-music-park-bc-04042026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303954"
+  },
+  {
+    "evento": {
+      "nome": "28ª Festa da Cebola | Luan Santana\nParque da Cebola\nItuporanga • SC\n10 de abril\n00:00",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40153/28a-festa-da-cebola-luan-santana"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303963"
+  },
+  {
+    "evento": {
+      "nome": "Dilsinho em Lages\nParque de Exposições Conta Dinheiro\nLages • SC\n10 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40171/dilsinho-em-lages"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303971"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: Revisiting Creedence | Grande Florianópol...\nArena Opus\nSão José • SC\n20 de a",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39908/atracao-internacional-revisiting-creedence-grande-florianopolis-sc"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303980"
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira\nExpo Center Norte\nSão Paulo • SP\n24 a 26 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39354/arnold-2026-feira"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303988"
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira + Bodybuilding\nExpo Center Norte\nSão Paulo • SP\n24 a 26 de abril",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39355/arnold-2026-feira-bodybuilding"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.303997"
+  },
+  {
+    "evento": {
+      "nome": "Gramado Summit 2026\nSerra Park - Gramado/RS\nGramado • RS\n06 a 08 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/37982/gramado-summit-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304006"
+  },
+  {
+    "evento": {
+      "nome": "Empreende Brazil Conference 2026 | SC\nArena Opus\nSão José • SC\n22 a 23 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/38008/empreende-brazil-conference-2026-sc"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304014"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Pouso Ale...\nSummit Hall\nPouso Alegre • MG\n07 de maio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40256/atracao-internacional-dire-straits-legacy-em-pouso-alegre-mg"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304022"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Divinópoli...\nDivinópolis Clube\nDivinópolis • MG\n08 de",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40328/atracao-internacional-dire-straits-legacy-em-divinopolis-mg"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304030"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: DIRE STRAITS LEGACY em Belo Horiz...\nBeFly Hall\nBelo Horizonte • MG\n09 de mai",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40324/atracao-internacional-dire-straits-legacy-em-belo-horizonte-mg"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304040"
+  },
+  {
+    "evento": {
+      "nome": "Atração Internacional: Dire Straits Legacy em Campos dos Goytac...\nFundação Rural de Campos\nCampos d",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40370/atracao-internacional-dire-straits-legacy-em-campos-dos-goytacazes-rj"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304049"
+  },
+  {
+    "evento": {
+      "nome": "Eventos Esportivos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/produto/eventos-esportivos"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304058"
+  },
+  {
+    "evento": {
+      "nome": "Google Play",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://play.google.com/store/apps/details?id=br.com.blueticket"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304067"
+  },
+  {
+    "evento": {
+      "nome": "FEV\n27\n2027\nLaura Pausini - 2027\nSão Paulo, SP\nMercado Livre Arena Pacaembu",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304075"
+  },
+  {
+    "evento": {
+      "nome": "OUT\n30\n2026\nJorja Smith\nSão Paulo, SP\nEspaço Unimed",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304084"
+  },
+  {
+    "evento": {
+      "nome": "AGO\n16\n2026\nDPR CREAM & DPR ARTIC\nSão Paulo, SP\nAudio",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304092"
+  },
+  {
+    "evento": {
+      "nome": "MAI\n26\n2026\nPomme\nSão Paulo, SP\nTeatro Renault",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304101"
+  },
+  {
+    "evento": {
+      "nome": "DATAS\nDIVERSAS\n\nShrek - O Musical\nSão Paulo, SP\nTeatro Renault",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/shrek-o-musical-12763"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304109"
+  },
+  {
+    "evento": {
+      "nome": "eventos corporativos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://www.ticketsforfun.com.br/comercial/eventos-corporativos"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304118"
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DOS CAMPOS/SP\nMirage Circus\n12",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1688&link=https://www.guicheweb.com.br/circo-mirage-circus-sao-jose-dos-campos-sp-12abr-as-20h30_50759"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304126"
+  },
+  {
+    "evento": {
+      "nome": "FORTALEZA/CE\nShows Henrique & Juliano\n05",
+      "artista": "Various Artists",
+      "data": "2026-12-05",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1225&link=https://www.guicheweb.com.br/manifesto-musical-fortaleza_49751"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304136"
+  },
+  {
+    "evento": {
+      "nome": "ARIQUEMES/RO\nRodeios\nDE 01",
+      "artista": "Various Artists",
+      "data": "2026-08-01",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1107&link=https://www.guicheweb.com.br/41-expoari_45139"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304144"
+  },
+  {
+    "evento": {
+      "nome": "VITORIA/ES\nBrava Stage Club\n04",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1727&link=https://www.guicheweb.com.br/brava-stage-club_50915"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304153"
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DO RIO PRETO/SP\nRegistro Histórico - Grupo VIP | SJRP\n12",
+      "artista": "Various Artists",
+      "data": "2026-09-12",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1722&link=https://www.guicheweb.com.br/teste-evento-modelo-apresentacao-de-sistema_25876"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304161"
+  },
+  {
+    "evento": {
+      "nome": "BALNEARIO GAIVOTA/SC\nMailing Lagoa - Panda\n05",
+      "artista": "Various Artists",
+      "data": "2026-04-05",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1726&link=https://www.guicheweb.com.br/mailing-lagoa-panda_50618"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304170"
+  },
+  {
+    "evento": {
+      "nome": "ALFENAS/MG\nVelório do Carneiro 2026\n11",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1664&link=https://www.guicheweb.com.br/velorio-do-carneiro-2026_48755"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304179"
+  },
+  {
+    "evento": {
+      "nome": "MACAPA/AP\nQuintal do TG\n12",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1728&link=https://www.guicheweb.com.br/quintal-do-tg_50876"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304187"
+  },
+  {
+    "evento": {
+      "nome": "BRASILIA/DF\nNo Pelo 360 - Brasília/DF\n06",
+      "artista": "Various Artists",
+      "data": "2026-06-06",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1704&link=https://www.guicheweb.com.br/no-pelo-360-brasilia_50738"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304195"
+  },
+  {
+    "evento": {
+      "nome": "SAO JOSE DO RIO PRETO/SP\nHenrique e Juliano | São José do Rio Preto\n25",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1665&link=https://www.guicheweb.com.br/henrique-e-juliano--sao-jose-do-rio-preto_49021"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304204"
+  },
+  {
+    "evento": {
+      "nome": "HORTOLANDIA/SP\nFesta do Peão de Hortolândia 2026\nDE 08",
+      "artista": "Various Artists",
+      "data": "2026-05-08",
+      "cidade": "",
+      "fonte": "guicheweb",
+      "url": "https://www.guicheweb.com.br/click_banner.php?id=1691&link=https://www.guicheweb.com.br/festa-do-peao-de-hortolandia-2026_50085"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.304213"
+  },
+  {
+    "evento": {
+      "nome": "TOKA CLUB (10.04) GABRIEL PENSADOR\n\n10 ABR 2026\n\nRua Carlos Marcondes, 501, Jardim Limoeiro, São Jos",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/toka-club-1004-gabriel-pensador"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306314"
+  },
+  {
+    "evento": {
+      "nome": "Felipe Araújo\n\n25 ABR 2026\n\nJundiaí, MANSÃO\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/felipe-araujo"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306325"
+  },
+  {
+    "evento": {
+      "nome": "Universo Alegria Esteio\n\n26 ABR 2026\n\nParque Exposições Assis Brasil, 0 - Novo Esteio, Esteio, RS -",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/universo-alegria-esteio"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306334"
+  },
+  {
+    "evento": {
+      "nome": "Vibra Rock 2026\n\n02 MAI 2026\n\nVitória, Praça do Papa\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/vibra-rock-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306343"
+  },
+  {
+    "evento": {
+      "nome": "Terraviva Festival\n\n02 MAI\n03 MAI 2026\n\nPirassununga, Fazenda Bons Ventos\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/terraviva-festival"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306351"
+  },
+  {
+    "evento": {
+      "nome": "EU SOU A HISTÓRIA - ESAH\n\n02 MAI 2026\n\nVila Velha, Parque da Prainha\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/eu-sou-a-historia-esah"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306360"
+  },
+  {
+    "evento": {
+      "nome": "MAESTRIA\n\n09 MAI 2026\n\nCariacica, Estádio Kleber Andrade\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/maestria"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306369"
+  },
+  {
+    "evento": {
+      "nome": "CELEIRO FESTIVAL - CURITIBA\n\n14 MAI\n17 MAI 2026\n\nCuritiba, Pedreira Paulo Leminski\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/celeiro-festival-curitiba"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306378"
+  },
+  {
+    "evento": {
+      "nome": "AEROROCK\n\n11 JUL 2026\n\nVitória, Espaço Patrick Ribeiro - Aeroporto de Vitória\n\nCOMPRAR INGRESSO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/aerorock"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306387"
+  },
+  {
+    "evento": {
+      "nome": "Eco Parque - Arraial D'Ajuda - Abril e Maio 2026\n\n01 ABR\n03 MAI 2026\n\nPorto Seguro, Eco Parque - Arr",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/eco-parque-arraial-dajuda-abril-e-maio-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306396"
+  },
+  {
+    "evento": {
+      "nome": "Festival da Cultura Nerd 2026\n26 SET\n27 SET 2026\nMaceió, Centro de Convenções de Maceió",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/festival-da-cultura-nerd-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306405"
+  },
+  {
+    "evento": {
+      "nome": "Bloco do Boi 2026\n21 JUN 2026\nItapetinga, Bosque da Lagoa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/bloco-do-boi-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306413"
+  },
+  {
+    "evento": {
+      "nome": "BAILE DA TAIPA\n03 ABR 2026\nPorto Seguro, Casa de Taipa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/baile-da-taipa"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306422"
+  },
+  {
+    "evento": {
+      "nome": "PAGODE DA TAIPA - 04/04\n04 ABR 2026\nPorto Seguro, Casa de Taipa",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/pagode-da-taipa-0404"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306431"
+  },
+  {
+    "evento": {
+      "nome": "SANTO LUAU - CABANA AREA BEACH 04/04\n04 ABR 2026\nAv. Beira Mar, 6900 - Porto Seguro, Porto Seguro, B",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/santo-luau-cabana-area-beach-0404"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306445"
+  },
+  {
+    "evento": {
+      "nome": "VAQUEJADA PARQUE LAERTÃO\n11 ABR 2026\nCORRENTINA, PARQUE DE VAQUEJADA LAERTÃO",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/vaquejada-parque-laertao"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306454"
+  },
+  {
+    "evento": {
+      "nome": "Eco Parque - Arraial D'Ajuda - Junho 2026\n11 JUN\n27 JUN 2026\nPorto Seguro, Eco Parque - Arraial D'Aj",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/eco-parque-arraial-dajuda-junho-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306463"
+  },
+  {
+    "evento": {
+      "nome": "SEMANA SANTA !!\n04 ABR 2026\nPorto Seguro, Morocha Club",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/semana-santa"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306471"
+  },
+  {
+    "evento": {
+      "nome": "FAZENDA PARK NOVA CONQUISTA 25º EDIÇÃO\n04 ABR\n05 ABR 2026\nUBATÃ, FAZENDA PARK",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/fazenda-park-nova-conquista-25-edicao"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306479"
+  },
+  {
+    "evento": {
+      "nome": "LUAU - CABANA AREA BEACH 18/04\n18 ABR 2026\nAv. Beira Mar, 6900, Porto Seguro, Porto Seguro, BA - 458",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "zigtickets",
+      "url": "https://zig.tickets/eventos/luau-cabana-area-beach-18-04"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306488"
+  },
+  {
+    "evento": {
+      "nome": "BONJOUR PARTY",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/bonjour-party/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306496"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026\n% OFF\nMac DeMarco Brasil\n\nVárias Cidades",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/mac-demarco-brasil/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306505"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026\n% OFF\nTeora Páscoa Funk Fro...\n\nImbituba/SC",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/teora-pascoa-funk-from-brazil/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306513"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026\n% OFF\nUNDR ARCA SP\n\nSão Paulo/SP",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/undr-arca-sp/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306522"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026\n% OFF\nSurreal Park Soul Fes...\n\nCamboriú/SC",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/surreal-park-soul-festival/"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T11:45:53.306530"
   }
 ]

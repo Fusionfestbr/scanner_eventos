@@ -4,6 +4,7 @@ USA Playwright para renderizar JavaScript com selectors específicos por site.
 """
 import re
 from datetime import datetime, timedelta
+from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 
 from config import SITES_CONFIG, SCRAPER_TIMEOUT
@@ -18,102 +19,102 @@ HEADERS = {
 
 SELECTORS = {
     "ticketmaster": {
-        "container": "[data-testid='event-card'], .event-card, .EventCard, [class*='event-item'], li.event-item",
-        "nome": "h3, [data-testid='event-title'], .event-title, .title",
-        "data": "time, [data-testid='event-date'], .event-date, .date",
-        "local": "[data-testid='event-venue'], .venue, .location, .local",
-        "link": "a[href*='/event/']",
+        "container": "a[href*='/event/'], article, li a",
+        "nome": "h3, h2, span, div",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/event/'], a",
     },
     "ingresse": {
-        "container": "[class*='evento'], [class*='card-evento'], .event-card, article",
-        "nome": "h3, h2, [class*='titulo'], [class*='title']",
-        "data": "time, [class*='data'], [class*='date'], [class*='date-text']",
-        "local": "[class*='local'], [class*='localidade'], [class*='venue']",
-        "link": "a[href*='/evento/'], a[href*='/e/']",
+        "container": "a[href*='/evento/'], a[href*='/e/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a[href*='/e/'], a",
     },
     "sympla": {
-        "container": "[data-testid='event-card'], .event-card, .event-item, li",
-        "nome": "h3, [data-testid='event-name'], .event-name, .title",
-        "data": "time, [data-testid='event-date'], .event-date, span:has-text('/')",
-        "local": "[data-testid='venue-name'], .venue-name, .local",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], a[href*='/br/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a",
     },
     "ticket360": {
-        "container": ".evento-card, .card-evento, [class*='event'], li",
-        "nome": "h3, .titulo, .event-title, [class*='name']",
-        "data": "time, .data, .date, .event-date",
-        "local": ".local, .venue, .localidade",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], a[href*='/event/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a[href*='/event/'], a",
     },
     "eventim": {
-        "container": ".event-item, .event-card, [class*='event']",
-        "nome": "h3, .event-title, .title",
-        "data": "time, .event-date, .date",
-        "local": ".venue, .location, .local",
-        "link": "a[href*='/event/']",
+        "container": "a[href*='/event/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/event/'], a",
     },
     "blueticket": {
-        "container": ".card-evento, .evento-card, .event-card, li.evento, article",
-        "nome": "h3, .nome-evento, .event-name, .title",
-        "data": "time, .data-evento, .date, .data",
-        "local": ".local-evento, .local, .venue",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a",
     },
     "livepass": {
-        "container": ".event-card, [class*='event-item'], li",
-        "nome": "h3, .event-title, .title",
-        "data": "time, .date, [class*='data']",
-        "local": ".venue, .local, .location",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a",
     },
     "bilheteriadigital": {
-        "container": ".event-card, [class*='event-item'], .card-evento",
-        "nome": "h3, .event-name, .title, [class*='nome']",
-        "data": "time, .date, [class*='data']",
-        "local": ".venue, .local, .location",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a",
     },
     "ticketsforfun": {
-        "container": ".event-card, .card-evento, [class*='event']",
-        "nome": "h3, .title, .event-title",
-        "data": "time, .date, [class*='data']",
-        "local": ".local, .venue",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a",
     },
     "guicheweb": {
-        "container": ".evento-card, .event-card, [class*='event-item']",
-        "nome": "h3, .nome, .title",
-        "data": "time, .data, .date",
-        "local": ".local, .localidade",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a",
     },
     "q2ingressos": {
-        "container": ".evento, .card-evento, [class*='event']",
-        "nome": "h3, .nome-evento, .title",
-        "data": "time, .data, .date",
-        "local": ".local, .venue",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a",
     },
     "uhuu": {
-        "container": ".event-card, .card-evento, [class*='event-item']",
-        "nome": "h3, .title, [class*='nome']",
-        "data": "time, .date, [class*='data']",
-        "local": ".local, .venue",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], a[href*='/rj/'], a[href*='/sp/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a[href*='/rj/'], a[href*='/sp/'], a",
     },
     "zigtickets": {
-        "container": ".event-card, [class*='event-item'], li",
-        "nome": "h3, .event-title, .title",
-        "data": "time, .date, [class*='data']",
-        "local": ".venue, .location",
-        "link": "a[href*='/event/']",
+        "container": "a[href*='/event/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/event/'], a",
     },
     "betimelapse": {
-        "container": ".evento, .card-evento, [class*='event']",
-        "nome": "h3, .nome, .title",
-        "data": "time, .data, .date",
-        "local": ".local, .localidade",
-        "link": "a[href*='/evento/']",
+        "container": "a[href*='/evento/'], article",
+        "nome": "h3, h2, span",
+        "data": "time, span",
+        "local": "span, div",
+        "link": "a[href*='/evento/'], a",
     },
 }
 
@@ -174,49 +175,75 @@ def buscar_betimelapse():
     return generic_playwright_scraper("betimelapse")
 
 
-def generic_playwright_scraper(fonte: str) -> list[dict]:
-    """Scraper genérico usando Playwright com selectors específicos."""
+def generic_playwright_scraper(fonte: str, max_retries: int = 3) -> list[dict]:
+    """Scraper genérico com retry e melhor extração."""
     eventos = []
     config = SITES_CONFIG.get(fonte, {})
     url = config.get("url", "")
+    timeout = config.get("timeout", 30) * 1000
     
     if not url:
         return eventos
     
     selectors = SELECTORS.get(fonte, {})
     
-    try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(
-                headless=True,
-                args=["--disable-blink-features=AutomationControlled", "--no-sandbox"]
-            )
-            context = browser.new_context(
-                user_agent=HEADERS["User-Agent"],
-                locale="pt-BR",
-                viewport={"width": 1280, "height": 720}
-            )
-            page = context.new_page()
-            page.set_default_timeout(15000)
-            
-            try:
-                page.goto(url, wait_until="load", timeout=15000)
-            except:
-                pass
-            
-            page.wait_for_timeout(2000)
-            
-            _scroll_page(page)
-            
-            eventos.extend(_extract_with_selectors(page, selectors, fonte, url))
-            
-            if not eventos:
-                eventos.extend(_extract_fallback(page, fonte, url))
-            
-            browser.close()
-            
-    except Exception as e:
-        print(f"   [ERRO] {fonte}: {e}")
+    for tentativa in range(1, max_retries + 1):
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(
+                    headless=True,
+                    args=["--disable-blink-features=AutomationControlled", "--no-sandbox", "--disable-dev-shm-usage"]
+                )
+                context = browser.new_context(
+                    user_agent=HEADERS["User-Agent"],
+                    locale="pt-BR",
+                    viewport={"width": 1280, "height": 720}
+                )
+                page = context.new_page()
+                page.set_default_timeout(timeout)
+                
+                try:
+                    page.goto(url, wait_until="networkidle", timeout=timeout)
+                except Exception as e:
+                    if tentativa < max_retries:
+                        page.wait_for_timeout(5000)
+                        continue
+                    else:
+                        print(f"   [ERRO] {fonte}: não carregou após {max_retries} tentativas")
+                        continue
+                
+                page.wait_for_timeout(3000)
+                _scroll_page(page)
+                
+                eventos_extracted = _extract_with_selectors(page, selectors, fonte, url)
+                
+                if eventos_extracted:
+                    eventos.extend(eventos_extracted)
+                    browser.close()
+                    break
+                else:
+                    if tentativa < max_retries:
+                        import time
+                        time.sleep(5)
+                        continue
+                    else:
+                        print(f"   [ERRO] {fonte}: não carregou após {max_retries} tentativas")
+                        continue
+                    
+        except Exception as e:
+            if tentativa < max_retries:
+                import time
+                time.sleep(5)
+                continue
+            else:
+                print(f"   [ERRO] {fonte}: {e}")
+    
+    if not eventos and fonte in SITES_PROTEGIDOS:
+        print(f"   -> Tentando stealth para {fonte}...")
+        eventos = generic_stealth_scraper(fonte)
+        if not eventos:
+            print(f"   -> Tentando Selenium stealth para {fonte}...")
+            eventos = generic_selenium_stealth_scraper(fonte)
     
     return eventos
 
@@ -236,38 +263,234 @@ def _scroll_page(page):
 def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) -> list[dict]:
     """Extrai eventos usando selectors específicos."""
     eventos = []
-    container_sel = selectors.get("container", "[class*='event']")
+    container_sel = selectors.get("container", "a")
     
     try:
-        containers = page.query_selector_all(container_sel)
+        links = page.query_selector_all("a[href]")
     except:
-        containers = []
+        links = []
     
-    for item in containers:
+    seen_links = set()
+    
+    for link in links:
         try:
-            nome = _get_text(item, selectors.get("nome", "h3, h2"))
-            data = _get_data(item, selectors.get("data", "time"))
-            local = _get_text(item, selectors.get("local", "[class*='local']"))
-            link = _get_link(item, selectors.get("link", "a"))
+            href = link.get_attribute("href")
+            if not href or href in seen_links:
+                continue
             
-            if nome and len(nome) > 2:
-                if not data:
-                    data = _generate_future_date()
-                
-                cidade_extraida = _extract_cidade(local)
-                
-                eventos.append({
-                    "nome": nome,
-                    "artista": "Various Artists",
-                    "data": data,
-                    "cidade": local if not cidade_extraida else cidade_extraida,
-                    "fonte": fonte,
-                    "url": link if link and link.startswith("http") else (base_url + link if link else base_url)
-                })
+            if not _is_valid_event_url(href):
+                continue
+            
+            seen_links.add(href)
+            
+            nome = link.inner_text().strip()
+            
+            if not nome or len(nome) < 3:
+                parent = link.evaluate("el => el.parentElement")
+                if parent:
+                    nome = parent.inner_text().strip()
+            
+            if not _is_valid_event_name(nome):
+                continue
+            
+            data = _generate_future_date()
+            
+            parent_text = ""
+            try:
+                parent = link.evaluate("el => el.parentElement")
+                if parent:
+                    parent_text = parent.inner_text()
+            except:
+                pass
+            
+            local = ""
+            if parent_text:
+                lines = parent_text.split("\n")
+                for line in lines[1:]:
+                    line = line.strip()
+                    if len(line) > 2 and len(line) < 80:
+                        local = line
+                        break
+            
+            nome_limpo, local_limpo = _clean_event_name(nome, local)
+            
+            url_final = base_url
+            if href.startswith("http"):
+                url_final = href
+            elif href.startswith("//"):
+                parsed = urlparse(base_url)
+                url_final = f"{parsed.scheme}:{href}"
+            elif href.startswith("/"):
+                parsed = urlparse(base_url)
+                url_final = f"{parsed.scheme}://{parsed.netloc}{href}"
+            elif href.startswith("../"):
+                parsed = urlparse(base_url)
+                base_path = "/".join(parsed.path.split("/")[:-1])
+                url_final = f"{parsed.scheme}://{parsed.netloc}{base_path}/{href.replace('../', '')}"
+            else:
+                parsed = urlparse(base_url)
+                url_final = f"{parsed.scheme}://{parsed.netloc}/{href}"
+            
+            eventos.append({
+                "nome": nome_limpo,
+                "artista": "Various Artists",
+                "data": data,
+                "cidade": local_limpo if local_limpo else "",
+                "fonte": fonte,
+                "url": url_final
+            })
         except:
             continue
     
     return eventos
+
+
+def _is_valid_event_name(nome: str) -> bool:
+    """Verifica se o nome parece ser um evento válido (não menu/botão)."""
+    if not nome or len(nome) < 3:
+        return False
+    
+    nome_lower = nome.lower().strip()
+    
+    ignore_patterns = [
+        "menu", "navbar", "nav", "footer", "header", "sidebar",
+        "login", "logout", "entrar", "sair", "cadastro", "register",
+        "buscar", "search", "pesquisar", "pesquisa",
+        "acesso", "esqueci", "senha", "recuperar",
+        "home", "início", "inicio",
+        "sobre", "about", "contato", "contact",
+        "privacidade", "cookies", "termos", "terms",
+        "acessibilidade", "a-", "a+", "contraste",
+        "meus", "ingressos", "ticket", "perfil",
+        "facebook", "instagram", "twitter", "whatsapp",
+        "youtube", "linkedin",
+        "blog", "notícias", "news",
+        "faq", "ajuda", "help", "duvidas", "perguntas",
+        "conteúdo", "content", "rodapé", "rodape",
+        "encontre", "busca", "eventos", "categorias",
+        "skip to", "main content", "principal",
+        "suporte", "support", "fale conosco",
+        "central de", "minha conta", "meus pedidos",
+        "rolar para", "voltar ao topo", "back to top",
+        "saiba mais", "ver detalhes", "leia mais",
+        "confira", "clique aqui", "acessar",
+    ]
+    
+    for pattern in ignore_patterns:
+        if nome_lower == pattern or nome_lower.startswith(pattern + " ") or " " + pattern + " " in nome_lower:
+            return False
+    
+    if len(nome_lower) > 100:
+        return False
+    
+    return True
+
+
+def _clean_event_name(nome: str, local: str) -> tuple:
+    """Separa o nome do evento do local/cidade."""
+    if not nome:
+        return "", ""
+    
+    nome_original = nome
+    local_encontrado = local
+    
+    lines = nome.split("\n")
+    if len(lines) > 1:
+        nome_evento = lines[0].strip()
+        local_lines = [l.strip() for l in lines[1:] if l.strip() and len(l.strip()) < 60]
+        
+        if local_lines and not local_encontrado:
+            local_encontrado = " | ".join(local_lines)
+        
+        if nome_evento and len(nome_evento) > 2:
+            return nome_evento, local_encontrado
+    
+    if " - " in nome and not local_encontrado:
+        parts = nome.rsplit(" - ", 1)
+        if len(parts) == 2 and len(parts[0]) > 3:
+            nome_evento = parts[0].strip()
+            possivel_local = parts[1].strip()
+            if len(possivel_local) < 50:
+                return nome_evento, possivel_local
+    
+    return nome_original, local_encontrado
+
+
+def _is_valid_event_url(url: str) -> bool:
+    """Verifica se a URL parece ser de um evento (não página institucional)."""
+    if not url:
+        return False
+    
+    url_lower = url.lower()
+    
+    invalid_patterns = [
+        "/auth", "/login", "/logout", "/cadastro", "/register",
+        "/perfil", "/conta", "/minha-conta",
+        "/central", "/ajuda", "/faq", "/duvidas",
+        "/sobre", "/about", "/contato", "/contact",
+        "/politica", "/privacidade", "/cookies", "/termos",
+        "/blog", "/noticias", "/news",
+        "/home", "/inicio",
+        "/categoria", "/sub-categoria",
+        "/busca", "/pesquisa", "/search",
+        "/meus-ingressos", "/ingressos",
+    ]
+    
+    for pattern in invalid_patterns:
+        if pattern in url_lower:
+            return False
+    
+    if "/evento" in url_lower or "/event/" in url_lower or "?" in url_lower:
+        return True
+    
+    return True
+
+
+def _extract_local_from_container(item) -> str:
+    """Extrai texto de local do container do evento."""
+    try:
+        text_parts = []
+        
+        for sel in ["[class*='local']", "[class*='venue']", "[class*='location']", ".endereco", ".address"]:
+            try:
+                elem = item.query_selector(sel)
+                if elem:
+                    text = elem.inner_text().strip()
+                    if text:
+                        text_parts.append(text)
+            except:
+                continue
+        
+        if text_parts:
+            return " | ".join(text_parts)
+        
+        full_text = item.inner_text()
+        if full_text:
+            lines = full_text.split("\n")
+            for line in lines[1:]:
+                line = line.strip()
+                if len(line) > 3 and len(line) < 100:
+                    return line
+        
+    except:
+        pass
+    return ""
+
+
+def _extract_link_from_container(item) -> str:
+    """Extrai link do container do evento."""
+    try:
+        links = item.query_selector_all("a")
+        for link in links:
+            href = link.get_attribute("href")
+            if href and not href.startswith("javascript") and not href.startswith("#"):
+                if "/evento" in href or "/event" in href or "?" in href:
+                    return href
+        if links:
+            return links[0].get_attribute("href")
+    except:
+        pass
+    return ""
 
 
 def _extract_fallback(page, fonte: str, base_url: str) -> list[dict]:
@@ -300,13 +523,18 @@ def _extract_fallback(page, fonte: str, base_url: str) -> list[dict]:
                     nome = re.sub(r'\s+(COMPRAR|MONITORAR|IGNORAR)$', '', nome).strip()
                     
                     if nome and len(nome) > 5:
+                        url_final = href if href.startswith("http") else base_url
+                        if not href.startswith("http"):
+                            parsed = urlparse(base_url)
+                            url_final = f"{parsed.scheme}://{parsed.netloc}{href}" if href.startswith("/") else base_url
+                        
                         eventos.append({
                             "nome": nome[:100],
                             "artista": "Various Artists",
                             "data": data,
                             "cidade": "",
                             "fonte": fonte,
-                            "url": href if href.startswith("http") else base_url
+                            "url": url_final
                         })
             except:
                 continue
@@ -471,7 +699,7 @@ def padronizar_eventos(eventos: list[dict]) -> list[dict]:
     
     eventos_padronizados = _deduplicate_events(eventos_padronizados)
     
-    return eventos_padronizados[:100]
+    return eventos_padronizados
 
 
 def _deduplicate_events(eventos: list[dict]) -> list[dict]:
@@ -536,3 +764,279 @@ def normalizar_data(data_str: str) -> str:
                 return f"2026-{num}-{dia}"
     
     return ""
+
+
+SITES_PROTEGIDOS = ["eventim", "livepass"]
+
+
+def generic_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
+    """Scraper usando undetected-chromedriver para sites protegidos."""
+    eventos = []
+    config = SITES_CONFIG.get(fonte, {})
+    url = config.get("url", "")
+    
+    if not url:
+        return eventos
+    
+    for tentativa in range(1, max_retries + 1):
+        try:
+            import undetected_chromedriver as uc
+            
+            options = uc.ChromeOptions()
+            options.add_argument("--headless")
+            options.add_argument("--no-sandbox")
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--disable-gpu")
+            
+            driver = uc.Chrome(options=options, version_main=None)
+            driver.set_page_load_timeout(30)
+            
+            try:
+                driver.get(url)
+            except:
+                driver.quit()
+                if tentativa < max_retries:
+                    import time
+                    time.sleep(5)
+                    continue
+                continue
+            
+            import time
+            time.sleep(5)
+            
+            from selenium.webdriver.common.by import By
+            from selenium.webdriver.support.ui import WebDriverWait
+            from selenium.webdriver.support import expected_conditions as EC
+            
+            try:
+                WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.TAG_NAME, "body"))
+                )
+            except:
+                pass
+            
+            links = driver.find_elements(By.TAG_NAME, "a")
+            
+            seen_hrefs = set()
+            
+            for link in links:
+                try:
+                    href = link.get_attribute("href")
+                    if not href or href in seen_hrefs:
+                        continue
+                    
+                    if not _is_valid_event_url_stealth(href):
+                        continue
+                    
+                    seen_hrefs.add(href)
+                    
+                    try:
+                        nome = link.text.strip()
+                    except:
+                        nome = ""
+                    
+                    if not nome or len(nome) < 3:
+                        try:
+                            parent = link.find_element(By.XPATH, "./..")
+                            nome = parent.text.strip()
+                            if nome:
+                                lines = nome.split("\n")
+                                nome = lines[0].strip()
+                        except:
+                            pass
+                    
+                    if not _is_valid_event_name(nome):
+                        continue
+                    
+                    url_final = href
+                    if not href.startswith("http"):
+                        from urllib.parse import urlparse
+                        parsed = urlparse(url)
+                        url_final = f"{parsed.scheme}://{parsed.netloc}{href}"
+                    
+                    eventos.append({
+                        "nome": nome[:100],
+                        "artista": "Various Artists",
+                        "data": _generate_future_date(),
+                        "cidade": "",
+                        "fonte": fonte,
+                        "url": url_final
+                    })
+                except:
+                    continue
+            
+            driver.quit()
+            
+            if eventos:
+                break
+            elif tentativa < max_retries:
+                import time
+                time.sleep(5)
+                
+        except Exception as e:
+            if tentativa < max_retries:
+                import time
+                time.sleep(5)
+                continue
+            else:
+                print(f"   [ERRO STEALTH] {fonte}: {e}")
+    
+    return eventos
+
+
+def _is_valid_event_url_stealth(url: str) -> bool:
+    """Verifica se URL é de evento (para Selenium)."""
+    if not url:
+        return False
+    
+    url_lower = url.lower()
+    
+    invalid_patterns = [
+        "/auth", "/login", "/logout", "/cadastro", "/register",
+        "/perfil", "/conta", "/minha-conta",
+        "/central", "/ajuda", "/faq", "/duvidas",
+        "/sobre", "/about", "/contato", "/contact",
+        "/politica", "/privacidade", "/cookies", "/termos",
+        "/blog", "/noticias", "/news",
+        "/home", "/inicio",
+        "/categoria", "/sub-categoria",
+        "/busca", "/pesquisa", "/search",
+        "/meus-ingressos", "/ingressos",
+    ]
+    
+    for pattern in invalid_patterns:
+        if pattern in url_lower:
+            return False
+    
+    if "/evento" in url_lower or "/event/" in url_lower or "?" in url_lower:
+        return True
+    
+    return False
+
+
+def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
+    """Scraper usando Selenium com stealth para sites protegidos."""
+    eventos = []
+    config = SITES_CONFIG.get(fonte, {})
+    url = config.get("url", "")
+    
+    if not url:
+        return eventos
+    
+    for tentativa in range(1, max_retries + 1):
+        try:
+            from selenium import webdriver
+            from selenium.webdriver.chrome.options import Options
+            from selenium.webdriver.common.by import By
+            from selenium.webdriver.support.ui import WebDriverWait
+            from selenium.webdriver.support import expected_conditions as EC
+            
+            options = Options()
+            options.add_argument("--headless")
+            options.add_argument("--no-sandbox")
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--disable-gpu")
+            options.add_argument("--disable-blink-features=AutomationControlled")
+            options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            options.add_experimental_option("useAutomationExtension", False)
+            options.add_argument("--disable-web-security")
+            options.add_argument("--allow-running-insecure-content")
+            options.add_argument("--ignore-certificate-errors")
+            
+            driver = webdriver.Chrome(options=options)
+            driver.set_page_load_timeout(30)
+            driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+                "source": """
+                    Object.defineProperty(navigator, 'webdriver', {
+                        get: () => undefined
+                    });
+                """
+            })
+            
+            try:
+                driver.get(url)
+            except:
+                driver.quit()
+                if tentativa < max_retries:
+                    import time
+                    time.sleep(5)
+                    continue
+                continue
+            
+            import time
+            time.sleep(5)
+            
+            try:
+                WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.TAG_NAME, "body"))
+                )
+            except:
+                pass
+            
+            links = driver.find_elements(By.TAG_NAME, "a")
+            
+            seen_hrefs = set()
+            
+            for link in links:
+                try:
+                    href = link.get_attribute("href")
+                    if not href or href in seen_hrefs:
+                        continue
+                    
+                    if not _is_valid_event_url_stealth(href):
+                        continue
+                    
+                    seen_hrefs.add(href)
+                    
+                    try:
+                        nome = link.text.strip()
+                    except:
+                        nome = ""
+                    
+                    if not nome or len(nome) < 3:
+                        try:
+                            parent = link.find_element(By.XPATH, "./..")
+                            nome = parent.text.strip()
+                            if nome:
+                                lines = nome.split("\n")
+                                nome = lines[0].strip()
+                        except:
+                            pass
+                    
+                    if not _is_valid_event_name(nome):
+                        continue
+                    
+                    url_final = href
+                    if not href.startswith("http"):
+                        from urllib.parse import urlparse
+                        parsed = urlparse(url)
+                        url_final = f"{parsed.scheme}://{parsed.netloc}{href}"
+                    
+                    eventos.append({
+                        "nome": nome[:100],
+                        "artista": "Various Artists",
+                        "data": _generate_future_date(),
+                        "cidade": "",
+                        "fonte": fonte,
+                        "url": url_final
+                    })
+                except:
+                    continue
+            
+            driver.quit()
+            
+            if eventos:
+                break
+            elif tentativa < max_retries:
+                import time
+                time.sleep(5)
+                
+        except Exception as e:
+            if tentativa < max_retries:
+                import time
+                time.sleep(5)
+                continue
+            else:
+                print(f"   [ERRO SELENIUM] {fonte}: {e}")
+    
+    return eventos

@@ -1,0 +1,389 @@
+[
+  {
+    "evento": {
+      "nome": "BTS WORLD TOUR ARIRANG",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "28, 30 e 31 de Outubro de 2026 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bts-world-tour-arirang"
+    },
+    "analise": {
+      "evento": "BTS WORLD TOUR ARIRANG",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "28, 30 e 31 de Outubro de 2026 | COMPRAR",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 9.2
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 9,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento BTS WORLD TOUR ARIRANG em 2026. As notas de hype, escassez, público e potencial de revenda são consistentemente altas, justificando a compra. A data (2026-05-03) é futura, mas o hype persistente do BTS sugere relevância contínua."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 8.9,
+      "probabilidade_esgotar": 95,
+      "recomendacao_volume": "alto"
+    }
+  },
+  {
+    "evento": {
+      "nome": "NBA House 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "3 a 21 de Junho de 2026 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/nbahouse"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": true,
+      "comentario": "A análise indica alto hype e publikco, mas a data do evento (2026-05-03) é significativamente distante. A escassez e o potencial de revenda são moderados. Recomenda-se monitorar a evolução da demanda e a confirmação das datas do evento antes de tomar uma decisão definitiva."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Erro detectado na análise",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 0,
+      "probabilidade_esgotar": 0,
+      "recomendacao_volume": "baixo"
+    }
+  },
+  {
+    "evento": {
+      "nome": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "4, 5, 6, 7, 11, 12, 13 de Setembro de 2026 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/rockinrio"
+    },
+    "analise": {
+      "evento": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "11",
+        "12",
+        "13"
+      ],
+      "data_evento": "2026-09-03",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.14
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 9,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o Rock in Rio 2026. A data (início de maio e setembro) sugere uma janela de vendas longa e diversificada. Os fatores de hype, escassez, publico e potencial de revenda são positivos.  Recomendo comprar com alta confiança."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 8.3,
+      "probabilidade_esgotar": 90,
+      "recomendacao_volume": "alto"
+    }
+  },
+  {
+    "evento": {
+      "nome": "Suhai Festival Interlagos 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Agosto de 2026 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/suhai-festival-de-interlagos-2026"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de revenda e interesse público (hype e publikco elevados), mas a data do evento (2026-05-03) é distante. Recomenda-se monitorar o desenvolvimento do evento para avaliar se os fatores de sucesso permanecem relevantes."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 8.5,
+      "probabilidade_esgotar": 90,
+      "recomendacao_volume": "alto"
+    }
+  },
+  {
+    "evento": {
+      "nome": "Lollapalooza Brasil 2027",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "19, 20 e 21 de Março de 2027 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/lollapaloozabr"
+    },
+    "analise": {
+      "evento": "Lollapalooza Brasil 2027",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "19, 20 e 21 de Março de 2027",
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.13
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 9,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o Lollapalooza Brasil 2027. A data (2026-05-03) é um ponto crucial para avaliar a relevância do evento no mercado atual. Apesar da data ser futura, os indicadores de hype, escassez e publikco são altos, sugerindo uma forte demanda.  A nota final de 8.13 reforça essa avaliação."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 8.3,
+      "probabilidade_esgotar": 90,
+      "recomendacao_volume": "alto"
+    }
+  },
+  {
+    "evento": {
+      "nome": "Henry & Klauss: Masters of Magic World Tour 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "30 de Maio a 28 de Junho de 2026 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/henry-e-klauss"
+    },
+    "analise": {
+      "evento": "Henry & Klauss: Masters of Magic World Tour 2026",
+      "artista": "Various Artists",
+      "data_inicio": "2026-05-03",
+      "data_fim": "2026-06-28",
+      "cidade": "30 de Maio a 28 de Junho de 2026 | COMPRAR",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de venda (potencial_revenda=9) e forte interesse público (publikco=8), mas a duração do evento (30 de Maio a 28 de Junho de 2026) é considerável. A nota final de 7.5 sugere que, apesar do hype e da escassez, o evento pode perder força com o tempo. Recomenda-se monitorar a demanda e ajustar a estratégia de compra conforme a proximidade da data."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 7.7,
+      "probabilidade_esgotar": 80,
+      "recomendacao_volume": "médio"
+    }
+  },
+  {
+    "evento": {
+      "nome": "João Rock 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "01 de Agosto de 2026 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/joao-rock"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "O evento 'João Rock 2026' é significativamente no futuro (mais de um ano). Embora os fatores de hype, escassez e publikco sejam positivos, a incerteza do mercado e a longa janela até a data exigem uma abordagem cautelosa. A nota final de 0 pode ser excessivamente otimista considerando o horizonte temporal."
+    },
+    "acao_final": "IGNORAR",
+    "razao": "Nota insuficiente",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 0,
+      "probabilidade_esgotar": 0,
+      "recomendacao_volume": "baixo"
+    }
+  },
+  {
+    "evento": {
+      "nome": "CA7RIEL & Paco Amoroso: Free Spirits World Tour",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Novembro de 2026 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/ca7riel-e-paco-amoroso"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise parece razoável com base nos dados fornecidos. No entanto, a data do evento (2026-05-03) é significativamente no futuro e o hype pode diminuir com o tempo. Recomenda-se monitorar a evolução da venda e do interesse antes de tomar uma decisão definitiva de compra."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 7.7,
+      "probabilidade_esgotar": 80,
+      "recomendacao_volume": "médio"
+    }
+  },
+  {
+    "evento": {
+      "nome": "The Weeknd: After Hours Til Dawn",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "Rio de Janeiro e São Paulo | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/the-weeknd"
+    },
+    "analise": {
+      "evento": "The Weeknd: After Hours Til Dawn",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidades": [
+        "Rio de Janeiro",
+        "São Paulo"
+      ],
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 9.25
+    },
+    "auditoria": {
+      "decisao": "COMPRAR",
+      "confianca": 9,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de sucesso para o evento. O hype, a escassez, o público-alvo e o potencial de revenda são todos muito altos, resultando em uma nota final excelente. A data de 2026 pode ser um fator a considerar no monitoramento contínuo da demanda."
+    },
+    "acao_final": "COMPRAR",
+    "razao": "Alta nota e confiança (nota>=7.7, confianca>=7.0)",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 8.3,
+      "probabilidade_esgotar": 90,
+      "recomendacao_volume": "alto"
+    }
+  },
+  {
+    "evento": {
+      "nome": "Bienal do Livro Bahia 2026 - Salvador",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
+      "cidade": "15 de Abril a 21 de Abril de 2026 | COMPRAR",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bienal-do-livro-bahia-2026"
+    },
+    "analise": {
+      "evento": "Bienal do Livro Bahia 2026",
+      "artista": "Various Artists",
+      "data_inicio": "2026-05-03",
+      "data_fim": "2026-04-21",
+      "cidade": "Salvador",
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5,
+      "link_compra": "COMPRAR"
+    },
+    "auditoria": {
+      "decisao": "MONITORAR",
+      "confianca": 6,
+      "erro_detectado": false,
+      "comentario": "A análise indica um alto potencial de revenda (9) e hype (7), mas a data do evento é significativamente distante (2026). A escassez (6) e o publikco (8) são positivos, mas a confiança na decisão deve ser moderada devido ao longo período até a realização. Recomenda-se monitorar a evolução da análise e o mercado nos próximos anos."
+    },
+    "acao_final": "MONITORAR",
+    "razao": "Nota média",
+    "thresholds_usados": {
+      "min_nota_comprar": 7.7,
+      "min_confianca": 7.0
+    },
+    "compra_agressiva": false,
+    "previsao": {
+      "score_valorizacao": 7.1,
+      "probabilidade_esgotar": 75,
+      "recomendacao_volume": "médio"
+    }
+  }
+]
