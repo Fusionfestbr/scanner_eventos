@@ -57,7 +57,7 @@ def marcar_notificado(evento_id: str) -> None:
     salvar_notificados(notificados)
 
 
-def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: Optional[Dict] = None) -> str:
+def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: Optional[Dict] = None, arbitragem: Optional[Dict] = None) -> str:
     """Formata mensagem de alerta."""
     nome = evento.get("nome", "N/A")
     artista = evento.get("artista", "N/A")
@@ -104,10 +104,26 @@ def formatar_mensagem(evento: dict, analise: dict, auditoria: dict, plano_acao: 
 🎯 Preço alvo venda: R$ {preco_alvo:.2f}
 💵 Margem estimada: {margem}"""
     
+    if arbitragem and arbitragem.get("oportunidade"):
+        menor = arbitragem.get("menor_preco", 0)
+        maior = arbitragem.get("maior_preco", 0)
+        spread = arbitragem.get("spread_percent", 0)
+        lucro = arbitragem.get("lucro_potencial", 0)
+        fonte_menor = arbitragem.get("fonte_menor", "N/A")
+        fonte_maior = arbitragem.get("fonte_maior", "N/A")
+        
+        mensagem += f"""
+
+💸 <b>ARBITRAGEM DETECTADA</b>
+💰 Menor: R$ {menor:.2f} ({fonte_menor})
+💵 Maior: R$ {maior:.2f} ({fonte_maior})
+📊 Spread: {spread:.1f}%
+💵 Lucro: R$ {lucro:.2f}"""
+    
     return mensagem
 
 
-def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Optional[Dict] = None) -> bool:
+def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Optional[Dict] = None, arbitragem: Optional[Dict] = None) -> bool:
     """
     Envia alerta via Telegram.
     
@@ -116,6 +132,7 @@ def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Opti
         analise: Dados da análise
         auditoria: Dados da auditoria
         plano_acao: Dados do plano de ação (opcional)
+        arbitragem: Dados da arbitragem (opcional)
     
     Returns:
         True se enviado com sucesso
@@ -126,7 +143,7 @@ def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Opti
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
         return False
     
-    mensagem = formatar_mensagem(evento, analise, auditoria)
+    mensagem = formatar_mensagem(evento, analise, auditoria, plano_acao, arbitragem)
     
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     
@@ -148,7 +165,7 @@ def enviar_alerta(evento: dict, analise: dict, auditoria: dict, plano_acao: Opti
         return False
 
 
-def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao: str, plano_acao: Optional[Dict] = None) -> bool:
+def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao: str, plano_acao: Optional[Dict] = None, arbitragem: Optional[Dict] = None) -> bool:
     """
     Verifica critérios e envia alerta se necessário.
     
@@ -158,6 +175,7 @@ def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao
         auditoria: Dados da auditoria
         acao: Ação final (COMPRAR, MONITORAR, IGNORAR)
         plano_acao: Dados do plano de ação (opcional)
+        arbitragem: Dados da arbitragem (opcional)
     
     Returns:
         True se alerta foi enviado
@@ -179,7 +197,7 @@ def verificar_e_enviar_alerta(evento: dict, analise: dict, auditoria: dict, acao
     if ja_notificado(evento_id):
         return False
     
-    sucesso = enviar_alerta(evento, analise, auditoria, plano_acao)
+    sucesso = enviar_alerta(evento, analise, auditoria, plano_acao, arbitragem)
     
     if sucesso:
         marcar_notificado(evento_id)

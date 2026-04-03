@@ -11,7 +11,7 @@ from agents.validador import validar_eventos
 from agents.analista import analisar_eventos
 from agents.auditor import auditar_eventos
 from core.decision import processar_decisoes
-from core.learning import salvar_evento_no_historico
+from core.learning import salvar_evento_no_historico, obter_thresholds, verificar_performance
 from core.ranking import gerar_ranking, salvar_ranking
 from core.data_quality import (
     filtrar_eventos_validos,
@@ -24,6 +24,8 @@ from core.notifier import verificar_e_enviar_alerta
 from config import FALLBACK_ENABLED
 from core.predictor import processar_previsoes
 from core.executor import processar_planos_acao
+from core.arbitrage import processar_arbitragem
+from agents.scraper import buscar_precos_revenda
 
 
 def log(msg: str) -> None:
@@ -55,6 +57,13 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
         Tupla com (qtd_coletados, qtd_validos_quality, qtd_analisados, qtd_finais, qualidade_score)
     """
     log("=== INICIANDO PIPELINE DE EVENTOS ===")
+    
+    thresholds = obter_thresholds()
+    log(f"   -> Thresholds carregados: nota>={thresholds['min_nota_comprar']}, confianca>={thresholds['min_confianca']}")
+    
+    perf = verificar_performance()
+    if perf.get("status") == "alerta":
+        log(f"   [ALERTA] Performance caiu: {perf.get('mensagem')}")
     
     log("1/7 - Coletando eventos...")
     eventos_coletados = coletar_eventos()
@@ -120,6 +129,29 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     eventos_finais = processar_planos_acao(eventos_finais)
     log(f"   -> Planos de ação gerados para {len(eventos_finais)} eventos")
     
+    log("Detectando oportunidades de arbitragem...")
+    eventos_com_arbitragem = []
+    for item in eventos_finais:
+        evento_com_arbit = item.copy()
+        
+        if item.get("acao_final") == "COMPRAR":
+            nome_evento = item.get("evento", {}).get("nome", "")
+            if nome_evento:
+                precos_revenda = buscar_precos_revenda(nome_evento)
+                evento_original = item.get("evento", {})
+                preco_original = evento_original.get("preco", 0)
+                
+                if preco_original > 0:
+                    precos_revenda.insert(0, {"plataforma": evento_original.get("fonte", "original"), "preco": preco_original})
+                
+                evento_com_arbit["precos_encontrados"] = precos_revenda
+                evento_com_arbit["evento"]["precos_encontrados"] = precos_revenda
+        
+        eventos_com_arbitragem.append(evento_com_arbit)
+    
+    eventos_finais = processar_arbitragem(eventos_com_arbitragem, apenas_comprar=True)
+    log(f"   -> Arbitragem detectada para {len(eventos_finais)} eventos")
+    
     final_path = os.path.join(os.path.dirname(__file__), "..", "data", "final.json")
     salvar_json(eventos_finais, final_path)
     log(f"   -> Salvo em {final_path}")
@@ -136,9 +168,10 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
         auditoria = item.get("auditoria", {})
         acao = item.get("acao_final", "IGNORAR")
         plano_acao = item.get("plano_acao", {})
+        arbitragem = item.get("arbitragem", {})
         salvar_evento_no_historico(evento, analise, auditoria, acao)
         
-        enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao)
+        enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao, arbitragem)
         if enviado:
             log(f"   -> Alerta enviado para: {evento.get('nome', 'N/A')}")
     

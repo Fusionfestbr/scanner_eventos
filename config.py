@@ -88,6 +88,19 @@ SITES_CONFIG = {
 
 SITES_ATIVOS = list(SITES_CONFIG.keys())
 
+SITES_REVENDA = {
+    "viagogo": {
+        "url": "https://www.viagogo.com/br",
+        "timeout": 30
+    },
+    "buyticketbrasil": {
+        "url": "https://buyticketbrasil.com/",
+        "timeout": 30
+    }
+}
+
+ARBITRAGE_MIN_SPREAD = float(os.environ.get("ARBITRAGE_MIN_SPREAD", "20"))
+
 INTERVALO_MINUTOS = int(os.environ.get("INTERVALO_MINUTOS", "30"))
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "8436380065:AAFFCJ0Z7EWmfHDGCpGQrlbBbKmHQCXVf6o")

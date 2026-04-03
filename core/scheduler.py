@@ -144,8 +144,10 @@ def executar_ciclo() -> dict:
     from agents.auditor import auditar_eventos
     from core.decision import processar_decisoes
     from core.predictor import processar_previsoes
+    from core.executor import processar_planos_acao
     from core.learning import salvar_evento_no_historico
     from core.notifier import verificar_e_enviar_alerta
+    from core.arbitrage import processar_arbitragem
     
     eventos_validados = validar_eventos(eventos_novos)
     eventos_analisados = analisar_eventos(eventos_validados)
@@ -154,6 +156,7 @@ def executar_ciclo() -> dict:
     
     eventos_finais = processar_previsoes(eventos_finais)
     eventos_finais = processar_planos_acao(eventos_finais)
+    eventos_finais = processar_arbitragem(eventos_finais, apenas_comprar=True)
     
     for item in eventos_finais:
         evento = item.get("evento", {})
@@ -161,8 +164,9 @@ def executar_ciclo() -> dict:
         auditoria = item.get("auditoria", {})
         acao = item.get("acao_final", "IGNORAR")
         plano_acao = item.get("plano_acao", {})
+        arbitragem = item.get("arbitragem", {})
         salvar_evento_no_historico(evento, analise, auditoria, acao)
-        verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao)
+        verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao, arbitragem)
     
     compras = sum(1 for e in eventos_finais if e.get("acao_final") == "COMPRAR")
     monitorar = sum(1 for e in eventos_finais if e.get("acao_final") == "MONITORAR")

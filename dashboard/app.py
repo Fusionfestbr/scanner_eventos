@@ -3,13 +3,26 @@ Dashboard Flask para visualização de eventos.
 """
 import json
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 
 app = Flask(__name__)
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 FINAL_FILE = os.path.join(DATA_DIR, "final.json")
 RANKING_FILE = os.path.join(DATA_DIR, "ranking.json")
+
+try:
+    from core.learning import (
+        calcular_metricas_financeiras,
+        calcular_metricas_moving_average,
+        analisar_padroes,
+        verificar_performance,
+        obter_thresholds,
+        carregar_resultados
+    )
+    LEARNING_AVAILABLE = True
+except ImportError:
+    LEARNING_AVAILABLE = False
 
 
 def carregar_eventos():
@@ -64,6 +77,19 @@ def index():
     eventos = carregar_ranking()
     estatisticas = calcular_estatisticas(eventos)
     
+    learning_stats = {}
+    if LEARNING_AVAILABLE:
+        try:
+            learning_stats = {
+                "metricas_financeiras": calcular_metricas_financeiras(),
+                "moving_average": calcular_metricas_moving_average(),
+                "padroes": analisar_padroes(),
+                "performance": verificar_performance(),
+                "thresholds": obter_thresholds()
+            }
+        except Exception:
+            learning_stats = {}
+    
     if filtro != "todos":
         eventos = [e for e in eventos if e.get("acao_final") == filtro]
     
@@ -71,8 +97,28 @@ def index():
         "index.html",
         eventos=eventos,
         estatisticas=estatisticas,
-        filtro=filtro
+        filtro=filtro,
+        learning_stats=learning_stats if learning_stats else None,
+        learning_available=LEARNING_AVAILABLE
     )
+
+
+@app.route("/metrics")
+def metrics():
+    """API para métricas de aprendizado."""
+    if not LEARNING_AVAILABLE:
+        return jsonify({"error": "Learning module not available"})
+    
+    try:
+        return jsonify({
+            "financeiras": calcular_metricas_financeiras(),
+            "moving_average": calcular_metricas_moving_average(),
+            "padroes": analisar_padroes(),
+            "performance": verificar_performance(),
+            "thresholds": obter_thresholds()
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)})
 
 
 @app.route("/refresh")

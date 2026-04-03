@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 
-from config import SITES_CONFIG, SCRAPER_TIMEOUT
+from config import SITES_CONFIG, SITES_REVENDA, SCRAPER_TIMEOUT
 
 
 HEADERS = {
@@ -1477,3 +1477,120 @@ def _extract_guicheweb_cards(page, fonte: str, base_url: str) -> list[dict]:
             continue
     
     return eventos
+
+
+def buscar_precos_revenda(nome_evento: str) -> list[dict]:
+    """
+    Busca preços de um evento em sites de revenda.
+    
+    Args:
+        nome_evento: Nome do evento para buscar
+    
+    Returns:
+        Lista de preços encontrados [{"plataforma": str, "preco": float}]
+    """
+    precos = []
+    
+    precos_busca = _buscar_preco_viagogo(nome_evento)
+    if precos_busca:
+        precos.extend(precos_busca)
+    
+    precos_busca = _buscar_preco_buyticketbrasil(nome_evento)
+    if precos_busca:
+        precos.extend(precos_busca)
+    
+    return precos
+
+
+def _buscar_preco_viagogo(nome_evento: str) -> list[dict]:
+    """Busca preços no Viagogo."""
+    precos = []
+    config = SITES_REVENDA.get("viagogo", {})
+    url = config.get("url", "")
+    
+    if not url:
+        return precos
+    
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled", "--no-sandbox"]
+            )
+            context = browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                locale="pt-BR"
+            )
+            page = context.new_page()
+            page.set_default_timeout(15000)
+            
+            search_url = f"{url}?SearchText={nome_evento.replace(' ', '+')}"
+            page.goto(search_url, wait_until="domcontentloaded")
+            page.wait_for_timeout(3000)
+            
+            preco_elements = page.query_selector_all("text=R$")
+            
+            for el in preco_elements[:5]:
+                try:
+                    texto = el.inner_text()
+                    match = re.search(r'R\$\s*([\d.,]+)', texto)
+                    if match:
+                        preco_str = match.group(1).replace('.', '').replace(',', '.')
+                        preco = float(preco_str)
+                        if preco > 0:
+                            precos.append({"plataforma": "viagogo", "preco": preco})
+                except:
+                    continue
+            
+            browser.close()
+    except Exception:
+        pass
+    
+    return precos
+
+
+def _buscar_preco_buyticketbrasil(nome_evento: str) -> list[dict]:
+    """Busca preços no Buy Ticket Brasil."""
+    precos = []
+    config = SITES_REVENDA.get("buyticketbrasil", {})
+    url = config.get("url", "")
+    
+    if not url:
+        return precos
+    
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled", "--no-sandbox"]
+            )
+            context = browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                locale="pt-BR"
+            )
+            page = context.new_page()
+            page.set_default_timeout(15000)
+            
+            search_url = f"{url}?s={nome_evento.replace(' ', '+')}"
+            page.goto(search_url, wait_until="domcontentloaded")
+            page.wait_for_timeout(3000)
+            
+            preco_elements = page.query_selector_all("text=R$")
+            
+            for el in preco_elements[:5]:
+                try:
+                    texto = el.inner_text()
+                    match = re.search(r'R\$\s*([\d.,]+)', texto)
+                    if match:
+                        preco_str = match.group(1).replace('.', '').replace(',', '.')
+                        preco = float(preco_str)
+                        if preco > 0:
+                            precos.append({"plataforma": "buyticketbrasil", "preco": preco})
+                except:
+                    continue
+            
+            browser.close()
+    except Exception:
+        pass
+    
+    return precos

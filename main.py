@@ -12,7 +12,10 @@ from core.learning import (
     calcular_metricas,
     obter_thresholds,
     mostrar_historico,
-    registrar_resultado
+    registrar_resultado,
+    registrar_operacao,
+    calcular_metricas_financeiras,
+    mostrar_resultados_operacoes
 )
 from core.ranking import gerar_ranking, salvar_ranking
 from core.notifier import testar_conexao, enviar_alerta
@@ -33,6 +36,14 @@ def main():
     
     if "--register" in args:
         registrar_resultado_manual()
+        return
+    
+    if "--register-op" in args:
+        registrar_operacao_manual()
+        return
+    
+    if "--results" in args:
+        mostrar_resultados()
         return
     
     if "--test-telegram" in args:
@@ -109,6 +120,62 @@ def registrar_resultado_manual():
     else:
         print("\n  Evento não encontrado no histórico.")
     
+    print("-"*50 + "\n")
+
+
+def registrar_operacao_manual():
+    """Registra uma operação de compra/venda concretizada."""
+    print("\n" + "="*50)
+    print("  REGISTRAR OPERAÇÃO (COMPRA/VENDA)")
+    print("="*50 + "\n")
+    
+    nome = input("  Nome do evento: ").strip()
+    data_evento = input("  Data do evento (YYYY-MM-DD): ").strip()
+    artista = input("  Artista: ").strip()
+    preco_compra = float(input("  Preço de compra (R$): ").strip().replace(",", "."))
+    preco_venda = float(input("  Preço de venda (R$): ").strip().replace(",", "."))
+    data_compra = input("  Data de compra (YYYY-MM-DD): ").strip()
+    data_venda = input("  Data de venda (YYYY-MM-DD): ").strip()
+    fonte_compra = input("  Fonte de compra (ticketmaster/sympla/etc): ").strip()
+    fonte_venda = input("  Fonte de venda (viagogo/buyticket/etc): ").strip()
+    nota = input("  Nota da decisão original (ex: 8.5): ").strip()
+    estrategia = input("  Estratégia (conservativa/moderada/arriscada): ").strip()
+    
+    nota_float = float(nota) if nota else 0
+    estrategia_valida = estrategia if estrategia in ["conservativa", "moderada", "arriscada"] else "conservativa"
+    
+    sucesso = registrar_operacao(
+        nome_evento=nome,
+        data_evento=data_evento,
+        artista=artista,
+        preco_compra=preco_compra,
+        preco_venda=preco_venda,
+        data_compra=data_compra,
+        data_venda=data_venda,
+        fonte_compra=fonte_compra,
+        fonte_venda=fonte_venda,
+        nota_decisao=nota_float,
+        estrategia=estrategia_valida
+    )
+    
+    if sucesso:
+        lucro = preco_venda - preco_compra
+        lucro_pct = (lucro / preco_compra * 100) if preco_compra > 0 else 0
+        print(f"\n  Operação registrada!")
+        print(f"  Lucro: R$ {lucro:.2f} ({lucro_pct:.1f}%)")
+    else:
+        print("\n  Erro ao registrar operação.")
+    
+    print("-"*50 + "\n")
+
+
+def mostrar_resultados():
+    """Mostra métricas financeiras."""
+    print("\n" + "="*50)
+    print("  RESULTADOS FINANCEIROS")
+    print("="*50 + "\n")
+    
+    mostrar_resultados_operacoes(resumido=False)
     print("-"*50 + "\n")
 
 
