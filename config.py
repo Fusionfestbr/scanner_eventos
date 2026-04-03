@@ -39,11 +39,6 @@ SITES_CONFIG = {
         "timeout": 30,
         "prioridade": "alta"
     },
-    "eventim": {
-        "url": "https://www.eventim.com.br/",
-        "timeout": 30,
-        "prioridade": "media"
-    },
     "blueticket": {
         "url": "https://www.blueticket.com.br/",
         "timeout": 30,

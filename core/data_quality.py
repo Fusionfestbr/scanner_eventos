@@ -4,18 +4,30 @@ Módulo de qualidade e confiabilidade de dados.
 import json
 import os
 import re
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from typing import Tuple, List, Dict
 
 from config import MIN_QUALITY_PERCENT, FALLBACK_ENABLED, REJECTED_FILE
 
+
+MESES_ABREV = {"JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"}
+MESES_ABREV_EXT = {"JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"}
 
 def validar_nome(nome: str) -> bool:
     """Valida nome do evento."""
     if not nome or not isinstance(nome, str):
         return False
     nome = nome.strip()
-    return len(nome) >= 3
+    
+    if len(nome) < 3:
+        return False
+    
+    # Filtrar eventos que são apenas abreviações de meses
+    nome_upper = nome.upper()
+    if nome_upper in MESES_ABREV or nome_upper in MESES_ABREV_EXT:
+        return False
+    
+    return True
 
 
 def validar_data(data_str: str) -> Tuple[bool, str]:
@@ -48,8 +60,14 @@ def validar_data(data_str: str) -> Tuple[bool, str]:
     if not data_obj:
         return False, "formato inválido"
     
-    if data_obj.date() < date.today():
-        return False, "data passada"
+    data_evento = data_obj.date()
+    hoje = date.today()
+    
+    # Aceitar eventos futuros ou próximos 60 dias do passado recente
+    limite_passado = hoje - timedelta(days=60)
+    
+    if data_evento < limite_passado:
+        return False, "data muito antiga"
     
     return True, ""
 
@@ -73,14 +91,18 @@ def validar_evento(evento: dict) -> Tuple[bool, str]:
     if not validar_nome(nome):
         return False, "nome inválido"
     
+    # Data é opcional - não rejeitar se vazia (regra: sem dados falsos)
     data = evento.get("data", "")
-    valida, motivo = validar_data(data)
-    if not valida:
-        return False, f"data inválida: {motivo}"
+    if data:
+        valida, motivo = validar_data(data)
+        if not valida:
+            return False, f"data inválida: {motivo}"
     
+    # Cidade é opcional - não rejeitar se vazia (regra: sem dados falsos)
+    # Apenas verificar se não é dado falso
     cidade = evento.get("cidade", "")
-    if not validar_cidade(cidade):
-        return False, "cidade inválida"
+    if cidade and cidade.lower() in ["brasil", "brazil"]:
+        return False, "cidade inválida (dado falso)"
     
     return True, ""
 

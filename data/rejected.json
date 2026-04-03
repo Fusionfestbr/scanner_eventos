@@ -1678,5 +1678,2081 @@
     },
     "motivo": "cidade inválida",
     "timestamp": "2026-04-03T11:45:53.306530"
+  },
+  {
+    "evento": {
+      "nome": "BTS WORLD TOUR ARIRANG",
+      "artista": "Various Artists",
+      "data": "2026-10-28",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bts-world-tour-arirang"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075608"
+  },
+  {
+    "evento": {
+      "nome": "NBA House 2026",
+      "artista": "Various Artists",
+      "data": "2026-06-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/nbahouse"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075698"
+  },
+  {
+    "evento": {
+      "nome": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-09-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/rockinrio"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075738"
+  },
+  {
+    "evento": {
+      "nome": "Suhai Festival Interlagos 2026",
+      "artista": "Various Artists",
+      "data": "2026-08-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/suhai-festival-de-interlagos-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075768"
+  },
+  {
+    "evento": {
+      "nome": "Lollapalooza Brasil 2027",
+      "artista": "Various Artists",
+      "data": "2026-03-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/lollapaloozabr"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.075803"
+  },
+  {
+    "evento": {
+      "nome": "Henry & Klauss: Masters of Magic World Tour 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/henry-e-klauss"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075841"
+  },
+  {
+    "evento": {
+      "nome": "João Rock 2026",
+      "artista": "Various Artists",
+      "data": "2026-08-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/joao-rock"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075876"
+  },
+  {
+    "evento": {
+      "nome": "CA7RIEL & Paco Amoroso: Free Spirits World Tour",
+      "artista": "Various Artists",
+      "data": "2026-11-07",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/ca7riel-e-paco-amoroso"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075902"
+  },
+  {
+    "evento": {
+      "nome": "Bienal do Livro Bahia 2026 - Salvador",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bienal-do-livro-bahia-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075939"
+  },
+  {
+    "evento": {
+      "nome": "Jonas Brothers: Greetings From Your Hometown",
+      "artista": "Various Artists",
+      "data": "2026-05-13",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/jonas-brothers"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.075976"
+  },
+  {
+    "evento": {
+      "nome": "Bad Religion - São Paulo - 28/04/2026 - Venda Geral",
+      "artista": "Various Artists",
+      "data": "2026-04-28",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bad-religion"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076014"
+  },
+  {
+    "evento": {
+      "nome": "Harry Styles: Together, Together",
+      "artista": "Various Artists",
+      "data": "2026-07-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/harry-styles"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076053"
+  },
+  {
+    "evento": {
+      "nome": "Autódromo Velocitta",
+      "artista": "Various Artists",
+      "data": "2026-06-05",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/manti-wine-sessions"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076090"
+  },
+  {
+    "evento": {
+      "nome": "Estádio Nilton Santos",
+      "artista": "Various Artists",
+      "data": "2026-01-29",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/college-football"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.076124"
+  },
+  {
+    "evento": {
+      "nome": "Maracanãzinho",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/uts-rio-2026-br"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.076151"
+  },
+  {
+    "evento": {
+      "nome": "The Cavern Club",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/ritchie-the-cavern-club"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076170"
+  },
+  {
+    "evento": {
+      "nome": "Suhai Music Hall",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/thiaguinho-suhai-music-hall"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076192"
+  },
+  {
+    "evento": {
+      "nome": "Tokio Marine Hall",
+      "artista": "Various Artists",
+      "data": "2026-04-14",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/soul-ii-soul-tokio-marine-hall"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076227"
+  },
+  {
+    "evento": {
+      "nome": "Arena Anhembi",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/somos-rock-festival"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076257"
+  },
+  {
+    "evento": {
+      "nome": "Vibra São Paulo",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/turne-tres-gracas"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076286"
+  },
+  {
+    "evento": {
+      "nome": "Autódromo de Interlagos",
+      "artista": "Various Artists",
+      "data": "2026-07-06",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/fiawecsaopaulo"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076311"
+  },
+  {
+    "evento": {
+      "nome": "Vivo Rio",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/queremos-festival-11-de-abril"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076338"
+  },
+  {
+    "evento": {
+      "nome": "Qualistage",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/ivan-lins-no-qualistage-rj"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076366"
+  },
+  {
+    "evento": {
+      "nome": "Farmasi Arena",
+      "artista": "Various Artists",
+      "data": "2026-08-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/rosalia"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076391"
+  },
+  {
+    "evento": {
+      "nome": "João Pessoa",
+      "artista": "Various Artists",
+      "data": "2026-04-10",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/guilherme-arantes-joao-pessoa"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076417"
+  },
+  {
+    "evento": {
+      "nome": "Curitiba",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/venda-geral-the-lumineers-the-automatic-world-tour-2026-curitiba"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076441"
+  },
+  {
+    "evento": {
+      "nome": "Londrina",
+      "artista": "Various Artists",
+      "data": "2026-05-02",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/roupa-nova-londrina-pr"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076462"
+  },
+  {
+    "evento": {
+      "nome": "Teatro Ruth Escobar",
+      "artista": "Various Artists",
+      "data": "2026-03-22",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/aladdin-teatro-ruth-escobar"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.076487"
+  },
+  {
+    "evento": {
+      "nome": "Audio",
+      "artista": "Various Artists",
+      "data": "2026-04-08",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/greentea-peng-na-audio-sp"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076512"
+  },
+  {
+    "evento": {
+      "nome": "The Lumineers: The Automatic World Tour",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/the-lumineers"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076537"
+  },
+  {
+    "evento": {
+      "nome": "ZAYN: The Konnakol Tour",
+      "artista": "Various Artists",
+      "data": "2026-10-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/zayn"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076559"
+  },
+  {
+    "evento": {
+      "nome": "SPIN DOCTORS + SMASH MOUTH",
+      "artista": "Various Artists",
+      "data": "2026-04-30",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115855"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076609"
+  },
+  {
+    "evento": {
+      "nome": "Curso de Violão",
+      "artista": "Various Artists",
+      "data": "2026-04-22",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/118668"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076636"
+  },
+  {
+    "evento": {
+      "nome": "NOSSO MANÉ - TOUR BASTIDORES",
+      "artista": "Various Artists",
+      "data": "2026-03-26",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/75481"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.076657"
+  },
+  {
+    "evento": {
+      "nome": "SINC STRINGS DJ",
+      "artista": "Various Artists",
+      "data": "2026-07-29",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/117887"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076684"
+  },
+  {
+    "evento": {
+      "nome": "MUSEU DAS CULTURAS INDÍGENAS",
+      "artista": "Various Artists",
+      "data": "2026-03-24",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/95807"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.076713"
+  },
+  {
+    "evento": {
+      "nome": "ARENA STAR LASER",
+      "artista": "Various Artists",
+      "data": "2026-03-24",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/107843"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.076741"
+  },
+  {
+    "evento": {
+      "nome": "QUEEN LEGEND + E. BALBO",
+      "artista": "Various Artists",
+      "data": "2026-06-30",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/111424"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076769"
+  },
+  {
+    "evento": {
+      "nome": "14 Bis",
+      "artista": "Various Artists",
+      "data": "2026-05-14",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115004"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.076798"
+  },
+  {
+    "evento": {
+      "nome": "Xangai- '50 anos de música e poesia'",
+      "artista": "Various Artists",
+      "data": "2026-04-50",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115337"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-03T14:14:38.077724"
+  },
+  {
+    "evento": {
+      "nome": "DIOGO NOGUEIRA",
+      "artista": "Various Artists",
+      "data": "2026-04-24",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114439"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.077790"
+  },
+  {
+    "evento": {
+      "nome": "CONCHA PARA TODOS – ZÉLIA DUNCAN",
+      "artista": "Various Artists",
+      "data": "2026-04-26",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114845"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.077840"
+  },
+  {
+    "evento": {
+      "nome": "BACO EXU DO BLUES",
+      "artista": "Various Artists",
+      "data": "2026-07-25",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/116908"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.077883"
+  },
+  {
+    "evento": {
+      "nome": "CONCHA PARA TODOS – FLÁVIO VENTURINI",
+      "artista": "Various Artists",
+      "data": "2026-05-10",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114846"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.077920"
+  },
+  {
+    "evento": {
+      "nome": "É Claro Que É Rock 2026 Passo Fundo",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39335/e-claro-que-e-rock-2026-passo-fundo"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.077955"
+  },
+  {
+    "evento": {
+      "nome": "Warung Day Festival 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39353/warung-day-festival-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.077994"
+  },
+  {
+    "evento": {
+      "nome": "28ª Festa da Cebola | Luan Santana",
+      "artista": "Various Artists",
+      "data": "2026-04-28",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40153/28a-festa-da-cebola-luan-santana"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078028"
+  },
+  {
+    "evento": {
+      "nome": "Dilsinho em Lages",
+      "artista": "Various Artists",
+      "data": "2026-04-10",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40171/dilsinho-em-lages"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078061"
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39354/arnold-2026-feira"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078093"
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira + Bodybuilding",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39355/arnold-2026-feira-bodybuilding"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078118"
+  },
+  {
+    "evento": {
+      "nome": "Gramado Summit 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/37982/gramado-summit-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078151"
+  },
+  {
+    "evento": {
+      "nome": "Empreende Brazil Conference 2026 | SC",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/38008/empreende-brazil-conference-2026-sc"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078183"
+  },
+  {
+    "evento": {
+      "nome": "FEV",
+      "artista": "Various Artists",
+      "data": "2026-02-27",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078216"
+  },
+  {
+    "evento": {
+      "nome": "OUT",
+      "artista": "Various Artists",
+      "data": "2026-10-30",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078248"
+  },
+  {
+    "evento": {
+      "nome": "AGO",
+      "artista": "Various Artists",
+      "data": "2026-08-16",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078287"
+  },
+  {
+    "evento": {
+      "nome": "MAI",
+      "artista": "Various Artists",
+      "data": "2026-05-26",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078321"
+  },
+  {
+    "evento": {
+      "nome": "EVENTO TESTE EDMAR",
+      "artista": "Various Artists",
+      "data": "2026-03-02",
+      "cidade": "",
+      "fonte": "q2ingressos",
+      "url": "https://q2ingressos.com.br/eventgroup/evento-teste-edmar-01-12-2025"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078354"
+  },
+  {
+    "evento": {
+      "nome": "SEX",
+      "artista": "Various Artists",
+      "data": "2026-04-17",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/mano-brown-mb10-convida-rael-e-rincon-sapiencia-15816"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078394"
+  },
+  {
+    "evento": {
+      "nome": "QUA",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078429"
+  },
+  {
+    "evento": {
+      "nome": "SÁB",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/a-culpa-e-dos-amigos-15126"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078463"
+  },
+  {
+    "evento": {
+      "nome": "DOM",
+      "artista": "Various Artists",
+      "data": "2026-04-05",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/kysha-e-mine-lancamento-best-friends-forever-15807"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078499"
+  },
+  {
+    "evento": {
+      "nome": "TER",
+      "artista": "Various Artists",
+      "data": "2026-04-07",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/caso-bizarro-ao-vivo-no-teatro-16019"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078535"
+  },
+  {
+    "evento": {
+      "nome": "QUI",
+      "artista": "Various Artists",
+      "data": "2026-04-09",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/gongada-drag-15662"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:14:38.078589"
+  },
+  {
+    "evento": {
+      "nome": "SEG",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/coldplayers-the-music-of-coldplay-16011"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078627"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/mac-demarco-brasil/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078660"
+  },
+  {
+    "evento": {
+      "nome": "03.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078695"
+  },
+  {
+    "evento": {
+      "nome": "04.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-04",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/funk-room-village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078730"
+  },
+  {
+    "evento": {
+      "nome": "11.07.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-11",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/baile-do-momo-village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078763"
+  },
+  {
+    "evento": {
+      "nome": "17.04.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-17",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/iem-rio/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078792"
+  },
+  {
+    "evento": {
+      "nome": "20.11.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-20",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/navio-bell-marques/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078827"
+  },
+  {
+    "evento": {
+      "nome": "27.12.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-27",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/reveillon-duna/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078862"
+  },
+  {
+    "evento": {
+      "nome": "04.02.2027",
+      "artista": "Various Artists",
+      "data": "2026-03-04",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/camarote-club/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078897"
+  },
+  {
+    "evento": {
+      "nome": "05.02.2027",
+      "artista": "Various Artists",
+      "data": "2026-01-05",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/camarote-mar-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:14:38.078934"
+  },
+  {
+    "evento": {
+      "nome": "BTS WORLD TOUR ARIRANG",
+      "artista": "Various Artists",
+      "data": "2026-10-28",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bts-world-tour-arirang"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390380"
+  },
+  {
+    "evento": {
+      "nome": "NBA House 2026",
+      "artista": "Various Artists",
+      "data": "2026-06-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/nbahouse"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390429"
+  },
+  {
+    "evento": {
+      "nome": "Rock in Rio 2026",
+      "artista": "Various Artists",
+      "data": "2026-09-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/rockinrio"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390453"
+  },
+  {
+    "evento": {
+      "nome": "Suhai Festival Interlagos 2026",
+      "artista": "Various Artists",
+      "data": "2026-08-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/suhai-festival-de-interlagos-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390469"
+  },
+  {
+    "evento": {
+      "nome": "Lollapalooza Brasil 2027",
+      "artista": "Various Artists",
+      "data": "2026-03-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/lollapaloozabr"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.390485"
+  },
+  {
+    "evento": {
+      "nome": "Henry & Klauss: Masters of Magic World Tour 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/henry-e-klauss"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390501"
+  },
+  {
+    "evento": {
+      "nome": "João Rock 2026",
+      "artista": "Various Artists",
+      "data": "2026-08-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/joao-rock"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390516"
+  },
+  {
+    "evento": {
+      "nome": "CA7RIEL & Paco Amoroso: Free Spirits World Tour",
+      "artista": "Various Artists",
+      "data": "2026-11-07",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/ca7riel-e-paco-amoroso"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390526"
+  },
+  {
+    "evento": {
+      "nome": "Bienal do Livro Bahia 2026 - Salvador",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bienal-do-livro-bahia-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390539"
+  },
+  {
+    "evento": {
+      "nome": "Jonas Brothers: Greetings From Your Hometown",
+      "artista": "Various Artists",
+      "data": "2026-05-13",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/jonas-brothers"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390552"
+  },
+  {
+    "evento": {
+      "nome": "Bad Religion - São Paulo - 28/04/2026 - Venda Geral",
+      "artista": "Various Artists",
+      "data": "2026-04-28",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bad-religion"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390563"
+  },
+  {
+    "evento": {
+      "nome": "Harry Styles: Together, Together",
+      "artista": "Various Artists",
+      "data": "2026-07-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/harry-styles"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390575"
+  },
+  {
+    "evento": {
+      "nome": "Autódromo Velocitta",
+      "artista": "Various Artists",
+      "data": "2026-06-05",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/manti-wine-sessions"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390585"
+  },
+  {
+    "evento": {
+      "nome": "Estádio Nilton Santos",
+      "artista": "Various Artists",
+      "data": "2026-01-29",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/college-football"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.390597"
+  },
+  {
+    "evento": {
+      "nome": "Maracanãzinho",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/uts-rio-2026-br"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.390609"
+  },
+  {
+    "evento": {
+      "nome": "The Cavern Club",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/ritchie-the-cavern-club"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390620"
+  },
+  {
+    "evento": {
+      "nome": "Suhai Music Hall",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/thiaguinho-suhai-music-hall"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390632"
+  },
+  {
+    "evento": {
+      "nome": "Tokio Marine Hall",
+      "artista": "Various Artists",
+      "data": "2026-04-14",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/soul-ii-soul-tokio-marine-hall"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390643"
+  },
+  {
+    "evento": {
+      "nome": "Arena Anhembi",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/somos-rock-festival"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390654"
+  },
+  {
+    "evento": {
+      "nome": "Vibra São Paulo",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/turne-tres-gracas"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390664"
+  },
+  {
+    "evento": {
+      "nome": "Autódromo de Interlagos",
+      "artista": "Various Artists",
+      "data": "2026-07-06",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/fiawecsaopaulo"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390674"
+  },
+  {
+    "evento": {
+      "nome": "Vivo Rio",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/queremos-festival-11-de-abril"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390683"
+  },
+  {
+    "evento": {
+      "nome": "Qualistage",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/ivan-lins-no-qualistage-rj"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390694"
+  },
+  {
+    "evento": {
+      "nome": "Farmasi Arena",
+      "artista": "Various Artists",
+      "data": "2026-08-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/rosalia"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390703"
+  },
+  {
+    "evento": {
+      "nome": "João Pessoa",
+      "artista": "Various Artists",
+      "data": "2026-04-10",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/guilherme-arantes-joao-pessoa"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390714"
+  },
+  {
+    "evento": {
+      "nome": "Curitiba",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/venda-geral-the-lumineers-the-automatic-world-tour-2026-curitiba"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390725"
+  },
+  {
+    "evento": {
+      "nome": "Londrina",
+      "artista": "Various Artists",
+      "data": "2026-05-02",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/roupa-nova-londrina-pr"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390736"
+  },
+  {
+    "evento": {
+      "nome": "Teatro Ruth Escobar",
+      "artista": "Various Artists",
+      "data": "2026-03-22",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/aladdin-teatro-ruth-escobar"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.390747"
+  },
+  {
+    "evento": {
+      "nome": "Audio",
+      "artista": "Various Artists",
+      "data": "2026-04-08",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/greentea-peng-na-audio-sp"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390757"
+  },
+  {
+    "evento": {
+      "nome": "The Lumineers: The Automatic World Tour",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/the-lumineers"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390767"
+  },
+  {
+    "evento": {
+      "nome": "ZAYN: The Konnakol Tour",
+      "artista": "Various Artists",
+      "data": "2026-10-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/zayn"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390777"
+  },
+  {
+    "evento": {
+      "nome": "SPIN DOCTORS + SMASH MOUTH",
+      "artista": "Various Artists",
+      "data": "2026-04-30",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115855"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390788"
+  },
+  {
+    "evento": {
+      "nome": "Curso de Violão",
+      "artista": "Various Artists",
+      "data": "2026-04-22",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/118668"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390799"
+  },
+  {
+    "evento": {
+      "nome": "NOSSO MANÉ - TOUR BASTIDORES",
+      "artista": "Various Artists",
+      "data": "2026-03-26",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/75481"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.390809"
+  },
+  {
+    "evento": {
+      "nome": "SINC STRINGS DJ",
+      "artista": "Various Artists",
+      "data": "2026-07-29",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/117887"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390819"
+  },
+  {
+    "evento": {
+      "nome": "MUSEU DAS CULTURAS INDÍGENAS",
+      "artista": "Various Artists",
+      "data": "2026-03-24",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/95807"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.390829"
+  },
+  {
+    "evento": {
+      "nome": "ARENA STAR LASER",
+      "artista": "Various Artists",
+      "data": "2026-03-24",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/107843"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.390839"
+  },
+  {
+    "evento": {
+      "nome": "QUEEN LEGEND + E. BALBO",
+      "artista": "Various Artists",
+      "data": "2026-06-30",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/111424"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390850"
+  },
+  {
+    "evento": {
+      "nome": "14 Bis",
+      "artista": "Various Artists",
+      "data": "2026-05-14",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115004"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.390859"
+  },
+  {
+    "evento": {
+      "nome": "Xangai- '50 anos de música e poesia'",
+      "artista": "Various Artists",
+      "data": "2026-04-50",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115337"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-03T14:15:04.391227"
+  },
+  {
+    "evento": {
+      "nome": "DIOGO NOGUEIRA",
+      "artista": "Various Artists",
+      "data": "2026-04-24",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114439"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391242"
+  },
+  {
+    "evento": {
+      "nome": "CONCHA PARA TODOS – ZÉLIA DUNCAN",
+      "artista": "Various Artists",
+      "data": "2026-04-26",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114845"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391251"
+  },
+  {
+    "evento": {
+      "nome": "BACO EXU DO BLUES",
+      "artista": "Various Artists",
+      "data": "2026-07-25",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/116908"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391260"
+  },
+  {
+    "evento": {
+      "nome": "CONCHA PARA TODOS – FLÁVIO VENTURINI",
+      "artista": "Various Artists",
+      "data": "2026-05-10",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114846"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391268"
+  },
+  {
+    "evento": {
+      "nome": "É Claro Que É Rock 2026 Passo Fundo",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39335/e-claro-que-e-rock-2026-passo-fundo"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391275"
+  },
+  {
+    "evento": {
+      "nome": "Warung Day Festival 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39353/warung-day-festival-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391283"
+  },
+  {
+    "evento": {
+      "nome": "28ª Festa da Cebola | Luan Santana",
+      "artista": "Various Artists",
+      "data": "2026-04-28",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40153/28a-festa-da-cebola-luan-santana"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391290"
+  },
+  {
+    "evento": {
+      "nome": "Dilsinho em Lages",
+      "artista": "Various Artists",
+      "data": "2026-04-10",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/40171/dilsinho-em-lages"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391297"
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39354/arnold-2026-feira"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391304"
+  },
+  {
+    "evento": {
+      "nome": "Arnold 2026 | Feira + Bodybuilding",
+      "artista": "Various Artists",
+      "data": "2026-04-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39355/arnold-2026-feira-bodybuilding"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391310"
+  },
+  {
+    "evento": {
+      "nome": "Gramado Summit 2026",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/37982/gramado-summit-2026"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391317"
+  },
+  {
+    "evento": {
+      "nome": "Empreende Brazil Conference 2026 | SC",
+      "artista": "Various Artists",
+      "data": "2026-05-20",
+      "cidade": "",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/38008/empreende-brazil-conference-2026-sc"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391323"
+  },
+  {
+    "evento": {
+      "nome": "FEV",
+      "artista": "Various Artists",
+      "data": "2026-02-27",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391330"
+  },
+  {
+    "evento": {
+      "nome": "OUT",
+      "artista": "Various Artists",
+      "data": "2026-10-30",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391338"
+  },
+  {
+    "evento": {
+      "nome": "AGO",
+      "artista": "Various Artists",
+      "data": "2026-08-16",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391345"
+  },
+  {
+    "evento": {
+      "nome": "MAI",
+      "artista": "Various Artists",
+      "data": "2026-05-26",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391352"
+  },
+  {
+    "evento": {
+      "nome": "EVENTO TESTE EDMAR",
+      "artista": "Various Artists",
+      "data": "2026-03-02",
+      "cidade": "",
+      "fonte": "q2ingressos",
+      "url": "https://q2ingressos.com.br/eventgroup/evento-teste-edmar-01-12-2025"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391359"
+  },
+  {
+    "evento": {
+      "nome": "SEX",
+      "artista": "Various Artists",
+      "data": "2026-04-17",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/mano-brown-mb10-convida-rael-e-rincon-sapiencia-15816"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391366"
+  },
+  {
+    "evento": {
+      "nome": "QUA",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391373"
+  },
+  {
+    "evento": {
+      "nome": "SÁB",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/a-culpa-e-dos-amigos-15126"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391380"
+  },
+  {
+    "evento": {
+      "nome": "DOM",
+      "artista": "Various Artists",
+      "data": "2026-04-05",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/kysha-e-mine-lancamento-best-friends-forever-15807"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391387"
+  },
+  {
+    "evento": {
+      "nome": "TER",
+      "artista": "Various Artists",
+      "data": "2026-04-07",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/caso-bizarro-ao-vivo-no-teatro-16019"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391394"
+  },
+  {
+    "evento": {
+      "nome": "QUI",
+      "artista": "Various Artists",
+      "data": "2026-04-09",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/gongada-drag-15662"
+    },
+    "motivo": "cidade inválida",
+    "timestamp": "2026-04-03T14:15:04.391400"
+  },
+  {
+    "evento": {
+      "nome": "SEG",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/coldplayers-the-music-of-coldplay-16011"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391407"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/mac-demarco-brasil/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391414"
+  },
+  {
+    "evento": {
+      "nome": "03.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391421"
+  },
+  {
+    "evento": {
+      "nome": "04.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-04",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/funk-room-village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391428"
+  },
+  {
+    "evento": {
+      "nome": "11.07.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-11",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/baile-do-momo-village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391434"
+  },
+  {
+    "evento": {
+      "nome": "17.04.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-17",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/iem-rio/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391441"
+  },
+  {
+    "evento": {
+      "nome": "20.11.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-20",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/navio-bell-marques/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391448"
+  },
+  {
+    "evento": {
+      "nome": "27.12.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-27",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/reveillon-duna/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391454"
+  },
+  {
+    "evento": {
+      "nome": "04.02.2027",
+      "artista": "Various Artists",
+      "data": "2026-03-04",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/camarote-club/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391461"
+  },
+  {
+    "evento": {
+      "nome": "05.02.2027",
+      "artista": "Various Artists",
+      "data": "2026-01-05",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/camarote-mar-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:15:04.391468"
+  },
+  {
+    "evento": {
+      "nome": "Lollapalooza Brasil 2027",
+      "artista": "Various Artists",
+      "data": "2026-03-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/lollapaloozabr"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860051"
+  },
+  {
+    "evento": {
+      "nome": "Estádio Nilton Santos",
+      "artista": "Various Artists",
+      "data": "2026-01-29",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/college-football"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860113"
+  },
+  {
+    "evento": {
+      "nome": "Maracanãzinho",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/uts-rio-2026-br"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860121"
+  },
+  {
+    "evento": {
+      "nome": "Teatro Ruth Escobar",
+      "artista": "Various Artists",
+      "data": "2026-03-22",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/aladdin-teatro-ruth-escobar"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860198"
+  },
+  {
+    "evento": {
+      "nome": "FEV",
+      "artista": "Various Artists",
+      "data": "2026-02-27",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860269"
+  },
+  {
+    "evento": {
+      "nome": "EVENTO TESTE EDMAR",
+      "artista": "Various Artists",
+      "data": "2026-03-02",
+      "cidade": "",
+      "fonte": "q2ingressos",
+      "url": "https://q2ingressos.com.br/eventgroup/evento-teste-edmar-01-12-2025"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860294"
+  },
+  {
+    "evento": {
+      "nome": "QUA",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860312"
+  },
+  {
+    "evento": {
+      "nome": "SEG",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/coldplayers-the-music-of-coldplay-16011"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860341"
+  },
+  {
+    "evento": {
+      "nome": "03.04.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/mac-demarco-brasil/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860348"
+  },
+  {
+    "evento": {
+      "nome": "03.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860355"
+  },
+  {
+    "evento": {
+      "nome": "04.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-04",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/funk-room-village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860361"
+  },
+  {
+    "evento": {
+      "nome": "11.07.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-11",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/baile-do-momo-village-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860368"
+  },
+  {
+    "evento": {
+      "nome": "17.04.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-17",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/iem-rio/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860375"
+  },
+  {
+    "evento": {
+      "nome": "20.11.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-20",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/navio-bell-marques/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860381"
+  },
+  {
+    "evento": {
+      "nome": "27.12.2026",
+      "artista": "Various Artists",
+      "data": "2026-03-27",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/reveillon-duna/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860388"
+  },
+  {
+    "evento": {
+      "nome": "04.02.2027",
+      "artista": "Various Artists",
+      "data": "2026-03-04",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/camarote-club/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860395"
+  },
+  {
+    "evento": {
+      "nome": "05.02.2027",
+      "artista": "Various Artists",
+      "data": "2026-01-05",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/camarote-mar-rj/"
+    },
+    "motivo": "data inválida: data passada",
+    "timestamp": "2026-04-03T14:23:25.860402"
+  },
+  {
+    "evento": {
+      "nome": "Estádio Nilton Santos",
+      "artista": "Various Artists",
+      "data": "2026-01-29",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/college-football"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.957202"
+  },
+  {
+    "evento": {
+      "nome": "Maracanãzinho",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/uts-rio-2026-br"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.957242"
+  },
+  {
+    "evento": {
+      "nome": "Xangai- '50 anos de música e poesia'",
+      "artista": "Various Artists",
+      "data": "2026-04-50",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115337"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-03T14:33:38.958581"
+  },
+  {
+    "evento": {
+      "nome": "QUA",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.958798"
+  },
+  {
+    "evento": {
+      "nome": "SEG",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/coldplayers-the-music-of-coldplay-16011"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.958858"
+  },
+  {
+    "evento": {
+      "nome": "03.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/village-rj/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.958880"
+  },
+  {
+    "evento": {
+      "nome": "04.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-04",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/funk-room-village-rj/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.958890"
+  },
+  {
+    "evento": {
+      "nome": "11.07.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-11",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/baile-do-momo-village-rj/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.958900"
+  },
+  {
+    "evento": {
+      "nome": "17.04.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-17",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/iem-rio/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.958910"
+  },
+  {
+    "evento": {
+      "nome": "05.02.2027",
+      "artista": "Various Artists",
+      "data": "2026-01-05",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/camarote-mar-rj/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T14:33:38.958946"
   }
 ]

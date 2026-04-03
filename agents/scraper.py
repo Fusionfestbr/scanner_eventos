@@ -215,7 +215,15 @@ def generic_playwright_scraper(fonte: str, max_retries: int = 3) -> list[dict]:
                 page.wait_for_timeout(3000)
                 _scroll_page(page)
                 
-                eventos_extracted = _extract_with_selectors(page, selectors, fonte, url)
+                # Special handling for sites with card-based layout
+                if fonte == "ingresse":
+                    eventos_extracted = _extract_ingresse_cards(page, fonte, url)
+                elif fonte == "bilheteriadigital":
+                    eventos_extracted = _extract_bilheteriadigital_cards(page, fonte, url)
+                elif fonte == "guicheweb":
+                    eventos_extracted = _extract_guicheweb_cards(page, fonte, url)
+                else:
+                    eventos_extracted = _extract_with_selectors(page, selectors, fonte, url)
                 
                 if eventos_extracted:
                     eventos.extend(eventos_extracted)
@@ -293,8 +301,7 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
             if not _is_valid_event_name(nome):
                 continue
             
-            data = _generate_future_date()
-            
+            # Primeiro obter parent_text
             parent_text = ""
             try:
                 parent = link.evaluate("el => el.parentElement")
@@ -303,14 +310,72 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
             except:
                 pass
             
+            # Extrair data do elemento <time> primeiro
+            data = ""
+            try:
+                time_elem = link.query_selector("time")
+                if time_elem:
+                    data = time_elem.get_attribute("datetime") or time_elem.inner_text().strip()
+            except:
+                pass
+            
+            # Se não achou, tentar do nome do evento
+            if not data:
+                data = _extract_date_from_text(nome)
+            
+            # Se não achou, tentar do texto do pai
+            if not data and parent_text:
+                data = _extract_date_from_text(parent_text)
+            
+            # NÃO usar fallback - deixar vazio se não encontrar data real
+            
             local = ""
+            cidade = ""
             if parent_text:
                 lines = parent_text.split("\n")
                 for line in lines[1:]:
                     line = line.strip()
                     if len(line) > 2 and len(line) < 80:
-                        local = line
-                        break
+                        line_limpa = re.sub(r'^(COMPRAR|MONITORAR|IGNORAR|SAIBA|MAIS|VER)$', '', line, flags=re.IGNORECASE).strip()
+                        if not line_limpa:
+                            continue
+                        
+                        if _is_date_pattern(line_limpa):
+                            data_extra = _extract_date_from_text(line_limpa)
+                            if data_extra and not data:
+                                data = data_extra
+                            continue
+                        
+                        # Pular linhas que contêm palavras de data mas não são cidades
+                        line_lower = line_limpa.lower()
+                        
+                        # Skip lines with date patterns (completely skip, don't extract)
+                        if _is_date_pattern(line_limpa):
+                            continue
+                        
+                        # Skip lines with date keywords
+                        date_keywords = ['de janeiro', 'de fevereiro', 'de março', 'de abril', 'de maio', 'de junho', 
+                                        'de julho', 'de agosto', 'de setembro', 'de outubro', 'de novembro', 'de dezembro',
+                                        ' de 202', 'comprar', 'monitorar', 'ignorar']
+                        
+                        if any(kw in line_lower for kw in date_keywords):
+                            continue
+                        
+                        # Skip if contains multiple numbers (date-like)
+                        if re.search(r'\d+[,a]\s*\d+', line_limpa):
+                            continue
+                        
+                        # Skip if just a month + year
+                        if re.match(r'^(janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\s+de\s+\d{4}$', line_lower, re.IGNORECASE):
+                            continue
+                        
+                        # Only add to city if it looks like a city (not a date)
+                        if not cidade:
+                            cidade_extraida = _extract_cidade(line_limpa)
+                            if cidade_extraida:
+                                cidade = cidade_extraida
+                        if not local:
+                            local = line_limpa
             
             nome_limpo, local_limpo = _clean_event_name(nome, local)
             
@@ -334,8 +399,8 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
             eventos.append({
                 "nome": nome_limpo,
                 "artista": "Various Artists",
-                "data": data,
-                "cidade": local_limpo if local_limpo else "",
+                "data": normalizar_data(data) if data else "",
+                "cidade": cidade if cidade else "",
                 "fonte": fonte,
                 "url": url_final
             })
@@ -374,6 +439,7 @@ def _is_valid_event_name(nome: str) -> bool:
         "rolar para", "voltar ao topo", "back to top",
         "saiba mais", "ver detalhes", "leia mais",
         "confira", "clique aqui", "acessar",
+        "criar evento", "como funciona", "criar", "entrar",
     ]
     
     for pattern in ignore_patterns:
@@ -397,10 +463,35 @@ def _clean_event_name(nome: str, local: str) -> tuple:
     lines = nome.split("\n")
     if len(lines) > 1:
         nome_evento = lines[0].strip()
-        local_lines = [l.strip() for l in lines[1:] if l.strip() and len(l.strip()) < 60]
         
-        if local_lines and not local_encontrado:
-            local_encontrado = " | ".join(local_lines)
+        # Filter out lines that are dates, buttons, etc.
+        valid_lines = []
+        for line in lines[1:]:
+            line = line.strip()
+            if not line:
+                continue
+            if len(line) > 60:
+                continue
+            
+            line_lower = line.lower()
+            
+            # Skip lines that look like dates
+            if any(m in line_lower for m in ['de janeiro', 'de fevereiro', 'de março', 'de abril', 'de maio', 'de junho', 
+                                              'de julho', 'de agosto', 'de setembro', 'de outubro', 'de novembro', 'de dezembro']):
+                continue
+            
+            # Skip lines with date patterns
+            if re.search(r'\d+[,a]\s*\d+', line):
+                continue
+            
+            # Skip button-like lines
+            if line.lower() in ['comprar', 'monitorar', 'ignorar', 'saiba mais', 'ver', 'mais']:
+                continue
+            
+            valid_lines.append(line)
+        
+        if valid_lines and not local_encontrado:
+            local_encontrado = " | ".join(valid_lines)
         
         if nome_evento and len(nome_evento) > 2:
             return nome_evento, local_encontrado
@@ -440,10 +531,25 @@ def _is_valid_event_url(url: str) -> bool:
         if pattern in url_lower:
             return False
     
-    if "/evento" in url_lower or "/event/" in url_lower or "?" in url_lower:
+    # More permissive - accept various event patterns
+    valid_patterns = [
+        "/evento", "/event/", "/e/", "/show", "/ticket",
+        ".com.br/",  # Accept any link from main domain
+    ]
+    
+    for pattern in valid_patterns:
+        if pattern in url_lower:
+            return True
+    
+    # For sites that don't have clear patterns, check if it's a valid http link
+    if url.startswith("http") and "guicheweb" in url_lower:
+        return True
+    if url.startswith("http") and "bilheteriadigital" in url_lower:
+        return True
+    if url.startswith("http") and "ingresse" in url_lower:
         return True
     
-    return True
+    return False
 
 
 def _extract_local_from_container(item) -> str:
@@ -606,22 +712,119 @@ def _extract_cidade(local: str) -> str:
     if not local:
         return ""
     
-    local = local.upper()
+    local_upper = local.upper()
+    
+    # Skip if looks like a date
+    meses = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", 
+             "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"]
+    for mes in meses:
+        if mes in local_upper:
+            return ""
     
     capitais = [
         "SÃO PAULO", "RIO DE JANEIRO", "BELO HORIZONTE", "BRASÍLIA", "SALVADOR",
         "CURITIBA", "FORTALEZA", "RECIFE", "PORTO ALEGRE", "MANAUS",
-        "RIO DE JANEIRO", "NITERÓI", "CAMPINAS", "VITÓRIA", "GOIÂNIA",
+        "NITERÓI", "CAMPINAS", "VITÓRIA", "GOIÂNIA",
         "FLORIANÓPOLIS", "CAMPO GRANDE", "BELÉM", "JOÃO PESSOA", "ARACAJU"
     ]
     
     for cidade in capitais:
-        if cidade in local:
+        if cidade in local_upper:
             return cidade.title()
     
-    match = re.search(r'([A-Z][A-Z]+)', local)
+    # Try to find state (2 letters after -)
+    match = re.search(r'-\s*([A-Z]{2})\s*$', local_upper)
     if match:
-        return match.group(1).title()
+        return match.group(1)
+    
+    # Try to find city before state (e.g., "São Paulo - SP")
+    match = re.search(r'([A-ZÀ-ÖØ-Þ][A-ZÀ-ÖØ-Þ\s]+)\s*-\s*[A-Z]{2}', local_upper)
+    if match:
+        city_name = match.group(1).strip()
+        if len(city_name) > 2:
+            return city_name.title()
+    
+    return ""
+
+
+def _is_date_pattern(text: str) -> bool:
+    """Verifica se o texto parece ser uma data (não cidade)."""
+    if not text:
+        return False
+    
+    text_lower = text.lower()
+    
+    date_patterns = [
+        r'\d{1,2}\s+de\s+\w+',  # 28 de Outubro
+        r'\d{1,2}\s+a\s+\d{1,2}\s+de',  # 3 a 21 de Junho
+        r'\d{1,2}[,/]\d{1,2}[,/]\d{2,4}',  # 28/10/2026
+        r'\w+\s+de\s+\d{4}',  # Outubro de 2026
+        r'\d{1,2}\s*,\s*\d{1,2}\s*,\s*\d{1,2}\s+de',  # 28, 30 e 31 de
+        r'\d{1,2}\s*,\s*\d{1,2}\s+e\s+\d{1,2}',  # 28, 30 e 31
+        r'\d{1,2}\s+a\s*\d{1,2}\s+de\s+\w+\s+de\s+\d{4}',  # 3 a 21 de Junho de 2026
+    ]
+    
+    for pattern in date_patterns:
+        if re.search(pattern, text_lower):
+            return True
+    
+    meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", 
+             "julho", "agosto", "setembro", "outubro", "novembro", "dezembro",
+             "jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
+    
+    for mes in meses:
+        if mes in text_lower and ("de" in text_lower or "202" in text):
+            return True
+    
+    return False
+
+
+def _extract_date_from_text(text: str) -> str:
+    """Extrai data de texto (nome do evento, etc)."""
+    if not text:
+        return ""
+    
+    text = text.strip()
+    
+    patterns = [
+        (r'(\d{1,2})[/](\d{1,2})[/](\d{4})', '%d/%m/%Y'),
+        (r'(\d{1,2})[/](\d{1,2})[/](\d{2})', '%d/%m/%y'),
+        (r'(\d{1,2})[-](\d{1,2})[-](\d{4})', '%d-%m-%Y'),
+        (r'(\d{1,2})[-](\d{1,2})[-](\d{2})', '%d-%m-%y'),
+        (r'(\d{4})[-](\d{2})[-](\d{2})', '%Y-%m-%d'),
+    ]
+    
+    for pattern, fmt in patterns:
+        match = re.search(pattern, text)
+        if match:
+            try:
+                from datetime import datetime
+                if '%y' in fmt:
+                    year = int(match.group(3))
+                    year = 2000 + year if year < 50 else 1900 + year
+                    dt = datetime(year, int(match.group(2)), int(match.group(1)))
+                else:
+                    dt = datetime.strptime(match.group(0), fmt)
+                return dt.strftime("%Y-%m-%d")
+            except:
+                continue
+    
+    meses = {
+        "janeiro": "01", "fevereiro": "02", "março": "03", "abril": "04",
+        "maio": "05", "junho": "06", "julho": "07", "agosto": "08",
+        "setembro": "09", "outubro": "10", "novembro": "11", "dezembro": "12",
+        "jan": "01", "fev": "02", "mar": "03", "abr": "04", "mai": "05",
+        "jun": "06", "jul": "07", "ago": "08", "set": "09", "out": "10",
+        "nov": "11", "dez": "12"
+    }
+    
+    text_lower = text.lower()
+    for mes, num in meses.items():
+        if mes in text_lower:
+            match = re.search(r'(\d{1,2})', text)
+            if match:
+                dia = match.group(1).zfill(2)
+                return f"2026-{num}-{dia}"
     
     return ""
 
@@ -766,11 +969,11 @@ def normalizar_data(data_str: str) -> str:
     return ""
 
 
-SITES_PROTEGIDOS = ["eventim", "livepass"]
+SITES_PROTEGIDOS = []
 
 
-def generic_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
-    """Scraper usando undetected-chromedriver para sites protegidos."""
+def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[dict]:
+    """Scraper usando Selenium com stealth para sites protegidos."""
     eventos = []
     config = SITES_CONFIG.get(fonte, {})
     url = config.get("url", "")
@@ -780,16 +983,29 @@ def generic_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
     
     for tentativa in range(1, max_retries + 1):
         try:
-            import undetected_chromedriver as uc
+            from selenium import webdriver
+            from selenium.webdriver.chrome.options import Options
+            from selenium.webdriver.common.by import By
+            from selenium.webdriver.support.ui import WebDriverWait
+            from selenium.webdriver.support import expected_conditions as EC
             
-            options = uc.ChromeOptions()
-            options.add_argument("--headless")
+            options = Options()
+            options.add_argument("--headless=new")
             options.add_argument("--no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
             options.add_argument("--disable-gpu")
+            options.add_argument("--disable-blink-features=AutomationControlled")
+            options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            options.add_experimental_option("useAutomationExtension", False)
+            options.add_argument("--disable-web-security")
+            options.add_argument("--allow-running-insecure-content")
+            options.add_argument("--ignore-certificate-errors")
+            options.add_argument("--disable-extensions")
+            options.add_argument("--disable-popup-blocking")
+            options.add_argument("--start-maximized")
             
-            driver = uc.Chrome(options=options, version_main=None)
-            driver.set_page_load_timeout(30)
+            driver = webdriver.Chrome(options=options)
+            driver.set_page_load_timeout(45)
             
             try:
                 driver.get(url)
@@ -797,21 +1013,24 @@ def generic_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
                 driver.quit()
                 if tentativa < max_retries:
                     import time
-                    time.sleep(5)
+                    time.sleep(8)
                     continue
                 continue
             
             import time
-            time.sleep(5)
-            
-            from selenium.webdriver.common.by import By
-            from selenium.webdriver.support.ui import WebDriverWait
-            from selenium.webdriver.support import expected_conditions as EC
+            time.sleep(6)
             
             try:
-                WebDriverWait(driver, 10).until(
+                WebDriverWait(driver, 15).until(
                     EC.presence_of_element_located((By.TAG_NAME, "body"))
                 )
+            except:
+                pass
+            
+            try:
+                for _ in range(2):
+                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                    time.sleep(2)
             except:
                 pass
             
@@ -868,20 +1087,26 @@ def generic_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
             driver.quit()
             
             if eventos:
+                print(f"   -> {fonte}: {len(eventos)} eventos via Selenium")
                 break
             elif tentativa < max_retries:
                 import time
-                time.sleep(5)
+                time.sleep(8)
                 
         except Exception as e:
             if tentativa < max_retries:
                 import time
-                time.sleep(5)
+                time.sleep(8)
                 continue
             else:
-                print(f"   [ERRO STEALTH] {fonte}: {e}")
+                print(f"   [ERRO SELENIUM] {fonte}: {str(e)[:100]}")
     
     return eventos
+
+
+def generic_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
+    """Wrapper - usa Selenium diretamente (mais estável)."""
+    return generic_selenium_stealth_scraper(fonte, max_retries)
 
 
 def _is_valid_event_url_stealth(url: str) -> bool:
@@ -1038,5 +1263,217 @@ def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 2) -> list[d
                 continue
             else:
                 print(f"   [ERRO SELENIUM] {fonte}: {e}")
+    
+    return eventos
+
+
+def _extract_ingresse_cards(page, fonte: str, base_url: str) -> list[dict]:
+    """Extrai eventos do Ingresse usando cards."""
+    eventos = []
+    
+    cards = page.query_selector_all("[class*='card']")
+    
+    for card in cards:
+        try:
+            nome = ""
+            data = ""
+            cidade = ""
+            url_final = base_url
+            
+            # Get link inside card
+            link = card.query_selector("a")
+            if link:
+                href = link.get_attribute("href")
+                if href:
+                    if href.startswith("http"):
+                        url_final = href
+                    elif href.startswith("/"):
+                        from urllib.parse import urlparse
+                        parsed = urlparse(base_url)
+                        url_final = f"{parsed.scheme}://{parsed.netloc}{href}"
+            
+            # Get text content
+            text = card.inner_text()
+            if not text or len(text) < 5:
+                continue
+            
+            lines = [l.strip() for l in text.split("\n") if l.strip()]
+            
+            # First non-empty line is usually the event name
+            for line in lines:
+                if len(line) >= 3 and not _is_date_pattern(line):
+                    nome = line
+                    break
+            
+            # Look for date (contains month name)
+            for line in lines:
+                data_extra = _extract_date_from_text(line)
+                if data_extra:
+                    data = data_extra
+                    break
+            
+            # Look for city (usually has city name - check for known patterns)
+            for line in lines:
+                if any(city in line.upper() for city in ["SÃO", "RIO", "BELÉM", "VILA", "CURITIBA", "FORTALEZA"]):
+                    cidade = line
+                    break
+            
+            if nome and _is_valid_event_name(nome):
+                eventos.append({
+                    "nome": nome[:100],
+                    "artista": "Various Artists",
+                    "data": normalizar_data(data) if data else "",
+                    "cidade": cidade,
+                    "fonte": fonte,
+                    "url": url_final
+                })
+        except:
+            continue
+    
+    return eventos
+
+
+def _extract_bilheteriadigital_cards(page, fonte: str, base_url: str) -> list[dict]:
+    """Extrai eventos do Bilheteria Digital."""
+    eventos = []
+    
+    # Find all elements with event-related classes
+    elements = page.query_selector_all("[class*='event']")
+    
+    for elem in elements:
+        try:
+            text = elem.inner_text()
+            if not text or len(text) < 10:
+                continue
+            
+            lines = [l.strip() for l in text.split("\n") if l.strip()]
+            
+            nome = ""
+            data = ""
+            cidade = ""
+            url_final = base_url
+            
+            # Find link
+            link = elem.query_selector("a")
+            if link:
+                href = link.get_attribute("href")
+                if href and "javascript" not in href:
+                    if href.startswith("http"):
+                        url_final = href
+                    elif href.startswith("/"):
+                        from urllib.parse import urlparse
+                        parsed = urlparse(base_url)
+                        url_final = f"{parsed.scheme}://{parsed.netloc}{href}"
+            
+            # First meaningful line is event name
+            for line in lines:
+                if len(line) >= 3:
+                    nome = line
+                    break
+            
+            # Extract date
+            for line in lines:
+                data_extra = _extract_date_from_text(line)
+                if data_extra:
+                    data = data_extra
+                    break
+            
+            # Extract city (look for patterns like "São Paulo - SP")
+            for line in lines:
+                if " - " in line:
+                    parts = line.split(" - ")
+                    if len(parts) >= 2 and len(parts[1].strip()) <= 3:
+                        cidade = line
+                        break
+            
+            if nome and _is_valid_event_name(nome):
+                eventos.append({
+                    "nome": nome[:100],
+                    "artista": "Various Artists",
+                    "data": normalizar_data(data) if data else "",
+                    "cidade": cidade,
+                    "fonte": fonte,
+                    "url": url_final
+                })
+        except:
+            continue
+    
+    return eventos
+
+
+def _extract_guicheweb_cards(page, fonte: str, base_url: str) -> list[dict]:
+    """Extrai eventos do Guicheweb."""
+    eventos = []
+    
+    # Guicheweb has event links in banners
+    links = page.query_selector_all("a[href*='guicheweb.com.br/evento']")
+    
+    for link in links:
+        try:
+            href = link.get_attribute("href")
+            if not href:
+                continue
+            
+            text = link.inner_text().strip()
+            if not text or len(text) < 3:
+                continue
+            
+            nome = text
+            url_final = href
+            
+            # Get parent for more info
+            try:
+                parent = link.evaluate("el => el.parentElement")
+                parent_text = parent.inner_text() if parent else ""
+            except:
+                parent_text = ""
+            
+            # Try to extract city from URL or text
+            cidade = ""
+            if "sao-jose-dos-campos" in href.lower():
+                cidade = "São José dos Campos, SP"
+            elif "fortaleza" in href.lower():
+                cidade = "Fortaleza, CE"
+            
+            if _is_valid_event_name(nome):
+                eventos.append({
+                    "nome": nome[:100],
+                    "artista": "Various Artists",
+                    "data": "",
+                    "cidade": cidade,
+                    "fonte": fonte,
+                    "url": url_final
+                })
+        except:
+            continue
+    
+    # Also try banner links
+    banner_links = page.query_selector_all("a[href*='click_banner']")
+    for link in banner_links:
+        try:
+            href = link.get_attribute("href")
+            if not href or "guicheweb.com.br" not in href:
+                continue
+            
+            # Extract the actual event URL from the redirect parameter
+            if "link=" in href:
+                import urllib.parse
+                params = urllib.parse.parse_qs(urllib.parse.urlparse(href).query)
+                event_url = params.get("link", [""])[0]
+                if event_url:
+                    url_final = event_url
+                    # Extract city from URL
+                    nome = event_url.split("/")[-1].replace("-", " ").replace("_", " ").title()
+                    if _is_valid_event_name(nome):
+                        eventos.append({
+                            "nome": nome[:100],
+                            "artista": "Various Artists",
+                            "data": "",
+                            "cidade": "",
+                            "fonte": fonte,
+                            "url": url_final
+                        })
+        except:
+            continue
     
     return eventos
