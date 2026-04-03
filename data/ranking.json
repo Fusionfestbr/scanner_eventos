@@ -35,6 +35,7 @@
     "thresholds_usados": {
       "min_nota_comprar": 7.7,
       "min_confianca": 7.0
-    }
+    },
+    "posicao": 1
   }
 ]

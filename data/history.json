@@ -82,5 +82,19 @@
     "resultado_real": null,
     "data_decisao": "2026-04-03T09:12:57.042143",
     "data_registro": "2026-04-03T09:12:57.042149"
+  },
+  {
+    "id": "Curso_de_Energia_Solar_no_Rio_de_Janeiro_RJ_nos_dias__12/06_e_13/06/2026_2026-06-13",
+    "evento": "Curso de Energia Solar no Rio de Janeiro RJ nos dias  12/06 e 13/06/2026",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "Brasil",
+    "nota_final": 7.25,
+    "decisao": "MONITORAR",
+    "confianca": 6,
+    "acao_final": "MONITORAR",
+    "resultado_real": null,
+    "data_decisao": "2026-04-03T09:18:43.423260",
+    "data_registro": "2026-04-03T09:18:43.423265"
   }
 ]

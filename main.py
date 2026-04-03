@@ -14,6 +14,7 @@ from core.learning import (
     mostrar_historico,
     registrar_resultado
 )
+from core.ranking import gerar_ranking, salvar_ranking
 from config import INTERVALO_MINUTOS
 
 
@@ -167,6 +168,16 @@ def executar_pipeline_normal():
     print(f"  Decisoes tomadas:   {qtd_finais}")
     print(f"  Qualidade dados:    {score}%")
     print("-"*50 + "\n")
+    
+    final_path = os.path.join(os.path.dirname(__file__), "data", "final.json")
+    if os.path.exists(final_path):
+        with open(final_path, "r", encoding="utf-8") as f:
+            eventos_finais = json.load(f)
+        
+        ranking = gerar_ranking(eventos_finais)
+        salvar_ranking(ranking)
+        print(f"  Ranking gerado com {len(ranking)} eventos")
+        print(f"  Execute: python dashboard/app.py para iniciar o dashboard")
 
 
 if __name__ == "__main__":
