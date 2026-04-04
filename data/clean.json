@@ -336,10 +336,10 @@
     "url": "https://www.ingresse.com/"
   },
   {
-    "nome": "Semana Movida | 31...",
+    "nome": "FESTA UNDR _ NA AR...",
     "artista": "Various Artists",
     "data": "2026-04-03",
-    "cidade": "",
+    "cidade": "Arca - São Paulo",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
   },
@@ -348,14 +348,6 @@
     "artista": "Various Artists",
     "data": "2026-04-03",
     "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "FESTA UNDR _ NA AR...",
-    "artista": "Various Artists",
-    "data": "2026-04-03",
-    "cidade": "Arca - São Paulo",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
   },
@@ -369,6 +361,14 @@
   },
   {
     "nome": "Laroc Guarujá apre...",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
+    "nome": "Semana Movida | 31...",
     "artista": "Various Artists",
     "data": "2026-04-04",
     "cidade": "",
@@ -592,14 +592,6 @@
     "url": "https://www.ingresse.com/"
   },
   {
-    "nome": "Gerações - Curitib...",
-    "artista": "Various Artists",
-    "data": "2026-05-03",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
     "nome": "Festival Repique |...",
     "artista": "Various Artists",
     "data": "2026-05-09",
@@ -632,10 +624,10 @@
     "url": "https://www.ingresse.com/"
   },
   {
-    "nome": "Na Vila - Blumenau",
+    "nome": "Gerações - Floripa",
     "artista": "Various Artists",
-    "data": "2026-04-03",
-    "cidade": "Na Vila - Blumenau",
+    "data": "2026-05-23",
+    "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
   },
@@ -728,6 +720,14 @@
     "url": "https://www.ingresse.com/"
   },
   {
+    "nome": "Gerações - Curitib...",
+    "artista": "Various Artists",
+    "data": "2026-05-03",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/"
+  },
+  {
     "nome": "Boteco do Zezo",
     "artista": "Various Artists",
     "data": "2026-05-03",
@@ -760,7 +760,7 @@
     "url": "https://www.ingresse.com/"
   },
   {
-    "nome": "SEMANA SANTA - WE ...",
+    "nome": "ARQ Ribeirão Preto",
     "artista": "Various Artists",
     "data": "2026-04-03",
     "cidade": "",
@@ -776,7 +776,7 @@
     "url": "https://www.ingresse.com/"
   },
   {
-    "nome": "ARQ Ribeirão Preto",
+    "nome": "SEMANA SANTA - WE ...",
     "artista": "Various Artists",
     "data": "2026-04-03",
     "cidade": "",
@@ -806,78 +806,6 @@
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "SPIN DOCTORS + SMASH MOUTH",
-    "artista": "Various Artists",
-    "data": "2026-04-30",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/115855"
-  },
-  {
-    "nome": "Curso de Violão",
-    "artista": "Various Artists",
-    "data": "2026-04-22",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/118668"
-  },
-  {
-    "nome": "SINC STRINGS DJ",
-    "artista": "Various Artists",
-    "data": "2026-07-29",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/117887"
-  },
-  {
-    "nome": "QUEEN LEGEND + E. BALBO",
-    "artista": "Various Artists",
-    "data": "2026-06-30",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/111424"
-  },
-  {
-    "nome": "14 Bis",
-    "artista": "Various Artists",
-    "data": "2026-05-14",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/115004"
-  },
-  {
-    "nome": "DIOGO NOGUEIRA",
-    "artista": "Various Artists",
-    "data": "2026-04-24",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/114439"
-  },
-  {
-    "nome": "CONCHA PARA TODOS – ZÉLIA DUNCAN",
-    "artista": "Various Artists",
-    "data": "2026-04-26",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/114845"
-  },
-  {
-    "nome": "BACO EXU DO BLUES",
-    "artista": "Various Artists",
-    "data": "2026-07-25",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/116908"
-  },
-  {
-    "nome": "CONCHA PARA TODOS – FLÁVIO VENTURINI",
-    "artista": "Various Artists",
-    "data": "2026-05-10",
-    "cidade": "",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/114846"
   },
   {
     "nome": "É Claro Que É Rock 2026 Passo Fundo",
@@ -942,6 +870,14 @@
     "cidade": "",
     "fonte": "blueticket",
     "url": "https://www.blueticket.com.br/evento/38008/empreende-brazil-conference-2026-sc"
+  },
+  {
+    "nome": "SÃO PAULO",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/mc-gp-oficina-03-de-abril"
   },
   {
     "nome": "MC GP - OFICINA",
@@ -1488,12 +1424,12 @@
     "url": "https://www.bilheteriadigital.com/"
   },
   {
-    "nome": "16/04/2026",
+    "nome": "30/05/26 a 30/05/26",
     "artista": "Various Artists",
-    "data": "2026-04-16",
+    "data": "2026-05-30",
     "cidade": "",
     "fonte": "uhuu",
-    "url": "https://uhuu.com/evento/sp/sao-paulo/gravacao-do-dvd-paula-fernandes-15925"
+    "url": "https://uhuu.com/evento/sp/sao-paulo/emerson-lake-and-palmer-16140"
   },
   {
     "nome": "SEX",
@@ -1509,7 +1445,7 @@
     "data": "2026-04-04",
     "cidade": "",
     "fonte": "uhuu",
-    "url": "https://uhuu.com/evento/sp/sao-paulo/a-culpa-e-dos-amigos-15126"
+    "url": "https://uhuu.com/evento/sp/sao-paulo/a-ultima-sessao-de-freud-15630"
   },
   {
     "nome": "DOM",

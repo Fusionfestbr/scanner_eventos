@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 
-from config import SITES_CONFIG, SITES_REVENDA, SCRAPER_TIMEOUT
+from config import SITES_CONFIG, SITES_REVENDA, SCRAPER_TIMEOUT, MAX_EVENTOS_POR_FONTE
 
 
 HEADERS = {
@@ -298,6 +298,19 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
                 if parent:
                     nome = parent.inner_text().strip()
             
+            # Se o nome extraído é uma data pura, tentar obter nome do parent
+            if _is_pure_date_pattern(nome.lower()):
+                parent = link.evaluate("el => el.parentElement")
+                if parent:
+                    parent_text = parent.inner_text()
+                    if parent_text:
+                        lines = parent_text.split("\n")
+                        for line in lines:
+                            line = line.strip()
+                            if line and len(line) > 3 and not _is_pure_date_pattern(line.lower()):
+                                nome = line
+                                break
+            
             if not _is_valid_event_name(nome):
                 continue
             
@@ -411,11 +424,15 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
 
 
 def _is_valid_event_name(nome: str) -> bool:
-    """Verifica se o nome parece ser um evento válido (não menu/botão)."""
+    """Verifica se o nome parece ser um evento válido (não menu/botão/data)."""
     if not nome or len(nome) < 3:
         return False
     
     nome_lower = nome.lower().strip()
+    
+    # Rejeitar se parece mais data do que nome de evento
+    if _is_pure_date_pattern(nome_lower):
+        return False
     
     ignore_patterns = [
         "menu", "navbar", "nav", "footer", "header", "sidebar",
@@ -450,6 +467,38 @@ def _is_valid_event_name(nome: str) -> bool:
         return False
     
     return True
+
+
+def _is_pure_date_pattern(text: str) -> bool:
+    """Verifica se o texto é puramente uma data (não um nome de evento)."""
+    if not text:
+        return False
+    
+    # Apenas data no formato brasileiro: "28 de Outubro"
+    if re.match(r'^\d{1,2}\s+de\s+\w+$', text):
+        return True
+    
+    # Data com ano: "28 de Outubro de 2026"
+    if re.match(r'^\d{1,2}\s+de\s+\w+\s+de\s+\d{4}$', text):
+        return True
+    
+    # Data numérica: "28/10/2026"
+    if re.match(r'^\d{1,2}[/]\d{1,2}[/]\d{4}$', text):
+        return True
+    
+    # Mês + ano: "Outubro de 2026"
+    if re.match(r'^\w+\s+de\s+\d{4}$', text):
+        return True
+    
+    # Range de datas: "3 a 21 de Junho"
+    if re.match(r'^\d{1,2}\s+a\s+\d{1,2}\s+de\s+\w+$', text):
+        return True
+    
+    # Múltiplas datas: "28, 30 e 31 de Outubro"
+    if re.match(r'^\d{1,2}(,\s*\d{1,3})*\s+e\s+\d{1,2}\s+de\s+\w+$', text):
+        return True
+    
+    return False
 
 
 def _clean_event_name(nome: str, local: str) -> tuple:
@@ -922,7 +971,11 @@ def buscar_eventos_reais() -> list[dict]:
         try:
             eventos_fonte = funcao_busca()
             if eventos_fonte:
-                print(f"     -> {len(eventos_fonte)} eventos")
+                # Aplicar limite por fonte
+                eventos_fonte = eventos_fonte[:MAX_EVENTOS_POR_FONTE]
+                print(f"     -> {len(eventos_fonte)} eventos (limitado a {MAX_EVENTOS_POR_FONTE})")
+            else:
+                print(f"     -> 0 eventos")
             eventos.extend(eventos_fonte)
         except Exception as e:
             print(f"   [ERRO] {nome_fonte}: {e}")

@@ -545,9 +545,9 @@
             letter-spacing: 0.5px;
         }
 
-        .tag-alto, .tag-premium { background: rgba(16, 185, 129, 0.15); color: var(--green); }
-        .tag-medio, .tag-médio, .tag-gradual { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
-        .tag-baixo, .tag-rápida, .tag-rapida { background: rgba(100, 116, 139, 0.15); color: var(--text-dim); }
+.tag-alto, .tag-premium, .tag-fonte-alta { background: rgba(16, 185, 129, 0.15); color: var(--green); }
+.tag-medio, .tag-médio, .tag-gradual, .tag-fonte-media { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
+.tag-baixo, .tag-rápida, .tag-rapida, .tag-fonte-baixa { background: rgba(100, 116, 139, 0.15); color: var(--text-dim); }
         
         .tag-agora { background: rgba(239, 68, 68, 0.15); color: var(--red); }
         .tag-monitorar { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
@@ -971,6 +971,7 @@
                     <tr>
                         <th>#</th>
                         <th>Evento</th>
+                        <th>Fonte</th>
                         <th>Data</th>
                         <th>Cidade</th>
                         <th>Nota</th>
@@ -1009,6 +1010,7 @@
                                 <span class="artist-name">{{ evento.evento.artista }}</span>
                             </div>
                         </td>
+                        <td><span class="tag tag-{{ 'medio' if evento.evento.fonte in ['ingresse', 'sympla', 'ticket360'] else ('alto' if evento.evento.fonte == 'ticketmaster' else 'baixo') }}">{{ evento.evento.fonte }}</span></td>
                         <td class="mono">{{ evento.evento.data }}</td>
                         <td class="mono">{{ evento.evento.cidade[:20] }}</td>
                         <td class="score" style="color: var(--accent-light)">{{ "%.1f"|format(evento.analise.nota_final | default(0)) }}</td>

@@ -4102,5 +4102,161 @@
     },
     "motivo": "data inválida: data muito antiga",
     "timestamp": "2026-04-03T18:17:01.759565"
+  },
+  {
+    "evento": {
+      "nome": "Estádio Nilton Santos",
+      "artista": "Various Artists",
+      "data": "2026-01-29",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/college-football"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T20:38:22.742626"
+  },
+  {
+    "evento": {
+      "nome": "Sunset 5521 SP",
+      "artista": "Various Artists",
+      "data": "2026-09-55",
+      "cidade": "São Paulo",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-03T20:38:22.743683"
+  },
+  {
+    "evento": {
+      "nome": "FEV",
+      "artista": "Various Artists",
+      "data": "2026-02-27",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-03T20:38:22.744470"
+  },
+  {
+    "evento": {
+      "nome": "OUT",
+      "artista": "Various Artists",
+      "data": "2026-10-30",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-03T20:38:22.744473"
+  },
+  {
+    "evento": {
+      "nome": "AGO",
+      "artista": "Various Artists",
+      "data": "2026-08-16",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-03T20:38:22.744474"
+  },
+  {
+    "evento": {
+      "nome": "MAI",
+      "artista": "Various Artists",
+      "data": "2026-05-26",
+      "cidade": "",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-03T20:38:22.744476"
+  },
+  {
+    "evento": {
+      "nome": "QUA",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T20:38:22.744513"
+  },
+  {
+    "evento": {
+      "nome": "SEG",
+      "artista": "Various Artists",
+      "data": "2026-01-20",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/coldplayers-the-music-of-coldplay-16011"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T20:38:22.744542"
+  },
+  {
+    "evento": {
+      "nome": "03.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/village-rj/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T20:38:22.744558"
+  },
+  {
+    "evento": {
+      "nome": "04.06.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-04",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/funk-room-village-rj/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T20:38:22.744566"
+  },
+  {
+    "evento": {
+      "nome": "11.07.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-11",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/baile-do-momo-village-rj/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T20:38:22.744574"
+  },
+  {
+    "evento": {
+      "nome": "17.04.2026",
+      "artista": "Various Artists",
+      "data": "2026-01-17",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/iem-rio/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T20:38:22.744582"
+  },
+  {
+    "evento": {
+      "nome": "05.02.2027",
+      "artista": "Various Artists",
+      "data": "2026-01-05",
+      "cidade": "",
+      "fonte": "betimelapse",
+      "url": "https://betimelapse.com.br/eventos/camarote-mar-rj/"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-03T20:38:22.744611"
   }
 ]

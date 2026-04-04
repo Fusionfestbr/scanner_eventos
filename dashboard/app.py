@@ -3,6 +3,11 @@ Dashboard Flask para visualização de eventos.
 """
 import json
 import os
+import sys
+
+# Adicionar diretório raiz ao path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import threading
 from datetime import datetime, timedelta
 from flask import Flask, render_template, request, redirect, url_for, jsonify
@@ -14,7 +19,7 @@ FINAL_FILE = os.path.join(DATA_DIR, "final.json")
 RANKING_FILE = os.path.join(DATA_DIR, "ranking.json")
 
 # Status da coleta
-coleta_status = {"ativo": False, "mensagem": "Inativo", "progresso": 0}
+coleta_status = {"ativo": False, "mensagem": "Pronto para coletar", "progresso": 0, "ultima_coleta": None}
 
 try:
     from core.learning import (
@@ -163,29 +168,32 @@ def run_pipeline():
         try:
             coleta_status["ativo"] = True
             coleta_status["mensagem"] = "Iniciando coleta..."
-            coleta_status["progresso"] = 0
+            coleta_status["progresso"] = 5
             
-            # Simular progresso (em produção, integrar com o pipeline real)
-            import time
-            for i in range(1, 101, 10):
-                time.sleep(0.5)
-                coleta_status["progresso"] = i
-                coleta_status["mensagem"] = f"Coletando... {i}/100"
+            # Importar e executar o pipeline real
+            from core.orchestrator import executar_pipeline
             
-            # Aqui seria: from core.orchestrator import executar_pipeline; executar_pipeline()
-            coleta_status["mensagem"] = "Processando dados..."
-            time.sleep(1)
+            coleta_status["mensagem"] = "Coletando eventos..."
+            coleta_status["progresso"] = 20
             
-            coleta_status["mensagem"] = "Finalizando..."
+            # Executar pipeline completo
+            qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, score = executar_pipeline()
+            
+            coleta_status["mensagem"] = f"Processado: {qtd_coletados} coletados, {qtd_finais} decisões"
             coleta_status["progresso"] = 100
-            time.sleep(0.5)
-            
             coleta_status["ativo"] = False
-            coleta_status["mensagem"] = "Coleta concluída"
+            coleta_status["ultima_coleta"] = datetime.now().isoformat()
+            
+            # Resetar status após 5 segundos
+            import time
+            time.sleep(5)
+            coleta_status["mensagem"] = "Pronto para coletar"
+            coleta_status["progresso"] = 0
             
         except Exception as e:
             coleta_status["ativo"] = False
             coleta_status["mensagem"] = f"Erro: {str(e)}"
+            print(f"[ERRO COLETA] {e}")
     
     thread = threading.Thread(target=executar)
     thread.start()

@@ -8272,5 +8272,61 @@
     "resultado_real": null,
     "data_decisao": "2026-04-03T18:42:40.935880",
     "data_registro": "2026-04-03T18:42:40.935883"
+  },
+  {
+    "id": "Semana_Movida_|_31..._2026-04-04",
+    "evento": "Semana Movida | 31...",
+    "artista": "Various Artists",
+    "data": "2026-04-04",
+    "cidade": "",
+    "nota_final": 7.5,
+    "decisao": "MONITORAR",
+    "confianca": 6,
+    "acao_final": "MONITORAR",
+    "resultado_real": null,
+    "data_decisao": "2026-04-03T21:02:26.244766",
+    "data_registro": "2026-04-03T21:02:26.244772"
+  },
+  {
+    "id": "Gerações_-_Floripa_2026-05-23",
+    "evento": "Gerações - Floripa",
+    "artista": "Various Artists",
+    "data": "2026-05-23",
+    "cidade": "",
+    "nota_final": 0,
+    "decisao": "IGNORAR",
+    "confianca": 2,
+    "acao_final": "IGNORAR",
+    "resultado_real": null,
+    "data_decisao": "2026-04-03T21:02:26.329445",
+    "data_registro": "2026-04-03T21:02:26.329448"
+  },
+  {
+    "id": "SÃO_PAULO_2026-04-03",
+    "evento": "SÃO PAULO",
+    "artista": "Various Artists",
+    "data": "2026-04-03",
+    "cidade": "Bauru - SP",
+    "nota_final": 7.5,
+    "decisao": "MONITORAR",
+    "confianca": 6,
+    "acao_final": "MONITORAR",
+    "resultado_real": null,
+    "data_decisao": "2026-04-03T21:02:26.410767",
+    "data_registro": "2026-04-03T21:02:26.410771"
+  },
+  {
+    "id": "30/05/26_a_30/05/26_2026-05-30",
+    "evento": "30/05/26 a 30/05/26",
+    "artista": "Various Artists",
+    "data": "2026-05-30",
+    "cidade": "",
+    "nota_final": 7.5,
+    "decisao": "MONITORAR",
+    "confianca": 6,
+    "acao_final": "MONITORAR",
+    "resultado_real": null,
+    "data_decisao": "2026-04-03T21:02:28.059653",
+    "data_registro": "2026-04-03T21:02:28.059656"
   }
 ]
