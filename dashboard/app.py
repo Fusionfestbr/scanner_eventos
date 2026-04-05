@@ -10,16 +10,13 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import threading
 from datetime import datetime, timedelta
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from functools import wraps
+from flask import Flask, render_template, request, redirect, url_for, jsonify, Response
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-change-me-in-prod")
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
-FINAL_FILE = os.path.join(DATA_DIR, "final.json")
-RANKING_FILE = os.path.join(DATA_DIR, "ranking.json")
-
-# Status da coleta
-coleta_status = {"ativo": False, "mensagem": "Pronto para coletar", "progresso": 0, "ultima_coleta": None}
+DASHBOARD_PASSWORD = os.environ.get("DASHBOARD_PASSWORD", "")
 
 try:
     from core.learning import (
@@ -33,6 +30,34 @@ try:
     LEARNING_AVAILABLE = True
 except ImportError:
     LEARNING_AVAILABLE = False
+
+
+def check_auth(username, password):
+    """Verifica credenciais de auth básica."""
+    if not DASHBOARD_PASSWORD:
+        return True
+    return password == DASHBOARD_PASSWORD
+
+
+def authenticate():
+    """Retorna resposta de autenticação."""
+    return Response(
+        'Acesso requerido', 401,
+        {'WWW-Authenticate': 'Basic realm="Dashboard Login"'}
+    )
+
+
+def require_auth(f):
+    """Decorator para proteger rotas com auth básica."""
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if not DASHBOARD_PASSWORD:
+            return f(*args, **kwargs)
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            return authenticate()
+        return f(*args, **kwargs)
+    return decorated
 
 
 def carregar_eventos():
@@ -108,6 +133,7 @@ def calcular_estatisticas(eventos):
 
 
 @app.route("/")
+@require_auth
 def index():
     """Página principal com lista de eventos."""
     filtro_acao = request.args.get("acao", "todos")

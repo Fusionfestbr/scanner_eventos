@@ -264,7 +264,7 @@ def _scroll_page(page):
             page.wait_for_timeout(1000)
             page.evaluate("window.scrollTo(0, 0)")
             page.wait_for_timeout(500)
-    except:
+    except Exception:
         pass
 
 
@@ -275,7 +275,7 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
     
     try:
         links = page.query_selector_all("a[href]")
-    except:
+    except Exception:
         links = []
     
     seen_links = set()
@@ -320,7 +320,7 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
                 parent = link.evaluate("el => el.parentElement")
                 if parent:
                     parent_text = parent.inner_text()
-            except:
+            except Exception:
                 pass
             
             # Extrair data do elemento <time> primeiro
@@ -329,7 +329,7 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
                 time_elem = link.query_selector("time")
                 if time_elem:
                     data = time_elem.get_attribute("datetime") or time_elem.inner_text().strip()
-            except:
+            except Exception:
                 pass
             
             # Se não achou, tentar do nome do evento
@@ -417,7 +417,7 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
                 "fonte": fonte,
                 "url": url_final
             })
-        except:
+        except Exception:
             continue
     
     return eventos
@@ -636,7 +636,7 @@ def _extract_local_from_container(item) -> str:
                     text = elem.inner_text().strip()
                     if text:
                         text_parts.append(text)
-            except:
+            except Exception:
                 continue
         
         if text_parts:
@@ -650,7 +650,7 @@ def _extract_local_from_container(item) -> str:
                 if len(line) > 3 and len(line) < 100:
                     return line
         
-    except:
+    except Exception:
         pass
     return ""
 
@@ -666,7 +666,7 @@ def _extract_link_from_container(item) -> str:
                     return href
         if links:
             return links[0].get_attribute("href")
-    except:
+    except Exception:
         pass
     return ""
 
@@ -714,9 +714,9 @@ def _extract_fallback(page, fonte: str, base_url: str) -> list[dict]:
                             "fonte": fonte,
                             "url": url_final
                         })
-            except:
+            except Exception:
                 continue
-    except:
+    except Exception:
         pass
     
     return eventos
@@ -735,7 +735,7 @@ def _get_text(item, selectors: str) -> str:
                 text = elem.inner_text().strip()
                 if text:
                     return text
-        except:
+        except Exception:
             continue
     return ""
 
@@ -756,7 +756,7 @@ def _get_data(item, selectors: str) -> str:
                 text = elem.inner_text().strip()
                 if text:
                     return normalizar_data(text)
-        except:
+        except Exception:
             continue
     return ""
 
@@ -774,7 +774,7 @@ def _get_link(item, selectors: str) -> str:
                 href = elem.get_attribute("href")
                 if href:
                     return href
-        except:
+        except Exception:
             continue
     return ""
 
@@ -914,7 +914,7 @@ def _extract_date_from_text(text: str) -> str:
                         
                         mes = meses.get(mes_nome, "01")
                         return f"{ano}-{mes}-01"  # Primeiro dia do mês
-            except:
+            except Exception:
                 continue
     
     meses = {
@@ -926,13 +926,15 @@ def _extract_date_from_text(text: str) -> str:
         "nov": "11", "dez": "12"
     }
     
+    current_year = datetime.now().year
+    
     text_lower = text.lower()
     for mes, num in meses.items():
         if mes in text_lower:
             match = re.search(r'(\d{1,2})', text)
             if match:
                 dia = match.group(1).zfill(2)
-                return f"2026-{num}-{dia}"
+                return f"{current_year}-{num}-{dia}"
     
     return ""
 
@@ -1042,7 +1044,7 @@ def normalizar_data(data_str: str) -> str:
     
     try:
         data_str = str(data_str).strip()
-    except:
+    except Exception:
         return ""
     
     patterns = [
@@ -1061,7 +1063,7 @@ def normalizar_data(data_str: str) -> str:
                     return f"{match.group(3)}-{match.group(2)}-{match.group(1)}"
                 elif fmt == "%d-%m-%Y":
                     return f"{match.group(3)}-{match.group(2)}-{match.group(1)}"
-            except:
+            except Exception:
                 continue
     
     meses = {
@@ -1070,18 +1072,19 @@ def normalizar_data(data_str: str) -> str:
         "setembro": "09", "outubro": "10", "novembro": "11", "dezembro": "12"
     }
     
+    current_year = datetime.now().year
     data_lower = data_str.lower()
     for mes_pt, num in meses.items():
         if mes_pt in data_lower:
             match = re.search(r"(\d{1,2})", data_str)
             if match:
                 dia = match.group(1).zfill(2)
-                return f"2026-{num}-{dia}"
+                return f"{current_year}-{num}-{dia}"
     
     return ""
 
 
-SITES_PROTEGIDOS = []
+SITES_PROTEGIDOS = ["eventim", "livepass", "ticketmaster"]
 
 
 def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[dict]:
@@ -1121,7 +1124,7 @@ def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[d
             
             try:
                 driver.get(url)
-            except:
+            except Exception:
                 driver.quit()
                 if tentativa < max_retries:
                     import time
@@ -1136,14 +1139,14 @@ def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[d
                 WebDriverWait(driver, 15).until(
                     EC.presence_of_element_located((By.TAG_NAME, "body"))
                 )
-            except:
+            except Exception:
                 pass
             
             try:
                 for _ in range(2):
                     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                     time.sleep(2)
-            except:
+            except Exception:
                 pass
             
             links = driver.find_elements(By.TAG_NAME, "a")
@@ -1163,7 +1166,7 @@ def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[d
                     
                     try:
                         nome = link.text.strip()
-                    except:
+                    except Exception:
                         nome = ""
                     
                     if not nome or len(nome) < 3:
@@ -1173,7 +1176,7 @@ def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[d
                             if nome:
                                 lines = nome.split("\n")
                                 nome = lines[0].strip()
-                        except:
+                        except Exception:
                             pass
                     
                     if not _is_valid_event_name(nome):
@@ -1193,7 +1196,7 @@ def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[d
                         "fonte": fonte,
                         "url": url_final
                     })
-                except:
+                except Exception:
                     continue
             
             driver.quit()
@@ -1214,11 +1217,6 @@ def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[d
                 print(f"   [ERRO SELENIUM] {fonte}: {str(e)[:100]}")
     
     return eventos
-
-
-def generic_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
-    """Wrapper - usa Selenium diretamente (mais estável)."""
-    return generic_selenium_stealth_scraper(fonte, max_retries)
 
 
 def _is_valid_event_url_stealth(url: str) -> bool:
@@ -1249,134 +1247,6 @@ def _is_valid_event_url_stealth(url: str) -> bool:
         return True
     
     return False
-
-
-def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 2) -> list[dict]:
-    """Scraper usando Selenium com stealth para sites protegidos."""
-    eventos = []
-    config = SITES_CONFIG.get(fonte, {})
-    url = config.get("url", "")
-    
-    if not url:
-        return eventos
-    
-    for tentativa in range(1, max_retries + 1):
-        try:
-            from selenium import webdriver
-            from selenium.webdriver.chrome.options import Options
-            from selenium.webdriver.common.by import By
-            from selenium.webdriver.support.ui import WebDriverWait
-            from selenium.webdriver.support import expected_conditions as EC
-            
-            options = Options()
-            options.add_argument("--headless")
-            options.add_argument("--no-sandbox")
-            options.add_argument("--disable-dev-shm-usage")
-            options.add_argument("--disable-gpu")
-            options.add_argument("--disable-blink-features=AutomationControlled")
-            options.add_experimental_option("excludeSwitches", ["enable-automation"])
-            options.add_experimental_option("useAutomationExtension", False)
-            options.add_argument("--disable-web-security")
-            options.add_argument("--allow-running-insecure-content")
-            options.add_argument("--ignore-certificate-errors")
-            
-            driver = webdriver.Chrome(options=options)
-            driver.set_page_load_timeout(30)
-            driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-                "source": """
-                    Object.defineProperty(navigator, 'webdriver', {
-                        get: () => undefined
-                    });
-                """
-            })
-            
-            try:
-                driver.get(url)
-            except:
-                driver.quit()
-                if tentativa < max_retries:
-                    import time
-                    time.sleep(5)
-                    continue
-                continue
-            
-            import time
-            time.sleep(5)
-            
-            try:
-                WebDriverWait(driver, 10).until(
-                    EC.presence_of_element_located((By.TAG_NAME, "body"))
-                )
-            except:
-                pass
-            
-            links = driver.find_elements(By.TAG_NAME, "a")
-            
-            seen_hrefs = set()
-            
-            for link in links:
-                try:
-                    href = link.get_attribute("href")
-                    if not href or href in seen_hrefs:
-                        continue
-                    
-                    if not _is_valid_event_url_stealth(href):
-                        continue
-                    
-                    seen_hrefs.add(href)
-                    
-                    try:
-                        nome = link.text.strip()
-                    except:
-                        nome = ""
-                    
-                    if not nome or len(nome) < 3:
-                        try:
-                            parent = link.find_element(By.XPATH, "./..")
-                            nome = parent.text.strip()
-                            if nome:
-                                lines = nome.split("\n")
-                                nome = lines[0].strip()
-                        except:
-                            pass
-                    
-                    if not _is_valid_event_name(nome):
-                        continue
-                    
-                    url_final = href
-                    if not href.startswith("http"):
-                        from urllib.parse import urlparse
-                        parsed = urlparse(url)
-                        url_final = f"{parsed.scheme}://{parsed.netloc}{href}"
-                    
-                    eventos.append({
-                        "nome": nome[:100],
-                        "artista": "Various Artists",
-                        "data": _generate_future_date(),
-                        "cidade": "",
-                        "fonte": fonte,
-                        "url": url_final
-                    })
-                except:
-                    continue
-            
-            driver.quit()
-            
-            if eventos:
-                break
-            elif tentativa < max_retries:
-                import time
-                time.sleep(5)
-                
-        except Exception as e:
-            if tentativa < max_retries:
-                import time
-                time.sleep(5)
-                continue
-            else:
-                print(f"   [ERRO SELENIUM] {fonte}: {e}")
-    
-    return eventos
 
 
 def _extract_ingresse_cards(page, fonte: str, base_url: str) -> list[dict]:
@@ -1439,7 +1309,7 @@ def _extract_ingresse_cards(page, fonte: str, base_url: str) -> list[dict]:
                     "fonte": fonte,
                     "url": url_final
                 })
-        except:
+        except Exception:
             continue
     
     return eventos
@@ -1507,7 +1377,7 @@ def _extract_bilheteriadigital_cards(page, fonte: str, base_url: str) -> list[di
                     "fonte": fonte,
                     "url": url_final
                 })
-        except:
+        except Exception:
             continue
     
     return eventos
@@ -1537,7 +1407,7 @@ def _extract_guicheweb_cards(page, fonte: str, base_url: str) -> list[dict]:
             try:
                 parent = link.evaluate("el => el.parentElement")
                 parent_text = parent.inner_text() if parent else ""
-            except:
+            except Exception:
                 parent_text = ""
             
             # Try to extract city from URL or text
@@ -1556,7 +1426,7 @@ def _extract_guicheweb_cards(page, fonte: str, base_url: str) -> list[dict]:
                     "fonte": fonte,
                     "url": url_final
                 })
-        except:
+        except Exception:
             continue
     
     # Also try banner links
@@ -1585,7 +1455,7 @@ def _extract_guicheweb_cards(page, fonte: str, base_url: str) -> list[dict]:
                             "fonte": fonte,
                             "url": url_final
                         })
-        except:
+        except Exception:
             continue
     
     return eventos
@@ -1651,7 +1521,7 @@ def _buscar_preco_viagogo(nome_evento: str) -> list[dict]:
                         preco = float(preco_str)
                         if preco > 0:
                             precos.append({"plataforma": "viagogo", "preco": preco})
-                except:
+                except Exception:
                     continue
             
             browser.close()
@@ -1698,7 +1568,7 @@ def _buscar_preco_buyticketbrasil(nome_evento: str) -> list[dict]:
                         preco = float(preco_str)
                         if preco > 0:
                             precos.append({"plataforma": "buyticketbrasil", "preco": preco})
-                except:
+                except Exception:
                     continue
             
             browser.close()

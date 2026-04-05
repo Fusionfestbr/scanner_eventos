@@ -25,20 +25,66 @@ def signal_handler(sig, frame):
     running = False
 
 
+def _is_process_running(pid: int) -> bool:
+    """Verifica se um processo está rodando."""
+    if os.name == 'nt':
+        try:
+            import psutil
+            return psutil.pid_exists(pid)
+        except ImportError:
+            try:
+                os.kill(pid, 0)
+                return True
+            except OSError:
+                return False
+    else:
+        try:
+            os.kill(pid, 0)
+            return True
+        except OSError:
+            return False
+
+
+def _is_stale_lock(max_age_seconds: int = 3600) -> bool:
+    """Verifica se o lock file está stale (processo morto ou muito antigo)."""
+    if not os.path.exists(LOCK_FILE):
+        return False
+    
+    try:
+        stat = os.stat(LOCK_FILE)
+        age = time.time() - stat.st_mtime
+        if age > max_age_seconds:
+            return True
+        
+        with open(LOCK_FILE, "r") as f:
+            pid = int(f.read().strip())
+        return not _is_process_running(pid)
+    except (ValueError, IOError, OSError):
+        return True
+
+
+def cleanup_stale_lock() -> bool:
+    """Remove lock file stale se existir. Retorna True se limpou."""
+    if _is_stale_lock():
+        try:
+            os.remove(LOCK_FILE)
+            print(f"   [LOCK] Lock file stale removido")
+            return True
+        except OSError:
+            pass
+    return False
+
+
 def acquire_lock() -> bool:
     """Adquire lock para evitar execução duplicada."""
+    cleanup_stale_lock()
+    
     if os.path.exists(LOCK_FILE):
         try:
             with open(LOCK_FILE, "r") as f:
                 pid = int(f.read().strip())
-            if os.name == 'nt':
-                try:
-                    import psutil
-                    if psutil.pid_exists(pid):
-                        return False
-                except ImportError:
-                    pass
-            return False
+            if _is_process_running(pid):
+                return False
         except (ValueError, IOError):
             pass
     

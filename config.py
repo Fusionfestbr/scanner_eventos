@@ -2,6 +2,9 @@
 Configurações do scanner_eventos.
 """
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 LM_STUDIO_URL = os.environ.get("LM_STUDIO_URL", "http://127.0.0.1:1234/v1/chat/completions")
 MODEL = os.environ.get("MODEL", "google/gemma-3-4b")
@@ -105,8 +108,8 @@ MAX_EVENTOS_POR_FONTE = int(os.environ.get("MAX_EVENTOS_POR_FONTE", "50"))
 
 INTERVALO_MINUTOS = int(os.environ.get("INTERVALO_MINUTOS", "30"))
 
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "8436380065:AAFFCJ0Z7EWmfHDGCpGQrlbBbKmHQCXVf6o")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "1048111648")
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 ALERTA_NOTA_MINIMA = float(os.environ.get("ALERTA_NOTA_MINIMA", "8.5"))
 ALERTA_CONFIANCA_MINIMA = int(os.environ.get("ALERTA_CONFIANCA_MINIMA", "7"))
 ALERTA_ENABLED = os.environ.get("ALERTA_ENABLED", "true").lower() == "true"
