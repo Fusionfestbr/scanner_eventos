@@ -3,6 +3,7 @@ Dashboard Flask para visualização de eventos.
 """
 import json
 import os
+import secrets
 import sys
 
 # Adicionar diretório raiz ao path
@@ -14,7 +15,7 @@ from functools import wraps
 from flask import Flask, render_template, request, redirect, url_for, jsonify, Response
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-change-me-in-prod")
+app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
 
 DASHBOARD_PASSWORD = os.environ.get("DASHBOARD_PASSWORD", "")
 
@@ -116,36 +117,7 @@ def carregar_ranking():
         return []
 
 
-def filtrar_por_periodo(eventos, periodo):
-    """Filtra eventos por período temporal."""
-    if periodo == "todos":
-        return eventos
-    
-    hoje = datetime.now().date()
-    
-    if periodo == "semana":
-        data_limite = hoje + timedelta(days=7)
-    elif periodo == "mes":
-        data_limite = hoje + timedelta(days=30)
-    elif periodo == "ano":
-        data_limite = hoje + timedelta(days=365)
-    else:
-        return eventos
-    
-    eventos_filtrados = []
-    for evento in eventos:
-        data_str = evento.get("data", "")
-        if not data_str:
-            data_str = evento.get("evento", {}).get("data", "")
-        if data_str:
-            try:
-                data_evento = datetime.fromisoformat(data_str.replace("Z", "+00:00")).date()
-                if hoje <= data_evento <= data_limite:
-                    eventos_filtrados.append(evento)
-            except ValueError:
-                continue
-    
-    return eventos_filtrados
+
 
 
 def calcular_estatisticas(eventos):
@@ -312,6 +284,7 @@ def validos():
 
 
 @app.route("/run-pipeline", methods=["POST"])
+@require_auth
 def run_pipeline():
     """Executa o pipeline de coleta em background."""
     global coleta_status
@@ -358,12 +331,14 @@ def run_pipeline():
 
 
 @app.route("/api/coleta-status")
+@require_auth
 def get_coleta_status():
     """Retorna status da coleta para progresso visual."""
     return jsonify(coleta_status)
 
 
 @app.route("/api/events")
+@require_auth
 def api_events():
     """API para auto-refresh dos eventos."""
     filtro_acao = request.args.get("acao", "todos")
@@ -405,6 +380,7 @@ def api_events():
 
 
 @app.route("/api/resumo")
+@require_auth
 def api_resumo():
     """API para resumo estatístico dos eventos."""
     eventos = carregar_ranking()
@@ -422,4 +398,4 @@ def refresh():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=False, host="127.0.0.1", port=5000)

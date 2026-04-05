@@ -45,7 +45,7 @@ def construir_prompt_evento(evento: dict) -> list[dict]:
 
 
 def chamar_llm(messages: list[dict]) -> str | None:
-    """Envia requisição para LM Studio."""
+    """Envia requisição para LM Studio com retry."""
     for attempt in range(2):
         payload = {
             "model": MODEL,
@@ -62,7 +62,12 @@ def chamar_llm(messages: list[dict]) -> str | None:
             response.raise_for_status()
             data = response.json()
             
-            message = data["choices"][0]["message"]
+            choices = data.get("choices", [])
+            if not choices:
+                print(f"   [ERRO] Resposta sem choices (tentativa {attempt + 1})")
+                continue
+            
+            message = choices[0].get("message", {})
             
             content = message.get("content", "")
             reasoning = message.get("reasoning_content", "")
@@ -71,12 +76,15 @@ def chamar_llm(messages: list[dict]) -> str | None:
             
             if full_text:
                 return full_text
+            else:
+                print(f"   [ERRO] Resposta vazia (tentativa {attempt + 1})")
+                continue
         except requests.exceptions.RequestException as e:
             print(f"   [ERRO] Requisição falhou: {e}")
-            return None
+            continue
         except (KeyError, IndexError) as e:
             print(f"   [ERRO] Resposta inválida: {e}")
-            return None
+            continue
     
     return None
 
@@ -85,8 +93,6 @@ def extrair_json(resposta: str) -> dict | None:
     """Extrai JSON da resposta do LLM."""
     if not resposta:
         return None
-    
-    import re
     
     match = re.search(r'\{[^{}]*"hype"[^{}]*\}', resposta, re.DOTALL)
     if match:
@@ -101,7 +107,7 @@ def extrair_json(resposta: str) -> dict | None:
     if match:
         hype_match = re.search(r'"hype"\s*:\s*([\d.]+)', resposta)
         escassez_match = re.search(r'"escassez"\s*:\s*([\d.]+)', resposta)
-        publikco_match = re.search(r'"publico"\s*:\s*([\d.]+)', resposta)
+        publico_match = re.search(r'"publico"\s*:\s*([\d.]+)', resposta)
         revenda_match = re.search(r'"potencial_revenda"\s*:\s*([\d.]+)', resposta)
         nota_match = re.search(r'"nota_final"\s*:\s*([\d.]+)', resposta)
         
@@ -109,7 +115,7 @@ def extrair_json(resposta: str) -> dict | None:
             result = {
                 "hype": float(hype_match.group(1)),
                 "escassez": float(escassez_match.group(1)) if escassez_match else 0,
-                "publico": float(publikco_match.group(1)) if publikco_match else 0,
+                "publico": float(publico_match.group(1)) if publico_match else 0,
                 "potencial_revenda": float(revenda_match.group(1)) if revenda_match else 0,
                 "nota_final": float(nota_match.group(1)) if nota_match else 0,
                 "justificativa": "Extraido do reasoning"

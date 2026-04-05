@@ -292,34 +292,29 @@ def _extract_with_selectors(page, selectors: dict, fonte: str, base_url: str) ->
             nome = link.inner_text().strip()
             
             if not nome or len(nome) < 3:
-                parent = link.evaluate("el => el.parentElement")
-                if parent:
-                    nome = parent.inner_text().strip()
+                parent_text = link.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")
+                if parent_text:
+                    nome = parent_text.strip()
             
             # Se o nome extraído é uma data pura, tentar obter nome do parent
             if _is_pure_date_pattern(nome.lower()):
-                parent = link.evaluate("el => el.parentElement")
-                if parent:
-                    parent_text = parent.inner_text()
-                    if parent_text:
-                        lines = parent_text.split("\n")
-                        for line in lines:
-                            line = line.strip()
-                            if line and len(line) > 3 and not _is_pure_date_pattern(line.lower()):
-                                nome = line
-                                break
+                parent_text = link.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")
+                if parent_text:
+                    lines = parent_text.split("\n")
+                    for line in lines:
+                        line = line.strip()
+                        if line and len(line) > 3 and not _is_pure_date_pattern(line.lower()):
+                            nome = line
+                            break
             
             if not _is_valid_event_name(nome):
                 continue
             
             # Primeiro obter parent_text
-            parent_text = ""
             try:
-                parent = link.evaluate("el => el.parentElement")
-                if parent:
-                    parent_text = parent.inner_text()
+                parent_text = link.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")
             except Exception:
-                pass
+                parent_text = ""
             
             # Extrair data do elemento <time> primeiro
             data = ""

@@ -118,7 +118,13 @@ def main():
     
     if "--daemon" in args:
         idx = args.index("--daemon")
-        intervalo = int(args[idx + 1]) if idx + 1 < len(args) else INTERVALO_MINUTOS
+        if idx + 1 < len(args):
+            try:
+                intervalo = int(args[idx + 1])
+            except ValueError:
+                intervalo = INTERVALO_MINUTOS
+        else:
+            intervalo = INTERVALO_MINUTOS
         executar_loop(intervalo)
         return
     
@@ -254,8 +260,12 @@ def registrar_operacao_manual():
     nome = input("  Nome do evento: ").strip()
     data_evento = input("  Data do evento (YYYY-MM-DD): ").strip()
     artista = input("  Artista: ").strip()
-    preco_compra = float(input("  Preço de compra (R$): ").strip().replace(",", "."))
-    preco_venda = float(input("  Preço de venda (R$): ").strip().replace(",", "."))
+    try:
+        preco_compra = float(input("  Preço de compra (R$): ").strip().replace(",", "."))
+        preco_venda = float(input("  Preço de venda (R$): ").strip().replace(",", "."))
+    except ValueError:
+        print("  Preço inválido. Use números.")
+        return
     data_compra = input("  Data de compra (YYYY-MM-DD): ").strip()
     data_venda = input("  Data de venda (YYYY-MM-DD): ").strip()
     fonte_compra = input("  Fonte de compra (ticketmaster/sympla/etc): ").strip()

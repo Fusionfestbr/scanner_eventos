@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-LLM_WORKERS = int(os.environ.get("LLM_WORKERS", "8"))
 LM_STUDIO_URL = os.environ.get("LM_STUDIO_URL", "http://127.0.0.1:1234/v1/chat/completions")
 MODEL = os.environ.get("MODEL", "google/gemma-3-4b")
 

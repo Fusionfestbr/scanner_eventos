@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 from core.historico_valorizacao import (
     carregar_historico,
@@ -54,6 +54,8 @@ def calcular_score_urgencia(data_evento: str) -> float:
     """Calcula score baseado na proximidade do evento (peso 10%)."""
     try:
         evento_date = datetime.fromisoformat(data_evento.replace("T", " "))
+        if evento_date.tzinfo is not None:
+            evento_date = evento_date.replace(tzinfo=None)
         hoje = datetime.now()
         dias_ate_evento = (evento_date - hoje).days
         
@@ -65,7 +67,7 @@ def calcular_score_urgencia(data_evento: str) -> float:
             return 4.0
         else:
             return 2.0
-    except:
+    except (ValueError, TypeError):
         return 5.0
 
 
@@ -94,13 +96,15 @@ def calcular_probabilidade_esgotar(nota_final: float, nome_artista: str, nome_ev
     
     try:
         evento_date = datetime.fromisoformat(data_evento.replace("T", " "))
+        if evento_date.tzinfo is not None:
+            evento_date = evento_date.replace(tzinfo=None)
         dias_ate = (evento_date - datetime.now()).days
         if 0 < dias_ate <= 30:
             prob_base += 10
-    except:
+    except (ValueError, TypeError):
         pass
     
-    return min(prob_base, 95)
+    return min(prob_base, 100)
 
 
 def determinar_volume(nota_final: float, prob_esgotar: float, score_valorizacao: float) -> str:

@@ -4,6 +4,7 @@ Envia alertas quando oportunidades são detectadas.
 """
 import json
 import os
+import threading
 import requests
 from datetime import datetime
 from typing import Optional, Dict
@@ -16,6 +17,8 @@ from config import (
     ALERTA_CONFIANCA_MINIMA,
     NOTIFICADOS_FILE
 )
+
+_file_lock = threading.Lock()
 
 
 def carregar_notificados() -> set:
@@ -32,9 +35,10 @@ def carregar_notificados() -> set:
 
 def salvar_notificados(ids: set) -> None:
     """Salva IDs dos eventos notificados."""
-    os.makedirs(os.path.dirname(NOTIFICADOS_FILE), exist_ok=True)
-    with open(NOTIFICADOS_FILE, "w", encoding="utf-8") as f:
-        json.dump({"ids": list(ids), "ultima_att": datetime.now().isoformat()}, f, ensure_ascii=False, indent=2)
+    with _file_lock:
+        os.makedirs(os.path.dirname(NOTIFICADOS_FILE), exist_ok=True)
+        with open(NOTIFICADOS_FILE, "w", encoding="utf-8") as f:
+            json.dump({"ids": list(ids), "ultima_att": datetime.now().isoformat()}, f, ensure_ascii=False, indent=2)
 
 
 def gerar_id_evento(evento: dict) -> str:

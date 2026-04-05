@@ -4,4 +4,3 @@ flask
 playwright
 selenium
 python-dotenv
-pyinstaller

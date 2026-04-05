@@ -9,6 +9,7 @@ import time
 from typing import Optional, Dict, List
 from urllib.parse import quote
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import re
 from config import LLM_WORKERS
 
 try:
@@ -35,7 +36,7 @@ def carregar_cache() -> dict:
     try:
         with open(CACHE_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    except:
+    except (json.JSONDecodeError, IOError):
         return {}
 
 
@@ -70,7 +71,7 @@ def validar_link(url: str) -> bool:
         cache[url] = valido
         salvar_cache(cache)
         return valido
-    except:
+    except requests.exceptions.RequestException:
         cache[url] = False
         salvar_cache(cache)
         return False
@@ -78,6 +79,9 @@ def validar_link(url: str) -> bool:
 
 def buscar_links_viagogo(nome_evento: str) -> List[dict]:
     """Busca links do Viagogo."""
+    if not PLAYWRIGHT_AVAILABLE:
+        return []
+    
     links = []
     base_url = "https://www.viagogo.com.br"
     
@@ -103,7 +107,7 @@ def buscar_links_viagogo(nome_evento: str) -> List[dict]:
                             "url": url_completa,
                             "preco": 0
                         })
-                except:
+                except Exception:
                     continue
             
             page.wait_for_timeout(500)
@@ -113,16 +117,15 @@ def buscar_links_viagogo(nome_evento: str) -> List[dict]:
                 if i < len(links):
                     try:
                         texto = el.inner_text()
-                        import re
-                        match = re.search(r'R\$\s*([\d.,]+)', texto)
-                        if match:
-                            preco_str = match.group(1).replace('.', '').replace(',', '.')
+                        preco_match = re.search(r'R\$\s*([\d.,]+)', texto)
+                        if preco_match:
+                            preco_str = preco_match.group(1).replace('.', '').replace(',', '.')
                             links[i]["preco"] = float(preco_str)
-                    except:
+                    except Exception:
                         pass
             
             browser.close()
-    except:
+    except Exception:
         pass
     
     return links
@@ -130,6 +133,9 @@ def buscar_links_viagogo(nome_evento: str) -> List[dict]:
 
 def buscar_links_buyticketbrasil(nome_evento: str) -> List[dict]:
     """Busca links do Buy Ticket Brasil."""
+    if not PLAYWRIGHT_AVAILABLE:
+        return []
+    
     links = []
     base_url = "https://buyticketbrasil.com"
     
@@ -155,7 +161,7 @@ def buscar_links_buyticketbrasil(nome_evento: str) -> List[dict]:
                             "url": url_completa,
                             "preco": 0
                         })
-                except:
+                except Exception:
                     continue
             
             precos = page.query_selector_all("text=R$")
@@ -163,16 +169,15 @@ def buscar_links_buyticketbrasil(nome_evento: str) -> List[dict]:
                 if i < len(links):
                     try:
                         texto = el.inner_text()
-                        import re
-                        match = re.search(r'R\$\s*([\d.,]+)', texto)
-                        if match:
-                            preco_str = match.group(1).replace('.', '').replace(',', '.')
+                        preco_match = re.search(r'R\$\s*([\d.,]+)', texto)
+                        if preco_match:
+                            preco_str = preco_match.group(1).replace('.', '').replace(',', '.')
                             links[i]["preco"] = float(preco_str)
-                    except:
+                    except Exception:
                         pass
             
             browser.close()
-    except:
+    except Exception:
         pass
     
     return links

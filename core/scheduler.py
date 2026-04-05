@@ -212,7 +212,8 @@ def executar_ciclo() -> dict:
         plano_acao = item.get("plano_acao", {})
         arbitragem = item.get("arbitragem", {})
         salvar_evento_no_historico(evento, analise, auditoria, acao)
-        verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao, arbitragem)
+        execucao = item.get("execucao_real", {})
+        verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao, arbitragem, execucao)
     
     compras = sum(1 for e in eventos_finais if e.get("acao_final") == "COMPRAR")
     monitorar = sum(1 for e in eventos_finais if e.get("acao_final") == "MONITORAR")
@@ -341,7 +342,7 @@ def reavaliar_eventos_comprados():
     if alterados:
         print(f"  {len(alterados)} alterações de estratégia detectadas")
         for e in alterados:
-            evento_nome = e.get("evento", e.get("evento", {}))
+            evento_nome = e.get("evento", {})
             nova_estrategia = e.get("plano_acao", {}).get("estrategia_saida")
             print(f"    - {evento_nome.get('nome', 'N/A')}: {nova_estrategia}")
     else:
