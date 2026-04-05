@@ -5,8 +5,11 @@ Gera links diretos de compra validados para oportunidades detectadas.
 import requests
 import json
 import os
+import time
 from typing import Optional, Dict, List
 from urllib.parse import quote
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from config import LLM_WORKERS
 
 try:
     from playwright.sync_api import sync_playwright
@@ -176,14 +179,21 @@ def buscar_links_buyticketbrasil(nome_evento: str) -> List[dict]:
 
 
 def buscar_links_revenda(nome_evento: str) -> List[dict]:
-    """Busca links de todas as plataformas de revenda."""
+    """Busca links de todas as plataformas de revenda em paralelo."""
     links = []
     
-    links_viagogo = buscar_links_viagogo(nome_evento)
-    links.extend(links_viagogo)
+    def buscar_viagogo():
+        return buscar_links_viagogo(nome_evento)
     
-    links_buyticket = buscar_links_buyticketbrasil(nome_evento)
-    links.extend(links_buyticket)
+    def buscar_buyticket():
+        return buscar_links_buyticketbrasil(nome_evento)
+    
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        f_viagogo = executor.submit(buscar_viagogo)
+        f_buyticket = executor.submit(buscar_buyticket)
+        
+        links.extend(f_viagogo.result(timeout=30))
+        links.extend(f_buyticket.result(timeout=30))
     
     return links
 

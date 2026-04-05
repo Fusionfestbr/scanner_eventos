@@ -4,8 +4,19 @@ Agente analista de eventos via IA local (LM Studio).
 import json
 import re
 import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
-from config import LM_STUDIO_URL, MODEL, REQUEST_TIMEOUT, MAX_TOKENS
+from config import LM_STUDIO_URL, MODEL, REQUEST_TIMEOUT, MAX_TOKENS, LLM_WORKERS
+
+_lock = threading.Lock()
+_counter = 0
+
+def _increment_counter():
+    global _counter
+    with _lock:
+        _counter += 1
+        return _counter
 
 
 def carregar_prompt() -> str:
@@ -132,18 +143,25 @@ def analisar_evento(evento: dict) -> dict:
 
 def analisar_eventos(eventos: list[dict]) -> list[dict]:
     """
-    Analisa lista de eventos via LLM.
+    Analisa lista de eventos via LLM em paralelo.
     Retorna lista com eventos + análise (parcial em caso de falha).
     """
-    resultados = []
-    
-    for i, evento in enumerate(eventos, 1):
-        print(f"   Analisando evento {i}/{len(eventos)}: {evento.get('nome', 'N/A')}")
-        
+    global _counter
+    _counter = 0
+    resultados = [None] * len(eventos)
+
+    def analisar_com_indice(idx, evento):
         analise = analisar_evento(evento)
-        resultados.append({
-            "evento": evento,
-            "analise": analise
-        })
-    
+        count = _increment_counter()
+        nome = evento.get('nome', 'N/A')[:60]
+        nota = analise.get('nota_final', 0)
+        print(f"   [{count}/{len(eventos)}] {nome} -> nota: {nota}")
+        return idx, {"evento": evento, "analise": analise}
+
+    with ThreadPoolExecutor(max_workers=LLM_WORKERS) as executor:
+        futures = {executor.submit(analisar_com_indice, i, evento): i for i, evento in enumerate(eventos)}
+        for future in as_completed(futures):
+            idx, resultado = future.result()
+            resultados[idx] = resultado
+
     return resultados

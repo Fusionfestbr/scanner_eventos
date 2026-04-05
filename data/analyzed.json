@@ -42,15 +42,10 @@
       "url": "https://www.ticketmaster.com.br/event/rockinrio"
     },
     "analise": {
-      "evento": "Rock in Rio 2026",
-      "artista": "Various Artists",
-      "data": "2026-09-13",
-      "cidade": null,
-      "hype": 9,
-      "escassez": 8,
-      "publico": 10,
-      "potencial_revenda": 9,
-      "nota_final": 9.2
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 9
     }
   },
   {
@@ -64,7 +59,7 @@
     },
     "analise": {
       "hype": 7,
-      "escassez": 5,
+      "escassez": 4,
       "publico": 9,
       "potencial_revenda": 8
     }
@@ -115,7 +110,7 @@
       "hype": 8,
       "escassez": 7,
       "publico": 9,
-      "potencial_revenda": 8
+      "potencial_revenda": 9
     }
   },
   {
@@ -227,7 +222,8 @@
       "hype": 7,
       "escassez": 3,
       "publico": 8,
-      "potencial_revenda": 9
+      "potencial_revenda": 9,
+      "nota_final": 7.5
     }
   },
   {
@@ -243,8 +239,7 @@
       "hype": 3,
       "escassez": 2,
       "publico": 5,
-      "potencial_revenda": 7,
-      "nota_final": 5
+      "potencial_revenda": 7
     }
   },
   {
@@ -274,13 +269,11 @@
       "url": "https://www.ticketmaster.com.br/event/soul-ii-soul-tokio-marine-hall"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7,
+      "escassez": 3,
+      "publico": 6,
+      "potencial_revenda": 8,
+      "nota_final": 6.5
     }
   },
   {
@@ -425,14 +418,13 @@
       "url": "https://www.ticketmaster.com.br/event/venda-geral-the-lumineers-the-automatic-world-tour-2026-curitiba"
     },
     "analise": {
-      "evento": "Various Artists",
-      "localizacao": "Curitiba",
-      "data": "2026-04-24",
-      "hype": 7,
-      "escassez": 5,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -500,15 +492,10 @@
       "url": "https://www.ticketmaster.com.br/event/zayn"
     },
     "analise": {
-      "evento": "ZAYN: The Konnakol Tour",
-      "artista": "Various Artists",
-      "data": "2026-10-01",
-      "cidade": null,
       "hype": 8,
       "escassez": 7,
       "publico": 9,
-      "potencial_revenda": 8,
-      "nota_final": 8.25
+      "potencial_revenda": 8
     }
   },
   {
@@ -521,16 +508,13 @@
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "evento": "Churrasquinho Menos é Mais",
-      "local": "Belém",
-      "artista": "Various Artists",
-      "data": "2026-05-30",
-      "cidade": "Churrasquinho Menos é Mais - Belém",
-      "hype": 3,
-      "escassez": 2,
-      "publico": 4,
-      "potencial_revenda": 3,
-      "nota_final": 3.17
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -599,22 +583,6 @@
   },
   {
     "evento": {
-      "nome": "Semana Santa dos Milagres 2026",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "hype": 7,
-      "escassez": 5,
-      "publico": 8,
-      "potencial_revenda": 9
-    }
-  },
-  {
-    "evento": {
       "nome": "Churrasquinho Menos é Mais - Ribeirão Preto",
       "artista": "Various Artists",
       "data": "2026-04-11",
@@ -632,7 +600,7 @@
       "escassez": 3,
       "publico": 7,
       "potencial_revenda": 6,
-      "nota_final": 5.8
+      "nota_final": 6.0
     }
   },
   {
@@ -650,10 +618,10 @@
       "data": "2026-04-25",
       "cidade": null,
       "hype": 6,
-      "escassez": 3,
-      "publico": 7,
-      "potencial_revenda": 8,
-      "nota_final": 7.0
+      "escassez": 7,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
     }
   },
   {
@@ -711,48 +679,6 @@
   },
   {
     "evento": {
-      "nome": "House & Friends",
-      "artista": "Various Artists",
-      "data": "2026-04-17",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "evento": "House & Friends",
-      "artista": "Various Artists",
-      "data": "2026-04-17",
-      "cidade": null,
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
-      "potencial_revenda": 8,
-      "nota_final": 8.25
-    }
-  },
-  {
-    "evento": {
-      "nome": "PsyLove - Terras O...",
-      "artista": "Various Artists",
-      "data": "2026-04-18",
-      "cidade": "Rio de Janeiro",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "evento": "PsyLove - Terras O...",
-      "artista": "Various Artists",
-      "data": "2026-04-18",
-      "cidade": "Rio de Janeiro",
-      "hype": 9,
-      "escassez": 8,
-      "publico": 9,
-      "potencial_revenda": 9,
-      "nota_final": 8.75
-    }
-  },
-  {
-    "evento": {
       "nome": "18.04 | HIGH CLUB ...",
       "artista": "Various Artists",
       "data": "2026-04-18",
@@ -790,64 +716,26 @@
   },
   {
     "evento": {
-      "nome": "FESTA UNDR _ NA AR...",
+      "nome": "NAVE D-EDGE SP pre...",
       "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Arca - São Paulo",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "evento": "FESTA UNDR _ NA AR...",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Arca - São Paulo",
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
-      "potencial_revenda": 8,
-      "nota_final": 8.4
-    }
-  },
-  {
-    "evento": {
-      "nome": "03. ABR. FESTIVAL ...",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
+      "data": "2026-04-18",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "hype": 7
-    }
-  },
-  {
-    "evento": {
-      "nome": "03 E 04/04 - FERIA...",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "evento": "03 E 04/04 - FERIA...",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": null,
       "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
+      "escassez": 3,
+      "publico": 6,
+      "potencial_revenda": 8,
+      "nota_final": 6.5
     }
   },
   {
     "evento": {
       "nome": "Laroc Guarujá apre...",
       "artista": "Various Artists",
-      "data": "2026-04-04",
+      "data": "2026-04-19",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
@@ -855,66 +743,31 @@
     "analise": {
       "evento": "Laroc Guarujá apre...",
       "artista": "Various Artists",
-      "data": "2026-04-04",
+      "data": "2026-04-19",
       "cidade": null,
       "hype": 7,
       "escassez": 6,
       "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "Semana Movida | 31...",
-      "artista": "Various Artists",
-      "data": "2026-04-04",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "evento": "Semana Movida",
-      "data": "2026-04-04",
-      "artista": "Various Artists",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
+      "potencial_revenda": 8,
       "nota_final": 7.5
     }
   },
   {
     "evento": {
-      "nome": "D-EDGE RIO apresen...",
+      "nome": "M.E.G.A apresenta ...",
       "artista": "Various Artists",
-      "data": "2026-04-04",
-      "cidade": "D-EDGE RIO apresen...",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "hype": 7,
-      "escassez": 3,
-      "publico": 8,
-      "potencial_revenda": 6,
-      "nota_final": 6.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "NAVE D-EDGE SP pre...",
-      "artista": "Various Artists",
-      "data": "2026-04-04",
+      "data": "2026-04-19",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "hype": 8,
-      "escassez": 3,
-      "publico": 7,
+      "evento": "M.E.G.A apresenta ..., Artista: Various Artists",
+      "data": "2026-04-19",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
       "potencial_revenda": 9,
       "nota_final": 7.5
     }
@@ -934,6 +787,27 @@
       "publico": 8,
       "potencial_revenda": 9,
       "nota_final": 8
+    }
+  },
+  {
+    "evento": {
+      "nome": "03 E 04/04 - FERIA...",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "evento": "03 E 04/04 - FERIA...",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
     }
   },
   {
@@ -983,6 +857,27 @@
   },
   {
     "evento": {
+      "nome": "Semana Movida | 31...",
+      "artista": "Various Artists",
+      "data": "2026-04-05",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "evento": "Semana Movida",
+      "data": "2026-04-05",
+      "artista": "Various Artists",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
       "nome": "Hospedagem We Love...",
       "artista": "Various Artists",
       "data": "2026-04-09",
@@ -1000,6 +895,23 @@
   },
   {
     "evento": {
+      "nome": "D-EDGE RIO apresen...",
+      "artista": "Various Artists",
+      "data": "2026-04-10",
+      "cidade": "D-EDGE RIO apresen...",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 3,
+      "publico": 8,
+      "potencial_revenda": 6,
+      "nota_final": 6.5
+    }
+  },
+  {
+    "evento": {
       "nome": "11.04 | HIGH CLUB ...",
       "artista": "Various Artists",
       "data": "2026-04-11",
@@ -1008,10 +920,15 @@
       "url": "https://www.ingresse.com/"
     },
     "analise": {
+      "evento": "11.04 | HIGH CLUB ...,",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": null,
       "hype": 7,
       "escassez": 6,
       "publico": 8,
-      "potencial_revenda": 9
+      "potencial_revenda": 9,
+      "nota_final": 8.0
     }
   },
   {
@@ -1032,44 +949,49 @@
       "escassez": 6,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 7.5
+      "nota_final": 8.0
     }
   },
   {
     "evento": {
-      "nome": "FESTA BLACK PRIDE ...",
+      "nome": "House & Friends",
       "artista": "Various Artists",
-      "data": "2026-06-05",
-      "cidade": "São Paulo",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "evento": "FESTA BLACK PRIDE ...",
-      "artista": "Various Artists",
-      "data": "2026-06-05",
-      "cidade": "São Paulo",
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
-      "potencial_revenda": 8,
-      "nota_final": 8.1
-    }
-  },
-  {
-    "evento": {
-      "nome": "Village 2026 : Seu...",
-      "artista": "Various Artists",
-      "data": "2026-06-05",
+      "data": "2026-04-17",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
+      "evento": "House & Friends",
+      "artista": "Various Artists",
+      "data": "2026-04-17",
+      "cidade": null,
       "hype": 8,
       "escassez": 7,
       "publico": 9,
-      "potencial_revenda": 9
+      "potencial_revenda": 8,
+      "nota_final": 8.25
+    }
+  },
+  {
+    "evento": {
+      "nome": "PsyLove - Terras O...",
+      "artista": "Various Artists",
+      "data": "2026-04-18",
+      "cidade": "Rio de Janeiro",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "evento": "PsyLove - Terras O...",
+      "artista": "Various Artists",
+      "data": "2026-04-18",
+      "cidade": "Rio de Janeiro",
+      "hype": 9,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 9,
+      "nota_final": 8.75
     }
   },
   {
@@ -1106,17 +1028,17 @@
   },
   {
     "evento": {
-      "nome": "Semana Santa dos M...",
+      "nome": "Village 2026 : Thi...",
       "artista": "Various Artists",
-      "data": "2026-04-03",
+      "data": "2026-06-14",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
       "potencial_revenda": 9
     }
   },
@@ -1124,60 +1046,36 @@
     "evento": {
       "nome": "Circo Spacial - SP...",
       "artista": "Various Artists",
-      "data": "2026-04-04",
+      "data": "2026-04-05",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
       "hype": 7,
-      "escassez": 6,
-      "publico": 8,
+      "escassez": 8,
+      "publico": 9,
       "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "OPEN VIBE :: A Sem...",
-      "artista": "Various Artists",
-      "data": "2026-04-04",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "hype": 8,
-      "escassez": 3,
-      "publico": 7,
-      "potencial_revenda": 9
+      "nota_final": 8.5
     }
   },
   {
     "evento": {
       "nome": "48• Expoam Mococa",
       "artista": "Various Artists",
-      "data": "2026-04-04",
+      "data": "2026-04-09",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "evento": "48• Expoam Mococa",
-      "artista": "Various Artists",
-      "data": "2026-04-04",
-      "cidade": null,
-      "notas": [
-        0,
-        10,
-        0,
-        10
-      ],
-      "nota_final": 5.0,
       "hype": 0,
-      "escassez": 10,
+      "escassez": 0,
       "publico": 0,
-      "potencial_revenda": 10
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1287,15 +1185,13 @@
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "evento": "Baile do Perna",
-      "data": "2026-05-09",
-      "cidade": "São Paulo",
-      "artista": "Various Artists",
-      "hype": 7,
-      "escassez": 3,
-      "publico": 8,
-      "potencial_revenda": 6,
-      "nota_final": 6.5
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1308,13 +1204,21 @@
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "evento": "Spirit",
+      "artista": "Various Artists",
+      "data": "2026-05-16",
+      "cidade": null,
+      "notas": [
+        9,
+        8,
+        7,
+        6
+      ],
+      "nota_final": 7.5,
+      "hype": 9,
+      "escassez": 8,
+      "publico": 7,
+      "potencial_revenda": 6
     }
   },
   {
@@ -1372,14 +1276,14 @@
       "escassez": 6,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 8.0
+      "nota_final": 7.8
     }
   },
   {
     "evento": {
-      "nome": "Festival Repique |...",
+      "nome": "Village 2026 : Seu...",
       "artista": "Various Artists",
-      "data": "2026-05-09",
+      "data": "2026-06-05",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
@@ -1388,23 +1292,28 @@
       "hype": 8,
       "escassez": 7,
       "publico": 9,
-      "potencial_revenda": 8
+      "potencial_revenda": 9
     }
   },
   {
     "evento": {
-      "nome": "DIOGO NOGUEIRA INF...",
+      "nome": "FESTA BLACK PRIDE ...",
       "artista": "Various Artists",
-      "data": "2026-05-09",
-      "cidade": "",
+      "data": "2026-06-05",
+      "cidade": "São Paulo",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
+      "evento": "FESTA BLACK PRIDE ...",
+      "artista": "Various Artists",
+      "data": "2026-06-05",
+      "cidade": "São Paulo",
       "hype": 8,
       "escassez": 7,
       "publico": 9,
-      "potencial_revenda": 8
+      "potencial_revenda": 8,
+      "nota_final": 8.1
     }
   },
   {
@@ -1460,44 +1369,19 @@
   },
   {
     "evento": {
-      "nome": "Exc Rio",
+      "nome": "Churrasquinho Meno...",
       "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Exc Rio",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "evento": "Exc Rio",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Exc Rio",
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.1
-    }
-  },
-  {
-    "evento": {
-      "nome": "Santa Maré",
-      "artista": "Various Artists",
-      "data": "2026-04-04",
+      "data": "2026-05-30",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "evento": "Santa Maré",
-      "artista": "Various Artists",
-      "data": "2026-04-04",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
+      "hype": 6,
+      "escassez": 3,
+      "publico": 7,
+      "potencial_revenda": 8,
+      "nota_final": 7.0
     }
   },
   {
@@ -1539,23 +1423,6 @@
   },
   {
     "evento": {
-      "nome": "Churrasquinho Meno...",
-      "artista": "Various Artists",
-      "data": "2026-04-11",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "hype": 5,
-      "escassez": 3,
-      "publico": 7,
-      "potencial_revenda": 6,
-      "nota_final": 5.5
-    }
-  },
-  {
-    "evento": {
       "nome": "ohf-osasco-nuwance",
       "artista": "Various Artists",
       "data": "2026-04-11",
@@ -1591,21 +1458,13 @@
       "url": "https://www.ingresse.com/"
     },
     "analise": {
-      "evento": "VIBE TERAPÊUTICA",
-      "artista": "Various Artists",
-      "data": "2026-04-11",
-      "cidade": null,
-      "notas": [
-        9,
-        8,
-        7,
-        6
-      ],
-      "nota_final": 7.5,
-      "hype": 9,
-      "escassez": 8,
-      "publico": 7,
-      "potencial_revenda": 6
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1618,10 +1477,15 @@
       "url": "https://www.ingresse.com/"
     },
     "analise": {
+      "evento": "PRAINHA CLUB SUEL...",
+      "artista": "Various Artists",
+      "data": "2026-04-12",
+      "cidade": null,
       "hype": 7,
-      "escassez": 3,
+      "escassez": 6,
       "publico": 8,
-      "potencial_revenda": 7
+      "potencial_revenda": 9,
+      "nota_final": 8.0
     }
   },
   {
@@ -1695,6 +1559,38 @@
   },
   {
     "evento": {
+      "nome": "Festival Repique |...",
+      "artista": "Various Artists",
+      "data": "2026-05-09",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8
+    }
+  },
+  {
+    "evento": {
+      "nome": "DIOGO NOGUEIRA INF...",
+      "artista": "Various Artists",
+      "data": "2026-05-09",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8
+    }
+  },
+  {
+    "evento": {
       "nome": "Boteco do Zezo",
       "artista": "Various Artists",
       "data": "2026-05-03",
@@ -1733,9 +1629,9 @@
   },
   {
     "evento": {
-      "nome": "#ESTUDEOFUNK SESSI...",
+      "nome": "MARIROOTS SÓ PEDRA...",
       "artista": "Various Artists",
-      "data": "2026-04-17",
+      "data": "2026-04-24",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
@@ -1743,15 +1639,15 @@
     "analise": {
       "hype": 7,
       "escassez": 3,
-      "publico": 6,
-      "potencial_revenda": 8
+      "publico": 8,
+      "potencial_revenda": 9
     }
   },
   {
     "evento": {
       "nome": "GÁVEA SAMBA CLUBE",
       "artista": "Various Artists",
-      "data": "2026-04-17",
+      "data": "2026-04-24",
       "cidade": "Villa, Planetário ...",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
@@ -1760,14 +1656,46 @@
       "hype": 8,
       "escassez": 6,
       "publico": 9,
-      "potencial_revenda": 8
+      "potencial_revenda": 7
+    }
+  },
+  {
+    "evento": {
+      "nome": "GOODTIMES",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9
+    }
+  },
+  {
+    "evento": {
+      "nome": "ARQ Uberlandia",
+      "artista": "Various Artists",
+      "data": "2026-04-04",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 3,
+      "publico": 8,
+      "potencial_revenda": 9
     }
   },
   {
     "evento": {
       "nome": "ARQ Ribeirão Preto",
       "artista": "Various Artists",
-      "data": "2026-04-03",
+      "data": "2026-04-04",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
@@ -1775,58 +1703,8 @@
     "analise": {
       "evento": "Arqu Ribeirão Preto",
       "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.8
-    }
-  },
-  {
-    "evento": {
-      "nome": "ARQ Uberlandia",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "hype": 7,
-      "escassez": 5,
-      "publico": 8,
-      "potencial_revenda": 9
-    }
-  },
-  {
-    "evento": {
-      "nome": "SEMANA SANTA - WE ...",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "CURADORIA",
-      "artista": "Various Artists",
       "data": "2026-04-04",
-      "cidade": "Villa, Planetário ...",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/"
-    },
-    "analise": {
+      "cidade": null,
       "hype": 7,
       "escassez": 6,
       "publico": 8,
@@ -1852,18 +1730,221 @@
   },
   {
     "evento": {
-      "nome": "MARIROOTS SÓ PEDRA...",
+      "nome": "ROCKERIA",
       "artista": "Various Artists",
-      "data": "2026-04-24",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "#ESTUDEOFUNK SESSI...",
+      "artista": "Various Artists",
+      "data": "2026-04-17",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 3,
+      "publico": 6,
+      "potencial_revenda": 8
+    }
+  },
+  {
+    "evento": {
+      "nome": "MARINA LIMA NA FU...",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/"
     },
     "analise": {
       "hype": 8,
-      "escassez": 3,
-      "publico": 7,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 8
+    }
+  },
+  {
+    "evento": {
+      "nome": "Myra",
+      "artista": "Various Artists",
+      "data": "2026-05-01",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "analise": {
+      "evento": "Myra",
+      "artista": "Various Artists",
+      "data": "2026-05-01",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "SPIN DOCTORS + SMASH MOUTH",
+      "artista": "Various Artists",
+      "data": "2026-04-30",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115855"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
       "potencial_revenda": 9
+    }
+  },
+  {
+    "evento": {
+      "nome": "Curso de Violão",
+      "artista": "Various Artists",
+      "data": "2026-04-22",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/118668"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Blitz - Turnê “Agora é a Hora”",
+      "artista": "Various Artists",
+      "data": "2026-05-30",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/118494"
+    },
+    "analise": {
+      "evento": "Blitz - Turnê \"Agora é a Hora\"",
+      "artista": "Various Artists",
+      "data": "2026-05-30",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.1
+    }
+  },
+  {
+    "evento": {
+      "nome": "QUEEN LEGEND + E. BALBO",
+      "artista": "Various Artists",
+      "data": "2026-06-30",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/111424"
+    },
+    "analise": {
+      "evento": "QUEEN LEGEND + E. BALBO",
+      "artista": "Various Artists",
+      "data": "2026-06-30",
+      "cidade": null,
+      "hype": 9,
+      "escassez": 8,
+      "publico": 10,
+      "potencial_revenda": 9,
+      "nota_final": 9.2
+    }
+  },
+  {
+    "evento": {
+      "nome": "DIOGO NOGUEIRA",
+      "artista": "Various Artists",
+      "data": "2026-04-24",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114439"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7
+    }
+  },
+  {
+    "evento": {
+      "nome": "CONCHA PARA TODOS – ZÉLIA DUNCAN",
+      "artista": "Various Artists",
+      "data": "2026-04-26",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114845"
+    },
+    "analise": {
+      "evento": "CONCHA PARA TODOS – ZÉLIA DUNCAN",
+      "artista": "Various Artists",
+      "data": "2026-04-26",
+      "cidade": null,
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 7,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "BACO EXU DO BLUES",
+      "artista": "Various Artists",
+      "data": "2026-07-25",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/116908"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 6,
+      "publico": 9,
+      "potencial_revenda": 8
+    }
+  },
+  {
+    "evento": {
+      "nome": "CONCHA PARA TODOS – FLÁVIO VENTURINI",
+      "artista": "Various Artists",
+      "data": "2026-05-10",
+      "cidade": "",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114846"
+    },
+    "analise": {
+      "evento": "CONCHA PARA TODOS – FLÁVIO VENTURINI",
+      "artista": "Various Artists",
+      "data": "2026-05-10",
+      "cidade": null,
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 9,
+      "nota_final": 8.0
     }
   },
   {
@@ -1899,7 +1980,7 @@
     },
     "analise": {
       "hype": 7,
-      "escassez": 4,
+      "escassez": 3,
       "publico": 8,
       "potencial_revenda": 9,
       "nota_final": 7.5
@@ -1916,10 +1997,7 @@
     },
     "analise": {
       "evento": "28ª Festa da Cebola",
-      "artista": "Various Artists",
-      "artistas_principais": [
-        "Luan Santana"
-      ],
+      "artista": "Luan Santana, Artista: Various Artists",
       "data": "2026-04-28",
       "cidade": null,
       "hype": 7,
@@ -2033,87 +2111,6 @@
   },
   {
     "evento": {
-      "nome": "SÃO PAULO",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Bauru - SP",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/mc-gp-oficina-03-de-abril"
-    },
-    "analise": {
-      "evento": "SÃO PAULO",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Bauru - SP",
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "MC GP - OFICINA",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Bauru - SP",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/mc-gp-oficina-03-de-abril"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "03 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "TATURANA COM GREG",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Bauru - SP",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/taturana-com-greg-03-de-abril"
-    },
-    "analise": {
-      "evento": "TATURANA COM GREG",
-      "artista": "Various Artists",
-      "data": "2026-04-03",
-      "cidade": "Bauru - SP",
-      "hype": 7,
-      "escassez": 5,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
       "nome": "BAILE DAS RELIQUIAS COM DEDE E NEGO BLUE",
       "artista": "Various Artists",
       "data": "2026-04-04",
@@ -2135,25 +2132,6 @@
   },
   {
     "evento": {
-      "nome": "04 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-04",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-04",
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.8
-    }
-  },
-  {
-    "evento": {
       "nome": "SÁBADO COM LUCAS AKIRA E FÁBIO",
       "artista": "Various Artists",
       "data": "2026-04-04",
@@ -2169,8 +2147,8 @@
       "hype": 7,
       "escassez": 5,
       "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
+      "potencial_revenda": 7,
+      "nota_final": 7.1
     }
   },
   {
@@ -2206,13 +2184,14 @@
     },
     "analise": {
       "evento": "Various Artists",
-      "datas": "2026-04-09 a 2026-04-12",
+      "data_inicio": "2026-04-09",
+      "data_fim": "2026-04-12",
       "cidade": null,
       "hype": 7,
       "escassez": 6,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 7.5
+      "nota_final": 8.0
     }
   },
   {
@@ -2243,26 +2222,6 @@
   },
   {
     "evento": {
-      "nome": "09 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-09",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-09",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "SUZANO MUSIC FESTIVAL 2026 | MURILO HUFF + THIAGO E GRACIANO",
       "artista": "Various Artists",
       "data": "2026-08-20",
@@ -2276,29 +2235,9 @@
         "MURILO HUFF",
         "THIAGO E GRACIANO"
       ],
-      "artistas_variaveis": true,
+      "artistas_variados": true,
       "data": "2026-08-20",
       "cidade": "Suzano - SP",
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "10 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-10",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-10",
-      "cidade": null,
       "hype": 7,
       "escassez": 6,
       "publico": 8,
@@ -2342,30 +2281,10 @@
       "data": "2026-04-10",
       "cidade": "Piracicaba - SP",
       "hype": 7,
-      "escassez": 3,
-      "publico": 8,
-      "potencial_revenda": 7,
-      "nota_final": 7.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "11 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-11",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-11",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
+      "escassez": 5,
       "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 8.0
+      "nota_final": 7.5
     }
   },
   {
@@ -2493,36 +2412,10 @@
       "url": "https://www.bilheteriadigital.com/as-guerreiras-do-kpop-teatro-univap-12-de-abril"
     },
     "analise": {
-      "evento": "AS GUERREIRAS DO KPOP",
-      "local": "TEATRO UNIVAP",
-      "artista": "Various Artists",
-      "data": "2026-04-12",
-      "cidade": "São José dos Campos - SP",
-      "hype": 9,
-      "escassez": 8,
-      "publico": 7,
-      "potencial_revenda": 9,
-      "nota_final": 8.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "12 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-12",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-12",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 9
     }
   },
   {
@@ -2572,26 +2465,6 @@
   },
   {
     "evento": {
-      "nome": "13 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-13",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-13",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "ROLAND-GARROS JUNIOR SERIES BY RENAULT 2026",
       "artista": "Various Artists",
       "data": "2026-06-20",
@@ -2609,86 +2482,6 @@
       "publico": 8,
       "potencial_revenda": 9,
       "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "15 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-15",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-15",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "16 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-16",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-16",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "17 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-17",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-17",
-      "cidade": null,
-      "hype": 6,
-      "escassez": 7,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "18 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-18",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-18",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
     }
   },
   {
@@ -2735,26 +2528,6 @@
   },
   {
     "evento": {
-      "nome": "19 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-19",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-19",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "SERESTA & SOFRÊNCIA COM THIAGO AQUINO E ANDERSON O GAROTINHO",
       "artista": "Various Artists",
       "data": "2026-04-19",
@@ -2776,7 +2549,7 @@
   },
   {
     "evento": {
-      "nome": "SEGUNDA FORROZEIRA COM OS MENINOS DE BARÃO",
+      "nome": "SEGUNDA FORROZEIRA - MENINOS DE BARÃO E GALICIA",
       "artista": "Various Artists",
       "data": "2026-04-20",
       "cidade": "São Bernardo do Campo - SP",
@@ -2784,7 +2557,7 @@
       "url": "https://www.bilheteriadigital.com/segunda-forrrozeira-com-os-meninos-de-barao-20-de-abril"
     },
     "analise": {
-      "evento": "SEGUNDA FORROZEIRA COM OS MENINOS DE BARÃO",
+      "evento": "SEGUNDA FORROZEIRA - MENINOS DE BARÃO E GALICIA",
       "artista": "Various Artists",
       "data": "2026-04-20",
       "cidade": "São Bernardo do Campo - SP",
@@ -2793,26 +2566,6 @@
       "publico": 8,
       "potencial_revenda": 6,
       "nota_final": 6.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "20 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-20",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-20",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
     }
   },
   {
@@ -2859,26 +2612,6 @@
   },
   {
     "evento": {
-      "nome": "24 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-24",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-24",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 8,
-      "publico": 9,
-      "potencial_revenda": 8,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "BAILE DO HOMI",
       "artista": "Various Artists",
       "data": "2026-04-30",
@@ -2891,25 +2624,6 @@
       "escassez": 6,
       "publico": 9,
       "potencial_revenda": 8
-    }
-  },
-  {
-    "evento": {
-      "nome": "30 de Abril",
-      "artista": "Various Artists",
-      "data": "2026-04-30",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-04-30",
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.8
     }
   },
   {
@@ -2954,25 +2668,6 @@
   },
   {
     "evento": {
-      "nome": "01 de Maio",
-      "artista": "Various Artists",
-      "data": "2026-05-01",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-05-01",
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "A ÚNICA CASA SHOW",
       "artista": "Various Artists",
       "data": "2026-05-08",
@@ -2994,26 +2689,6 @@
   },
   {
     "evento": {
-      "nome": "08 de Maio",
-      "artista": "Various Artists",
-      "data": "2026-05-08",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-05-08",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "BRAVOS ITACURUÇA",
       "artista": "Various Artists",
       "data": "2026-05-09",
@@ -3028,29 +2703,9 @@
       "cidade": "Cunha - SP",
       "hype": 7,
       "escassez": 4,
-      "publico": 6,
-      "potencial_revenda": 8,
-      "nota_final": 6.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "09 de Maio",
-      "artista": "Various Artists",
-      "data": "2026-05-09",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-05-09",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
       "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
+      "potencial_revenda": 7,
+      "nota_final": 7.0
     }
   },
   {
@@ -3068,10 +2723,10 @@
       "data": "2026-05-09",
       "cidade": "São Paulo - SP",
       "hype": 8,
-      "escassez": 6,
-      "publico": 7,
-      "potencial_revenda": 9,
-      "nota_final": 7.83
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.4
     }
   },
   {
@@ -3097,26 +2752,6 @@
   },
   {
     "evento": {
-      "nome": "15 de Maio",
-      "artista": "Various Artists",
-      "data": "2026-05-15",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-05-15",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "SÁBADO PRIME COM MC MENO K",
       "artista": "Various Artists",
       "data": "2026-05-16",
@@ -3133,30 +2768,10 @@
       "data": "2026-05-16",
       "cidade": "São Bernardo do Campo - SP",
       "hype": 7,
-      "escassez": 3,
+      "escassez": 4,
       "publico": 8,
       "potencial_revenda": 7,
       "nota_final": 7.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "16 de Maio",
-      "artista": "Various Artists",
-      "data": "2026-05-16",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-05-16",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
     }
   },
   {
@@ -3182,26 +2797,6 @@
   },
   {
     "evento": {
-      "nome": "23 de Maio",
-      "artista": "Various Artists",
-      "data": "2026-05-23",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-05-23",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 8,
-      "publico": 9,
-      "potencial_revenda": 8,
-      "nota_final": 8.0
-    }
-  },
-  {
-    "evento": {
       "nome": "BEEF TOUR - 10 ANOS - BAURU",
       "artista": "Various Artists",
       "data": "2026-05-30",
@@ -3210,7 +2805,7 @@
       "url": "https://www.bilheteriadigital.com/beef-tour-10-anos-bauru-30-de-maio"
     },
     "analise": {
-      "evento": "BEEF TOUR - 10 ANOS - Bauru",
+      "evento": "BEEF TOUR - 10 ANOS",
       "artista": "Various Artists",
       "data": "2026-05-30",
       "cidade": "Bauru - SP",
@@ -3219,26 +2814,6 @@
       "publico": 9,
       "potencial_revenda": 8,
       "nota_final": 8.1
-    }
-  },
-  {
-    "evento": {
-      "nome": "30 de Maio",
-      "artista": "Various Artists",
-      "data": "2026-05-30",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-05-30",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
     }
   },
   {
@@ -3306,25 +2881,6 @@
   },
   {
     "evento": {
-      "nome": "13 de Junho",
-      "artista": "Various Artists",
-      "data": "2026-06-13",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-06-13",
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
       "nome": "BEEF TOUR - 10 ANOS - ITAPETININGA",
       "artista": "Various Artists",
       "data": "2026-08-08",
@@ -3340,27 +2896,8 @@
       "hype": 7,
       "escassez": 6,
       "publico": 8,
-      "potencial_revenda": 8,
-      "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "08 de Agosto",
-      "artista": "Various Artists",
-      "data": "2026-08-08",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-08-08",
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
       "potencial_revenda": 9,
-      "nota_final": 8.0
+      "nota_final": 7.5
     }
   },
   {
@@ -3373,31 +2910,13 @@
       "url": "https://www.bilheteriadigital.com/16-08-seminario-tecnico-buakaw-16-de-agosto"
     },
     "analise": {
-      "hype": 6,
-      "escassez": 3,
-      "publico": 7,
-      "potencial_revenda": 5,
-      "nota_final": 5.25
-    }
-  },
-  {
-    "evento": {
-      "nome": "16 de Agosto",
-      "artista": "Various Artists",
-      "data": "2026-08-16",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-08-16",
-      "cidade": null,
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 8.0
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -3424,43 +2943,22 @@
   },
   {
     "evento": {
-      "nome": "17 de Outubro",
+      "nome": "16/04/2026",
       "artista": "Various Artists",
-      "data": "2026-10-17",
-      "cidade": "",
-      "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/"
-    },
-    "analise": {
-      "evento": "Various Artists",
-      "data": "2026-10-17",
-      "cidade": null,
-      "hype": 6,
-      "escassez": 7,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "30/05/26 a 30/05/26",
-      "artista": "Various Artists",
-      "data": "2026-05-30",
+      "data": "2026-04-16",
       "cidade": "",
       "fonte": "uhuu",
-      "url": "https://uhuu.com/evento/sp/sao-paulo/emerson-lake-and-palmer-16140"
+      "url": "https://uhuu.com/evento/sp/sao-paulo/gravacao-do-dvd-paula-fernandes-15925"
     },
     "analise": {
       "evento": "Various Artists",
-      "data_inicio": "2026-05-30",
-      "data_fim": "2026-05-30",
+      "data": "2026-04-16",
       "cidade": null,
-      "hype": 6,
-      "escassez": 7,
-      "publico": 8,
-      "potencial_revenda": 9,
-      "nota_final": 7.5
+      "hype": 7,
+      "escassez": 8,
+      "publico": 9,
+      "potencial_revenda": 8,
+      "nota_final": 8.0
     }
   },
   {
@@ -3484,31 +2982,12 @@
   },
   {
     "evento": {
-      "nome": "SÁB",
-      "artista": "Various Artists",
-      "data": "2026-04-04",
-      "cidade": "",
-      "fonte": "uhuu",
-      "url": "https://uhuu.com/evento/sp/sao-paulo/a-ultima-sessao-de-freud-15630"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
       "nome": "DOM",
       "artista": "Various Artists",
       "data": "2026-04-05",
       "cidade": "",
       "fonte": "uhuu",
-      "url": "https://uhuu.com/evento/sp/sao-paulo/kysha-e-mine-lancamento-best-friends-forever-15807"
+      "url": "https://uhuu.com/evento/sp/sao-paulo/a-ultima-sessao-de-freud-15630"
     },
     "analise": {
       "hype": 0,
@@ -3547,6 +3026,25 @@
       "cidade": "",
       "fonte": "uhuu",
       "url": "https://uhuu.com/evento/sp/sao-paulo/gongada-drag-15662"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "SÁB",
+      "artista": "Various Artists",
+      "data": "2026-04-11",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/sp/sao-paulo/show-do-bita-festa-dos-bichos-15957"
     },
     "analise": {
       "hype": 0,

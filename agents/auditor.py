@@ -5,8 +5,19 @@ Revisa análises e gera decisões.
 import json
 import re
 import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
-from config import LM_STUDIO_URL, MODEL, REQUEST_TIMEOUT, MAX_TOKENS
+from config import LM_STUDIO_URL, MODEL, REQUEST_TIMEOUT, MAX_TOKENS, LLM_WORKERS
+
+_lock = threading.Lock()
+_counter = 0
+
+def _increment_counter():
+    global _counter
+    with _lock:
+        _counter += 1
+        return _counter
 
 
 def construir_prompt_auditoria(evento: dict, analise: dict) -> list[dict]:
@@ -88,22 +99,30 @@ def auditar_evento(evento: dict, analise: dict) -> dict:
 
 
 def auditar_eventos(eventos_analisados: list[dict]) -> list[dict]:
-    """Audita lista de eventos."""
-    resultados = []
-    
-    for i, item in enumerate(eventos_analisados, 1):
+    """Audita lista de eventos em paralelo."""
+    global _counter
+    _counter = 0
+    resultados = [None] * len(eventos_analisados)
+
+    def auditar_com_indice(idx, item):
         evento = item["evento"]
         analise = item["analise"]
-        
-        nome = evento.get("nome", "N/A")
-        print(f"   Auditando evento {i}/{len(eventos_analisados)}: {nome}")
-        
         auditoria = auditar_evento(evento, analise)
-        
-        resultados.append({
+        count = _increment_counter()
+        nome = evento.get("nome", "N/A")[:60]
+        decisao = auditoria.get("decisao", "IGNORAR")
+        confianca = auditoria.get("confianca", 0)
+        print(f"   [{count}/{len(eventos_analisados)}] {nome} -> {decisao} (conf: {confianca})")
+        return idx, {
             "evento": evento,
             "analise": analise,
             "auditoria": auditoria
-        })
-    
+        }
+
+    with ThreadPoolExecutor(max_workers=LLM_WORKERS) as executor:
+        futures = {executor.submit(auditar_com_indice, i, item): i for i, item in enumerate(eventos_analisados)}
+        for future in as_completed(futures):
+            idx, resultado = future.result()
+            resultados[idx] = resultado
+
     return resultados

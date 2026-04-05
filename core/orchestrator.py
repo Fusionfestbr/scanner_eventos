@@ -5,6 +5,7 @@ Coordena o fluxo entre coletor, validador e persistência.
 import json
 import os
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from agents.coletor import coletar_eventos
 from agents.validador import validar_eventos
@@ -21,7 +22,7 @@ from core.data_quality import (
     salvar_rejeitados
 )
 from core.notifier import verificar_e_enviar_alerta
-from config import FALLBACK_ENABLED
+from config import FALLBACK_ENABLED, LLM_WORKERS
 from core.predictor import processar_previsoes
 from core.executor import processar_planos_acao
 from core.arbitrage import processar_arbitragem
@@ -131,40 +132,61 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     log(f"   -> Planos de ação gerados para {len(eventos_finais)} eventos")
     
     log("Detectando oportunidades de arbitragem...")
-    eventos_com_arbitragem = []
-    for item in eventos_finais:
+    
+    def buscar_precos_para_evento(item):
         evento_com_arbit = item.copy()
-        
         if item.get("acao_final") == "COMPRAR":
             nome_evento = item.get("evento", {}).get("nome", "")
             if nome_evento:
                 precos_revenda = buscar_precos_revenda(nome_evento)
                 evento_original = item.get("evento", {})
                 preco_original = evento_original.get("preco", 0)
-                
                 if preco_original > 0:
                     precos_revenda.insert(0, {"plataforma": evento_original.get("fonte", "original"), "preco": preco_original})
-                
                 evento_com_arbit["precos_encontrados"] = precos_revenda
                 evento_com_arbit["evento"]["precos_encontrados"] = precos_revenda
-        
-        eventos_com_arbitragem.append(evento_com_arbit)
+        return evento_com_arbit
     
-    eventos_finais = processar_arbitragem(eventos_com_arbitragem, apenas_comprar=True)
+    eventos_comprar = [i for i in eventos_finais if i.get("acao_final") == "COMPRAR"]
+    if eventos_comprar:
+        log(f"   -> Buscando precos de revenda para {len(eventos_comprar)} eventos...")
+        with ThreadPoolExecutor(max_workers=min(4, len(eventos_comprar))) as executor:
+            eventos_com_arbitragem = list(executor.map(buscar_precos_para_evento, eventos_comprar))
+        # Merge back: replace COMPRAR items in eventos_finais
+        idx_comprar = 0
+        for i, item in enumerate(eventos_finais):
+            if item.get("acao_final") == "COMPRAR":
+                eventos_finais[i] = eventos_com_arbitragem[idx_comprar]
+                idx_comprar += 1
+            else:
+                eventos_finais[i] = item.copy()
+                eventos_finais[i]["precos_encontrados"] = []
+    else:
+        eventos_com_arbitragem = eventos_finais
+    
+    eventos_finais = processar_arbitragem(eventos_finais, apenas_comprar=True)
     log(f"   -> Arbitragem detectada para {len(eventos_finais)} eventos")
     
     log("Gerando execuções reais...")
-    for item in eventos_finais:
-        if item.get("acao_final") == "COMPRAR":
-            evento = item.get("evento", {})
-            analise = item.get("analise", {})
-            previsao = item.get("previsao", {})
-            plano_acao = item.get("plano_acao", {})
-            
-            execucao = gerar_execucao_real(evento, analise, previsao, plano_acao)
-            item["execucao"] = execucao
+    eventos_comprar = [i for i in eventos_finais if i.get("acao_final") == "COMPRAR"]
+    count_exec = 0
     
-    log(f"   -> Execuções geradas para {sum(1 for i in eventos_finais if i.get('acao_final') == 'COMPRAR')} eventos")
+    def gerar_execucao_para_item(item):
+        evento = item.get("evento", {})
+        analise = item.get("analise", {})
+        previsao = item.get("previsao", {})
+        plano_acao = item.get("plano_acao", {})
+        execucao = gerar_execucao_real(evento, analise, previsao, plano_acao)
+        return item.get("evento", {}).get("nome", ""), execucao
+    
+    with ThreadPoolExecutor(max_workers=min(4, len(eventos_comprar))) as executor:
+        futures = {executor.submit(gerar_execucao_para_item, item): item for item in eventos_comprar}
+        for future in as_completed(futures):
+            item = futures[future]
+            nome_ev, execucao = future.result()
+            item["execucao"] = execucao
+            count_exec += 1
+            log(f"   -> Execução {count_exec}/{len(eventos_comprar)}: {nome_ev[:50]}")
     
     final_path = os.path.join(os.path.dirname(__file__), "..", "data", "final.json")
     salvar_json(eventos_finais, final_path)
@@ -176,6 +198,7 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     log(f"   -> Ranking gerado com {len(ranking)} eventos")
     
     log("Salvando no histórico...")
+    enviados_telegram = 0
     for item in eventos_finais:
         evento = item.get("evento", {})
         analise = item.get("analise", {})
@@ -186,9 +209,16 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
         execucao = item.get("execucao", {})
         salvar_evento_no_historico(evento, analise, auditoria, acao)
         
-        enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao, arbitragem, execucao)
-        if enviado:
-            log(f"   -> Alerta enviado para: {evento.get('nome', 'N/A')}")
+        try:
+            enviado = verificar_e_enviar_alerta(evento, analise, auditoria, acao, plano_acao, arbitragem, execucao)
+            if enviado:
+                enviados_telegram += 1
+                log(f"   -> Alerta Telegram enviado para: {evento.get('nome', 'N/A')}")
+        except Exception as e:
+            log(f"   [ERRO TELEGRAM] Falha ao notificar {evento.get('nome', '?')}: {e}")
+    
+    if enviados_telegram > 0:
+        log(f"   -> {enviados_telegram} alertas enviados via Telegram")
     
     log(f"   -> {qtd_finais} eventos salvos no histórico")
     

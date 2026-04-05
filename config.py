@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+LLM_WORKERS = int(os.environ.get("LLM_WORKERS", "8"))
 LM_STUDIO_URL = os.environ.get("LM_STUDIO_URL", "http://127.0.0.1:1234/v1/chat/completions")
 MODEL = os.environ.get("MODEL", "google/gemma-3-4b")
 
@@ -104,9 +105,11 @@ SITES_REVENDA = {
 
 ARBITRAGE_MIN_SPREAD = float(os.environ.get("ARBITRAGE_MIN_SPREAD", "20"))
 
-MAX_EVENTOS_POR_FONTE = int(os.environ.get("MAX_EVENTOS_POR_FONTE", "50"))
+MAX_EVENTOS_POR_FONTE = int(os.environ.get("MAX_EVENTOS_POR_FONTE", "0"))
 
 INTERVALO_MINUTOS = int(os.environ.get("INTERVALO_MINUTOS", "30"))
+
+LLM_WORKERS = int(os.environ.get("LLM_WORKERS", "12"))
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")

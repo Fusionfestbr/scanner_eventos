@@ -3,6 +3,7 @@ Agente de scraping para coletar eventos de múltiplas fontes reais.
 USA Playwright para renderizar JavaScript com selectors específicos por site.
 """
 import re
+import time
 from datetime import datetime, timedelta
 from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
@@ -247,11 +248,8 @@ def generic_playwright_scraper(fonte: str, max_retries: int = 3) -> list[dict]:
                 print(f"   [ERRO] {fonte}: {e}")
     
     if not eventos and fonte in SITES_PROTEGIDOS:
-        print(f"   -> Tentando stealth para {fonte}...")
-        eventos = generic_stealth_scraper(fonte)
-        if not eventos:
-            print(f"   -> Tentando Selenium stealth para {fonte}...")
-            eventos = generic_selenium_stealth_scraper(fonte)
+        print(f"   -> Tentando Selenium stealth para {fonte}...")
+        eventos = generic_selenium_stealth_scraper(fonte)
     
     return eventos
 
@@ -973,14 +971,18 @@ def buscar_eventos_reais() -> list[dict]:
         try:
             eventos_fonte = funcao_busca()
             if eventos_fonte:
-                # Aplicar limite por fonte
-                eventos_fonte = eventos_fonte[:MAX_EVENTOS_POR_FONTE]
-                print(f"     -> {len(eventos_fonte)} eventos (limitado a {MAX_EVENTOS_POR_FONTE})")
+                if MAX_EVENTOS_POR_FONTE > 0:
+                    eventos_fonte = eventos_fonte[:MAX_EVENTOS_POR_FONTE]
+                    print(f"     -> {len(eventos_fonte)} eventos (limitado a {MAX_EVENTOS_POR_FONTE})")
+                else:
+                    print(f"     -> {len(eventos_fonte)} eventos (sem limite)")
             else:
                 print(f"     -> 0 eventos")
             eventos.extend(eventos_fonte)
+            time.sleep(2)
         except Exception as e:
             print(f"   [ERRO] {nome_fonte}: {e}")
+            time.sleep(3)
     
     eventos = padronizar_eventos(eventos)
     

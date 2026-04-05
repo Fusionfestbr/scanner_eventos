@@ -231,10 +231,15 @@ def enviar_alerta(
         if response.status_code == 200:
             return True
         else:
-            print(f"   [ERRO] Telegram: {response.text}")
+            print(f"   [ERRO] Telegram HTTP {response.status_code}: {response.text}")
             return False
+    except requests.exceptions.RequestException as e:
+        print(f"   [ERRO] Telegram request falhou: {e}")
+        return False
     except Exception as e:
-        print(f"   [ERRO] Telegram falhou: {e}")
+        print(f"   [ERRO] Telegram falhou inesperado: {e}")
+        import traceback
+        traceback.print_exc()
         return False
 
 
@@ -243,9 +248,9 @@ def verificar_e_enviar_alerta(
     analise: dict, 
     auditoria: dict, 
     acao: str, 
-    plano_acao: Optional[Dict] = None, 
-    arbitragem: Optional[Dict] = None,
-    execucao: Optional[Dict] = None
+    plano_acao: dict | None = None, 
+    arbitragem: dict | None = None,
+    execucao: dict | None = None
 ) -> bool:
     """
     Verifica critérios e envia alerta se necessário.
@@ -269,20 +274,27 @@ def verificar_e_enviar_alerta(
     confianca = auditoria.get("confianca", 0)
     
     if nota < ALERTA_NOTA_MINIMA:
+        print(f"   [TELEGRAM] {evento.get('nome','?')[:40]}: nota {nota:.1f} < {ALERTA_NOTA_MINIMA} - nao notifica")
         return False
     
     if confianca < ALERTA_CONFIANCA_MINIMA:
+        print(f"   [TELEGRAM] {evento.get('nome','?')[:40]}: confianca {confianca} < {ALERTA_CONFIANCA_MINIMA} - nao notifica")
         return False
     
     evento_id = gerar_id_evento(evento)
     
     if ja_notificado(evento_id):
+        print(f"   [TELEGRAM] {evento.get('nome','?')[:40]}: ja notificado - pulando")
         return False
     
+    print(f"   [TELEGRAM] Enviando alerta: {evento.get('nome','?')[:50]} (nota={nota}, conf={confianca})")
     sucesso = enviar_alerta(evento, analise, auditoria, plano_acao, arbitragem, execucao)
     
     if sucesso:
         marcar_notificado(evento_id)
+        print(f"   [TELEGRAM] Alerta enviado com sucesso!")
+    else:
+        print(f"   [TELEGRAM] FALHA ao enviar alerta para: {evento.get('nome','?')[:50]}")
     
     return sucesso
 
