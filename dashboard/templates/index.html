@@ -395,6 +395,16 @@
             display: flex;
             gap: 10px;
             padding: 0 32px 24px;
+            flex-wrap: wrap;
+        }
+
+        .search-bar input::placeholder {
+            color: var(--text-dim);
+        }
+
+        .search-bar input:focus {
+            border-color: var(--accent-dim);
+            box-shadow: 0 0 0 3px var(--accent-glow);
         }
 
         .filter-pill {
@@ -796,8 +806,10 @@
 
         <!-- Abas -->
         <div class="tabs">
-            <button class="tab active" data-tab="oportunidades">Oportunidades</button>
-            <button class="tab" data-tab="todos">Todos os Eventos</button>
+            <button class="tab {{ 'active' if aba == 'oportunidades' else '' }}" data-tab="oportunidades" data-url="/?aba=oportunidades&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&acao={{ filtro_acao }}">Oportunidades</button>
+            <button class="tab {{ 'active' if aba == 'todos' else '' }}" data-tab="todos" data-url="/?aba=todos&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&acao={{ filtro_acao }}">Todos os Eventos</button>
+            <button class="tab {{ 'active' if aba == 'brutos' else '' }}" data-tab="brutos" data-url="/brutos">Eventos Brutos</button>
+            <button class="tab {{ 'active' if aba == 'validos' else '' }}" data-tab="validos" data-url="/validos">Eventos Válidos</button>
         </div>
 
         <!-- Gráficos -->
@@ -940,40 +952,116 @@
 
             <div class="filter-bar">
                 <!-- Filtros Temporais -->
-                <a href="/?periodo=todos&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_periodo == 'todos' else '' }}">
+                <a href="/?periodo=todos&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_periodo == 'todos' else '' }}">
                     <i class="fas fa-calendar-alt"></i> Todas as Datas
                 </a>
-                <a href="/?periodo=semana&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_periodo == 'semana' else '' }}">
+                <a href="/?periodo=semana&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_periodo == 'semana' else '' }}">
                     <i class="fas fa-calendar-week"></i> Esta Semana
                 </a>
-                <a href="/?periodo=mes&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_periodo == 'mes' else '' }}">
+                <a href="/?periodo=mes&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_periodo == 'mes' else '' }}">
                     <i class="fas fa-calendar"></i> Este Mês
+                </a>
+                <a href="/?periodo=ano&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_periodo == 'ano' else '' }}">
+                    <i class="fas fa-calendar-check"></i> Este Ano
+                </a>
+                
+                <!-- Filtros de Escopo -->
+                <a href="/?escopo=todos&periodo={{ filtro_periodo }}&categoria={{ filtro_categoria }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_escopo == 'todos' else '' }}">
+                    <i class="fas fa-globe"></i> Todos Escopos
+                </a>
+                <a href="/?escopo=nacional&periodo={{ filtro_periodo }}&categoria={{ filtro_categoria }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_escopo == 'nacional' else '' }}">
+                    <i class="fas fa-flag"></i> Nacionais
+                </a>
+                <a href="/?escopo=internacional&periodo={{ filtro_periodo }}&categoria={{ filtro_categoria }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_escopo == 'internacional' else '' }}">
+                    <i class="fas fa-plane"></i> Internacionais
+                </a>
+                
+                <!-- Filtros de Categoria -->
+                <a href="/?categoria=todos&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_categoria == 'todos' else '' }}">
+                    <i class="fas fa-layer-group"></i> Todas Categorias
+                </a>
+                <a href="/?categoria=show&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_categoria == 'show' else '' }}">
+                    <i class="fas fa-music"></i> Shows
+                </a>
+                <a href="/?categoria=festival&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_categoria == 'festival' else '' }}">
+                    <i class="fas fa-campground"></i> Festivais
+                </a>
+                <a href="/?categoria=esporte&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_categoria == 'esporte' else '' }}">
+                    <i class="fas fa-futbol"></i> Esportes
+                </a>
+                <a href="/?categoria=teatro&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_categoria == 'teatro' else '' }}">
+                    <i class="fas fa-theater-masks"></i> Teatro
+                </a>
+                <a href="/?categoria=standup&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&aba={{ aba }}&acao={{ filtro_acao }}" class="filter-pill {{ 'active' if filtro_categoria == 'standup' else '' }}">
+                    <i class="fas fa-laugh-squint"></i> Stand-up
                 </a>
                 
                 <!-- Filtros de Ação -->
-                <a href="/?acao=todos&periodo={{ filtro_periodo }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'todos' else '' }}">
+                <a href="/?acao=todos&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'todos' else '' }}">
                     <i class="fas fa-border-all"></i> Todas Ações
                 </a>
-                <a href="/?acao=COMPRAR&periodo={{ filtro_periodo }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'COMPRAR' else '' }}">
+                <a href="/?acao=COMPRAR&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'COMPRAR' else '' }}">
                     <i class="fas fa-bolt"></i> Comprar
                 </a>
-                <a href="/?acao=MONITORAR&periodo={{ filtro_periodo }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'MONITORAR' else '' }}">
+                <a href="/?acao=MONITORAR&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'MONITORAR' else '' }}">
                     <i class="fas fa-satellite-dish"></i> Monitorar
                 </a>
-                <a href="/?acao=IGNORAR&periodo={{ filtro_periodo }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'IGNORAR' else '' }}">
+                <a href="/?acao=IGNORAR&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&aba={{ aba }}" class="filter-pill {{ 'active' if filtro_acao == 'IGNORAR' else '' }}">
                     <i class="fas fa-ban"></i> Ignorar
                 </a>
             </div>
+
+            <!-- Busca por artista ou cidade -->
+            {% if aba in ['oportunidades', 'todos'] %}
+            <div class="search-bar" style="padding: 0 32px 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <form action="/" method="GET" style="display: flex; gap: 8px; flex: 1; min-width: 300px;">
+                    <input type="hidden" name="aba" value="{{ aba }}">
+                    <input type="hidden" name="periodo" value="{{ filtro_periodo }}">
+                    <input type="hidden" name="escopo" value="{{ filtro_escopo }}">
+                    <input type="hidden" name="categoria" value="{{ filtro_categoria }}">
+                    <input type="hidden" name="acao" value="{{ filtro_acao }}">
+                    <input type="text" name="busca" value="{{ filtro_busca }}" placeholder="Buscar por nome, artista ou cidade..." style="flex: 1; padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 13px; outline: none; min-width: 200px;">
+                    <button type="submit" style="padding: 12px 20px; border-radius: 10px; border: none; background: var(--accent-glow); color: var(--accent-light); cursor: pointer; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </form>
+                {% if filtro_busca %}
+                <a href="/?aba={{ aba }}&periodo={{ filtro_periodo }}&escopo={{ filtro_escopo }}&categoria={{ filtro_categoria }}&acao={{ filtro_acao }}" style="padding: 12px 20px; border-radius: 10px; border: 1px solid var(--red); background: rgba(239, 68, 68, 0.1); color: var(--red); cursor: pointer; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; text-decoration: none;">
+                    <i class="fas fa-times"></i> Limpar busca
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
 
             {% if eventos %}
             <table class="data-table">
                 <thead>
                     <tr>
+                        {% if aba == 'brutos' %}
                         <th>#</th>
                         <th>Evento</th>
                         <th>Fonte</th>
                         <th>Data</th>
                         <th>Cidade</th>
+                        <th>Categoria</th>
+                        <th>Escopo</th>
+                        {% elif aba == 'validos' %}
+                        <th>#</th>
+                        <th>Evento</th>
+                        <th>Fonte</th>
+                        <th>Data</th>
+                        <th>Cidade</th>
+                        <th>Categoria</th>
+                        <th>Escopo</th>
+                        <th>País</th>
+                        {% else %}
+                        <th>#</th>
+                        <th>Evento</th>
+                        <th>Fonte</th>
+                        <th>Data</th>
+                        <th>Cidade</th>
+                        <th>Categoria</th>
+                        <th>Escopo</th>
                         <th>Nota</th>
                         <th>Score</th>
                         <th>Esgotar</th>
@@ -986,11 +1074,38 @@
                         <th>Decisão</th>
                         <th>Ação</th>
                         <th>Compra</th>
+                        {% endif %}
                     </tr>
                 </thead>
                 <tbody>
                     {% for evento in eventos %}
                     <tr>
+                        {% if aba == 'brutos' %}
+                        <td class="rank-num">{{ loop.index }}</td>
+                        <td>
+                            <div class="event-info">
+                                <span class="event-name">{{ evento.nome[:50] if evento.nome else 'N/A' }}</span>
+                            </div>
+                        </td>
+                        <td><span class="tag tag-medio">{{ evento.fonte or '-' }}</span></td>
+                        <td class="mono">{{ evento.data or '-' }}</td>
+                        <td class="mono">{{ evento.cidade or '-' }}</td>
+                        <td><span class="tag tag-medio">{{ evento.categoria or '-' }}</span></td>
+                        <td><span class="tag {{ 'tag-alto' if evento.tipo_geografico == 'nacional' else 'tag-baixo' }}">{{ evento.tipo_geografico or '-' }}</span></td>
+                        {% elif aba == 'validos' %}
+                        <td class="rank-num">{{ loop.index }}</td>
+                        <td>
+                            <div class="event-info">
+                                <span class="event-name">{{ evento.nome[:50] if evento.nome else 'N/A' }}</span>
+                            </div>
+                        </td>
+                        <td><span class="tag tag-medio">{{ evento.fonte or '-' }}</span></td>
+                        <td class="mono">{{ evento.data or '-' }}</td>
+                        <td class="mono">{{ evento.cidade or '-' }}</td>
+                        <td><span class="tag tag-medio">{{ evento.categoria or '-' }}</span></td>
+                        <td><span class="tag {{ 'tag-alto' if evento.tipo_geografico == 'nacional' else 'tag-baixo' }}">{{ evento.tipo_geografico or '-' }}</span></td>
+                        <td class="mono">{{ evento.pais or '-' }}</td>
+                        {% else %}
                         <td class="rank-num">{{ evento.posicao }}</td>
                         <td>
                             <div class="event-info">
@@ -1013,6 +1128,8 @@
                         <td><span class="tag tag-{{ 'medio' if evento.evento.fonte in ['ingresse', 'sympla', 'ticket360'] else ('alto' if evento.evento.fonte == 'ticketmaster' else 'baixo') }}">{{ evento.evento.fonte }}</span></td>
                         <td class="mono">{{ evento.evento.data }}</td>
                         <td class="mono">{{ evento.evento.cidade[:20] }}</td>
+                        <td><span class="tag tag-medio">{{ evento.evento.categoria or '-' }}</span></td>
+                        <td><span class="tag {{ 'tag-alto' if evento.evento.tipo_geografico == 'nacional' else 'tag-baixo' }}">{{ evento.evento.tipo_geografico or '-' }}</span></td>
                         <td class="score" style="color: var(--accent-light)">{{ "%.1f"|format(evento.analise.nota_final | default(0)) }}</td>
                         {% set score = evento.previsao.score_valorizacao if evento.previsao else 0 %}
                         {% set score_class = 'score-high' if score >= 7 else ('score-mid' if score >= 5 else 'score-low') %}
@@ -1042,6 +1159,7 @@
                             </a>
                             {% endif %}
                         </td>
+                        {% endif %}
                     </tr>
                     {% endfor %}
                 </tbody>

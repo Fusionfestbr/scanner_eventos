@@ -1,9 +1,10 @@
 """
 Módulo de ranking de eventos.
-Ordena eventos por decisão, nota e confiança.
+Ordena eventos por decisão, nota, confiança e data.
 """
 import json
 import os
+from datetime import datetime
 from typing import List, Dict
 
 RANKING_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "ranking.json")
@@ -22,10 +23,24 @@ def gerar_ranking(eventos: List[dict]) -> List[dict]:
     2. score_valorizacao (maior primeiro)
     3. nota_final (maior primeiro)
     4. confianca (maior primeiro)
+    5. data (mais próxima primeiro, dentro de cada grupo)
     
     Returns:
         Lista ordenada de eventos
     """
+    def extrair_data_negativa(item):
+        """Data negativa para ordenação: mais próxima = maior valor (fica primeiro)"""
+        data_str = item.get("evento", {}).get("data", "")
+        if not data_str:
+            data_str = item.get("data", "")
+        if not data_str:
+            return datetime.max
+        try:
+            dt = datetime.fromisoformat(data_str.replace("Z", "+00:00"))
+            return -dt.timestamp()
+        except (ValueError, TypeError):
+            return 0
+
     def chave_ordenacao(item):
         acao = item.get("acao_final", "IGNORAR")
         nota = item.get("analise", {}).get("nota_final", 0)
@@ -34,7 +49,7 @@ def gerar_ranking(eventos: List[dict]) -> List[dict]:
         
         peso_acao = PESO_ACAO.get(acao, 0)
         
-        return (peso_acao, score_val, nota, confianca)
+        return (peso_acao, score_val, nota, confianca, extrair_data_negativa(item))
     
     ranking = sorted(eventos, key=chave_ordenacao, reverse=True)
     

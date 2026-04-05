@@ -18,6 +18,14 @@ app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-change-me-in-prod")
 
 DASHBOARD_PASSWORD = os.environ.get("DASHBOARD_PASSWORD", "")
 
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+FINAL_FILE = os.path.join(DATA_DIR, "final.json")
+RANKING_FILE = os.path.join(DATA_DIR, "ranking.json")
+RAW_FILE = os.path.join(DATA_DIR, "raw.json")
+CLEAN_FILE = os.path.join(DATA_DIR, "clean.json")
+
+coleta_status = {"ativo": False, "mensagem": "Pronto para coletar", "progresso": 0, "ultima_coleta": None}
+
 try:
     from core.learning import (
         calcular_metricas_financeiras,
@@ -30,6 +38,32 @@ try:
     LEARNING_AVAILABLE = True
 except ImportError:
     LEARNING_AVAILABLE = False
+
+try:
+    from core.filtros import (
+        filtrar_por_periodo,
+        filtrar_por_escopo,
+        filtrar_por_categoria,
+        filtrar_por_cidade,
+        filtrar_por_artista,
+        buscar,
+        resumo_estatistico,
+        ordenar_por_data
+    )
+    FILTROS_AVAILABLE = True
+except ImportError:
+    FILTROS_AVAILABLE = False
+
+
+def carregar_json(filepath):
+    """Carrega arquivo JSON genérico."""
+    if not os.path.exists(filepath):
+        return []
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return []
 
 
 def check_auth(username, password):
@@ -93,15 +127,19 @@ def filtrar_por_periodo(eventos, periodo):
         data_limite = hoje + timedelta(days=7)
     elif periodo == "mes":
         data_limite = hoje + timedelta(days=30)
+    elif periodo == "ano":
+        data_limite = hoje + timedelta(days=365)
     else:
         return eventos
     
     eventos_filtrados = []
     for evento in eventos:
         data_str = evento.get("data", "")
+        if not data_str:
+            data_str = evento.get("evento", {}).get("data", "")
         if data_str:
             try:
-                data_evento = datetime.fromisoformat(data_str).date()
+                data_evento = datetime.fromisoformat(data_str.replace("Z", "+00:00")).date()
                 if hoje <= data_evento <= data_limite:
                     eventos_filtrados.append(evento)
             except ValueError:
@@ -137,13 +175,32 @@ def calcular_estatisticas(eventos):
 def index():
     """Página principal com lista de eventos."""
     filtro_acao = request.args.get("acao", "todos")
-    filtro_periodo = request.args.get("periodo", "todos")  # Novo filtro temporal
-    aba = request.args.get("aba", "oportunidades")  # Novo parâmetro para abas
+    filtro_periodo = request.args.get("periodo", "todos")
+    filtro_escopo = request.args.get("escopo", "todos")
+    filtro_categoria = request.args.get("categoria", "todos")
+    filtro_cidade = request.args.get("cidade", "")
+    filtro_artista = request.args.get("artista", "")
+    filtro_busca = request.args.get("busca", "")
+    aba = request.args.get("aba", "oportunidades")
     
     eventos = carregar_ranking()
     
-    # Aplicar filtro temporal
     eventos = filtrar_por_periodo(eventos, filtro_periodo)
+    
+    if filtro_escopo != "todos" and FILTROS_AVAILABLE:
+        eventos = filtrar_por_escopo(eventos, filtro_escopo)
+    
+    if filtro_categoria != "todos" and FILTROS_AVAILABLE:
+        eventos = filtrar_por_categoria(eventos, filtro_categoria)
+    
+    if filtro_cidade and FILTROS_AVAILABLE:
+        eventos = filtrar_por_cidade(eventos, filtro_cidade)
+    
+    if filtro_artista and FILTROS_AVAILABLE:
+        eventos = filtrar_por_artista(eventos, filtro_artista)
+    
+    if filtro_busca and FILTROS_AVAILABLE:
+        eventos = buscar(eventos, filtro_busca)
     
     estatisticas = calcular_estatisticas(eventos)
     
@@ -160,11 +217,9 @@ def index():
         except Exception:
             learning_stats = {}
     
-    # Aplicar filtro de ação
     if filtro_acao != "todos":
         eventos = [e for e in eventos if e.get("acao_final") == filtro_acao]
     
-    # Para aba "oportunidades", mostrar apenas COMPRAR
     if aba == "oportunidades":
         eventos = [e for e in eventos if e.get("acao_final") == "COMPRAR"]
     
@@ -173,10 +228,85 @@ def index():
         eventos=eventos,
         estatisticas=estatisticas,
         filtro_acao=filtro_acao,
-        filtro_periodo=filtro_periodo,  # Novo
-        aba=aba,  # Novo
-        coleta_status=coleta_status,  # Novo
+        filtro_periodo=filtro_periodo,
+        filtro_escopo=filtro_escopo,
+        filtro_categoria=filtro_categoria,
+        filtro_cidade=filtro_cidade,
+        filtro_artista=filtro_artista,
+        filtro_busca=filtro_busca,
+        aba=aba,
+        coleta_status=coleta_status,
         learning_stats=learning_stats if learning_stats else None,
+        learning_available=LEARNING_AVAILABLE
+    )
+
+
+@app.route("/brutos")
+@require_auth
+def brutos():
+    """Página de eventos brutos (antes de qualquer filtro)."""
+    eventos_brutos = carregar_json(RAW_FILE)
+    
+    if FILTROS_AVAILABLE:
+        eventos_brutos = ordenar_por_data(eventos_brutos, crescente=True)
+    
+    estatisticas = {
+        "total": len(eventos_brutos),
+        "comprar": 0,
+        "monitorar": 0,
+        "ignorar": 0,
+        "nota_media": 0
+    }
+    
+    return render_template(
+        "index.html",
+        eventos=eventos_brutos,
+        estatisticas=estatisticas,
+        filtro_acao="todos",
+        filtro_periodo="todos",
+        filtro_escopo="todos",
+        filtro_categoria="todos",
+        filtro_cidade="",
+        filtro_artista="",
+        filtro_busca="",
+        aba="brutos",
+        coleta_status=coleta_status,
+        learning_stats=None,
+        learning_available=LEARNING_AVAILABLE
+    )
+
+
+@app.route("/validos")
+@require_auth
+def validos():
+    """Página de eventos válidos (após validação)."""
+    eventos_validos = carregar_json(CLEAN_FILE)
+    
+    if FILTROS_AVAILABLE:
+        eventos_validos = ordenar_por_data(eventos_validos, crescente=True)
+    
+    estatisticas = {
+        "total": len(eventos_validos),
+        "comprar": 0,
+        "monitorar": 0,
+        "ignorar": 0,
+        "nota_media": 0
+    }
+    
+    return render_template(
+        "index.html",
+        eventos=eventos_validos,
+        estatisticas=estatisticas,
+        filtro_acao="todos",
+        filtro_periodo="todos",
+        filtro_escopo="todos",
+        filtro_categoria="todos",
+        filtro_cidade="",
+        filtro_artista="",
+        filtro_busca="",
+        aba="validos",
+        coleta_status=coleta_status,
+        learning_stats=None,
         learning_available=LEARNING_AVAILABLE
     )
 
@@ -238,10 +368,26 @@ def api_events():
     """API para auto-refresh dos eventos."""
     filtro_acao = request.args.get("acao", "todos")
     filtro_periodo = request.args.get("periodo", "todos")
+    filtro_escopo = request.args.get("escopo", "todos")
+    filtro_categoria = request.args.get("categoria", "todos")
+    filtro_cidade = request.args.get("cidade", "")
+    filtro_artista = request.args.get("artista", "")
+    filtro_busca = request.args.get("busca", "")
     aba = request.args.get("aba", "oportunidades")
     
     eventos = carregar_ranking()
     eventos = filtrar_por_periodo(eventos, filtro_periodo)
+    
+    if filtro_escopo != "todos" and FILTROS_AVAILABLE:
+        eventos = filtrar_por_escopo(eventos, filtro_escopo)
+    if filtro_categoria != "todos" and FILTROS_AVAILABLE:
+        eventos = filtrar_por_categoria(eventos, filtro_categoria)
+    if filtro_cidade and FILTROS_AVAILABLE:
+        eventos = filtrar_por_cidade(eventos, filtro_cidade)
+    if filtro_artista and FILTROS_AVAILABLE:
+        eventos = filtrar_por_artista(eventos, filtro_artista)
+    if filtro_busca and FILTROS_AVAILABLE:
+        eventos = buscar(eventos, filtro_busca)
     
     if filtro_acao != "todos":
         eventos = [e for e in eventos if e.get("acao_final") == filtro_acao]
@@ -256,6 +402,17 @@ def api_events():
         "estatisticas": estatisticas,
         "timestamp": datetime.now().isoformat()
     })
+
+
+@app.route("/api/resumo")
+def api_resumo():
+    """API para resumo estatístico dos eventos."""
+    eventos = carregar_ranking()
+    if FILTROS_AVAILABLE:
+        resumo = resumo_estatistico(eventos)
+    else:
+        resumo = {"total": len(eventos)}
+    return jsonify(resumo)
 
 
 @app.route("/refresh")

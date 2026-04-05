@@ -7,6 +7,7 @@ from utils.date_utils import (
     data_eh_futura,
     formatar_data_iso
 )
+from core.classificadores import classificar_escopo, classificar_categoria, extrair_pais
 
 
 def validar_eventos(eventos: list[dict]) -> list[dict]:
@@ -18,6 +19,7 @@ def validar_eventos(eventos: list[dict]) -> list[dict]:
     - Remove eventos com data inválida
     - Remove duplicados (mesmo nome + data)
     - Padroniza data no formato YYYY-MM-DD
+    - Adiciona campos de classificação: tipo_geografico, categoria, pais
     """
     eventos_validos = []
     seen = set()
@@ -46,7 +48,10 @@ def validar_eventos(eventos: list[dict]) -> list[dict]:
             "data": data_iso,
             "cidade": evento.get("cidade", "").strip(),
             "fonte": evento.get("fonte", "").strip(),
-            "url": evento.get("url", "").strip()
+            "url": evento.get("url", "").strip(),
+            "tipo_geografico": classificar_escopo(evento),
+            "categoria": classificar_categoria(evento),
+            "pais": extrair_pais(evento)
         }
         eventos_validos.append(evento_limpo)
     
