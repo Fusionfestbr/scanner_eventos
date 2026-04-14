@@ -298,22 +298,22 @@ def run_pipeline():
             coleta_status["ativo"] = True
             coleta_status["mensagem"] = "Iniciando coleta..."
             coleta_status["progresso"] = 5
+            coleta_status["ultima_coleta"] = datetime.now().isoformat()
             
-            # Importar e executar o pipeline real
-            from core.orchestrator import executar_pipeline
+            from core.orchestrator import executar_pipeline, get_pipeline_status
             
             coleta_status["mensagem"] = "Coletando eventos..."
             coleta_status["progresso"] = 20
             
-            # Executar pipeline completo
             qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, score = executar_pipeline()
+            
+            pipeline_status = get_pipeline_status()
+            coleta_status["etapas"] = pipeline_status.get("etapas", [])
             
             coleta_status["mensagem"] = f"Processado: {qtd_coletados} coletados, {qtd_finais} decisões"
             coleta_status["progresso"] = 100
             coleta_status["ativo"] = False
-            coleta_status["ultima_coleta"] = datetime.now().isoformat()
             
-            # Resetar status após 5 segundos
             import time
             time.sleep(5)
             coleta_status["mensagem"] = "Pronto para coletar"
@@ -334,6 +334,10 @@ def run_pipeline():
 @require_auth
 def get_coleta_status():
     """Retorna status da coleta para progresso visual."""
+    from core.orchestrator import get_pipeline_status
+    pipeline_status = get_pipeline_status()
+    coleta_status["etapas"] = pipeline_status.get("etapas", [])
+    coleta_status["etapa_atual"] = pipeline_status.get("etapa_atual", "")
     return jsonify(coleta_status)
 
 
@@ -383,11 +387,14 @@ def api_events():
 @require_auth
 def api_resumo():
     """API para resumo estatístico dos eventos."""
+    from core.orchestrator import get_pipeline_status
+    pipeline_status = get_pipeline_status()
     eventos = carregar_ranking()
     if FILTROS_AVAILABLE:
         resumo = resumo_estatistico(eventos)
     else:
         resumo = {"total": len(eventos)}
+    resumo["pipeline_status"] = pipeline_status
     return jsonify(resumo)
 
 
