@@ -29,6 +29,12 @@ from core.executor import processar_planos_acao
 from core.arbitrage import processar_arbitragem
 from agents.scraper import buscar_precos_revenda
 from core.executor_real import gerar_execucao_real
+from core.cache import (
+    processar_com_cache,
+    mesclar_resultados,
+    adicionar_lote_ao_cache,
+    get_cache_stats
+)
 
 
 PIPELINE_ETAPAS = [
@@ -134,12 +140,12 @@ def carregar_json(filepath: str) -> list:
         return json.load(f)
 
 
-def executar_pipeline() -> tuple[int, int, int, int, int]:
+def executar_pipeline() -> tuple:
     """
     Executa o pipeline completo.
     
     Returns:
-        Tupla com (qtd_coletados, qtd_validos_quality, qtd_analisados, qtd_finais, qualidade_score)
+        Tupla com (qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, qualidade_score, cache_stats)
     """
     _iniciar_pipeline()
     log("=== INICIANDO PIPELINE DE EVENTOS ===")
@@ -163,20 +169,28 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     log(f"   -> Salvo em {raw_path}")
     _concluir_etapa(1, "Coletando eventos", t)
     
+    # Etapa 1.5: Verificando cache
+    t = _iniciar_etapa(1, "Verificando cache...")
+    log("   -> Verificando cache...")
+    eventos_do_cache, eventos_para_processar, cache_stats = processar_com_cache(eventos_coletados)
+    log(f"   -> Cache: {cache_stats['cache_hits']} hits, {cache_stats['cache_misses']} misses, {cache_stats['re_analises']} re-análises")
+    log(f"   -> {len(eventos_do_cache)} eventos do cache, {len(eventos_para_processar)} para processar")
+    _concluir_etapa(1, "Verificando cache", t)
+    
     # Etapa 2: Verificando qualidade
     t = _iniciar_etapa(2, "Verificando qualidade...")
     log("2/7 - Verificando qualidade dos dados...")
-    eventos_validos_qc, eventos_rejeitados = filtrar_eventos_validos(eventos_coletados)
+    eventos_validos_qc, eventos_rejeitados = filtrar_eventos_validos(eventos_para_processar)
     qtd_validos_qc = len(eventos_validos_qc)
     
-    score = calcular_score(qtd_validos_qc, qtd_coletados)
-    log(f"   -> {qtd_validos_qc}/{qtd_coletados} válidos ({score['score']}%)")
+    score = calcular_score(qtd_validos_qc, len(eventos_para_processar))
+    log(f"   -> {qtd_validos_qc}/{len(eventos_para_processar)} válidos ({score['score']}%)")
     
     if eventos_rejeitados:
         salvar_rejeitados(eventos_rejeitados)
         log(f"   -> {len(eventos_rejeitados)} eventos rejeitados salvos em rejected.json")
     
-    qualidade_aceitavel, msg_qualidade = verificar_qualidade(qtd_validos_qc, qtd_coletados)
+    qualidade_aceitavel, msg_qualidade = verificar_qualidade(qtd_validos_qc, len(eventos_para_processar))
     print(f"   {msg_qualidade}")
     
     if not qualidade_aceitavel:
@@ -192,19 +206,19 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     # Etapa 4: Validando eventos
     t = _iniciar_etapa(4, "Validando eventos...")
     log("4/7 - Validando eventos...")
-    eventos_validados = validar_eventos(eventos_validos_qc)
-    qtd_validados = len(eventos_validados)
+    eventos_validados_novos = validar_eventos(eventos_validos_qc)
+    qtd_validados = len(eventos_validados_novos)
     log(f"   -> {qtd_validados} eventos válidos")
     
     clean_path = os.path.join(os.path.dirname(__file__), "..", "data", "clean.json")
-    salvar_json(eventos_validados, clean_path)
+    salvar_json(eventos_validados_novos, clean_path)
     log(f"   -> Salvo em {clean_path}")
     _concluir_etapa(4, "Validando eventos", t)
     
-    # Etapa 5: Analisando com IA
+    # Etapa 5: Analisando com IA (apenas eventos novos)
     t = _iniciar_etapa(5, "Analisando com IA...")
     log("5/7 - Analisando eventos com IA...")
-    eventos_analisados = analisar_eventos(eventos_validados)
+    eventos_analisados = analisar_eventos(eventos_validados_novos)
     qtd_analisados = len(eventos_analisados)
     log(f"   -> {qtd_analisados} eventos analisados")
     
@@ -312,6 +326,38 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     log(f"   -> Salvo em {final_path}")
     _concluir_etapa(12, "Gerando execuções", t)
     
+    # Mesclar eventos do cache com os processados
+    log("   -> Mesclando eventos do cache...")
+    eventos_finais = mesclar_resultados(eventos_do_cache, eventos_finais)
+    log(f"   -> Total: {len(eventos_finais)} eventos ({len(eventos_do_cache)} do cache + {len(eventos_para_processar)} processados)")
+    
+    # Atualizar cache com eventos processados
+    if eventos_finais:
+        adicionar_lote_ao_cache(eventos_finais)
+        log(f"   -> Cache atualizado com {len(eventos_finais)} eventos")
+    
+    # Atualizar clean.json com eventos do cache também
+    clean_completo = []
+    for item in eventos_do_cache:
+        cache = item["cache"]
+        clean_completo.append({
+            "nome": cache.get("nome", ""),
+            "artista": cache.get("artista", ""),
+            "data": cache.get("data", ""),
+            "cidade": cache.get("cidade", ""),
+            "fonte": cache.get("fonte", ""),
+            "url": cache.get("url", ""),
+            "tipo_geografico": cache.get("tipo_geografico", ""),
+            "categoria": cache.get("categoria", ""),
+            "pais": cache.get("pais", "")
+        })
+    clean_completo.extend(eventos_validados_novos)
+    salvar_json(clean_completo, clean_path)
+    log(f"   -> clean.json atualizado com {len(clean_completo)} eventos")
+    
+    # Atualizar final.json com resultado mesclado
+    salvar_json(eventos_finais, final_path)
+    
     # Etapa 13: Gerando ranking
     t = _iniciar_etapa(13, "Gerando ranking...")
     log("Gerando ranking...")
@@ -355,4 +401,4 @@ def executar_pipeline() -> tuple[int, int, int, int, int]:
     log("=== PIPELINE CONCLUÍDO ===")
     _concluir_pipeline()
     
-    return qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, score['score']
+    return qtd_coletados, qtd_validados, qtd_analisados, len(eventos_finais), score['score'], cache_stats

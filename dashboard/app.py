@@ -41,6 +41,12 @@ except ImportError:
     LEARNING_AVAILABLE = False
 
 try:
+    from core.cache import get_cache_stats
+    CACHE_AVAILABLE = True
+except ImportError:
+    CACHE_AVAILABLE = False
+
+try:
     from core.filtros import (
         filtrar_por_periodo,
         filtrar_por_escopo,
@@ -176,6 +182,13 @@ def index():
     
     estatisticas = calcular_estatisticas(eventos)
     
+    cache_stats = {}
+    if CACHE_AVAILABLE:
+        try:
+            cache_stats = get_cache_stats()
+        except Exception:
+            cache_stats = {}
+    
     learning_stats = {}
     if LEARNING_AVAILABLE:
         try:
@@ -199,6 +212,8 @@ def index():
         "index.html",
         eventos=eventos,
         estatisticas=estatisticas,
+        cache_stats=cache_stats if cache_stats else None,
+        cache_available=CACHE_AVAILABLE,
         filtro_acao=filtro_acao,
         filtro_periodo=filtro_periodo,
         filtro_escopo=filtro_escopo,
@@ -234,6 +249,8 @@ def brutos():
         "index.html",
         eventos=eventos_brutos,
         estatisticas=estatisticas,
+        cache_stats=None,
+        cache_available=CACHE_AVAILABLE,
         filtro_acao="todos",
         filtro_periodo="todos",
         filtro_escopo="todos",
@@ -269,6 +286,8 @@ def validos():
         "index.html",
         eventos=eventos_validos,
         estatisticas=estatisticas,
+        cache_stats=None,
+        cache_available=CACHE_AVAILABLE,
         filtro_acao="todos",
         filtro_periodo="todos",
         filtro_escopo="todos",
@@ -305,10 +324,14 @@ def run_pipeline():
             coleta_status["mensagem"] = "Coletando eventos..."
             coleta_status["progresso"] = 20
             
-            qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, score = executar_pipeline()
+            result = executar_pipeline()
+            qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, score, cache_stats = result
             
             pipeline_status = get_pipeline_status()
             coleta_status["etapas"] = pipeline_status.get("etapas", [])
+            coleta_status["cache_stats"] = cache_stats
+            
+            coleta_status["mensagem"] = f"Processado: {qtd_coletados} coletados, {qtd_finais} decisões ({cache_stats.get('cache_hits', 0)} do cache)"
             
             coleta_status["mensagem"] = f"Processado: {qtd_coletados} coletados, {qtd_finais} decisões"
             coleta_status["progresso"] = 100
