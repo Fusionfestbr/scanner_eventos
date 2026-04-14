@@ -14,8 +14,33 @@ from datetime import datetime, timedelta
 from functools import wraps
 from flask import Flask, render_template, request, redirect, url_for, jsonify, Response
 
+from utils.logger import logger
+from utils.rate_limiter import get_rate_limiter
+from utils.validation import validar_busca, validar_filtro, sanitizar_string
+
 app = Flask(__name__)
+
+rate_limiter = get_rate_limiter()
+
+
+@app.before_request
+def check_rate_limit():
+    """Rate limiting para todas as rotas."""
+    if request.endpoint in [None, 'static']:
+        return None
+    
+    ip = request.remote_addr or 'unknown'
+    
+    if request.endpoint:
+        permitido, motivo = rate_limiter.check(ip)
+        
+        if not permitido:
+            logger.warning(f"Rate limit excedido para {ip} em {request.endpoint}")
+            return jsonify({"status": "erro", "mensagem": motivo}), 429
+    
+    return None
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
+logger.info("Dashboard iniciado")
 
 DASHBOARD_PASSWORD = os.environ.get("DASHBOARD_PASSWORD", "")
 
@@ -26,6 +51,12 @@ RAW_FILE = os.path.join(DATA_DIR, "raw.json")
 CLEAN_FILE = os.path.join(DATA_DIR, "clean.json")
 
 coleta_status = {"ativo": False, "mensagem": "Pronto para coletar", "progresso": 0, "ultima_coleta": None}
+
+# Auto-coleta configurável
+AUTO_COLETA_ENABLED = False
+AUTO_COLETA_INTERVALO = 120  # 2 horas em minutos
+auto_coleta_timer = None
+auto_coleta_proxima = None
 
 try:
     from core.learning import (
@@ -421,10 +452,163 @@ def api_resumo():
     return jsonify(resumo)
 
 
+@app.route("/health")
+def health_check():
+    """Endpoint de saúde do sistema."""
+    import psutil
+    
+    try:
+        from core.orchestrator import get_pipeline_status
+        pipeline_status = get_pipeline_status()
+    except:
+        pipeline_status = {"ativo": False, "etapa_atual": "indisponivel"}
+    
+    try:
+        from core.learning import calcular_metricas_financeiras
+        metricas = calcular_metricas_financeiras()
+    except:
+        metricas = {"total_operacoes": 0, "lucro_total": 0}
+    
+    try:
+        from utils.checkpoint import get_checkpoint, get_estado_pipeline
+        checkpoint = get_checkpoint()
+        estado_pipeline = get_estado_pipeline()
+        checkpoint_info = {
+            "existe": checkpoint.existe(),
+            "etapa": checkpoint.get_etapa(),
+            "timestamp": checkpoint.get_timestamp()
+        }
+        pipeline_info = {
+            "etapa_atual": estado_pipeline.get_etapa_atual(),
+            "progresso": estado_pipeline.get_progresso(),
+            "saudavel": estado_pipeline.esta_saudavel(),
+            "erros": len(estado_pipeline.get_erros())
+        }
+    except:
+        checkpoint_info = {}
+        pipeline_info = {}
+    
+    health_data = {
+        "status": "UP",
+        "timestamp": datetime.now().isoformat(),
+        "sistema": {
+            "python": True,
+            "flask": True,
+            "lm_studio": _check_lm_studio(),
+        },
+        "pipeline": pipeline_status,
+        "metricas_financeiras": metricas,
+        "checkpoint": checkpoint_info,
+        "pipeline_estado": pipeline_info,
+        "recursos": {
+            "cpu_percent": psutil.cpu_percent(interval=0.1),
+            "memory_percent": psutil.virtual_memory().percent,
+            "disk_percent": psutil.disk_usage('/').percent
+        }
+    }
+    
+    return jsonify(health_data)
+
+
+def _check_lm_studio() -> bool:
+    """Verifica se LM Studio está disponível."""
+    try:
+        import requests
+        r = requests.get("http://127.0.0.1:1234/v1/models", timeout=2)
+        return r.status_code == 200
+    except:
+        return False
+
+
 @app.route("/refresh")
 def refresh():
     """Recarrega a página principal."""
     return redirect(url_for("index"))
+
+
+@app.route("/api/auto-coleta-status")
+@require_auth
+def api_auto_coleta_status():
+    """Retorna status da auto-coleta."""
+    global auto_coleta_proxima
+    return jsonify({
+        "enabled": AUTO_COLETA_ENABLED,
+        "intervalo": AUTO_COLETA_INTERVALO,
+        "proxima": auto_coleta_proxima.isoformat() if auto_coleta_proxima else None
+    })
+
+
+@app.route("/api/auto-coleta-toggle", methods=["POST"])
+@require_auth
+def api_auto_coleta_toggle():
+    """Liga/desliga auto-coleta."""
+    global AUTO_COLETA_ENABLED, auto_coleta_timer, auto_coleta_proxima
+    
+    data = request.get_json() or {}
+    enabled = data.get("enabled", not AUTO_COLETA_ENABLED)
+    intervalo = data.get("intervalo", AUTO_COLETA_INTERVALO)
+    
+    if enabled and intervalo > 0:
+        AUTO_COLETA_ENABLED = True
+        AUTO_COLETA_INTERVALO = intervalo
+        auto_coleta_proxima = datetime.now() + timedelta(minutes=intervalo)
+        _iniciar_auto_coleta(intervalo)
+        mensagem = f"Auto-coleta iniciada: a cada {intervalo} min"
+    else:
+        AUTO_COLETA_ENABLED = False
+        if auto_coleta_timer:
+            auto_coleta_timer.cancel()
+            auto_coleta_timer = None
+        auto_coleta_proxima = None
+        mensagem = "Auto-coleta parada"
+    
+    return jsonify({"status": "ok", "enabled": AUTO_COLETA_ENABLED, "intervalo": AUTO_COLETA_INTERVALO, "mensagem": mensagem})
+
+
+@app.route("/api/enviar-alerta", methods=["POST"])
+@require_auth
+def api_enviar_alerta():
+    """Envia alerta manual via Telegram."""
+    from core.notifier import enviar_alerta
+    
+    data = request.get_json() or {}
+    mensagem = data.get("mensagem", "Alerta de teste")
+    
+    try:
+        enviado = enviar_alerta(mensagem)
+        return jsonify({"status": "ok", "enviado": enviado})
+    except Exception as e:
+        return jsonify({"status": "erro", "mensagem": str(e)})
+
+
+def _iniciar_auto_coleta(minutos):
+    """Inicia o timer de auto-coleta."""
+    global auto_coleta_timer, auto_coleta_proxima
+    
+    def executar_coleta_automatica():
+        global auto_coleta_proxima, AUTO_COLETA_ENABLED
+        try:
+            if not coleta_status["ativo"]:
+                coleta_status["ativo"] = True
+                coleta_status["mensagem"] = "Auto-coleta em andamento..."
+                from core.orchestrator import executar_pipeline
+                result = executar_pipeline()
+                coleta_status["ativo"] = False
+                coleta_status["ultima_coleta"] = datetime.now().isoformat()
+        except Exception as e:
+            print(f"[AUTO-COLETA] Erro: {e}")
+        finally:
+            if AUTO_COLETA_ENABLED:
+                auto_coleta_proxima = datetime.now() + timedelta(minutes=AUTO_COLETA_INTERVALO)
+                _iniciar_auto_coleta(AUTO_COLETA_INTERVALO)
+    
+    if auto_coleta_timer:
+        auto_coleta_timer.cancel()
+    
+    auto_coleta_timer = threading.Timer(minutos * 60, executar_coleta_automatica)
+    auto_coleta_timer.daemon = True
+    auto_coleta_timer.start()
+    print(f"[AUTO-COLETA] Timer iniciado: {minutos} min")
 
 
 if __name__ == "__main__":

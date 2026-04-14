@@ -5,6 +5,7 @@ Executa o pipeline completo de análise de eventos.
 import json
 import os
 import sys
+from utils.logger import logger
 
 from core.orchestrator import executar_pipeline
 from core.scheduler import executar_loop, stop_scheduler
@@ -36,6 +37,12 @@ from config import INTERVALO_MINUTOS
 def main():
     """Executa o pipeline e exibe resultados."""
     args = sys.argv[1:]
+    
+    if "--force" in args:
+        from utils.checkpoint import get_checkpoint
+        cp = get_checkpoint()
+        cp.limpar()
+        print("  Checkpoint limpo. Executando...")
     
     if "--eventim" in args:
         from agents.eventim_api import get_eventim_events
@@ -500,6 +507,22 @@ def mostrar_resumo():
 
 def executar_pipeline_normal():
     """Executa o pipeline normal."""
+    from utils.checkpoint import get_checkpoint, get_estado_pipeline
+    
+    checkpoint = get_checkpoint()
+    estado = get_estado_pipeline()
+    
+    estado_checkpoint = checkpoint.carregar()
+    if estado_checkpoint:
+        etapa = estado_checkpoint.get("etapa", "desconhecido")
+        ts = estado_checkpoint.get("timestamp", "")
+        logger.info(f"Checkpoint encontrado: {etapa} de {ts}")
+        
+        if etapa == "concluido":
+            logger.info("Pipeline ja foi concluidoRecently, pulando execucao")
+            print("\n  Pipeline ja foi executado Recently. Use --force para forcar reexecucao.")
+            return
+    
     print("\n" + "="*50)
     print("  Fusion Revenda Master - Pipeline de Dados")
     print("="*50 + "\n")

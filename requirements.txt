@@ -4,3 +4,6 @@ flask
 playwright
 selenium
 python-dotenv
+loguru
+urllib3
+psutil

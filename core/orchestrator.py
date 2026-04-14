@@ -7,6 +7,8 @@ import os
 import time
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from utils.logger import logger
+from utils.checkpoint import get_checkpoint, get_estado_pipeline
 
 from agents.coletor import coletar_eventos
 from agents.validador import validar_eventos
@@ -120,9 +122,10 @@ def _concluir_pipeline() -> None:
 
 
 def log(msg: str) -> None:
-    """Log simples para terminal."""
+    """Log simples para terminal e arquivo."""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{timestamp}] {msg}")
+    logger.info(msg)
 
 
 def salvar_json(data: list, filepath: str) -> None:
@@ -147,6 +150,10 @@ def executar_pipeline() -> tuple:
     Returns:
         Tupla com (qtd_coletados, qtd_validados, qtd_analisados, qtd_finais, qualidade_score, cache_stats)
     """
+    checkpoint = get_checkpoint()
+    estado = get_estado_pipeline()
+    
+    estado.iniciar()
     _iniciar_pipeline()
     log("=== INICIANDO PIPELINE DE EVENTOS ===")
     
@@ -167,6 +174,9 @@ def executar_pipeline() -> tuple:
     raw_path = os.path.join(os.path.dirname(__file__), "..", "data", "raw.json")
     salvar_json(eventos_coletados, raw_path)
     log(f"   -> Salvo em {raw_path}")
+    
+    checkpoint.salvar("coleta", {"qtd": qtd_coletados, "arquivo": raw_path})
+    estado.etapa("coleta", 15)
     _concluir_etapa(1, "Coletando eventos", t)
     
     # Etapa 1.5: Verificando cache
@@ -400,5 +410,16 @@ def executar_pipeline() -> tuple:
     
     log("=== PIPELINE CONCLUÍDO ===")
     _concluir_pipeline()
+    
+    checkpoint.salvar("concluido", {
+        "qtd_coletados": qtd_coletados,
+        "qtd_validados": qtd_validados,
+        "qtd_analisados": qtd_analisados,
+        "qtd_finais": len(eventos_finais),
+        "score": score['score']
+    })
+    checkpoint.limpar()
+    estado.etapa("concluido", 100)
+    logger.info(f"Pipeline concluido com sucesso!")
     
     return qtd_coletados, qtd_validados, qtd_analisados, len(eventos_finais), score['score'], cache_stats

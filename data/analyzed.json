@@ -1,6 +1,26 @@
 [
   {
     "evento": {
+      "nome": "ENHYPEN WORLD TOUR 'BLOOD SAGA'",
+      "artista": "Various Artists",
+      "data": "2026-07-04",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/enhypen",
+      "tipo_geografico": "nacional",
+      "categoria": "show",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 9.5,
+      "escassez": 8.0,
+      "publico": 9.0,
+      "potencial_revenda": 9.2,
+      "nota_final": 8.93
+    }
+  },
+  {
+    "evento": {
       "nome": "Kid Abelha: Eu Tive Um Sonho",
       "artista": "Various Artists",
       "data": "2026-10-01",
@@ -12,11 +32,32 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.5,
-      "escassez": 4.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.0,
-      "nota_final": 5.88
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "Lollapalooza Brasil 2027",
+      "artista": "Various Artists",
+      "data": "2027-03-21",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/lollapaloozabr",
+      "tipo_geografico": "nacional",
+      "categoria": "festival",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 9.5,
+      "escassez": 8.5,
+      "publico": 10.0,
+      "potencial_revenda": 9.0
     }
   },
   {
@@ -33,10 +74,9 @@
     },
     "analise": {
       "hype": 7.5,
-      "escassez": 7.0,
-      "publico": 8.5,
-      "potencial_revenda": 8.0,
-      "nota_final": 7.75
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.0
     }
   },
   {
@@ -52,13 +92,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 8.5,
+      "escassez": 7.0,
+      "publico": 9.0,
+      "potencial_revenda": 8.5,
+      "nota_final": 8.25
     }
   },
   {
@@ -96,13 +134,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7,
+      "escassez": 5,
+      "publico": 9,
+      "potencial_revenda": 8
     }
   },
   {
@@ -118,13 +153,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 8,
+      "escassez": 7,
+      "publico": 8,
+      "potencial_revenda": 9
     }
   },
   {
@@ -140,11 +172,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 9.5,
-      "escassez": 8.5,
-      "publico": 9.0,
-      "potencial_revenda": 9.5,
-      "nota_final": 9.25
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -160,11 +194,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 8,
-      "escassez": 7,
-      "publico": 9,
-      "potencial_revenda": 8.5,
-      "nota_final_media": 8.25
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -175,6 +211,334 @@
       "cidade": "",
       "fonte": "ticketmaster",
       "url": "https://www.ticketmaster.com.br/event/jonas-brothers",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "Autódromo Velocitta",
+      "artista": "Various Artists",
+      "data": "2026-06-05",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/manti-wine-sessions",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7.0,
+      "escassez": 6.0,
+      "publico": 8.5,
+      "potencial_revenda": 7.5,
+      "nota_final": 7.25
+    }
+  },
+  {
+    "evento": {
+      "nome": "Tokio Marine Hall",
+      "artista": "Various Artists",
+      "data": "2026-04-14",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/soul-ii-soul-tokio-marine-hall",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 3.0,
+      "escassez": 5.0,
+      "publico": 4.0,
+      "potencial_revenda": 3.75,
+      "nota_final": 3.75,
+      "justificativa": "Evento com múltiplos artistas em local de médio porte (Tokio Marine Hall). A ausência da cidade e a data distante sugerem baixo hype imediato. O potencial de revenda é moderado, dependendo do gênero musical específico que atrairá o público. Nota média calculada."
+    }
+  },
+  {
+    "evento": {
+      "nome": "Casa Natura Musical",
+      "artista": "Various Artists",
+      "data": "2026-04-28",
+      "cidade": "São Paulo",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/lalom-queremos-na-casa-natura-musical-sp",
+      "tipo_geografico": "nacional",
+      "categoria": "show",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "Vibra São Paulo",
+      "artista": "Various Artists",
+      "data": "2026-05-01",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/turne-tres-gracas",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 7,
+      "publico": 8,
+      "potencial_revenda": 8,
+      "nota_final": 7.5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Autódromo de Interlagos",
+      "artista": "Various Artists",
+      "data": "2026-07-12",
+      "cidade": "São Paulo",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/fiawecsaopaulo",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Parque Ibirapuera",
+      "artista": "Various Artists",
+      "data": "2026-08-16",
+      "cidade": "São Paulo",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/sp2b",
+      "tipo_geografico": "nacional",
+      "categoria": "show",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.0,
+      "nota_final": 7.25
+    }
+  },
+  {
+    "evento": {
+      "nome": "Qualistage",
+      "artista": "Various Artists",
+      "data": "2026-04-18",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/paulinho-da-viola-no-qualistage-rj",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "Vivo Rio",
+      "artista": "Various Artists",
+      "data": "2026-04-22",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/venda-geral-the-lumineers-the-automatic-world-tour-2026-rio-de-janeiro",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "Farmasi Arena",
+      "artista": "Various Artists",
+      "data": "2026-08-11",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/rosalia",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 5,
+      "escassez": 3,
+      "publico": 4,
+      "potencial_revenda": 4.25
+    }
+  },
+  {
+    "evento": {
+      "nome": "Goiânia",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/pai-e-filho-almir-sater-e-gabriel-sater-goiania",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "Pinhais",
+      "artista": "Various Artists",
+      "data": "2026-04-26",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/somos-rock-festival-curitiba",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 5.0,
+      "escassez": 3.0,
+      "publico": 6.0,
+      "potencial_revenda": 4.5,
+      "nota_final": 4.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Juiz de Fora",
+      "artista": "Various Artists",
+      "data": "2026-06-26",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/joao-bosco-juiz-de-fora",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 4.0,
+      "escassez": 3.5,
+      "publico": 4.5,
+      "potencial_revenda": 3.75,
+      "nota_final": 3.9
+    }
+  },
+  {
+    "evento": {
+      "nome": "Cascavel",
+      "artista": "Various Artists",
+      "data": "2026-07-19",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/dvl-rock-festival",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 5.0,
+      "escassez": 3.0,
+      "publico": 4.0,
+      "potencial_revenda": 4.0,
+      "nota_final": 4.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Teatro Ruth Escobar",
+      "artista": "Various Artists",
+      "data": "2026-04-26",
+      "cidade": "São Paulo",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/aladdin-teatro-ruth-escobar",
+      "tipo_geografico": "nacional",
+      "categoria": "teatro",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 6.5,
+      "escassez": 5.0,
+      "publico": 7.0,
+      "potencial_revenda": 6.2
+    }
+  },
+  {
+    "evento": {
+      "nome": "The Cavern Club",
+      "artista": "Various Artists",
+      "data": "2026-04-16",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/leo-gandelman-the-cavern-club",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 5.0,
+      "escassez": 4.0,
+      "publico": 7.0,
+      "potencial_revenda": 6.0,
+      "nota_final": 5.75
+    }
+  },
+  {
+    "evento": {
+      "nome": "Bad Religion - São Paulo - 28/04/2026 - Venda Geral",
+      "artista": "Various Artists",
+      "data": "2026-04-28",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/bad-religion",
       "tipo_geografico": "nacional",
       "categoria": "outros",
       "pais": "Brasil"
@@ -235,335 +599,6 @@
   },
   {
     "evento": {
-      "nome": "Autódromo Velocitta",
-      "artista": "Various Artists",
-      "data": "2026-06-05",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/manti-wine-sessions",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 7,
-      "escassez": 8,
-      "publico": 7,
-      "potencial_revenda": 9
-    }
-  },
-  {
-    "evento": {
-      "nome": "Tokio Marine Hall",
-      "artista": "Various Artists",
-      "data": "2026-04-14",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/soul-ii-soul-tokio-marine-hall",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 3.0,
-      "escassez": 3.5,
-      "publico": 3.0,
-      "potencial_revenda": 2.5,
-      "nota_final": 3.125
-    }
-  },
-  {
-    "evento": {
-      "nome": "Casa Natura Musical",
-      "artista": "Various Artists",
-      "data": "2026-04-28",
-      "cidade": "São Paulo",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/lalom-queremos-na-casa-natura-musical-sp",
-      "tipo_geografico": "nacional",
-      "categoria": "show",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "Vibra São Paulo",
-      "artista": "Various Artists",
-      "data": "2026-05-01",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/turne-tres-gracas",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "Autódromo de Interlagos",
-      "artista": "Various Artists",
-      "data": "2026-07-12",
-      "cidade": "São Paulo",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/fiawecsaopaulo",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 7.5,
-      "escassez": 6.0,
-      "publico": 8.0,
-      "potencial_revenda": 7.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "Parque Ibirapuera",
-      "artista": "Various Artists",
-      "data": "2026-08-16",
-      "cidade": "São Paulo",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/sp2b",
-      "tipo_geografico": "nacional",
-      "categoria": "show",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "Qualistage",
-      "artista": "Various Artists",
-      "data": "2026-04-18",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/paulinho-da-viola-no-qualistage-rj",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 5.5,
-      "escassez": 3.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.5,
-      "media_notas": 5.75
-    }
-  },
-  {
-    "evento": {
-      "nome": "Vivo Rio",
-      "artista": "Various Artists",
-      "data": "2026-04-22",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/venda-geral-the-lumineers-the-automatic-world-tour-2026-rio-de-janeiro",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 5.0,
-      "escassez": 3.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.5,
-      "nota_final": 5.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "Farmasi Arena",
-      "artista": "Various Artists",
-      "data": "2026-08-11",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/rosalia",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "Goiânia",
-      "artista": "Various Artists",
-      "data": "2026-04-25",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/pai-e-filho-almir-sater-e-gabriel-sater-goiania",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 3.0,
-      "escassez": 2.5,
-      "publico": 4.0,
-      "potencial_revenda": 3.25,
-      "nota_final": 3.25
-    }
-  },
-  {
-    "evento": {
-      "nome": "Pinhais",
-      "artista": "Various Artists",
-      "data": "2026-04-26",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/somos-rock-festival-curitiba",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "Juiz de Fora",
-      "artista": "Various Artists",
-      "data": "2026-06-26",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/joao-bosco-juiz-de-fora",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 5.5,
-      "escassez": 4.0,
-      "publico": 6.0,
-      "potencial_revenda": 5.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "Cascavel",
-      "artista": "Various Artists",
-      "data": "2026-07-19",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/dvl-rock-festival",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "Teatro Ruth Escobar",
-      "artista": "Various Artists",
-      "data": "2026-04-26",
-      "cidade": "São Paulo",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/aladdin-teatro-ruth-escobar",
-      "tipo_geografico": "nacional",
-      "categoria": "teatro",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 6.0,
-      "escassez": 5.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.0,
-      "nota_final": 0,
-      "justificativa": "Extraido do reasoning"
-    }
-  },
-  {
-    "evento": {
-      "nome": "The Cavern Club",
-      "artista": "Various Artists",
-      "data": "2026-04-16",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/leo-gandelman-the-cavern-club",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 5.0,
-      "escassez": 3.0,
-      "publico": 4.0,
-      "potencial_revenda": 4.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "Bad Religion - São Paulo - 28/04/2026 - Venda Geral",
-      "artista": "Various Artists",
-      "data": "2026-04-28",
-      "cidade": "",
-      "fonte": "ticketmaster",
-      "url": "https://www.ticketmaster.com.br/event/bad-religion",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 8,
-      "escassez": 7,
-      "publico": 8,
-      "potencial_revenda": 7.5,
-      "nota_final": 7.5
-    }
-  },
-  {
-    "evento": {
       "nome": "BTS WORLD TOUR ARIRANG",
       "artista": "Various Artists",
       "data": "2026-10-31",
@@ -576,10 +611,10 @@
     },
     "analise": {
       "hype": 9.5,
-      "escassez": 8.5,
-      "publico": 9.0,
+      "escassez": 8.0,
+      "publico": 10.0,
       "potencial_revenda": 10.0,
-      "nota_final": 9.375
+      "nota_final": 9.2
     }
   },
   {
@@ -595,11 +630,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.5,
-      "escassez": 7.5,
-      "publico": 7.0,
-      "potencial_revenda": 7.0,
-      "nota_final": 6.875
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -615,11 +652,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 8.5,
-      "escassez": 7.0,
-      "publico": 9.0,
-      "potencial_revenda": 8.0,
-      "nota_final": 8.25
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8
     }
   },
   {
@@ -638,7 +674,7 @@
       "hype": 7.5,
       "escassez": 6.0,
       "publico": 7.0,
-      "potencial_revenda": 7.25
+      "potencial_revenda": 8.0
     }
   },
   {
@@ -654,10 +690,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7.5,
-      "escassez": 6.0,
-      "público": 8.0,
-      "potencial_revenda": 7.0
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -673,10 +712,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.5,
-      "escassez": 5.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.2
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -692,10 +734,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5.0,
-      "escassez": 3.0,
-      "publico": 6.0,
-      "potencial_revenda": 5.5
+      "hype": 3.0,
+      "escassez": 4.0,
+      "publico": 4.0,
+      "potencial_revenda": 3.5,
+      "nota_final": 3.62
     }
   },
   {
@@ -711,11 +754,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7.5,
-      "escassez": 6.0,
-      "publico": 7.0,
-      "potencial_revenda": 7.5,
-      "nota_final_media": 7.0
+      "hype": 3,
+      "escassez": 4,
+      "publico": 5,
+      "potencial_revenda": 4,
+      "nota_final": 3.75
     }
   },
   {
@@ -755,9 +798,9 @@
     "analise": {
       "hype": 7.5,
       "escassez": 6.0,
-      "publico": 8.0,
-      "potencial_revenda": 7.0,
-      "nota_final": 7.25
+      "publico": 7.0,
+      "potencial_revenda": 7.25,
+      "nota_final": 7.0
     }
   },
   {
@@ -773,11 +816,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 8.0,
-      "escassez": 7.5,
-      "publico": 9.0,
-      "potencial_revenda": 8.5,
-      "nota_final": 8.25
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -837,13 +882,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 5.0,
+      "escassez": 3.0,
+      "publico": 4.0,
+      "potencial_revenda": 4.0,
+      "nota_final": 3.75
     }
   },
   {
@@ -881,11 +924,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.0,
-      "escassez": 5.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.5,
-      "media_ponderada": 6.125
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -901,10 +946,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 7
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -920,11 +968,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 7.5,
-      "nota_final": 7.25
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -964,8 +1014,9 @@
     "analise": {
       "hype": 7.5,
       "escassez": 6.0,
-      "publico": 7.0,
-      "potencial_revenda": 7.2
+      "publico": 8.0,
+      "potencial_revenda": 7.0,
+      "nota_final": 7.12
     }
   },
   {
@@ -973,65 +1024,6 @@
       "nome": "PACETRONIK",
       "artista": "Various Artists",
       "data": "2026-04-23",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 6.0,
-      "escassez": 4.0,
-      "publico": 5.0,
-      "potencial_revenda": 6.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "MOVING D-EDGE SP p...",
-      "artista": "Various Artists",
-      "data": "2026-04-23",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 5,
-      "escassez": 4,
-      "publico": 6,
-      "potencial_revenda": 7,
-      "media_nota": 11
-    }
-  },
-  {
-    "evento": {
-      "nome": "D-EDGE RIO apresen...",
-      "artista": "Various Artists",
-      "data": "2026-04-24",
-      "cidade": "D-EDGE RIO apresen...",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 7,
-      "nota_final": 7.0
-    }
-  },
-  {
-    "evento": {
-      "nome": "Baile Lotadão 6º e...",
-      "artista": "Various Artists",
-      "data": "2026-04-25",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/",
@@ -1051,6 +1043,67 @@
   },
   {
     "evento": {
+      "nome": "MOVING D-EDGE SP p...",
+      "artista": "Various Artists",
+      "data": "2026-04-23",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "D-EDGE RIO apresen...",
+      "artista": "Various Artists",
+      "data": "2026-04-24",
+      "cidade": "D-EDGE RIO apresen...",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7.5,
+      "escassez": 7.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.2
+    }
+  },
+  {
+    "evento": {
+      "nome": "Baile Lotadão 6º e...",
+      "artista": "Various Artists",
+      "data": "2026-04-25",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.5,
+      "potencial_revenda": 7.0,
+      "nota_final": 7.25
+    }
+  },
+  {
+    "evento": {
       "nome": "Alok: Aurea Teresi...",
       "artista": "Various Artists",
       "data": "2026-04-25",
@@ -1065,7 +1118,8 @@
       "hype": 7.5,
       "escassez": 6.0,
       "publico": 8.0,
-      "potencial_revenda": 7.5
+      "potencial_revenda": 7.5,
+      "nota_final": 7.25
     }
   },
   {
@@ -1081,10 +1135,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.5,
-      "escassez": 5.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.2
+      "hype": 5,
+      "escassez": 3,
+      "publico": 6,
+      "potencial_revenda": 5
     }
   },
   {
@@ -1100,10 +1154,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7.5,
-      "escassez": 6.0,
-      "publico": 7.0,
-      "potencial_revenda": 7.5
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1119,11 +1176,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5.0,
-      "escassez": 3.0,
-      "publico": 4.0,
-      "potencial_revenda": 5.0,
-      "nota_final_media": 4.25
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 7.0,
+      "potencial_revenda": 6.5
     }
   },
   {
@@ -1139,10 +1195,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 8.0,
-      "escassez": 7.0,
-      "publico": 8.0,
-      "potencial_revenda": 7.5
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1158,10 +1217,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6,
-      "escassez": 7,
-      "publico": 6,
-      "potencial_revenda": 5
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1202,9 +1264,8 @@
       "hype": 7.5,
       "escassez": 8.0,
       "publico": 7.0,
-      "potencial_revenda": 8.5,
-      "media_notas": 7.75,
-      "nota_final": "Bom Potencial de Revenda (Nota Média: 7.75)"
+      "potencial_revenda": 7.5,
+      "nota_final": 7.38
     }
   },
   {
@@ -1220,12 +1281,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5.0,
-      "escassez": 3.0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Extraido do reasoning"
+      "hype": 3.5,
+      "escassez": 4.0,
+      "publico": 3.8,
+      "potencial_revenda": 3.6
     }
   },
   {
@@ -1241,12 +1300,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 3,
-      "escassez": 4,
-      "publico": 5,
-      "potencial_revenda": 6,
-      "nota_final": 4.5,
-      "recomendacao": "Baixa a Média. O nome 'M.E.G.A' sem um foco artístico claro e o fato de ser 'Various Artists' diminui o apelo imediato (hype). No entanto, se for um local grande ou uma atração conhecida que anuncie isso, pode gerar demanda decente para revenda, especialmente em datas específicas."
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1262,12 +1322,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5,
-      "escassez": 3,
-      "publico": 5,
-      "potencial_revenda": 5,
-      "nota_final": 4.5,
-      "justificativa": "Eventos em clubes com artistas variados tendem a ter um hype moderado se não houver nomes muito fortes. A ausência de cidade e data distante limita o potencial imediato de revenda (escassez/localização). Potencial médio devido à natureza do local."
+      "hype": 3.5,
+      "escassez": 4.0,
+      "publico": 3.0,
+      "potencial_revenda": 3.25,
+      "nota_final": 3.31
     }
   },
   {
@@ -1283,10 +1342,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.5,
-      "escassez": 5.0,
-      "publico": 6.0,
-      "potencial_revenda": 5.5
+      "hype": 6,
+      "escassez": 5,
+      "publico": 7,
+      "potencial_revenda": 6
     }
   },
   {
@@ -1324,11 +1383,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7.5,
-      "escassez": 6.0,
-      "publico": 8.0,
-      "potencial_revenda": 7.5,
-      "nota_final": 7.25
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1348,7 +1409,7 @@
       "escassez": 6.0,
       "publico": 8.0,
       "potencial_revenda": 7.0,
-      "nota_final": 7.13
+      "nota_final": 7.25
     }
   },
   {
@@ -1364,10 +1425,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7.5,
-      "escassez": 8.0,
-      "publico": 8.5,
-      "potencial_revenda": 9.0
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1383,10 +1447,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7.0,
-      "escassez": 6.5,
-      "publico": 8.0,
-      "potencial_revenda": 7.0
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1402,10 +1469,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7,
-      "escassez": 6,
-      "publico": 8,
-      "potencial_revenda": 7
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1421,11 +1491,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5,
-      "escassez": 3,
-      "publico": 7,
-      "potencial_revenda": 6,
-      "media": 5.25
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1433,84 +1505,6 @@
       "nome": "FLAGRA: VITA'S HOU...",
       "artista": "Various Artists",
       "data": "2026-05-08",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 3,
-      "escassez": 4,
-      "publico": 3,
-      "potencial_revenda": 4,
-      "nota_final": 3.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "Baile do Perna - 2...",
-      "artista": "Various Artists",
-      "data": "2026-05-09",
-      "cidade": "São Paulo",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 6.0,
-      "escassez": 5.5,
-      "publico": 7.0,
-      "potencial_revenda": 6.5,
-      "nota_final": 6.38
-    }
-  },
-  {
-    "evento": {
-      "nome": "Spirit",
-      "artista": "Various Artists",
-      "data": "2026-05-16",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 6.5,
-      "escassez": 5.5,
-      "publico": 6.0,
-      "potencial_revenda": 4.5
-    }
-  },
-  {
-    "evento": {
-      "nome": "Gostoso BsB",
-      "artista": "Various Artists",
-      "data": "2026-05-16",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 6,
-      "escassez": 4,
-      "publico": 7,
-      "potencial_revenda": 6
-    }
-  },
-  {
-    "evento": {
-      "nome": "Village 2026 : FUN...",
-      "artista": "Various Artists",
-      "data": "2026-06-04",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/",
@@ -1530,6 +1524,85 @@
   },
   {
     "evento": {
+      "nome": "Baile do Perna - 2...",
+      "artista": "Various Artists",
+      "data": "2026-05-09",
+      "cidade": "São Paulo",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7.0,
+      "escassez": 6.5,
+      "publico": 7.5,
+      "potencial_revenda": 8.0
+    }
+  },
+  {
+    "evento": {
+      "nome": "Spirit",
+      "artista": "Various Artists",
+      "data": "2026-05-16",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
+    }
+  },
+  {
+    "evento": {
+      "nome": "Gostoso BsB",
+      "artista": "Various Artists",
+      "data": "2026-05-16",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 4.0,
+      "escassez": 3.0,
+      "publico": 3.5,
+      "potencial_revenda": 3.2
+    }
+  },
+  {
+    "evento": {
+      "nome": "Village 2026 : FUN...",
+      "artista": "Various Artists",
+      "data": "2026-06-04",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 6.5,
+      "escassez": 7.0,
+      "publico": 7.5,
+      "potencial_revenda": 8.0
+    }
+  },
+  {
+    "evento": {
       "nome": "Só Track Boa Festi...",
       "artista": "Various Artists",
       "data": "2026-06-05",
@@ -1541,31 +1614,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7.5,
-      "escassez": 6.0,
-      "publico": 7.0,
-      "potencial_revenda": 7.0,
-      "nota_final": 6.75,
-      "justificativa": "Festival com múltiplos artistas ('Various Artists') tende a ter bom apelo geral (Hype/Público). A data em junho de 2026 é distante, o que pode moderar o hype imediato, mas um evento de nicho como 'Track Boa' sugere uma base de público engajada. Sem cidade definida ou nota específica para escassez/potencial de revenda, a média ponderada reflete um bom potencial médio, ideal para vendas antecipadas."
-    }
-  },
-  {
-    "evento": {
-      "nome": "FESTA BLACK PRIDE ...",
-      "artista": "Various Artists",
-      "data": "2026-06-05",
-      "cidade": "São Paulo",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "festival",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 9.0,
-      "escassez": 7.5,
-      "publico": 8.5,
-      "potencial_revenda": 9.0
+      "hype": 5.0,
+      "escassez": 3.0,
+      "publico": 4.0,
+      "potencial_revenda": 6.0,
+      "nota_final": 4.5
     }
   },
   {
@@ -1581,11 +1634,33 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.5,
-      "escassez": 7.0,
-      "publico": 7.5,
-      "potencial_revenda": 8.0,
-      "nota_final": 7.38
+      "hype": 5,
+      "escassez": 3,
+      "publico": 4,
+      "potencial_revenda": 5,
+      "nota_final": 4.25
+    }
+  },
+  {
+    "evento": {
+      "nome": "FESTA BLACK PRIDE ...",
+      "artista": "Various Artists",
+      "data": "2026-06-05",
+      "cidade": "São Paulo",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "festival",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1623,10 +1698,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5.0,
-      "escassez": 4.0,
-      "publico": 6.0,
-      "potencial_revenda": 5.0
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1664,10 +1742,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5.0,
-      "escassez": 4.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.0
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1683,11 +1764,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.5,
-      "escassez": 5.0,
-      "publico": 7.0,
-      "potencial_revenda": 6.8,
-      "nota_final": 6.33
+      "hype": 5.5,
+      "escassez": 3.0,
+      "publico": 6.0,
+      "potencial_revenda": 5.8,
+      "nota_final": 5.13
     }
   },
   {
@@ -1703,11 +1784,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5.0,
-      "escassez": 4.0,
-      "publico": 6.0,
-      "potencial_revenda": 5.5,
-      "nota_final": 5.13
+      "hype": 5,
+      "escassez": 3,
+      "publico": 7,
+      "potencial_revenda": 6
     }
   },
   {
@@ -1723,10 +1803,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.0,
-      "escassez": 5.0,
-      "publico": 6.0,
-      "potencial_revenda": 7.0
+      "hype": 6.5,
+      "escassez": 7.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "nota_final": 7.25
     }
   },
   {
@@ -1742,11 +1823,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 6.0,
-      "escassez": 3.5,
-      "publico": 7.0,
-      "potencial_revenda": 7.5,
-      "nota_media": 5.75
+      "hype": 3.0,
+      "escassez": 2.0,
+      "publico": 4.0,
+      "potencial_revenda": 3.0,
+      "nota_final": 3.0
     }
   },
   {
@@ -1754,6 +1835,25 @@
       "nome": "Roda do Partido 20...",
       "artista": "Various Artists",
       "data": "2026-04-25",
+      "cidade": "",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 4,
+      "escassez": 3,
+      "publico": 6,
+      "potencial_revenda": 5
+    }
+  },
+  {
+    "evento": {
+      "nome": "Gerações - Curitib...",
+      "artista": "Various Artists",
+      "data": "2026-05-03",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/",
@@ -1773,26 +1873,6 @@
   },
   {
     "evento": {
-      "nome": "Gerações - Curitib...",
-      "artista": "Various Artists",
-      "data": "2026-05-03",
-      "cidade": "",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 7.0,
-      "escassez": 6.5,
-      "publico": 7.5,
-      "potencial_revenda": 7.0,
-      "nota_final": 7.0
-    }
-  },
-  {
-    "evento": {
       "nome": "Festival Repique |...",
       "artista": "Various Artists",
       "data": "2026-05-09",
@@ -1804,12 +1884,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 5.0,
-      "escassez": 3.0,
-      "publico": 4.0,
-      "potencial_revenda": 3.5,
-      "nota_final": 3.75,
-      "observacoes": "A ausência de cidade e a natureza 'Various Artists' tornam a avaliação genérica. Festivais costumam ter bom potencial de revenda se forem grandes eventos conhecidos. Requer mais dados para uma análise precisa."
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1847,13 +1928,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "media_ponderada": 7.38
     }
   },
   {
@@ -1869,12 +1948,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 7.0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Extraido do reasoning"
+      "hype": 6.5,
+      "escassez": 5.0,
+      "publico": 7.0,
+      "potencial_revenda": 7.5
     }
   },
   {
@@ -1934,10 +2011,13 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 4.0,
-      "escassez": 3.5,
-      "publico": 3.0,
-      "potencial_revenda": 3.2
+      "hype": 0,
+      "escassez": 0,
+      "publico": 0,
+      "potencial_revenda": 0,
+      "nota_final": 0,
+      "justificativa": "Analise indisponivel",
+      "analise_indisponivel": true
     }
   },
   {
@@ -1950,6 +2030,26 @@
       "url": "https://www.ingresse.com/",
       "tipo_geografico": "nacional",
       "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 8,
+      "escassez": 7,
+      "publico": 9,
+      "potencial_revenda": 8.5,
+      "nota_final": 8.38
+    }
+  },
+  {
+    "evento": {
+      "nome": "GÁVEA SAMBA CLUBE",
+      "artista": "Various Artists",
+      "data": "2026-04-24",
+      "cidade": "Villa, Planetário ...",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "show",
       "pais": "Brasil"
     },
     "analise": {
@@ -1975,13 +2075,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 5,
+      "escassez": 3,
+      "publico": 6,
+      "potencial_revenda": 5
     }
   },
   {
@@ -1997,35 +2094,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "CURADORIA",
-      "artista": "Various Artists",
-      "data": "2026-04-25",
-      "cidade": "Villa, Planetário ...",
-      "fonte": "ingresse",
-      "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 6.0,
+      "escassez": 5.0,
+      "publico": 7.0,
+      "potencial_revenda": 7.5,
+      "nota_final": 6.5
     }
   },
   {
@@ -2052,14 +2125,14 @@
   },
   {
     "evento": {
-      "nome": "#ESTUDEOFUNK SESSI...",
+      "nome": "ARQ Uberlandia",
       "artista": "Various Artists",
-      "data": "2026-04-17",
+      "data": "2026-04-16",
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/",
       "tipo_geografico": "nacional",
-      "categoria": "show",
+      "categoria": "outros",
       "pais": "Brasil"
     },
     "analise": {
@@ -2096,10 +2169,10 @@
   },
   {
     "evento": {
-      "nome": "GÁVEA SAMBA CLUBE",
+      "nome": "#ESTUDEOFUNK SESSI...",
       "artista": "Various Artists",
       "data": "2026-04-17",
-      "cidade": "Villa, Planetário ...",
+      "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/",
       "tipo_geografico": "nacional",
@@ -2107,13 +2180,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 5,
+      "escassez": 3,
+      "publico": 6,
+      "potencial_revenda": 6
     }
   },
   {
@@ -2140,6 +2210,25 @@
   },
   {
     "evento": {
+      "nome": "CURADORIA",
+      "artista": "Various Artists",
+      "data": "2026-04-18",
+      "cidade": "Villa, Planetário ...",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7,
+      "escassez": 5,
+      "publico": 7,
+      "potencial_revenda": 6
+    }
+  },
+  {
+    "evento": {
       "nome": "Villa, Planetário ...",
       "artista": "Various Artists",
       "data": "2026-04-20",
@@ -2151,13 +2240,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 6.5,
+      "escassez": 5.0,
+      "publico": 7.0,
+      "potencial_revenda": 6.8,
+      "nota_final": 6.33
     }
   },
   {
@@ -2212,28 +2299,6 @@
       "cidade": "",
       "fonte": "ingresse",
       "url": "https://www.ingresse.com/",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
-      "nome": "SPIN DOCTORS + SMASH MOUTH",
-      "artista": "Various Artists",
-      "data": "2026-04-30",
-      "cidade": "Belo Horizonte",
-      "fonte": "sympla",
-      "url": "https://bileto.sympla.com.br/event/115855",
       "tipo_geografico": "nacional",
       "categoria": "outros",
       "pais": "Brasil"
@@ -2305,13 +2370,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 7.0,
+      "potencial_revenda": 7.5,
+      "media_notas": 7.0
     }
   },
   {
@@ -2327,13 +2390,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 8.5,
+      "escassez": 7.0,
+      "publico": 8.0,
+      "potencial_revenda": 8.5
     }
   },
   {
@@ -2371,13 +2431,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7,
+      "escassez": 6,
+      "publico": 7,
+      "potencial_revenda": 6
     }
   },
   {
@@ -2393,13 +2450,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "media": 7.25
     }
   },
   {
@@ -2437,13 +2492,31 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.0,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "nota_final_media": 7.12
+    }
+  },
+  {
+    "evento": {
+      "nome": "CONCHA PARA TODOS – FLÁVIO VENTURINI",
+      "artista": "Various Artists",
+      "data": "2026-05-10",
+      "cidade": "Belo Horizonte",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/114846",
+      "tipo_geografico": "nacional",
+      "categoria": "outros",
+      "pais": "Brasil"
+    },
+    "analise": {
+      "hype": 7.0,
+      "escassez": 6.0,
+      "publico": 7.5,
+      "potencial_revenda": 8.0,
+      "nota_final": 7.13
     }
   },
   {
@@ -2459,13 +2532,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 7.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5
     }
   },
   {
@@ -2503,13 +2573,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 7.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5
     }
   },
   {
@@ -2525,13 +2592,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5
     }
   },
   {
@@ -2569,13 +2633,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 7.5
     }
   },
   {
@@ -2613,13 +2674,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 7
     }
   },
   {
@@ -2679,13 +2737,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "nota_final": 7.25
     }
   },
   {
@@ -2701,13 +2757,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7,
+      "escassez": 5,
+      "publico": 7,
+      "potencial_revenda": 6
     }
   },
   {
@@ -2767,13 +2820,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 7.0,
+      "potencial_revenda": 7.25,
+      "nota_final": 7.19
     }
   },
   {
@@ -2811,13 +2862,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.0
     }
   },
   {
@@ -2899,13 +2947,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "nota_final": 7.25
     }
   },
   {
@@ -2921,13 +2967,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7,
+      "escassez": 6,
+      "publico": 8,
+      "potencial_revenda": 7.5,
+      "nota_final": 7.125
     }
   },
   {
@@ -2943,13 +2987,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 7.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "media_ponderada": 7.43
     }
   },
   {
@@ -2987,13 +3029,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 5.0,
+      "escassez": 6.0,
+      "publico": 7.0,
+      "potencial_revenda": 6.5
     }
   },
   {
@@ -3031,13 +3070,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.0,
+      "escassez": 6.5,
+      "publico": 7.5,
+      "potencial_revenda": 7.0,
+      "nota_media": 7.0
     }
   },
   {
@@ -3053,13 +3090,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 6.5,
+      "escassez": 5.0,
+      "publico": 7.0,
+      "potencial_revenda": 6.0
     }
   },
   {
@@ -3075,13 +3109,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 8.5,
+      "escassez": 7.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "nota_final": 7.75
     }
   },
   {
@@ -3097,13 +3129,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 6.5,
+      "escassez": 5.0,
+      "publico": 7.0,
+      "potencial_revenda": 6.8,
+      "nota_final": 6.33
     }
   },
   {
@@ -3141,13 +3171,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 7.0,
+      "potencial_revenda": 7.5
     }
   },
   {
@@ -3163,13 +3190,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 6,
+      "escassez": 5,
+      "publico": 7,
+      "potencial_revenda": 6.5
     }
   },
   {
@@ -3185,13 +3209,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "nota_final": 7.25
     }
   },
   {
@@ -3262,14 +3284,14 @@
   },
   {
     "evento": {
-      "nome": "BAILE DO PRESIDENTE",
+      "nome": "FORRÓ DE BOTECO COM WASHINGTON BRASILEIRO E SORÓ SILVA",
       "artista": "Various Artists",
-      "data": "2026-06-05",
-      "cidade": "Campos do Jordão - SP",
+      "data": "2026-06-03",
+      "cidade": "São Bernardo do Campo - SP",
       "fonte": "bilheteriadigital",
-      "url": "https://www.bilheteriadigital.com/baile-do-presidente-2026",
+      "url": "https://www.bilheteriadigital.com/forro-de-boteco-com-washington-brasileiro-e-soro-silva-03-de-junho",
       "tipo_geografico": "nacional",
-      "categoria": "outros",
+      "categoria": "show",
       "pais": "Brasil"
     },
     "analise": {
@@ -3295,13 +3317,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 5,
+      "escassez": 4,
+      "publico": 7,
+      "potencial_revenda": 6,
+      "nota_final": 5.5
     }
   },
   {
@@ -3317,13 +3337,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 6.0,
+      "publico": 7.0,
+      "potencial_revenda": 7.0,
+      "nota_final": 7.0
     }
   },
   {
@@ -3339,13 +3357,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 5,
+      "escassez": 3,
+      "publico": 5,
+      "potencial_revenda": 4
     }
   },
   {
@@ -3361,13 +3376,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 4.0,
+      "escassez": 5.0,
+      "publico": 6.0,
+      "potencial_revenda": 6.0,
+      "nota_final": 5.25
     }
   },
   {
@@ -3427,13 +3440,12 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 4.5,
+      "escassez": 3.0,
+      "publico": 6.0,
+      "potencial_revenda": 5.5,
+      "nota_final": 4.75,
+      "justificativa": "Seminários técnicos geralmente atraem um nicho de público específico (profissionais da área), o que garante demanda constante, mas limita o hype geral comparado a shows com grandes nomes. O potencial de revenda é bom para quem atende ao nicho, mas o público amplo pode ser menor."
     }
   },
   {
@@ -3460,28 +3472,6 @@
   },
   {
     "evento": {
-      "nome": "24/04/26 a 25/04/26",
-      "artista": "Various Artists",
-      "data": "2026-04-24",
-      "cidade": "",
-      "fonte": "uhuu",
-      "url": "https://uhuu.com/evento/sc/sao-jose/air-supply-celebrando-50-anos-de-carreira-15825",
-      "tipo_geografico": "nacional",
-      "categoria": "outros",
-      "pais": "Brasil"
-    },
-    "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
-    }
-  },
-  {
-    "evento": {
       "nome": "SEX",
       "artista": "Various Artists",
       "data": "2026-04-17",
@@ -3493,13 +3483,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 7.5,
+      "escassez": 7.0,
+      "publico": 8.0,
+      "potencial_revenda": 7.5,
+      "nota_final_media": 7.4
     }
   },
   {
@@ -3515,13 +3503,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 3,
+      "escassez": 2,
+      "publico": 4,
+      "potencial_revenda": 3
     }
   },
   {
@@ -3537,13 +3522,10 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 6,
+      "escassez": 5,
+      "publico": 7,
+      "potencial_revenda": 6
     }
   },
   {
@@ -3559,13 +3541,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 4,
+      "escassez": 5,
+      "publico": 5,
+      "potencial_revenda": 4.5,
+      "nota_final": 4.625
     }
   },
   {
@@ -3581,13 +3561,11 @@
       "pais": "Brasil"
     },
     "analise": {
-      "hype": 0,
-      "escassez": 0,
-      "publico": 0,
-      "potencial_revenda": 0,
-      "nota_final": 0,
-      "justificativa": "Analise indisponivel",
-      "analise_indisponivel": true
+      "hype": 5,
+      "escassez": 3,
+      "publico": 6,
+      "potencial_revenda": 5,
+      "nota_final": 4.75
     }
   }
 ]

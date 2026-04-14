@@ -1,6 +1,5 @@
 [
   {
-<<<<<<< HEAD
     "nome": "ENHYPEN WORLD TOUR 'BLOOD SAGA'",
     "artista": "Various Artists",
     "data": "2026-07-04",
@@ -49,40 +48,6 @@
     "url": "https://www.ticketmaster.com.br/event/suhai-festival-de-interlagos-2026"
   },
   {
-=======
-    "nome": "Kid Abelha: Eu Tive Um Sonho",
-    "artista": "Various Artists",
-    "data": "2026-10-01",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/kid-abelha"
-  },
-  {
-    "nome": "Somos Rock Festival - SP - 25/04/2026",
-    "artista": "Various Artists",
-    "data": "2026-04-25",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/somos-rock-festival"
-  },
-  {
-    "nome": "Martinho da Vila & Mart´Nália | Pai e Filha - Rio de Janeiro - 30/05/2026",
-    "artista": "Various Artists",
-    "data": "2026-05-30",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/martinho-da-vila-martnalia-pai-e-filha-rio-de-janeiro"
-  },
-  {
-    "nome": "Suhai Festival Interlagos 2026",
-    "artista": "Various Artists",
-    "data": "2026-08-01",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/suhai-festival-de-interlagos-2026"
-  },
-  {
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "nome": "João Rock 2026",
     "artista": "Various Artists",
     "data": "2026-08-01",
@@ -123,25 +88,6 @@
     "url": "https://www.ticketmaster.com.br/event/jonas-brothers"
   },
   {
-<<<<<<< HEAD
-=======
-    "nome": "Harry Styles: Together, Together",
-    "artista": "Various Artists",
-    "data": "2026-07-01",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/harry-styles"
-  },
-  {
-    "nome": "ZAYN: The Konnakol Tour",
-    "artista": "Various Artists",
-    "data": "2026-10-01",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/zayn"
-  },
-  {
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "nome": "Autódromo Velocitta",
     "artista": "Various Artists",
     "data": "2026-06-05",
@@ -279,7 +225,6 @@
   },
   {
     "nome": "Bad Religion - São Paulo - 28/04/2026 - Venda Geral",
-<<<<<<< HEAD
     "artista": "Various Artists",
     "data": "2026-04-28",
     "cidade": "",
@@ -296,109 +241,11 @@
   },
   {
     "nome": "ZAYN: The Konnakol Tour",
-=======
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "artista": "Various Artists",
-    "data": "2026-04-28",
+    "data": "2026-10-01",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/bad-religion"
-  },
-  {
-    "nome": "BTS WORLD TOUR ARIRANG",
-    "artista": "Various Artists",
-    "data": "2026-10-31",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/bts-world-tour-arirang"
-  },
-  {
-    "nome": "Camarote Fanzone - Liniker - Bye Bye - Caju",
-    "artista": "Various Artists",
-    "data": "2026-07-11",
-    "cidade": "Churrasquinho Menos é Mais - Fortaleza",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Brasil Game Show 2026",
-    "artista": "Various Artists",
-    "data": "2026-10-09",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Camarote Fanzone - Robbie Williams",
-    "artista": "Various Artists",
-    "data": "2026-03-01",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Robbie Williams - BRITPOP Tour",
-    "artista": "Various Artists",
-    "data": "2026-10-13",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Bienal de Arquitetura Brasileira (BAB)",
-    "artista": "Various Artists",
-    "data": "2026-04-14",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Exxquece Festival",
-    "artista": "Various Artists",
-    "data": "2026-04-20",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Bonjour Party",
-    "artista": "Various Artists",
-    "data": "2026-04-25",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "BOMA PRESENTS: MACEO PLEX & MOCHAKK",
-    "artista": "Various Artists",
-    "data": "2026-05-01",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Warung Day Festival 2026",
-    "artista": "Various Artists",
-    "data": "2026-05-02",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Churrasquinho Menos é Mais - Fortaleza",
-    "artista": "Various Artists",
-    "data": "2026-05-02",
-    "cidade": "Churrasquinho Menos é Mais - Fortaleza",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "JOY WAKA WAKA | SUPERSTAR - RIO 2026",
-    "artista": "Various Artists",
-    "data": "2026-05-02",
-    "cidade": "JOY WAKA WAKA | SUPERSTAR - RIO 2026",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
+    "url": "https://www.ticketmaster.com.br/event/zayn"
   },
   {
     "nome": "BTS WORLD TOUR ARIRANG",
@@ -809,7 +656,6 @@
     "url": "https://www.ingresse.com/"
   },
   {
-<<<<<<< HEAD
     "nome": "Village 2026 : Noi...",
     "artista": "Various Artists",
     "data": "2026-06-05",
@@ -818,8 +664,6 @@
     "url": "https://www.ingresse.com/"
   },
   {
-=======
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "nome": "FESTA BLACK PRIDE ...",
     "artista": "Various Artists",
     "data": "2026-06-05",
@@ -828,21 +672,8 @@
     "url": "https://www.ingresse.com/"
   },
   {
-<<<<<<< HEAD
     "nome": "Village 2026 : Lui...",
     "artista": "Various Artists",
-=======
-    "nome": "Village 2026 : Noi...",
-    "artista": "Various Artists",
-    "data": "2026-06-05",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Village 2026 : Lui...",
-    "artista": "Various Artists",
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "data": "2026-06-12",
     "cidade": "",
     "fonte": "ingresse",
@@ -985,7 +816,6 @@
     "url": "https://www.ingresse.com/"
   },
   {
-<<<<<<< HEAD
     "nome": "GÁVEA SAMBA CLUBE",
     "artista": "Various Artists",
     "data": "2026-04-24",
@@ -994,8 +824,6 @@
     "url": "https://www.ingresse.com/"
   },
   {
-=======
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "nome": "GOODTIMES",
     "artista": "Various Artists",
     "data": "2026-04-25",
@@ -1012,7 +840,6 @@
     "url": "https://www.ingresse.com/"
   },
   {
-<<<<<<< HEAD
     "nome": "Semana Movida 14 A...",
     "artista": "Various Artists",
     "data": "2026-04-14",
@@ -1032,19 +859,6 @@
     "nome": "OFF no Privilège J...",
     "artista": "Various Artists",
     "data": "2026-04-17",
-=======
-    "nome": "CURADORIA",
-    "artista": "Various Artists",
-    "data": "2026-04-25",
-    "cidade": "Villa, Planetário ...",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
-    "nome": "Semana Movida 14 A...",
-    "artista": "Various Artists",
-    "data": "2026-04-14",
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
@@ -1058,11 +872,7 @@
     "url": "https://www.ingresse.com/"
   },
   {
-<<<<<<< HEAD
     "nome": "ARQ Ribeirão Preto",
-=======
-    "nome": "OFF no Privilège J...",
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "artista": "Various Artists",
     "data": "2026-04-17",
     "cidade": "",
@@ -1070,31 +880,14 @@
     "url": "https://www.ingresse.com/"
   },
   {
-<<<<<<< HEAD
     "nome": "CURADORIA",
     "artista": "Various Artists",
     "data": "2026-04-18",
-=======
-    "nome": "GÁVEA SAMBA CLUBE",
-    "artista": "Various Artists",
-    "data": "2026-04-17",
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "cidade": "Villa, Planetário ...",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
   },
   {
-<<<<<<< HEAD
-=======
-    "nome": "ARQ Ribeirão Preto",
-    "artista": "Various Artists",
-    "data": "2026-04-17",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/"
-  },
-  {
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "nome": "Villa, Planetário ...",
     "artista": "Various Artists",
     "data": "2026-04-20",
@@ -1127,17 +920,6 @@
     "url": "https://www.ingresse.com/"
   },
   {
-<<<<<<< HEAD
-=======
-    "nome": "SPIN DOCTORS + SMASH MOUTH",
-    "artista": "Various Artists",
-    "data": "2026-04-30",
-    "cidade": "Belo Horizonte",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/115855"
-  },
-  {
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "nome": "Curso de Violão",
     "artista": "Various Artists",
     "data": "2026-04-22",
@@ -1242,7 +1024,6 @@
     "url": "https://bileto.sympla.com.br/event/116908"
   },
   {
-<<<<<<< HEAD
     "nome": "Com carinho, Rodrigo Penna A festa",
     "artista": "Various Artists",
     "data": "2026-01-08",
@@ -1259,8 +1040,6 @@
     "url": "https://bileto.sympla.com.br/event/114846"
   },
   {
-=======
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "nome": "É Claro Que É Rock 2026 Passo Fundo",
     "artista": "Various Artists",
     "data": "2026-04-20",
@@ -1589,21 +1368,12 @@
     "url": "https://www.bilheteriadigital.com/deixa-rolar-oficina-fabinho-ao-vivo-30-de-maio"
   },
   {
-<<<<<<< HEAD
     "nome": "FORRÓ DE BOTECO COM WASHINGTON BRASILEIRO E SORÓ SILVA",
     "artista": "Various Artists",
     "data": "2026-06-03",
     "cidade": "São Bernardo do Campo - SP",
     "fonte": "bilheteriadigital",
     "url": "https://www.bilheteriadigital.com/forro-de-boteco-com-washington-brasileiro-e-soro-silva-03-de-junho"
-=======
-    "nome": "BAILE DO PRESIDENTE",
-    "artista": "Various Artists",
-    "data": "2026-06-05",
-    "cidade": "Campos do Jordão - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/baile-do-presidente-2026"
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
   },
   {
     "nome": "GERIATRICUS EM PRESIDENTE PRUDENTE",
@@ -1710,17 +1480,10 @@
     "url": "https://sales.ticketsforfun.com.br/#/event/minha-vida-em-marte-sp-2026"
   },
   {
-<<<<<<< HEAD
-    "nome": "18/11/26 a 21/11/26",
+    "nome": "08/04/26 a 14/06/26",
     "artista": "Various Artists",
-    "data": "2026-11-18",
-    "cidade": "Zz Top",
-=======
-    "nome": "24/04/26 a 25/04/26",
-    "artista": "Various Artists",
-    "data": "2026-04-24",
+    "data": "2026-04-08",
     "cidade": "",
->>>>>>> c53fe3e45aca19b1b325ba2a48ba9055400864fe
     "fonte": "uhuu",
     "url": "https://uhuu.com/evento/sc/sao-jose/air-supply-celebrando-50-anos-de-carreira-15825"
   },

@@ -1,4 +1,6 @@
 import requests
+from utils.logger import logger
+from utils.http_client import get_session
 
 API_URL = "https://api-site.ingresse.com/custom-categories/list/events"
 
@@ -17,14 +19,15 @@ TIMEOUT = 10
 def get_ingresse_events() -> list[dict]:
     """Busca eventos da API Ingresse e retorna no formato padronizado."""
     try:
-        response = requests.get(
-            API_URL,
-            params=PARAMS,
-            headers=HEADERS,
-            timeout=TIMEOUT
-        )
+        session = get_session()
+        response = session.get(API_URL, service_name="ingresse", params=PARAMS, headers=HEADERS)
+
+        if response is None:
+            logger.warning("Ingresse API indisponivel, tentando via requests padrao")
+            response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=TIMEOUT)
 
         if response.status_code != 200:
+            logger.error(f"Ingresse API retornou status {response.status_code}")
             print(f"   [ERRO] Ingresse API: status {response.status_code}")
             return []
 
