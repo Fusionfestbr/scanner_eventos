@@ -1,35 +1,35 @@
 [
   {
-    "nome": "BTS WORLD TOUR ARIRANG",
+    "nome": "Kid Abelha: Eu Tive Um Sonho",
     "artista": "Various Artists",
-    "data": "2026-10-31",
+    "data": "2026-10-01",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/bts-world-tour-arirang",
+    "url": "https://www.ticketmaster.com.br/event/kid-abelha",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Somos Rock Festival - SP - 25/04/2026",
+    "artista": "Various Artists",
+    "data": "2026-04-25",
+    "cidade": "",
+    "fonte": "ticketmaster",
+    "url": "https://www.ticketmaster.com.br/event/somos-rock-festival",
     "tipo_geografico": "nacional",
     "categoria": "show",
     "pais": "Brasil"
   },
   {
-    "nome": "NBA House 2026",
+    "nome": "Martinho da Vila & Mart´Nália | Pai e Filha - Rio de Janeiro - 30/05/2026",
     "artista": "Various Artists",
-    "data": "2026-06-21",
+    "data": "2026-05-30",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/nbahouse",
+    "url": "https://www.ticketmaster.com.br/event/martinho-da-vila-martnalia-pai-e-filha-rio-de-janeiro",
     "tipo_geografico": "nacional",
-    "categoria": "show",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Rock in Rio 2026",
-    "artista": "Various Artists",
-    "data": "2026-09-13",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/rockinrio",
-    "tipo_geografico": "nacional",
-    "categoria": "show",
+    "categoria": "outros",
     "pais": "Brasil"
   },
   {
@@ -41,28 +41,6 @@
     "url": "https://www.ticketmaster.com.br/event/suhai-festival-de-interlagos-2026",
     "tipo_geografico": "nacional",
     "categoria": "festival",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Lollapalooza Brasil 2027",
-    "artista": "Various Artists",
-    "data": "2027-03-21",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/lollapaloozabr",
-    "tipo_geografico": "nacional",
-    "categoria": "festival",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Henry & Klauss: Masters of Magic World Tour 2026",
-    "artista": "Various Artists",
-    "data": "2026-06-28",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/henry-e-klauss",
-    "tipo_geografico": "nacional",
-    "categoria": "show",
     "pais": "Brasil"
   },
   {
@@ -83,6 +61,17 @@
     "cidade": "",
     "fonte": "ticketmaster",
     "url": "https://www.ticketmaster.com.br/event/ca7riel-e-paco-amoroso",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Rock in Rio 2026",
+    "artista": "Various Artists",
+    "data": "2026-09-13",
+    "cidade": "",
+    "fonte": "ticketmaster",
+    "url": "https://www.ticketmaster.com.br/event/rockinrio",
     "tipo_geografico": "nacional",
     "categoria": "show",
     "pais": "Brasil"
@@ -110,17 +99,6 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Bad Religion - São Paulo - 28/04/2026 - Venda Geral",
-    "artista": "Various Artists",
-    "data": "2026-04-28",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/bad-religion",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
     "nome": "Harry Styles: Together, Together",
     "artista": "Various Artists",
     "data": "2026-07-01",
@@ -132,34 +110,23 @@
     "pais": "Brasil"
   },
   {
+    "nome": "ZAYN: The Konnakol Tour",
+    "artista": "Various Artists",
+    "data": "2026-10-01",
+    "cidade": "",
+    "fonte": "ticketmaster",
+    "url": "https://www.ticketmaster.com.br/event/zayn",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
     "nome": "Autódromo Velocitta",
     "artista": "Various Artists",
     "data": "2026-06-05",
     "cidade": "",
     "fonte": "ticketmaster",
     "url": "https://www.ticketmaster.com.br/event/manti-wine-sessions",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "The Cavern Club",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/ritchie-the-cavern-club",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Suhai Music Hall",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/thiaguinho-suhai-music-hall",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -176,14 +143,14 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Arena Anhembi",
+    "nome": "Casa Natura Musical",
     "artista": "Various Artists",
-    "data": "2026-04-25",
-    "cidade": "",
+    "data": "2026-04-28",
+    "cidade": "São Paulo",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/somos-rock-festival",
+    "url": "https://www.ticketmaster.com.br/event/lalom-queremos-na-casa-natura-musical-sp",
     "tipo_geografico": "nacional",
-    "categoria": "outros",
+    "categoria": "show",
     "pais": "Brasil"
   },
   {
@@ -201,7 +168,7 @@
     "nome": "Autódromo de Interlagos",
     "artista": "Various Artists",
     "data": "2026-07-12",
-    "cidade": "",
+    "cidade": "São Paulo",
     "fonte": "ticketmaster",
     "url": "https://www.ticketmaster.com.br/event/fiawecsaopaulo",
     "tipo_geografico": "nacional",
@@ -209,23 +176,34 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Vivo Rio",
+    "nome": "Parque Ibirapuera",
     "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
+    "data": "2026-08-16",
+    "cidade": "São Paulo",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/queremos-festival-11-de-abril",
+    "url": "https://www.ticketmaster.com.br/event/sp2b",
     "tipo_geografico": "nacional",
-    "categoria": "outros",
+    "categoria": "show",
     "pais": "Brasil"
   },
   {
     "nome": "Qualistage",
     "artista": "Various Artists",
-    "data": "2026-04-11",
+    "data": "2026-04-18",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/ivan-lins-no-qualistage-rj",
+    "url": "https://www.ticketmaster.com.br/event/paulinho-da-viola-no-qualistage-rj",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Vivo Rio",
+    "artista": "Various Artists",
+    "data": "2026-04-22",
+    "cidade": "",
+    "fonte": "ticketmaster",
+    "url": "https://www.ticketmaster.com.br/event/venda-geral-the-lumineers-the-automatic-world-tour-2026-rio-de-janeiro",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -242,34 +220,45 @@
     "pais": "Brasil"
   },
   {
-    "nome": "João Pessoa",
+    "nome": "Goiânia",
     "artista": "Various Artists",
-    "data": "2026-04-10",
+    "data": "2026-04-25",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/guilherme-arantes-joao-pessoa",
+    "url": "https://www.ticketmaster.com.br/event/pai-e-filho-almir-sater-e-gabriel-sater-goiania",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
   },
   {
-    "nome": "Curitiba",
+    "nome": "Pinhais",
     "artista": "Various Artists",
-    "data": "2026-04-24",
+    "data": "2026-04-26",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/venda-geral-the-lumineers-the-automatic-world-tour-2026-curitiba",
+    "url": "https://www.ticketmaster.com.br/event/somos-rock-festival-curitiba",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
   },
   {
-    "nome": "Londrina",
+    "nome": "Juiz de Fora",
     "artista": "Various Artists",
-    "data": "2026-05-02",
+    "data": "2026-06-26",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/roupa-nova-londrina-pr",
+    "url": "https://www.ticketmaster.com.br/event/joao-bosco-juiz-de-fora",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Cascavel",
+    "artista": "Various Artists",
+    "data": "2026-07-19",
+    "cidade": "",
+    "fonte": "ticketmaster",
+    "url": "https://www.ticketmaster.com.br/event/dvl-rock-festival",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -278,7 +267,7 @@
     "nome": "Teatro Ruth Escobar",
     "artista": "Various Artists",
     "data": "2026-04-26",
-    "cidade": "",
+    "cidade": "São Paulo",
     "fonte": "ticketmaster",
     "url": "https://www.ticketmaster.com.br/event/aladdin-teatro-ruth-escobar",
     "tipo_geografico": "nacional",
@@ -286,25 +275,146 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Audio",
+    "nome": "The Cavern Club",
     "artista": "Various Artists",
-    "data": "2026-04-08",
+    "data": "2026-04-16",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/greentea-peng-na-audio-sp",
+    "url": "https://www.ticketmaster.com.br/event/leo-gandelman-the-cavern-club",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
   },
   {
-    "nome": "ZAYN: The Konnakol Tour",
+    "nome": "Bad Religion - São Paulo - 28/04/2026 - Venda Geral",
     "artista": "Various Artists",
-    "data": "2026-10-01",
+    "data": "2026-04-28",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/zayn",
+    "url": "https://www.ticketmaster.com.br/event/bad-religion",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "BTS WORLD TOUR ARIRANG",
+    "artista": "Various Artists",
+    "data": "2026-10-31",
+    "cidade": "",
+    "fonte": "ticketmaster",
+    "url": "https://www.ticketmaster.com.br/event/bts-world-tour-arirang",
     "tipo_geografico": "nacional",
     "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Camarote Fanzone - Liniker - Bye Bye - Caju",
+    "artista": "Various Artists",
+    "data": "2026-07-11",
+    "cidade": "Churrasquinho Menos é Mais - Fortaleza",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Brasil Game Show 2026",
+    "artista": "Various Artists",
+    "data": "2026-10-09",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Robbie Williams - BRITPOP Tour",
+    "artista": "Various Artists",
+    "data": "2026-10-13",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Bienal de Arquitetura Brasileira (BAB)",
+    "artista": "Various Artists",
+    "data": "2026-04-14",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Exxquece Festival",
+    "artista": "Various Artists",
+    "data": "2026-04-20",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "festival",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Bonjour Party",
+    "artista": "Various Artists",
+    "data": "2026-04-25",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "BOMA PRESENTS: MACEO PLEX & MOCHAKK",
+    "artista": "Various Artists",
+    "data": "2026-05-01",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Warung Day Festival 2026",
+    "artista": "Various Artists",
+    "data": "2026-05-02",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "festival",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Churrasquinho Menos é Mais - Fortaleza",
+    "artista": "Various Artists",
+    "data": "2026-05-02",
+    "cidade": "Churrasquinho Menos é Mais - Fortaleza",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "JOY WAKA WAKA | SUPERSTAR - RIO 2026",
+    "artista": "Various Artists",
+    "data": "2026-05-02",
+    "cidade": "JOY WAKA WAKA | SUPERSTAR - RIO 2026",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
     "pais": "Brasil"
   },
   {
@@ -316,6 +426,39 @@
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
     "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "30/05 PAQUERA - EDIÇÃO 1 ANO",
+    "artista": "Various Artists",
+    "data": "2026-05-30",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Sounds of Quartzo",
+    "artista": "Various Artists",
+    "data": "2026-06-04",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "GUAPO PRIDE FESTIVAL 2026 - SP (GUAPO + APOGEU + WE SUNDIA)",
+    "artista": "Various Artists",
+    "data": "2026-06-06",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "festival",
     "pais": "Brasil"
   },
   {
@@ -341,43 +484,10 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Camarote Fanzone - Liniker - Bye Bye - Caju",
+    "nome": "GINGA BH - FULL OPEN BAR",
     "artista": "Various Artists",
-    "data": "2026-07-11",
+    "data": "2026-06-13",
     "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Churrasquinho Menos é Mais - Ribeirão Preto",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Bonjour Party",
-    "artista": "Various Artists",
-    "data": "2026-04-25",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Churrasquinho Menos é Mais - Fortaleza",
-    "artista": "Various Artists",
-    "data": "2026-05-02",
-    "cidade": "Churrasquinho Menos é Mais - Fortaleza",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
@@ -407,9 +517,9 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Baile Lotadão 6º e...",
+    "nome": "PACETRONIK",
     "artista": "Various Artists",
-    "data": "2026-04-25",
+    "data": "2026-04-23",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
@@ -418,7 +528,29 @@
     "pais": "Brasil"
   },
   {
-    "nome": "[CLIENTES BB] Alok...",
+    "nome": "MOVING D-EDGE SP p...",
+    "artista": "Various Artists",
+    "data": "2026-04-23",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "D-EDGE RIO apresen...",
+    "artista": "Various Artists",
+    "data": "2026-04-24",
+    "cidade": "D-EDGE RIO apresen...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Baile Lotadão 6º e...",
     "artista": "Various Artists",
     "data": "2026-04-25",
     "cidade": "",
@@ -437,83 +569,6 @@
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
     "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "25.04 | HIGH CLUB ...",
-    "artista": "Various Artists",
-    "data": "2026-04-25",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Fatchia x Selvagem...",
-    "artista": "Various Artists",
-    "data": "2026-04-25",
-    "cidade": "Rio de Janeiro",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Semana Movida | 31...",
-    "artista": "Various Artists",
-    "data": "2026-04-05",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Hospedagem We Love...",
-    "artista": "Various Artists",
-    "data": "2026-04-09",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "D-EDGE RIO apresen...",
-    "artista": "Various Artists",
-    "data": "2026-04-10",
-    "cidade": "D-EDGE RIO apresen...",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "11.04 | HIGH CLUB ...",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "12.04 | FESTA VERT...",
-    "artista": "Various Artists",
-    "data": "2026-04-12",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "festival",
     "pais": "Brasil"
   },
   {
@@ -561,9 +616,31 @@
     "pais": "Brasil"
   },
   {
+    "nome": "FERIADO DE TIRADEN...",
+    "artista": "Various Artists",
+    "data": "2026-04-18",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "NAVE D-EDGE SP pre...",
     "artista": "Various Artists",
     "data": "2026-04-18",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "SUPERAFTER D-EDGE ...",
+    "artista": "Various Artists",
+    "data": "2026-04-19",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
@@ -616,17 +693,6 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Village 2026 : Lui...",
-    "artista": "Various Artists",
-    "data": "2026-06-12",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
     "nome": "Village 2026 : BRA...",
     "artista": "Various Artists",
     "data": "2026-06-13",
@@ -649,47 +715,36 @@
     "pais": "Brasil"
   },
   {
+    "nome": "RIO SURF MUSIC FES...",
+    "artista": "Various Artists",
+    "data": "2026-06-19",
+    "cidade": "RIO SURF MUSIC FES...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "esporte",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Village 2026 : Rio...",
+    "artista": "Various Artists",
+    "data": "2026-06-21",
+    "cidade": "Village 2026 : Rio...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "Circo Spacial - SP...",
     "artista": "Various Artists",
-    "data": "2026-04-05",
+    "data": "2026-04-18",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
     "categoria": "teatro",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "48• Expoam Mococa",
-    "artista": "Various Artists",
-    "data": "2026-04-09",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "conferencia",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "AFROGROOVE - BELO ...",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "Intense Bubbles",
-    "artista": "Various Artists",
-    "data": "2026-04-12",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
     "pais": "Brasil"
   },
   {
@@ -781,17 +836,6 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Village 2026 : Seu...",
-    "artista": "Various Artists",
-    "data": "2026-06-05",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
     "nome": "FESTA BLACK PRIDE ...",
     "artista": "Various Artists",
     "data": "2026-06-05",
@@ -803,9 +847,9 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Arraiá da Fundição...",
+    "nome": "Village 2026 : Noi...",
     "artista": "Various Artists",
-    "data": "2026-05-22",
+    "data": "2026-06-05",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
@@ -814,9 +858,9 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Gerações - Floripa",
+    "nome": "Village 2026 : Lui...",
     "artista": "Various Artists",
-    "data": "2026-05-23",
+    "data": "2026-06-12",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
@@ -827,7 +871,7 @@
   {
     "nome": "Churrasquinho Meno...",
     "artista": "Various Artists",
-    "data": "2026-05-30",
+    "data": "2026-06-13",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
@@ -847,47 +891,25 @@
     "pais": "Brasil"
   },
   {
+    "nome": "Sorriso Eu Gosto n...",
+    "artista": "Various Artists",
+    "data": "2026-08-01",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "SAMBA INDEPENDENTE...",
     "artista": "Various Artists",
-    "data": "2026-04-09",
+    "data": "2026-04-16",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
     "categoria": "show",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "ohf-osasco-nuwance",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "VIBE TERAPÊUTICA",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "show",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "PRAINHA CLUB SUEL...",
-    "artista": "Various Artists",
-    "data": "2026-04-12",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
     "pais": "Brasil"
   },
   {
@@ -895,6 +917,17 @@
     "artista": "Various Artists",
     "data": "2026-04-16",
     "cidade": "Villa, Planetário ...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "AFROGROOVE: DOMING...",
+    "artista": "Various Artists",
+    "data": "2026-04-19",
+    "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
@@ -968,6 +1001,28 @@
     "pais": "Brasil"
   },
   {
+    "nome": "Arraiá da Fundição...",
+    "artista": "Various Artists",
+    "data": "2026-05-22",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Gerações - Floripa",
+    "artista": "Various Artists",
+    "data": "2026-05-23",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "Boteco do Zezo",
     "artista": "Various Artists",
     "data": "2026-05-03",
@@ -990,6 +1045,17 @@
     "pais": "Brasil"
   },
   {
+    "nome": "SÃO JOÃO | P12 JUR...",
+    "artista": "Various Artists",
+    "data": "2026-06-06",
+    "cidade": "SÃO JOÃO | P12 JUR...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "GOODTIMES",
     "artista": "Various Artists",
     "data": "2026-04-25",
@@ -1001,9 +1067,9 @@
     "pais": "Brasil"
   },
   {
-    "nome": "MATUE NA FUNDIÇÃO ...",
+    "nome": "Girus - Balb Club ...",
     "artista": "Various Artists",
-    "data": "2026-05-29",
+    "data": "2026-04-25",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
@@ -1012,47 +1078,25 @@
     "pais": "Brasil"
   },
   {
-    "nome": "BBQ SEM FRONTEIRAS...",
+    "nome": "CURADORIA",
     "artista": "Various Artists",
-    "data": "2026-06-06",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "GÁVEA SAMBA CLUBE",
-    "artista": "Various Artists",
-    "data": "2026-04-10",
+    "data": "2026-04-25",
     "cidade": "Villa, Planetário ...",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
-    "categoria": "show",
+    "categoria": "outros",
     "pais": "Brasil"
   },
   {
-    "nome": "COSTELADA AMAZON B...",
+    "nome": "Semana Movida 14 A...",
     "artista": "Various Artists",
-    "data": "2026-04-11",
+    "data": "2026-04-14",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
     "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "ROCKERIA",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "ingresse",
-    "url": "https://www.ingresse.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "show",
     "pais": "Brasil"
   },
   {
@@ -1064,6 +1108,50 @@
     "url": "https://www.ingresse.com/",
     "tipo_geografico": "nacional",
     "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "OFF no Privilège J...",
+    "artista": "Various Artists",
+    "data": "2026-04-17",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "GÁVEA SAMBA CLUBE",
+    "artista": "Various Artists",
+    "data": "2026-04-17",
+    "cidade": "Villa, Planetário ...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "ARQ Ribeirão Preto",
+    "artista": "Various Artists",
+    "data": "2026-04-17",
+    "cidade": "",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Villa, Planetário ...",
+    "artista": "Various Artists",
+    "data": "2026-04-20",
+    "cidade": "Villa, Planetário ...",
+    "fonte": "ingresse",
+    "url": "https://www.ingresse.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
     "pais": "Brasil"
   },
   {
@@ -1100,10 +1188,120 @@
     "pais": "Brasil"
   },
   {
+    "nome": "SPIN DOCTORS + SMASH MOUTH",
+    "artista": "Various Artists",
+    "data": "2026-04-30",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/115855",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Curso de Violão",
+    "artista": "Various Artists",
+    "data": "2026-04-22",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/118668",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "SIMPLESMENTE ROUPA NOVA",
+    "artista": "Various Artists",
+    "data": "2026-08-22",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/118140",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "YOGATERIA SOLIDÁRIA - Vencendo a PIF",
+    "artista": "Various Artists",
+    "data": "2026-04-19",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/117331",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "CIDADE NEGRA - 11/07/26",
+    "artista": "Various Artists",
+    "data": "2026-07-11",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/112945",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "Blitz - Turnê “Agora é a Hora”",
+    "artista": "Various Artists",
+    "data": "2026-05-30",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/118494",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "QUEEN LEGEND + E. BALBO",
+    "artista": "Various Artists",
+    "data": "2026-06-30",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/111424",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "DIOGO NOGUEIRA",
+    "artista": "Various Artists",
+    "data": "2026-04-24",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/114439",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "CONCHA PARA TODOS – ZÉLIA DUNCAN",
+    "artista": "Various Artists",
+    "data": "2026-04-26",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/114845",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "BACO EXU DO BLUES",
+    "artista": "Various Artists",
+    "data": "2026-07-25",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/116908",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "É Claro Que É Rock 2026 Passo Fundo",
     "artista": "Various Artists",
     "data": "2026-04-20",
-    "cidade": "",
+    "cidade": "Curitiba",
     "fonte": "blueticket",
     "url": "https://www.blueticket.com.br/evento/39335/e-claro-que-e-rock-2026-passo-fundo",
     "tipo_geografico": "nacional",
@@ -1111,34 +1309,45 @@
     "pais": "Brasil"
   },
   {
-    "nome": "Warung Day Festival 2026",
+    "nome": "Reggae Day Londrina",
     "artista": "Various Artists",
-    "data": "2026-05-20",
-    "cidade": "",
+    "data": "2026-06-20",
+    "cidade": "Curitiba",
     "fonte": "blueticket",
-    "url": "https://www.blueticket.com.br/evento/39353/warung-day-festival-2026",
+    "url": "https://www.blueticket.com.br/evento/40541/reggae-day-londrina",
     "tipo_geografico": "nacional",
-    "categoria": "festival",
+    "categoria": "outros",
     "pais": "Brasil"
   },
   {
-    "nome": "28ª Festa da Cebola | Luan Santana",
+    "nome": "Prime Rock Brasil BH 2026",
     "artista": "Various Artists",
-    "data": "2026-04-28",
-    "cidade": "",
+    "data": "2026-07-20",
+    "cidade": "Curitiba",
     "fonte": "blueticket",
-    "url": "https://www.blueticket.com.br/evento/40153/28a-festa-da-cebola-luan-santana",
+    "url": "https://www.blueticket.com.br/evento/40514/prime-rock-brasil-bh-2026",
     "tipo_geografico": "nacional",
-    "categoria": "festival",
+    "categoria": "show",
     "pais": "Brasil"
   },
   {
-    "nome": "Dilsinho em Lages",
+    "nome": "Alexandre Pires - Pagonejo Bão",
     "artista": "Various Artists",
-    "data": "2026-04-10",
-    "cidade": "",
+    "data": "2026-05-23",
+    "cidade": "Igloo Super Hall",
     "fonte": "blueticket",
-    "url": "https://www.blueticket.com.br/evento/40171/dilsinho-em-lages",
+    "url": "https://www.blueticket.com.br/evento/39653/alexandre-pires-pagonejo-bao",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "EDSON E HUDSON - 30 ANOS",
+    "artista": "Various Artists",
+    "data": "2026-07-30",
+    "cidade": "Igloo Super Hall",
+    "fonte": "blueticket",
+    "url": "https://www.blueticket.com.br/evento/40532/edson-e-hudson-30-anos",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -1147,7 +1356,7 @@
     "nome": "Arnold 2026 | Feira",
     "artista": "Various Artists",
     "data": "2026-04-20",
-    "cidade": "",
+    "cidade": "São Paulo",
     "fonte": "blueticket",
     "url": "https://www.blueticket.com.br/evento/39354/arnold-2026-feira",
     "tipo_geografico": "nacional",
@@ -1158,7 +1367,7 @@
     "nome": "Arnold 2026 | Feira + Bodybuilding",
     "artista": "Various Artists",
     "data": "2026-04-20",
-    "cidade": "",
+    "cidade": "São Paulo",
     "fonte": "blueticket",
     "url": "https://www.blueticket.com.br/evento/39355/arnold-2026-feira-bodybuilding",
     "tipo_geografico": "nacional",
@@ -1169,7 +1378,7 @@
     "nome": "Gramado Summit 2026",
     "artista": "Various Artists",
     "data": "2026-05-20",
-    "cidade": "",
+    "cidade": "São Paulo",
     "fonte": "blueticket",
     "url": "https://www.blueticket.com.br/evento/37982/gramado-summit-2026",
     "tipo_geografico": "nacional",
@@ -1180,185 +1389,9 @@
     "nome": "Empreende Brazil Conference 2026 | SC",
     "artista": "Various Artists",
     "data": "2026-05-20",
-    "cidade": "",
+    "cidade": "São Paulo",
     "fonte": "blueticket",
     "url": "https://www.blueticket.com.br/evento/38008/empreende-brazil-conference-2026-sc",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "SÃO PAULO",
-    "artista": "Various Artists",
-    "data": "2026-04-09",
-    "cidade": "Suzano - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-passaporte-09-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "SUZANO MUSIC FESTIVAL 2026 - PASSAPORTE",
-    "artista": "Various Artists",
-    "data": "2026-04-09",
-    "cidade": "Suzano - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-passaporte-09-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "festival",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "09 de Abril a 12 de Abril",
-    "artista": "Various Artists",
-    "data": "2026-04-09",
-    "cidade": "",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "SUZANO MUSIC FESTIVAL 2026 | LEONARDO + KAIQUE E FELIPE + THIAGO CARVALHO",
-    "artista": "Various Artists",
-    "data": "2026-08-20",
-    "cidade": "Suzano - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-leonardo-kaique-e-felipe-thiago-carvalho-09-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "festival",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "SUZANO MUSIC FESTIVAL 2026 | MURILO HUFF + THIAGO E GRACIANO",
-    "artista": "Various Artists",
-    "data": "2026-08-20",
-    "cidade": "Suzano - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-murilo-huff-thiago-e-graciano-10-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "festival",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "SEXTOU DO VILLA COM MARCELINHO FREITAS",
-    "artista": "Various Artists",
-    "data": "2026-04-10",
-    "cidade": "São Bernardo do Campo - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/sextou-do-villa-com-sampa-crew-e-marcelinho-freitas-10-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "GERIATRICUS EM PIRACICABA",
-    "artista": "Various Artists",
-    "data": "2026-04-10",
-    "cidade": "Piracicaba - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/geriatricus-em-piracicaba-10-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "DESPEDIDA DO PACA",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "São Bernardo do Campo - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/despedida-do-paca-11-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "GERIATRICUS EM SOROCABA",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "Sorocaba - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/geriatricus-em-sorocaba-11-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "53ª EXPOAGRO ITAPETININGA 2026",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "Itapetininga - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/53a-expoagro-itapetininga-2026",
-    "tipo_geografico": "nacional",
-    "categoria": "conferencia",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "11 de Abril a 20 de Abril",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "53ª EXPOAGRO ITAPETININGA 2026 - SOLIDÁRIO",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "Itapetininga - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/53a-expoagro-itapetininga-2026-solidario",
-    "tipo_geografico": "nacional",
-    "categoria": "conferencia",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "BAILE DA TROPA COM TRAPLAUDO",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "São Bernardo do Campo - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/baile-da-tropa-com-traplaudo-11-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "show",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "AS GUERREIRAS DO KPOP - TEATRO UNIVAP",
-    "artista": "Various Artists",
-    "data": "2026-04-12",
-    "cidade": "São José dos Campos - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/as-guerreiras-do-kpop-teatro-univap-12-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "show",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "SUZANO MUSIC FESTIVAL 2026 | ROUPA NOVA + ACOUSTIX",
-    "artista": "Various Artists",
-    "data": "2026-11-20",
-    "cidade": "Suzano - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/suzano-music-festival-2026-roupa-nova-acoustix-12-de-abril",
-    "tipo_geografico": "nacional",
-    "categoria": "festival",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "SEGUNDA FORROZEIRA COM KELVI PABLO E CHICÃO DOS TECLADOS",
-    "artista": "Various Artists",
-    "data": "2026-04-13",
-    "cidade": "São Bernardo do Campo - SP",
-    "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/segunda-forrozeira-com-kelvi-pablo-e-chicao-dos-teclados-13-de-abril",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -1370,6 +1403,28 @@
     "cidade": "São Paulo - SP",
     "fonte": "bilheteriadigital",
     "url": "https://www.bilheteriadigital.com/roland-garros-junior-series-by-renault-2026-15-de-abril",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "FUNK ALL NIGHT",
+    "artista": "Various Artists",
+    "data": "2026-04-16",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/funk-all-night-16-de-abril",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "TATURANA COM BRISOTTI",
+    "artista": "Various Artists",
+    "data": "2026-04-17",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/taturana-com-brisotti-17-de-abril",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -1397,6 +1452,17 @@
     "pais": "Brasil"
   },
   {
+    "nome": "SÁBADO COM PHD E SPIRRA SAMBA",
+    "artista": "Various Artists",
+    "data": "2026-04-18",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/sabado-com-phd-e-spirra-samba-18-de-abril",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
     "nome": "SERESTA & SOFRÊNCIA COM THIAGO AQUINO E ANDERSON O GAROTINHO",
     "artista": "Various Artists",
     "data": "2026-04-19",
@@ -1405,6 +1471,17 @@
     "url": "https://www.bilheteriadigital.com/seresta-e-sofrencia-com-thiago-aquino-e-anderson-o-garotinho-19-de-abril",
     "tipo_geografico": "nacional",
     "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "TO NO PAGODE",
+    "artista": "Various Artists",
+    "data": "2026-04-19",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/to-no-pagode-19-de-abril",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
     "pais": "Brasil"
   },
   {
@@ -1441,12 +1518,45 @@
     "pais": "Brasil"
   },
   {
+    "nome": "SAMBA DA LADEIRA",
+    "artista": "Various Artists",
+    "data": "2026-04-24",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/samba-da-ladeira-24-de-abril",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "BAILE DA TROPA COM MC KADU",
+    "artista": "Various Artists",
+    "data": "2026-04-25",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/baile-da-tropa-com-mc-kadu-25-de-abril",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "BAILE DO HOMI",
     "artista": "Various Artists",
     "data": "2026-04-30",
     "cidade": "São Bernardo do Campo - SP",
     "fonte": "bilheteriadigital",
     "url": "https://www.bilheteriadigital.com/baile-do-homi-30-de-abril",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "NEXO SESSIONS: PREDELLA",
+    "artista": "Various Artists",
+    "data": "2026-04-30",
+    "cidade": "Taquaritinga - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/nexo-sessions-predella-30-de-abril",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -1507,6 +1617,17 @@
     "pais": "Brasil"
   },
   {
+    "nome": "MC KAUAN",
+    "artista": "Various Artists",
+    "data": "2026-05-09",
+    "cidade": "Bauru - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/mc-kauan-09-de-maio",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "JAPA NK NO VILLA JARDIM",
     "artista": "Various Artists",
     "data": "2026-05-15",
@@ -1537,6 +1658,17 @@
     "url": "https://www.bilheteriadigital.com/deixa-se-envolver-23-de-maio",
     "tipo_geografico": "nacional",
     "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "SEXTOU DO VILLA COM FABINHO E SAMBA DO DOM",
+    "artista": "Various Artists",
+    "data": "2026-05-29",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/sextou-do-villa-com-fabinho-e-samba-do-dom-29-de-maio",
+    "tipo_geografico": "nacional",
+    "categoria": "show",
     "pais": "Brasil"
   },
   {
@@ -1573,12 +1705,67 @@
     "pais": "Brasil"
   },
   {
+    "nome": "BAILE DO PRESIDENTE",
+    "artista": "Various Artists",
+    "data": "2026-06-05",
+    "cidade": "Campos do Jordão - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/baile-do-presidente-2026",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
     "nome": "GERIATRICUS EM PRESIDENTE PRUDENTE",
     "artista": "Various Artists",
     "data": "2026-06-13",
     "cidade": "Presidente Prudente - SP",
     "fonte": "bilheteriadigital",
     "url": "https://www.bilheteriadigital.com/geriatricus-em-presidente-prudente-13-de-junho",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "ARENA RIBEIRÃO",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "Ribeirão Preto - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/ArenaRibeirao",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "13 de Junho a 24 de Junho",
+    "artista": "Various Artists",
+    "data": "2026-06-13",
+    "cidade": "",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "GERIATRICUS EM SÃO JOÃO DA BOA VISTA SP",
+    "artista": "Various Artists",
+    "data": "2026-06-23",
+    "cidade": "São João da Boa Vista - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/geriatricus-em-sao-joao-da-boa-vista-sp-23-de-junho",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "VITINHO NO VILLA JARDIM",
+    "artista": "Various Artists",
+    "data": "2026-06-28",
+    "cidade": "São Bernardo do Campo - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/vitinho-no-villa-jardim",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -1617,12 +1804,12 @@
     "pais": "Brasil"
   },
   {
-    "nome": "16/04/2026",
+    "nome": "24/04/26 a 25/04/26",
     "artista": "Various Artists",
-    "data": "2026-04-16",
+    "data": "2026-04-24",
     "cidade": "",
     "fonte": "uhuu",
-    "url": "https://uhuu.com/evento/sp/sao-paulo/gravacao-do-dvd-paula-fernandes-15925",
+    "url": "https://uhuu.com/evento/sc/sao-jose/air-supply-celebrando-50-anos-de-carreira-15825",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -1631,7 +1818,7 @@
     "nome": "SEX",
     "artista": "Various Artists",
     "data": "2026-04-17",
-    "cidade": "",
+    "cidade": "São Paulo",
     "fonte": "uhuu",
     "url": "https://uhuu.com/evento/sp/sao-paulo/mano-brown-mb10-convida-rael-e-rincon-sapiencia-15816",
     "tipo_geografico": "nacional",
@@ -1639,12 +1826,34 @@
     "pais": "Brasil"
   },
   {
-    "nome": "DOM",
+    "nome": "QUI",
     "artista": "Various Artists",
-    "data": "2026-04-05",
+    "data": "2026-04-16",
     "cidade": "",
     "fonte": "uhuu",
-    "url": "https://uhuu.com/evento/sp/sao-paulo/a-ultima-sessao-de-freud-15630",
+    "url": "https://uhuu.com/evento/rn/natal/sebrae-experience-2026-15504",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "DOM",
+    "artista": "Various Artists",
+    "data": "2026-04-19",
+    "cidade": "",
+    "fonte": "uhuu",
+    "url": "https://uhuu.com/evento/rn/natal/kysha-e-mine-best-friend-forever-ao-vivo-15723",
+    "tipo_geografico": "nacional",
+    "categoria": "outros",
+    "pais": "Brasil"
+  },
+  {
+    "nome": "SEG",
+    "artista": "Various Artists",
+    "data": "2026-04-20",
+    "cidade": "",
+    "fonte": "uhuu",
+    "url": "https://uhuu.com/evento/rj/sao-joao-de-meriti/belo-16021",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
@@ -1652,32 +1861,10 @@
   {
     "nome": "TER",
     "artista": "Various Artists",
-    "data": "2026-04-07",
-    "cidade": "",
+    "data": "2026-04-21",
+    "cidade": "São Paulo",
     "fonte": "uhuu",
-    "url": "https://uhuu.com/evento/sp/sao-paulo/caso-bizarro-ao-vivo-no-teatro-16019",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "QUI",
-    "artista": "Various Artists",
-    "data": "2026-04-09",
-    "cidade": "",
-    "fonte": "uhuu",
-    "url": "https://uhuu.com/evento/sp/sao-paulo/gongada-drag-15662",
-    "tipo_geografico": "nacional",
-    "categoria": "outros",
-    "pais": "Brasil"
-  },
-  {
-    "nome": "SÁB",
-    "artista": "Various Artists",
-    "data": "2026-04-11",
-    "cidade": "",
-    "fonte": "uhuu",
-    "url": "https://uhuu.com/evento/sp/sao-paulo/show-do-bita-festa-dos-bichos-15957",
+    "url": "https://uhuu.com/evento/sp/sao-paulo/as-guardias-do-kpop-15850",
     "tipo_geografico": "nacional",
     "categoria": "outros",
     "pais": "Brasil"
