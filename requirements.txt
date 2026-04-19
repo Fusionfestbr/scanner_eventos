@@ -6,3 +6,6 @@ python-dotenv
 loguru
 urllib3
 psutil
+PyQt5
+PyQtWebEngine
+pyinstaller
