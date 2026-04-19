@@ -378,7 +378,10 @@ def run_pipeline():
         except Exception as e:
             coleta_status["ativo"] = False
             coleta_status["mensagem"] = f"Erro: {str(e)}"
+            coleta_status["progresso"] = 100
             print(f"[ERRO COLETA] {e}")
+            import traceback
+            print(traceback.format_exc())
     
     thread = threading.Thread(target=executar)
     thread.start()

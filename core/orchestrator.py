@@ -326,14 +326,18 @@ def executar_pipeline() -> tuple:
         execucao = gerar_execucao_real(evento, analise, previsao, plano_acao)
         return item.get("evento", {}).get("nome", ""), execucao
     
-    with ThreadPoolExecutor(max_workers=min(4, len(eventos_comprar))) as executor:
-        futures = {executor.submit(gerar_execucao_para_item, item): item for item in eventos_comprar}
-        for future in as_completed(futures):
-            item = futures[future]
-            nome_ev, execucao = future.result()
-            item["execucao"] = execucao
-            count_exec += 1
-            log(f"   -> Execução {count_exec}/{len(eventos_comprar)}: {nome_ev[:50]}")
+    if not eventos_comprar:
+        log("   -> Nenhum evento para COMPRAR, pulando geração de execuções")
+    else:
+        max_workers = max(1, min(4, len(eventos_comprar)))
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {executor.submit(gerar_execucao_para_item, item): item for item in eventos_comprar}
+            for future in as_completed(futures):
+                item = futures[future]
+                nome_ev, execucao = future.result()
+                item["execucao"] = execucao
+                count_exec += 1
+                log(f"   -> Execução {count_exec}/{len(eventos_comprar)}: {nome_ev[:50]}")
     
     final_path = os.path.join(os.path.dirname(__file__), "..", "data", "final.json")
     salvar_json(eventos_finais, final_path)
