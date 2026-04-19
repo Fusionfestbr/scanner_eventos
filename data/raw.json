@@ -210,10 +210,10 @@
   {
     "nome": "The Cavern Club",
     "artista": "Various Artists",
-    "data": "2026-04-16",
+    "data": "2026-04-18",
     "cidade": "",
     "fonte": "ticketmaster",
-    "url": "https://www.ticketmaster.com.br/event/leo-gandelman-the-cavern-club"
+    "url": "https://www.ticketmaster.com.br/event/sergio-britto-the-cavern-club"
   },
   {
     "nome": "The Lumineers: The Automatic World Tour",
@@ -290,7 +290,7 @@
   {
     "nome": "Bienal de Arquitetura Brasileira (BAB)",
     "artista": "Various Artists",
-    "data": "2026-04-14",
+    "data": "2026-04-15",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
@@ -592,15 +592,15 @@
     "url": "https://www.ingresse.com/"
   },
   {
-    "nome": "Festival Zepinho",
+    "nome": "Festival Forró na ...",
     "artista": "Various Artists",
-    "data": "2026-04-26",
-    "cidade": "Shopping RioMar Fo...",
+    "data": "2026-04-30",
+    "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
   },
   {
-    "nome": "Festival Forró na ...",
+    "nome": "PANGEA GROOVE - SÃ...",
     "artista": "Various Artists",
     "data": "2026-04-30",
     "cidade": "",
@@ -842,7 +842,7 @@
   {
     "nome": "Semana Movida 14 A...",
     "artista": "Various Artists",
-    "data": "2026-04-14",
+    "data": "2026-04-16",
     "cidade": "",
     "fonte": "ingresse",
     "url": "https://www.ingresse.com/"
@@ -1000,6 +1000,22 @@
     "url": "https://bileto.sympla.com.br/event/114439"
   },
   {
+    "nome": "Projeto Seis e Meia Recife - Jota.Pê",
+    "artista": "Various Artists",
+    "data": "2026-05-08",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/119048"
+  },
+  {
+    "nome": "CONCHA PARA TODOS – RITCHIE",
+    "artista": "Various Artists",
+    "data": "2026-07-26",
+    "cidade": "Belo Horizonte",
+    "fonte": "sympla",
+    "url": "https://bileto.sympla.com.br/event/114849"
+  },
+  {
     "nome": "Twigg – um pouco de amor",
     "artista": "Various Artists",
     "data": "2026-01-16",
@@ -1022,22 +1038,6 @@
     "cidade": "Belo Horizonte",
     "fonte": "sympla",
     "url": "https://bileto.sympla.com.br/event/116908"
-  },
-  {
-    "nome": "Com carinho, Rodrigo Penna A festa",
-    "artista": "Various Artists",
-    "data": "2026-01-08",
-    "cidade": "Belo Horizonte",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/114950"
-  },
-  {
-    "nome": "CONCHA PARA TODOS – FLÁVIO VENTURINI",
-    "artista": "Various Artists",
-    "data": "2026-05-10",
-    "cidade": "Belo Horizonte",
-    "fonte": "sympla",
-    "url": "https://bileto.sympla.com.br/event/114846"
   },
   {
     "nome": "É Claro Que É Rock 2026 Passo Fundo",
@@ -1200,12 +1200,12 @@
     "url": "https://www.bilheteriadigital.com/seresta-e-sofrencia-com-thiago-aquino-e-anderson-o-garotinho-19-de-abril"
   },
   {
-    "nome": "TO NO PAGODE",
+    "nome": "19/04 - SIGO NO PAGODE",
     "artista": "Various Artists",
-    "data": "2026-04-19",
+    "data": "2026-08-19",
     "cidade": "Bauru - SP",
     "fonte": "bilheteriadigital",
-    "url": "https://www.bilheteriadigital.com/to-no-pagode-19-de-abril"
+    "url": "https://www.bilheteriadigital.com/sigo-no-pagode-19-de-abril"
   },
   {
     "nome": "SEGUNDA FORROZEIRA - MENINOS DE BARÃO E GALICIA",
@@ -1376,6 +1376,14 @@
     "url": "https://www.bilheteriadigital.com/forro-de-boteco-com-washington-brasileiro-e-soro-silva-03-de-junho"
   },
   {
+    "nome": "14ª FESTA JUNINA DO ROTARACT",
+    "artista": "Various Artists",
+    "data": "2026-06-14",
+    "cidade": "Andradina - SP",
+    "fonte": "bilheteriadigital",
+    "url": "https://www.bilheteriadigital.com/14a-festa-junina-do-rotaract-06-de-junho"
+  },
+  {
     "nome": "GERIATRICUS EM PRESIDENTE PRUDENTE",
     "artista": "Various Artists",
     "data": "2026-06-13",
@@ -1480,9 +1488,9 @@
     "url": "https://sales.ticketsforfun.com.br/#/event/minha-vida-em-marte-sp-2026"
   },
   {
-    "nome": "08/04/26 a 14/06/26",
+    "nome": "16/04/2026",
     "artista": "Various Artists",
-    "data": "2026-04-08",
+    "data": "2026-04-16",
     "cidade": "",
     "fonte": "uhuu",
     "url": "https://uhuu.com/evento/sc/sao-jose/air-supply-celebrando-50-anos-de-carreira-15825"

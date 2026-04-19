@@ -35,7 +35,8 @@ from core.cache import (
     processar_com_cache,
     mesclar_resultados,
     adicionar_lote_ao_cache,
-    get_cache_stats
+    get_cache_stats,
+    inicializar_cache_em_memoria
 )
 
 
@@ -156,6 +157,9 @@ def executar_pipeline() -> tuple:
     estado.iniciar()
     _iniciar_pipeline()
     log("=== INICIANDO PIPELINE DE EVENTOS ===")
+    
+    log("   -> Inicializando cache em memória...")
+    inicializar_cache_em_memoria()
     
     thresholds = obter_thresholds()
     log(f"   -> Thresholds carregados: nota>={thresholds['min_nota_comprar']}, confianca>={thresholds['min_confianca']}")

@@ -142,5 +142,269 @@
     },
     "motivo": "data inválida: data muito antiga",
     "timestamp": "2026-04-14T15:38:14.836892"
+  },
+  {
+    "evento": {
+      "nome": "Estádio Nilton Santos",
+      "artista": "Various Artists",
+      "data": "2026-01-29",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/college-football"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-14T20:57:48.903528"
+  },
+  {
+    "evento": {
+      "nome": "Sunset 5521 SP",
+      "artista": "Various Artists",
+      "data": "2026-09-55",
+      "cidade": "São Paulo",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-14T20:57:48.904410"
+  },
+  {
+    "evento": {
+      "nome": "Xangai- '50 anos de música e poesia'",
+      "artista": "Various Artists",
+      "data": "2026-04-50",
+      "cidade": "Belo Horizonte",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115337"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-14T20:57:48.904807"
+  },
+  {
+    "evento": {
+      "nome": "Twigg – um pouco de amor",
+      "artista": "Various Artists",
+      "data": "2026-01-16",
+      "cidade": "Belo Horizonte",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/119149"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-14T20:57:48.904843"
+  },
+  {
+    "evento": {
+      "nome": "Turnê Alceu 80 Girassóis",
+      "artista": "Various Artists",
+      "data": "2026-04-80",
+      "cidade": "Igloo Super Hall",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39208/turne-alceu-80-girassois"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-14T20:57:48.904898"
+  },
+  {
+    "evento": {
+      "nome": "FEV",
+      "artista": "Various Artists",
+      "data": "2026-02-27",
+      "cidade": "São Paulo",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-14T20:57:48.905357"
+  },
+  {
+    "evento": {
+      "nome": "OUT",
+      "artista": "Various Artists",
+      "data": "2026-10-30",
+      "cidade": "São Paulo",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-14T20:57:48.905361"
+  },
+  {
+    "evento": {
+      "nome": "AGO",
+      "artista": "Various Artists",
+      "data": "2026-08-16",
+      "cidade": "São Paulo",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-14T20:57:48.905362"
+  },
+  {
+    "evento": {
+      "nome": "MAI",
+      "artista": "Various Artists",
+      "data": "2026-05-26",
+      "cidade": "São Paulo",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-14T20:57:48.905364"
+  },
+  {
+    "evento": {
+      "nome": "QUA",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-14T20:57:48.905396"
+  },
+  {
+    "evento": {
+      "nome": "SÁB",
+      "artista": "Various Artists",
+      "data": "2026-01-18",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/turminha-do-teatro-a-bela-adormecida-15410"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-14T20:57:48.905413"
+  },
+  {
+    "evento": {
+      "nome": "Estádio Nilton Santos",
+      "artista": "Various Artists",
+      "data": "2026-01-29",
+      "cidade": "",
+      "fonte": "ticketmaster",
+      "url": "https://www.ticketmaster.com.br/event/college-football"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-14T21:56:58.736446"
+  },
+  {
+    "evento": {
+      "nome": "Sunset 5521 SP",
+      "artista": "Various Artists",
+      "data": "2026-09-55",
+      "cidade": "São Paulo",
+      "fonte": "ingresse",
+      "url": "https://www.ingresse.com/"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-14T21:56:58.737087"
+  },
+  {
+    "evento": {
+      "nome": "Xangai- '50 anos de música e poesia'",
+      "artista": "Various Artists",
+      "data": "2026-04-50",
+      "cidade": "Belo Horizonte",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/115337"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-14T21:56:58.737148"
+  },
+  {
+    "evento": {
+      "nome": "Twigg – um pouco de amor",
+      "artista": "Various Artists",
+      "data": "2026-01-16",
+      "cidade": "Belo Horizonte",
+      "fonte": "sympla",
+      "url": "https://bileto.sympla.com.br/event/119149"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-14T21:56:58.737161"
+  },
+  {
+    "evento": {
+      "nome": "Turnê Alceu 80 Girassóis",
+      "artista": "Various Artists",
+      "data": "2026-04-80",
+      "cidade": "Igloo Super Hall",
+      "fonte": "blueticket",
+      "url": "https://www.blueticket.com.br/evento/39208/turne-alceu-80-girassois"
+    },
+    "motivo": "data inválida: formato inválido",
+    "timestamp": "2026-04-14T21:56:58.737181"
+  },
+  {
+    "evento": {
+      "nome": "FEV",
+      "artista": "Various Artists",
+      "data": "2026-02-27",
+      "cidade": "São Paulo",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/laura-pausini"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-14T21:56:58.737232"
+  },
+  {
+    "evento": {
+      "nome": "OUT",
+      "artista": "Various Artists",
+      "data": "2026-10-30",
+      "cidade": "São Paulo",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/jorja-smith"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-14T21:56:58.737236"
+  },
+  {
+    "evento": {
+      "nome": "AGO",
+      "artista": "Various Artists",
+      "data": "2026-08-16",
+      "cidade": "São Paulo",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/dpr-cream-dpr-artic"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-14T21:56:58.737238"
+  },
+  {
+    "evento": {
+      "nome": "MAI",
+      "artista": "Various Artists",
+      "data": "2026-05-26",
+      "cidade": "São Paulo",
+      "fonte": "ticketsforfun",
+      "url": "https://sales.ticketsforfun.com.br/#/event/pomme"
+    },
+    "motivo": "nome inválido",
+    "timestamp": "2026-04-14T21:56:58.737241"
+  },
+  {
+    "evento": {
+      "nome": "QUA",
+      "artista": "Various Artists",
+      "data": "2026-01-03",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/paralamas-do-sucesso-e-biquini-cavadao-15641"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-14T21:56:58.737267"
+  },
+  {
+    "evento": {
+      "nome": "SÁB",
+      "artista": "Various Artists",
+      "data": "2026-01-18",
+      "cidade": "",
+      "fonte": "uhuu",
+      "url": "https://uhuu.com/evento/rj/rio-de-janeiro/turminha-do-teatro-a-bela-adormecida-15410"
+    },
+    "motivo": "data inválida: data muito antiga",
+    "timestamp": "2026-04-14T21:56:58.737278"
   }
 ]

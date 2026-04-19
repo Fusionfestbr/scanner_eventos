@@ -107,6 +107,7 @@ def carregar_json(filepath):
 def check_auth(username, password):
     """Verifica credenciais de auth básica."""
     if not DASHBOARD_PASSWORD:
+        logger.warning("AVISO: DASHBOARD_PASSWORD não configurada - acesso sem autenticação")
         return True
     return password == DASHBOARD_PASSWORD
 
@@ -124,6 +125,7 @@ def require_auth(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         if not DASHBOARD_PASSWORD:
+            logger.warning("Acesso permitido sem autenticação")
             return f(*args, **kwargs)
         auth = request.authorization
         if not auth or not check_auth(auth.username, auth.password):

@@ -9,8 +9,8 @@ from functools import wraps
 from typing import Callable, Dict, Tuple
 from utils.logger import logger
 
-DEFAULT_REQUESTS_PER_MINUTE = int(os.environ.get("RATE_LIMIT_RPM", "60"))
-DEFAULT_REQUESTS_PER_HOUR = int(os.environ.get("RATE_LIMIT_RPH", "500"))
+DEFAULT_REQUESTS_PER_MINUTE = int(os.environ.get("RATE_LIMIT_RPM", "1000"))
+DEFAULT_REQUESTS_PER_HOUR = int(os.environ.get("RATE_LIMIT_RPH", "10000"))
 BAN_DURATION = int(os.environ.get("RATE_BAN_DURATION", "300"))
 
 
