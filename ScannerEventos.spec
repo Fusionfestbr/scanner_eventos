@@ -1,12 +1,47 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import os
+
+datas = [
+    ('dashboard/templates', 'dashboard/templates'),
+    ('data', 'data'),
+]
 
 a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[],
-    hiddenimports=[],
+    datas=datas,
+    hiddenimports=[
+        'dashboard.app',
+        'core.orchestrator',
+        'core.learning',
+        'core.cache',
+        'core.filtros',
+        'core.notifier',
+        'core.executor',
+        'core.executor_real',
+        'core.predictor',
+        'core.decision',
+        'core.ranking',
+        'core.data_quality',
+        'core.arbitrage',
+        'core.scheduler',
+        'core.historico_valorizacao',
+        'utils.logger',
+        'utils.rate_limiter',
+        'utils.validation',
+        'utils.checkpoint',
+        'utils.date_utils',
+        'utils.http_client',
+        'flask',
+        'jinja2',
+        'werkzeug',
+        'requests',
+        'psutil',
+        'urllib3',
+        'loguru',
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
