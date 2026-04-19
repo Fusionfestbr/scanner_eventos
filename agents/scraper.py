@@ -11,6 +11,9 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 from config import SITES_CONFIG, SITES_REVENDA, SCRAPER_TIMEOUT, MAX_EVENTOS_POR_FONTE
 
 
+SITES_PROTEGIDOS = ["eventim", "livepass", "ticketmaster"]
+
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
     "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
@@ -1079,9 +1082,6 @@ def normalizar_data(data_str: str) -> str:
                 return f"{current_year}-{num}-{dia}"
     
     return ""
-
-
-SITES_PROTEGIDOS = ["eventim", "livepass", "ticketmaster"]
 
 
 def generic_selenium_stealth_scraper(fonte: str, max_retries: int = 3) -> list[dict]:

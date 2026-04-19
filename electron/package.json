@@ -1,0 +1,89 @@
+{
+  "name": "scanner-eventos",
+  "version": "1.0.0",
+  "description": "Scanner Eventos - Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.scannereventos.app",
+    "productName": "ScannerEventos",
+    "directories": {
+      "output": "../dist-electron"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "../flask_server.py",
+      "../requirements.txt",
+      "../dashboard/**",
+      "../data/**",
+      "../core/**",
+      "../utils/**",
+      "../agents/**",
+      "../config.py",
+      "../main.py",
+      "../.env"
+    ],
+    "extraResources": [
+      {
+        "from": "../data",
+        "to": "data"
+      },
+      {
+        "from": "../dashboard",
+        "to": "dashboard"
+      },
+      {
+        "from": "../flask_server.py",
+        "to": "flask_server.py"
+      },
+      {
+        "from": "../requirements.txt",
+        "to": "requirements.txt"
+      },
+      {
+        "from": "../utils",
+        "to": "utils"
+      },
+      {
+        "from": "../core",
+        "to": "core"
+      },
+      {
+        "from": "../agents",
+        "to": "agents"
+      },
+      {
+        "from": "../config.py",
+        "to": "config.py"
+      },
+      {
+        "from": "../main.py",
+        "to": "main.py"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "icon.ico"
+    },
+    "electronDownload": {
+      "mirror": "https://npmmirror.com/mirrors/electron/"
+    }
+  },
+  "author": "Scanner Eventos",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8"
+  }
+}
