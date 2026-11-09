@@ -58,6 +58,10 @@
         "to": "agents"
       },
       {
+        "from": "../prompts",
+        "to": "prompts"
+      },
+      {
         "from": "../config.py",
         "to": "config.py"
       },
