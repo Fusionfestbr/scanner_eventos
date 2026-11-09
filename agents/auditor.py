@@ -21,24 +21,33 @@ def _increment_counter():
 
 
 def construir_prompt_auditoria(evento: dict, analise: dict) -> list[dict]:
-    """Constrói prompt para auditoria."""
-    prompt = f"""Você é um auditor especializado em tomada de decisão no mercado de eventos.
+    """Constrói prompt para auditoria (template em prompts/auditor.txt)."""
+    prompt = (
+        carregar_prompt()
+        .replace("{nome}", str(evento.get("nome", "")))
+        .replace("{artista}", str(evento.get("artista", "")))
+        .replace("{data}", str(evento.get("data", "")))
+        .replace("{cidade}", str(evento.get("cidade", "")))
+        .replace("{hype}", str(analise.get("hype", 0)))
+        .replace("{escassez}", str(analise.get("escassez", 0)))
+        .replace("{publico}", str(analise.get("publico", 0)))
+        .replace("{potencial_revenda}", str(analise.get("potencial_revenda", 0)))
+        .replace("{nota_final}", str(analise.get("nota_final", 0)))
+    )
 
-Revise a análise abaixo e verifique:
-- se as notas fazem sentido
-- se há inconsistências
-- se o evento ainda é relevante (baseado na data)
-
-Evento: {evento.get('nome', '')}, Artista: {evento.get('artista', '')}, Data: {evento.get('data', '')}, Cidade: {evento.get('cidade', '')}
-Análise: hype={analise.get('hype', 0)}, escassez={analise.get('escassez', 0)}, publikco={analise.get('publico', 0)}, potencial_revenda={analise.get('potencial_revenda', 0)}, nota_final={analise.get('nota_final', 0)}
-
-Retorne APENAS JSON válido:
-{{"decisao": "COMPRAR" | "MONITORAR" | "IGNORAR", "confianca": 0-10, "erro_detectado": true/false, "comentario": ""}}"""
-    
     return [
         {"role": "system", "content": "Você é auditor especializado em eventos. Retorne APENAS JSON válido."},
         {"role": "user", "content": prompt}
     ]
+
+
+def carregar_prompt() -> str:
+    """Carrega o template de auditoria (prompts/auditor.txt)."""
+    import os
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    prompt_path = os.path.join(base_dir, "prompts", "auditor.txt")
+    with open(prompt_path, "r", encoding="utf-8") as f:
+        return f.read()
 
 
 def chamar_llm(messages: list[dict]) -> str | None:

@@ -20,7 +20,7 @@ def _increment_counter():
 
 
 def carregar_prompt() -> str:
-    """Carrega o prompt base do arquivo."""
+    """Carrega o template de análise (prompts/analista.txt)."""
     import os
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     prompt_path = os.path.join(base_dir, "prompts", "analista.txt")
@@ -29,14 +29,19 @@ def carregar_prompt() -> str:
 
 
 def construir_prompt_evento(evento: dict) -> list[dict]:
-    """Constrói mensagens para a API."""
-    nome = evento.get('nome', '')
-    artista = evento.get('artista', '')
-    data = evento.get('data', '')
-    cidade = evento.get('cidade', '')
-    
-    evento_info = f"Evento: {nome}, Artista: {artista}, Data: {data}, Cidade: {cidade}. Notas 0-10 hype/escassez/publico/potencial_revenda. nota_final = media. Retorne APENAS JSON."
-    
+    """Constrói mensagens para a API (template em prompts/analista.txt)."""
+    template = carregar_prompt()
+    evento_info = (
+        template
+        .replace("{nome}", evento.get("nome", "") or "N/A")
+        .replace("{artista}", evento.get("artista", "") or "N/A")
+        .replace("{data}", evento.get("data", "") or "N/A")
+        .replace("{cidade}", evento.get("cidade", "") or "N/A")
+        .replace("{local}", evento.get("local", "") or "N/A")
+        .replace("{genero}", evento.get("genero", "") or "N/A")
+        .replace("{preco}", str(evento.get("preco", "") or "N/A"))
+    )
+
     messages = [
         {"role": "system", "content": "Você é especialista em análise de eventos para revenda de ingressos. Retorne APENAS JSON válido."},
         {"role": "user", "content": evento_info}
