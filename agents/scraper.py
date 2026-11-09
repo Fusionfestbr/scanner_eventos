@@ -941,12 +941,17 @@ def _generate_future_date() -> str:
     return data.strftime("%Y-%m-%d")
 
 
-def buscar_eventos_reais() -> list[dict]:
-    """Busca eventos de TODOS os sites configurados usando Playwright."""
+def buscar_eventos_reais(fontes: list[str] | None = None) -> list[dict]:
+    """Busca eventos de TODOS os sites configurados usando Playwright.
+
+    Args:
+        fontes: lista opcional para restringir (ex.: só as fontes sem API).
+                None = todas.
+    """
     print("   Buscando eventos de todas as fontes (Playwright)...")
-    
+
     eventos = []
-    
+
     funcoes_busca = [
         ("ticketmaster", buscar_ticketmaster),
         ("ingresse", buscar_ingresse),
@@ -963,6 +968,10 @@ def buscar_eventos_reais() -> list[dict]:
         ("zigtickets", buscar_zigtickets),
         ("betimelapse", buscar_betimelapse),
     ]
+
+    if fontes is not None:
+        alvo = set(fontes)
+        funcoes_busca = [(f, fn) for f, fn in funcoes_busca if f in alvo]
     
     for nome_fonte, funcao_busca in funcoes_busca:
         print(f"   - Buscando {nome_fonte}...")
@@ -990,51 +999,74 @@ def buscar_eventos_reais() -> list[dict]:
 
 
 def padronizar_eventos(eventos: list[dict]) -> list[dict]:
-    """Padroniza formato dos eventos."""
+    """Padroniza formato dos eventos no schema canônico do pipeline."""
+    from agents.nome_parser import enriquecer_do_nome
+
     eventos_padronizados = []
-    
+
     for evento in eventos:
         nome = evento.get("nome", "").strip()
         if not nome or len(nome) < 3:
             continue
-        
+
         data = evento.get("data", "").strip()
         if data:
             data = normalizar_data(data)
             if not data:
                 continue
-        
+
+        artista_raw = evento.get("artista", "")
+
         evento_padrao = {
             "nome": nome,
-            "artista": evento.get("artista", "Various Artists"),
+            "artista": "" if artista_raw == "Various Artists" else (artista_raw or ""),
             "data": data,
-            "cidade": evento.get("cidade", "Brasil"),
-            "fonte": evento.get("fonte", "web"),  # Garantir que fonte nunca seja perdida
-            "url": evento.get("url", "")
+            "cidade": evento.get("cidade", "").strip(),
+            "fonte": evento.get("fonte", "web"),  # fonte nunca se perde
+            "url": evento.get("url", ""),
+            # campos novos (podem não existir nas entradas antigas)
+            "estado": evento.get("estado", "").strip(),
+            "local": evento.get("local", "").strip(),
+            "preco": evento.get("preco", 0.0) or 0.0,
+            "imagem": evento.get("imagem", "").strip(),
+            "event_id": str(evento.get("event_id", "") or ""),
+            "categoria_fonte": evento.get("categoria_fonte", "").strip(),
         }
+        # higiene do título: artista/cidade/data escondidos no nome
+        enriquecer_do_nome(evento_padrao)
         eventos_padronizados.append(evento_padrao)
-    
+
     eventos_padronizados = _deduplicate_events(eventos_padronizados)
-    
+
     return eventos_padronizados
 
 
 def _deduplicate_events(eventos: list[dict]) -> list[dict]:
-    """Remove eventos duplicados baseado no nome."""
+    """Remove eventos duplicados por nome normalizado (+ data quando houver)."""
     seen = set()
     unique = []
     for e in eventos:
-        nome = e["nome"].lower()
-        
+        nome = _chave_nome(e.get("nome", ""))
+        data = (e.get("data") or "")[:10]
+
         # Skip privacy/cookie notices
         if any(word in nome for word in ["privacidade", "cookies", "política", "politic", "privacy", "consent", "termos", "terms", "aviso legal"]):
             continue
-        
-        key = nome[:50]
+
+        key = f"{nome[:60]}|{data}" if data else nome[:60]
         if key not in seen:
             seen.add(key)
             unique.append(e)
     return unique
+
+
+def _chave_nome(nome: str) -> str:
+    """Chave de comparação: minúsculo + sem acentos + espaços colapsados."""
+    import unicodedata
+    if not nome:
+        return ""
+    sem_acento = "".join(c for c in unicodedata.normalize("NFKD", nome) if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", sem_acento.strip().lower())
 
 
 def normalizar_data(data_str: str) -> str:

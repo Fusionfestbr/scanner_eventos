@@ -1,5 +1,7 @@
 import requests
 
+from agents.nome_parser import evento_padrao
+
 API_URL = "https://public-api.eventim.com/websearch/search/api/exploration/v1/productGroups"
 
 PARAMS = {
@@ -55,7 +57,7 @@ def get_eventim_events() -> list[dict]:
 
 
 def _transform_event(item: dict) -> dict:
-    """Transforma resposta da API para formato interno."""
+    """Transforma resposta da API para o schema canônico do pipeline."""
     categories = item.get("categories", [])
 
     categoria = ""
@@ -64,16 +66,21 @@ def _transform_event(item: dict) -> dict:
     elif categories:
         categoria = categories[0].get("name", "")
 
-    return {
-        "id": item.get("productGroupId", ""),
-        "nome": item.get("name", ""),
-        "data_inicio": item.get("startDate", ""),
-        "data_fim": item.get("endDate", ""),
-        "preco_base": item.get("price", 0),
-        "moeda": item.get("currency", ""),
-        "link": item.get("link", ""),
-        "imagem": item.get("imageUrl", ""),
-        "status": item.get("status", ""),
-        "total_variacoes": item.get("productCount", 0),
-        "categoria": categoria
-    }
+    # Link pode vir relativo ("/event/xyz") — normaliza para URL absoluta
+    link = item.get("link", "") or ""
+    if link and not link.startswith("http"):
+        if link.startswith("//"):
+            link = "https:" + link
+        elif link.startswith("/"):
+            link = "https://www.eventim.com.br" + link
+
+    return evento_padrao(
+        nome=item.get("name", ""),
+        data=item.get("startDate", ""),
+        preco=item.get("price", 0),
+        url=link,
+        imagem=item.get("imageUrl", ""),
+        fonte="eventim",
+        event_id=item.get("productGroupId", ""),
+        categoria_fonte=categoria,
+    )

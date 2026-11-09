@@ -15,6 +15,7 @@ from agents.validador import validar_eventos
 from agents.analista import analisar_eventos
 from agents.auditor import auditar_eventos
 from core.decision import processar_decisoes
+from core.enricher import enriquecer_eventos, filtrar_musicos
 from core.learning import salvar_evento_no_historico, obter_thresholds, verificar_performance
 from core.ranking import gerar_ranking, salvar_ranking
 from core.data_quality import (
@@ -223,7 +224,24 @@ def executar_pipeline() -> tuple:
     eventos_validados_novos = validar_eventos(eventos_validos_qc)
     qtd_validados = len(eventos_validados_novos)
     log(f"   -> {qtd_validados} eventos válidos")
-    
+
+    # Enriquecimento híbrido (regras; IA só para o que faltar) + filtro de música
+    if eventos_validados_novos:
+        log("   -> Enriquecendo eventos (artista/gênero/descrição)...")
+        eventos_validados_novos = enriquecer_eventos(eventos_validados_novos)
+
+        musicos, nao_musicos = filtrar_musicos(eventos_validados_novos)
+        if nao_musicos:
+            salvar_rejeitados([{
+                "evento": e,
+                "motivo": "não é evento musical",
+                "timestamp": datetime.now().isoformat()
+            } for e in nao_musicos])
+            log(f"   -> {len(nao_musicos)} não-musicais -> rejected.json")
+        eventos_validados_novos = musicos
+        qtd_validados = len(eventos_validados_novos)
+        log(f"   -> {qtd_validados} eventos após filtro de música")
+
     clean_path = os.path.join(os.path.dirname(__file__), "..", "data", "clean.json")
     salvar_json(eventos_validados_novos, clean_path)
     log(f"   -> Salvo em {clean_path}")
@@ -367,7 +385,16 @@ def executar_pipeline() -> tuple:
             "url": cache.get("url", ""),
             "tipo_geografico": cache.get("tipo_geografico", ""),
             "categoria": cache.get("categoria", ""),
-            "pais": cache.get("pais", "")
+            "pais": cache.get("pais", ""),
+            # campos ricos adicionados no redesign da coleta
+            "estado": cache.get("estado", ""),
+            "local": cache.get("local", ""),
+            "preco": cache.get("preco", 0.0) or 0.0,
+            "imagem": cache.get("imagem", ""),
+            "event_id": cache.get("event_id", ""),
+            "categoria_fonte": cache.get("categoria_fonte", ""),
+            "genero": cache.get("genero", ""),
+            "descricao": cache.get("descricao", ""),
         })
     clean_completo.extend(eventos_validados_novos)
     salvar_json(clean_completo, clean_path)

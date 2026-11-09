@@ -1,4 +1,6 @@
 import requests
+
+from agents.nome_parser import evento_padrao
 from utils.logger import logger
 from utils.http_client import get_session
 
@@ -50,18 +52,19 @@ def get_ingresse_events() -> list[dict]:
 
 
 def _transform_event(evento: dict) -> dict:
-    """Transforma evento da Ingresse para formato padronizado."""
+    """Transforma evento da Ingresse para o schema canônico do pipeline."""
     place = evento.get("place", {})
     images = evento.get("images", {})
-    
-    return {
-        "source": "ingresse",
-        "event_id": str(evento.get("event_id", "")),
-        "name": evento.get("title", ""),
-        "date": evento.get("event_date", ""),
-        "city": place.get("city", ""),
-        "state": place.get("state", ""),
-        "venue": place.get("name", ""),
-        "image": images.get("large", ""),
-        "url": f"https://www.ingresse.com/event/{evento.get('slug', '')}"
-    }
+
+    return evento_padrao(
+        nome=evento.get("title", ""),
+        data=evento.get("event_date", ""),
+        cidade=place.get("city", ""),
+        estado=place.get("state", ""),
+        local=place.get("name", ""),
+        imagem=images.get("large", ""),
+        url=f"https://www.ingresse.com/event/{evento.get('slug', '')}",
+        fonte="ingresse",
+        event_id=str(evento.get("event_id", "")),
+        categoria_fonte=evento.get("category", "") if isinstance(evento.get("category"), str) else "",
+    )

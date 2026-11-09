@@ -1,5 +1,7 @@
 import requests
 
+from agents.nome_parser import evento_padrao
+
 API_URL = "https://public-api.eventim.com/websearch/search/api/exploration/v1/productGroups"
 
 PARAMS = {
@@ -55,7 +57,7 @@ def get_livepass_events() -> list[dict]:
 
 
 def _transform_event(item: dict) -> dict:
-    """Transforma evento da Livepass para formato padronizado."""
+    """Transforma evento da Livepass para o schema canônico do pipeline."""
     categories = item.get("categories", [])
 
     categoria = ""
@@ -64,14 +66,21 @@ def _transform_event(item: dict) -> dict:
     elif categories:
         categoria = categories[0].get("name", "")
 
-    return {
-        "source": "livepass",
-        "event_id": item.get("productGroupId", ""),
-        "name": item.get("name", ""),
-        "date": item.get("startDate", ""),
-        "city": "",
-        "state": "",
-        "venue": "",
-        "image": item.get("imageUrl", ""),
-        "url": item.get("link", "")
-    }
+    # Link pode vir relativo ("/event/xyz") — normaliza para URL absoluta
+    link = item.get("link", "") or ""
+    if link and not link.startswith("http"):
+        if link.startswith("//"):
+            link = "https:" + link
+        elif link.startswith("/"):
+            link = "https://www.livepass.com.br" + link
+
+    return evento_padrao(
+        nome=item.get("name", ""),
+        data=item.get("startDate", ""),
+        preco=item.get("price", 0),
+        imagem=item.get("imageUrl", ""),
+        url=link,
+        fonte="livepass",
+        event_id=item.get("productGroupId", ""),
+        categoria_fonte=categoria,
+    )

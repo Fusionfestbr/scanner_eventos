@@ -42,6 +42,29 @@ def check_rate_limit():
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
 logger.info("Dashboard iniciado")
 
+
+@app.template_filter("data_br")
+def data_br(valor):
+    """ISO 'YYYY-MM-DD' (ou com hora) → 'DD/MM/AAAA' legível."""
+    if not valor:
+        return "-"
+    s = str(valor)[:10]
+    if len(s) == 10 and s[4] == "-" and s[7] == "-":
+        return f"{s[8:10]}/{s[5:7]}/{s[0:4]}"
+    return s
+
+
+@app.template_filter("onde_legivel")
+def onde_legivel(evento):
+    """'Cidade - UF' consolidado para exibição."""
+    if not isinstance(evento, dict):
+        return "-"
+    cidade = (evento.get("cidade") or "").strip()
+    estado = (evento.get("estado") or "").strip()
+    if cidade and estado and estado.lower() not in cidade.lower():
+        return f"{cidade} - {estado}"
+    return cidade or estado or "-"
+
 DASHBOARD_PASSWORD = os.environ.get("DASHBOARD_PASSWORD", "")
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")

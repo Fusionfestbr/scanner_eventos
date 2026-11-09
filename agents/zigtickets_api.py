@@ -1,5 +1,7 @@
 import requests
 
+from agents.nome_parser import evento_padrao
+
 API_URL = "https://zigtickets-static-zig-tickets.s3.us-east-1.amazonaws.com/domains/zig.tickets/new-events.json"
 
 HEADERS = {
@@ -36,18 +38,18 @@ def get_zigtickets_events() -> list[dict]:
 
 
 def _transform_event(item: dict) -> dict:
-    """Transforma evento do Zig Tickets para formato padronizado."""
+    """Transforma evento do Zig Tickets para o schema canônico do pipeline."""
     location = item.get("event_location", {})
     banner = item.get("banner") or item.get("thumb") or ""
 
-    return {
-        "source": "zigtickets",
-        "event_id": str(item.get("id", "")),
-        "name": item.get("name", ""),
-        "date": item.get("start_date", ""),
-        "city": location.get("city", ""),
-        "state": location.get("state", ""),
-        "venue": location.get("name", ""),
-        "image": banner,
-        "url": f"https://zig.tickets/event/{item.get('slug', '')}"
-    }
+    return evento_padrao(
+        nome=item.get("name", ""),
+        data=item.get("start_date", ""),
+        cidade=location.get("city", ""),
+        estado=location.get("state", ""),
+        local=location.get("name", ""),
+        imagem=banner,
+        url=f"https://zig.tickets/event/{item.get('slug', '')}",
+        fonte="zigtickets",
+        event_id=str(item.get("id", "")),
+    )

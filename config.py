@@ -106,6 +106,14 @@ ARBITRAGE_MIN_SPREAD = float(os.environ.get("ARBITRAGE_MIN_SPREAD", "20"))
 
 MAX_EVENTOS_POR_FONTE = int(os.environ.get("MAX_EVENTOS_POR_FONTE", "0"))
 
+# Foco do scanner: só eventos musicais (show/festival) passam do validador;
+# não-música (esporte, teatro, congresso...) vai para rejected.json
+COLETA_SOMENTE_MUSICA = os.environ.get("COLETA_SOMENTE_MUSICA", "true").lower() == "true"
+
+# Enriquecimento híbrido: regras primeiro; LLM só preenche o que faltar
+# (artista ausente, gênero, categoria "outros") e gera descrição curta
+ENRIQUECER_COM_IA = os.environ.get("ENRIQUECER_COM_IA", "true").lower() == "true"
+
 INTERVALO_MINUTOS = int(os.environ.get("INTERVALO_MINUTOS", "30"))
 
 LLM_WORKERS = int(os.environ.get("LLM_WORKERS", "12"))

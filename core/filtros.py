@@ -187,7 +187,7 @@ def filtrar_por_artista(eventos: List[dict], artista: str) -> List[dict]:
 
 def buscar(eventos: List[dict], termo: str) -> List[dict]:
     """
-    Busca termo em nome, artista e cidade simultaneamente.
+    Busca termo em nome, artista, cidade, local, gênero e descrição.
     
     Args:
         eventos: Lista de eventos
@@ -202,13 +202,20 @@ def buscar(eventos: List[dict], termo: str) -> List[dict]:
     termo_lower = termo.lower()
     filtrados = []
     for evento in eventos:
-        nome = evento.get("nome", "") or evento.get("evento", {}).get("nome", "")
-        art = evento.get("artista", "") or evento.get("evento", {}).get("artista", "")
-        cid = evento.get("cidade", "") or evento.get("evento", {}).get("cidade", "")
+        ev = evento.get("evento", {})
+        nome = evento.get("nome", "") or ev.get("nome", "")
+        art = evento.get("artista", "") or ev.get("artista", "")
+        cid = evento.get("cidade", "") or ev.get("cidade", "")
+        local = ev.get("local", "")
+        genero = ev.get("genero", "")
+        descricao = ev.get("descricao", "")
 
-        if (termo_lower in nome.lower() or
-                termo_lower in art.lower() or
-                termo_lower in cid.lower()):
+        if (termo_lower in (nome or "").lower() or
+                termo_lower in (art or "").lower() or
+                termo_lower in (cid or "").lower() or
+                termo_lower in (local or "").lower() or
+                termo_lower in (genero or "").lower() or
+                termo_lower in (descricao or "").lower()):
             filtrados.append(evento)
 
     return ordenar_por_data(filtrados, crescente=True)

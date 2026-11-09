@@ -1316,11 +1316,12 @@
                         <td>
                             <div class="event-info">
                                 <span class="event-name">{{ evento.nome[:50] if evento.nome else 'N/A' }}</span>
+                                <span class="artist-name">{{ evento.artista or '' }}</span>
                             </div>
                         </td>
                         <td><span class="tag tag-medio">{{ evento.fonte or '-' }}</span></td>
-                        <td class="mono">{{ evento.data or '-' }}</td>
-                        <td class="mono">{{ evento.cidade or '-' }}</td>
+                        <td class="mono">{{ evento.data | data_br }}</td>
+                        <td class="mono">{{ evento | onde_legivel }}</td>
                         <td><span class="tag tag-medio">{{ evento.categoria or '-' }}</span></td>
                         <td><span class="tag {{ 'tag-alto' if evento.tipo_geografico == 'nacional' else 'tag-baixo' }}">{{ evento.tipo_geografico or '-' }}</span></td>
                         {% elif aba == 'validos' %}
@@ -1328,12 +1329,21 @@
                         <td>
                             <div class="event-info">
                                 <span class="event-name">{{ evento.nome[:50] if evento.nome else 'N/A' }}</span>
+                                <span class="artist-name">
+                                    {% if evento.artista %}
+                                    {{ evento.artista }}
+                                    {% if evento.genero %}<span class="tag tag-medio">{{ evento.genero }}</span>{% endif %}
+                                    {% else %}—{% endif %}
+                                </span>
+                                {% if evento.descricao %}
+                                <span style="display: block; font-size: 11px; color: var(--text-dim); margin-top: 2px;">{{ evento.descricao[:80] }}</span>
+                                {% endif %}
                             </div>
                         </td>
                         <td><span class="tag tag-medio">{{ evento.fonte or '-' }}</span></td>
-                        <td class="mono">{{ evento.data or '-' }}</td>
-                        <td class="mono">{{ evento.cidade or '-' }}</td>
-                        <td><span class="tag tag-medio">{{ evento.categoria or '-' }}</span></td>
+                        <td class="mono">{{ evento.data | data_br }}</td>
+                        <td class="mono">{{ evento | onde_legivel }}</td>
+                        <td><span class="tag tag-medio">{{ evento.genero or evento.categoria or '-' }}</span></td>
                         <td><span class="tag {{ 'tag-alto' if evento.tipo_geografico == 'nacional' else 'tag-baixo' }}">{{ evento.tipo_geografico or '-' }}</span></td>
                         <td class="mono">{{ evento.pais or '-' }}</td>
                         {% else %}
@@ -1353,13 +1363,36 @@
                                     {% endif %}
                                     {% endif %}
                                 </span>
-                                <span class="artist-name">{{ evento.evento.artista }}</span>
+                                <span class="artist-name">
+                                    {% if evento.evento.artista %}
+                                    {{ evento.evento.artista }}
+                                    {% if evento.evento.genero %}
+                                    <span class="tag tag-medio">{{ evento.evento.genero }}</span>
+                                    {% endif %}
+                                    {% elif evento.evento.genero %}
+                                    {{ evento.evento.genero }}
+                                    {% else %}
+                                    —
+                                    {% endif %}
+                                </span>
+                                {% if evento.evento.local or evento.evento.descricao or (evento.evento.preco and evento.evento.preco > 0) %}
+                                <span style="display: block; font-size: 11px; color: var(--text-dim); margin-top: 2px;">
+                                    {% if evento.evento.descricao %}
+                                    {{ evento.evento.descricao[:80] }}
+                                    {% elif evento.evento.local %}
+                                    <i class="fas fa-map-pin"></i> {{ evento.evento.local }}
+                                    {% endif %}
+                                    {% if evento.evento.preco and evento.evento.preco > 0 %}
+                                    {% if evento.evento.descricao or evento.evento.local %} · {% endif %}R$ {{ "%.0f"|format(evento.evento.preco) }}
+                                    {% endif %}
+                                </span>
+                                {% endif %}
                             </div>
                         </td>
                         <td><span class="tag tag-{{ 'medio' if evento.evento.fonte in ['ingresse', 'sympla', 'ticket360'] else ('alto' if evento.evento.fonte == 'ticketmaster' else 'baixo') }}">{{ evento.evento.fonte }}</span></td>
-                        <td class="mono">{{ evento.evento.data }}</td>
-                        <td class="mono">{{ evento.evento.cidade[:20] }}</td>
-                        <td><span class="tag tag-medio">{{ evento.evento.categoria or '-' }}</span></td>
+                        <td class="mono">{{ evento.evento.data | data_br }}</td>
+                        <td class="mono">{{ evento.evento | onde_legivel }}</td>
+                        <td><span class="tag tag-medio">{{ evento.evento.genero or evento.evento.categoria or '-' }}</span></td>
                         <td><span class="tag {{ 'tag-alto' if evento.evento.tipo_geografico == 'nacional' else 'tag-baixo' }}">{{ evento.evento.tipo_geografico or '-' }}</span></td>
                         <td class="score" style="color: var(--accent-light)">{{ "%.1f"|format(evento.analise.nota_final | default(0)) }}</td>
                         {% set score = evento.previsao.score_valorizacao if evento.previsao else 0 %}

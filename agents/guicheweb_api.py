@@ -1,5 +1,7 @@
 import requests
 
+from agents.nome_parser import evento_padrao
+
 API_URL = "https://www.guicheweb.com.br/webservices/api/api.php"
 
 HEADERS = {
@@ -40,23 +42,28 @@ def get_guicheweb_events() -> list[dict]:
 
 
 def _transform_event(item: dict) -> dict:
-    """Transforma evento do GuichêWeb para formato padronizado."""
+    """Transforma evento do GuichêWeb para o schema canônico do pipeline."""
     cidade = item.get("cidade", "")
     cidade_parts = cidade.split("/")
-    city = cidade_parts[0] if len(cidade_parts) > 0 else ""
-    state = cidade_parts[1] if len(cidade_parts) > 1 else ""
+    city = cidade_parts[0].strip() if len(cidade_parts) > 0 else ""
+    state = cidade_parts[1].strip() if len(cidade_parts) > 1 else ""
 
     img = item.get("img", "")
     image = f"https://cdn.guicheweb.com.br/gw-bucket/imagens/eventos/{img}" if img else ""
 
-    return {
-        "source": "guicheweb",
-        "event_id": item.get("id_evento", ""),
-        "name": item.get("nome", ""),
-        "date": item.get("data", ""),
-        "city": city,
-        "state": state,
-        "venue": item.get("local", ""),
-        "image": image,
-        "url": item.get("url_amigavel", "")
-    }
+    url_amigavel = item.get("url_amigavel", "") or ""
+    if url_amigavel and not url_amigavel.startswith("http"):
+        # URL relativa ("/evento/xyz") → absoluta
+        url_amigavel = f"https://www.guicheweb.com.br/{url_amigavel.lstrip('/')}"
+
+    return evento_padrao(
+        nome=item.get("nome", ""),
+        data=item.get("data", ""),
+        cidade=city,
+        estado=state,
+        local=item.get("local", ""),
+        imagem=image,
+        url=url_amigavel,
+        fonte="guicheweb",
+        event_id=str(item.get("id_evento", "")),
+    )

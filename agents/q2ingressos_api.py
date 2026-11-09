@@ -1,5 +1,7 @@
 import requests
 
+from agents.nome_parser import evento_padrao
+
 API_URL = "https://cdn.q2ingressos.com.br/assets/api/nextEvents.json"
 
 HEADERS = {
@@ -38,15 +40,15 @@ def get_q2ingressos_events() -> list[dict]:
 
 
 def _transform_event(item: dict) -> dict:
-    """Transforma evento do Q2 Ingressos para formato padronizado."""
-    return {
-        "source": "q2ingressos",
-        "event_id": str(item.get("Id", "")),
-        "name": item.get("Name", ""),
-        "date": item.get("StartDate", ""),
-        "city": item.get("City", ""),
-        "state": item.get("State", ""),
-        "venue": item.get("Place", ""),
-        "image": item.get("ImageEvent", ""),
-        "url": f"https://q2ingressos.com.br/evento/{item.get('Slug', '')}"
-    }
+    """Transforma evento do Q2 Ingressos para o schema canônico do pipeline."""
+    return evento_padrao(
+        nome=item.get("Name", ""),
+        data=item.get("StartDate", ""),
+        cidade=item.get("City", ""),
+        estado=item.get("State", ""),
+        local=item.get("Place", ""),
+        imagem=item.get("ImageEvent", ""),
+        url=f"https://q2ingressos.com.br/evento/{item.get('Slug', '')}",
+        fonte="q2ingressos",
+        event_id=str(item.get("Id", "")),
+    )

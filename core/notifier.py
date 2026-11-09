@@ -71,11 +71,19 @@ def formatar_mensagem(
 ) -> tuple[str, list]:
     """Formata mensagem de alerta com inline keyboard opcional."""
     nome = evento.get("nome", "N/A")
-    artista = evento.get("artista", "N/A")
+    artista = (evento.get("artista") or "").strip() or "Vários artistas"
     data = evento.get("data", "N/A")
-    cidade = evento.get("cidade", "N/A")
+    cidade = (evento.get("cidade") or "").strip() or "N/A"
+    estado = (evento.get("estado") or "").strip()
+    local = (evento.get("local") or "").strip()
+    genero = (evento.get("genero") or "").strip()
+    descricao = (evento.get("descricao") or "").strip()
+    preco = evento.get("preco", 0) or 0
     fonte = evento.get("fonte", "N/A")
-    link = evento.get("link", "")
+    link = evento.get("link", "") or evento.get("url", "")
+
+    data_fmt = f"{data[8:10]}/{data[5:7]}/{data[0:4]}" if len(data) >= 10 and data[4] == "-" else data
+    cidade_fmt = f"{cidade} - {estado}" if estado and estado.lower() not in cidade.lower() else cidade
     
     nota = analise.get("nota_final", 0)
     confianca = auditoria.get("confianca", 0)
@@ -105,8 +113,20 @@ def formatar_mensagem(
 
 📌 <b>Evento:</b> {nome}
 🎤 <b>Artista:</b> {artista}
-📅 <b>Data:</b> {data}
-📍 <b>Cidade:</b> {cidade}
+📅 <b>Data:</b> {data_fmt}
+📍 <b>Cidade:</b> {cidade_fmt}
+🎟️ <b>Fonte:</b> {fonte}"""
+
+    if local:
+        mensagem += f"\n🏟️ <b>Local:</b> {local}"
+    if preco > 0:
+        mensagem += f"\n💵 <b>Preço oficial:</b> R$ {preco:.2f}"
+    if genero:
+        mensagem += f"\n🎵 <b>Gênero:</b> {genero}"
+    if descricao:
+        mensagem += f"\n📝 {descricao}"
+
+    mensagem += f"""
 
 ⭐ <b>Nota:</b> {nota:.1f}/10
 🎯 <b>Confiança:</b> {confianca}/10"""

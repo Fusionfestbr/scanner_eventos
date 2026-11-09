@@ -3,7 +3,8 @@ Módulo de classificação automática de eventos.
 Classifica eventos por escopo geográfico e categoria com base em palavras-chave.
 NÃO modifica dados existentes — apenas adiciona campos novos.
 """
-from typing import Dict
+import re
+import unicodedata
 
 CIDADES_BRASILEIRAS = {
     "são paulo", "sp", "rio de janeiro", "rj", "brasília", "df",
@@ -96,6 +97,48 @@ CATEGORIAS = {
         "retiro", "louvor", "adoração", "worship", "congresso gospel"
     ]
 }
+
+# Categorias que interessam ao negócio (revenda de ingressos de música)
+CATEGORIAS_MUSICAIS = {"show", "festival"}
+
+# Categorias fora do escopo musical — rejeitadas quando
+# COLETA_SOMENTE_MUSICA está ativo
+CATEGORIAS_NAO_MUSICAS = {"esporte", "teatro", "standup", "conferencia", "religioso"}
+
+# Gêneros musicais reconhecidos no título/artista
+GENEROS = {
+    "sertanejo": ["sertanejo", "caipira", "viola", "universitário", "churrasquinho"],
+    "funk": ["funk", "baile funk", "mandelão", "bruxaria", "dj vazado"],
+    "rap": ["rap", "hip hop", "hiphop"],
+    "trap": ["trap", "drill"],
+    "rock": ["rock", "metal", "punk", "grunge", "indie rock", "emo"],
+    "pop": ["pop", "k-pop", "kpop", "j-pop", "jpop"],
+    "eletronica": ["eletrônica", "eletronica", "techno", "house", "trance",
+                   "edm", "progressive", "drum and bass", "dnb", "dubstep",
+                   "hardstyle", "rave"],
+    "samba": ["samba", "sambista", "gafieira", "roda de samba", "pagode de mesa"],
+    "pagode": ["pagode", "pagodão", "pagodao"],
+    "mpb": ["mpb", "bossa nova", "bossa"],
+    "forro": ["forró", "forro", "piseiro", "pisadinha", "corridinha", "arrocha"],
+    "gospel": ["gospel", "louvor", "adoração", "worship"],
+    "reggae": ["reggae"],
+    "jazz": ["jazz", "blues", "soul"],
+    "axe": ["axé", "axé"],
+    "reveillon": ["réveillon", "reveillon", "vira-ano", "ano novo", "baile de gala"],
+}
+
+# Palavras que indicam NÃO ser um show musical
+# (ajuda contra categoria "outros", sem depender de LLM)
+_NAO_MUSICAL_FORTES = [
+    "workshop", "curso", "palestra", "congresso", "seminário", "seminario",
+    "feira", "expo ", "expopais", "convenção", "convencao", "leilão", "leilao",
+    "futebol", "campeonato", "brasileirão", "brasileirao", "corrida", "maratona",
+    "ufc", "luta", "jogo do", "clássico", "clássicos",
+    "peça de teatro", "teatro infantil", "musical infantil",
+    "biblioteca", "museu", "galeria", "cinema", "documentário",
+    "aula", "treinamento", "imersão", "imersao", "formação",
+    "lançamento de produto",
+]
 
 
 def classificar_escopo(evento: dict) -> str:
@@ -221,3 +264,43 @@ def enriquecer_lista(eventos: list) -> list:
         Nova lista com eventos enriquecidos
     """
     return [enriquecer_evento(e.copy()) for e in eventos]
+
+
+def classificar_genero(evento: dict) -> str:
+    """
+    Identifica o gênero musical do evento pelo título/artista.
+
+    Returns:
+        Nome do gênero ("rock", "sertanejo", ...) ou "" quando
+        não é possível identificar por regras.
+    """
+    nome = (evento.get("nome", "") or "").lower()
+    artista = (evento.get("artista", "") or "").lower()
+    categoria_fonte = (evento.get("categoria_fonte", "") or "").lower()
+    texto = _sem_acentos(f"{nome} {artista} {categoria_fonte}")
+
+    for genero, palavras in GENEROS.items():
+        for palavra in palavras:
+            # \b evita falso-positivo ("emo" dentro de "memórias")
+            if re.search(r"\b" + re.escape(_sem_acentos(palavra)) + r"\b", texto, re.IGNORECASE):
+                return genero
+
+    return ""
+
+
+def _sem_acentos(texto: str) -> str:
+    if not texto:
+        return ""
+    normalizado = unicodedata.normalize("NFKD", texto)
+    return "".join(c for c in normalizado if not unicodedata.combining(c))
+
+
+def parece_nao_musical(evento: dict) -> bool:
+    """
+    Heurística rápida (sem IA): o título bate em alguma expressão
+    forte de não-música (workshop, futebol, palestra...)?
+    """
+    texto = _sem_acentos(
+        f"{(evento.get('nome') or '')} {(evento.get('categoria_fonte') or '')}"
+    ).lower()
+    return any(palavra in texto for palavra in _NAO_MUSICAL_FORTES)

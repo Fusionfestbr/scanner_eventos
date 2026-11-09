@@ -49,54 +49,54 @@ def main():
         eventos = get_eventim_events()
         print(f"\n  Eventos Eventim: {len(eventos)}")
         for e in eventos[:10]:
-            print(f"  - {e['nome']} | {e['data_inicio'][:10]} | R${e['preco_base']}")
+            print(f"  - {e['nome']} | {e['data'][:10]} | R${e['preco']} | {e['cidade']}")
         return
-    
+
     if "--ingresse" in args:
         from agents.ingresse_api import get_ingresse_events
         eventos = get_ingresse_events()
         print(f"\n  Eventos Ingresse: {len(eventos)}")
         for e in eventos[:10]:
-            print(f"  - {e['name']} | {e['date'][:10]}")
+            print(f"  - {e['nome']} | {e['data'][:10]} | {e['cidade']}")
         return
-    
+
     if "--all-events" in args:
         from agents.aggregator import get_all_events
         eventos = get_all_events()
         for e in eventos[:10]:
-            print(f"  [{e['source']}] {e['name']} | {e['date'][:10]}")
+            print(f"  [{e['fonte']}] {e['nome']} | {e['data'][:10]}")
         return
-    
+
     if "--livepass" in args:
         from agents.livepass_api import get_livepass_events
         eventos = get_livepass_events()
         print(f"\n  Eventos Livepass: {len(eventos)}")
         for e in eventos[:10]:
-            print(f"  - {e['name']} | {e['date'][:10]}")
+            print(f"  - {e['nome']} | {e['data'][:10]}")
         return
-    
+
     if "--q2ingressos" in args:
         from agents.q2ingressos_api import get_q2ingressos_events
         eventos = get_q2ingressos_events()
         print(f"\n  Eventos Q2 Ingressos: {len(eventos)}")
         for e in eventos[:10]:
-            print(f"  - {e['name']} | {e['date'][:10]}")
+            print(f"  - {e['nome']} | {e['data'][:10]} | {e['cidade']}")
         return
-    
+
     if "--zigtickets" in args:
         from agents.zigtickets_api import get_zigtickets_events
         eventos = get_zigtickets_events()
         print(f"\n  Eventos Zig Tickets: {len(eventos)}")
         for e in eventos[:10]:
-            print(f"  - {e['name']} | {e['date'][:10]}")
+            print(f"  - {e['nome']} | {e['data'][:10]} | {e['cidade']}")
         return
-    
+
     if "--guicheweb" in args:
         from agents.guicheweb_api import get_guicheweb_events
         eventos = get_guicheweb_events()
         print(f"\n  Eventos GuichêWeb: {len(eventos)}")
         for e in eventos[:10]:
-            print(f"  - {e['name']} | {e['date'][:10]}")
+            print(f"  - {e['nome']} | {e['data'][:10]} | {e['cidade']}")
         return
     
     if "--metrics" in args:
