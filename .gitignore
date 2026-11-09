@@ -19,6 +19,12 @@ data/*.log
 # Logs
 logs/
 
+# Node / Electron build artifacts
+node_modules/
+dist/
+dist-electron/
+build/
+
 # IDE
 .vscode/
 .idea/
