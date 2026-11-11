@@ -108,30 +108,46 @@ def auditar_evento(evento: dict, analise: dict) -> dict:
 
 
 def auditar_eventos(eventos_analisados: list[dict]) -> list[dict]:
-    """Audita lista de eventos em paralelo."""
+    """Audita lista de eventos em paralelo.
+
+    Um evento que falhar é auditado como "ignorar" — nunca derruba o estágio.
+    """
     global _counter
     _counter = 0
-    resultados = [None] * len(eventos_analisados)
+    total = len(eventos_analisados)
+    resultados = [None] * total
 
     def auditar_com_indice(idx, item):
-        evento = item["evento"]
-        analise = item["analise"]
-        auditoria = auditar_evento(evento, analise)
+        try:
+            evento = item["evento"]
+            analise = item["analise"]
+            auditoria = auditar_evento(evento, analise)
+        except Exception as e:
+            print(f"   [ERRO AUDITORIA] idx {idx}: {type(e).__name__}: {e}")
+            auditoria = {
+                "decisao": "IGNORAR",
+                "confianca": 0,
+                "erro_detectado": True,
+                "comentario": f"Erro na auditoria: {type(e).__name__}"
+            }
         count = _increment_counter()
-        nome = evento.get("nome", "N/A")[:60]
+        nome = item.get("evento", {}).get("nome", "N/A")[:60]
         decisao = auditoria.get("decisao", "IGNORAR")
         confianca = auditoria.get("confianca", 0)
-        print(f"   [{count}/{len(eventos_analisados)}] {nome} -> {decisao} (conf: {confianca})")
+        print(f"   [{count}/{total}] {nome} -> {decisao} (conf: {confianca})")
         return idx, {
-            "evento": evento,
-            "analise": analise,
+            "evento": item.get("evento", {}),
+            "analise": item.get("analise", {}),
             "auditoria": auditoria
         }
 
     with ThreadPoolExecutor(max_workers=LLM_WORKERS) as executor:
         futures = {executor.submit(auditar_com_indice, i, item): i for i, item in enumerate(eventos_analisados)}
         for future in as_completed(futures):
-            idx, resultado = future.result()
-            resultados[idx] = resultado
+            try:
+                idx, resultado = future.result()
+                resultados[idx] = resultado
+            except Exception as e:
+                print(f"   [ERRO AUDITORIA] future: {type(e).__name__}: {e}")
 
-    return resultados
+    return [r for r in resultados if r is not None]
