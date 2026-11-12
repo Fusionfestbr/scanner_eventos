@@ -215,4 +215,11 @@ def retomar():
 
 
 if __name__ == "__main__":
-    retomar()
+    try:
+        retomar()
+    except Exception:
+        import traceback
+        from utils.logger import logger
+        logger.exception("RETOMA falhou com exceção")
+        logger.error("TRACEBACK:\n" + traceback.format_exc())
+        raise
