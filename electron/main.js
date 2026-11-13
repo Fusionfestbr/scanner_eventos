@@ -1,6 +1,6 @@
 const { app, BrowserWindow, shell } = require('electron');
 const path = require('path');
-const { spawn } = require('child_process');
+const { spawn, execSync } = require('child_process');
 const fs = require('fs');
 const http = require('http');
 
@@ -8,6 +8,39 @@ let mainWindow;
 let flaskProcess;
 let pythonProcess = null;
 let LOG_FILE = null;
+
+const FLASK_PORT = 5000;
+
+function killProcessTree(pid) {
+    // O Flask sobe via shell (cmd.exe) e o "python" do PATH pode ser um alias
+    // que cria outro filho — .kill() mata só o pai e deixa o Python órfão
+    // escutando a porta com código antigo. taskkill /T encerra a árvore toda.
+    if (!pid) return;
+    try {
+        execSync(`taskkill /F /T /PID ${pid}`, { stdio: 'ignore' });
+        log(`Árvore do processo ${pid} encerrada`);
+    } catch (e) { /* processo já não existe */ }
+}
+
+function killPortOwner(port) {
+    // Antes de subir o Flask, encerra qualquer órfão de sessão anterior
+    // que esteja escutando a porta — senão a janela nova conecta num
+    // servidor antigo e o usuário vê a interface desatualizada.
+    try {
+        const out = execSync(`netstat -ano -p tcp | findstr ":${port} "`, { shell: true }).toString();
+        const pids = new Set();
+        out.split(/\r?\n/).forEach(line => {
+            if (line.toUpperCase().includes('LISTENING')) {
+                const m = line.trim().match(/(\d+)\s*$/);
+                if (m) pids.add(m[1]);
+            }
+        });
+        pids.forEach(pid => {
+            log(`Porta ${port} ocupada por PID ${pid} — encerrando órfão antes de iniciar`);
+            killProcessTree(pid);
+        });
+    } catch (e) { /* porta livre: findstr não encontrou nada */ }
+}
 
 function getLogFile() {
     if (!LOG_FILE) {
@@ -484,6 +517,7 @@ async function createWindow() {
             return;
         }
 
+        killPortOwner(FLASK_PORT);
         await startFlask(pythonCmd, flaskPath);
 
         const flaskReady = await waitForFlask(30);
@@ -526,11 +560,9 @@ app.whenReady().then(async () => {
 
 app.on('window-all-closed', () => {
     log('Janelas fechadas, encerrando...');
-    
+
     if (pythonProcess) {
-        try {
-            pythonProcess.kill();
-        } catch (e) {}
+        killProcessTree(pythonProcess.pid);
     }
     
     if (process.platform !== 'darwin') {
@@ -541,8 +573,6 @@ app.on('window-all-closed', () => {
 process.on('exit', () => {
     log('Processo encerrado');
     if (pythonProcess) {
-        try {
-            pythonProcess.kill();
-        } catch (e) {}
+        killProcessTree(pythonProcess.pid);
     }
 });
