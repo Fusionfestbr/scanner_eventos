@@ -445,6 +445,14 @@ def executar_pipeline() -> tuple:
     
     log("=== PIPELINE CONCLUÍDO ===")
     _concluir_pipeline()
+
+    # Radar de preços: dispara verificação em background (dedupe interno de 20h)
+    try:
+        from core.monitor_precos import rodar_monitor_background
+        rodar_monitor_background()
+        log("   -> Monitor de preços disparado em background")
+    except Exception as e:
+        log(f"   [AVISO] Monitor de preços não disparou: {e}")
     
     checkpoint.salvar("concluido", {
         "qtd_coletados": qtd_coletados,

@@ -1098,6 +1098,71 @@
         .v-score-low { color: var(--red); }
         .v-preco { color: var(--text); }
 
+        /* ===== Radar de preço (Fase 2) ===== */
+        .card-preco-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0,0,0,0.18);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 7px 10px;
+        }
+
+        .delta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 7px;
+            white-space: nowrap;
+        }
+
+        .delta-down {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .delta-up {
+            background: rgba(239, 68, 68, 0.12);
+            color: var(--red);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+        }
+
+        .delta-badge canvas { image-rendering: auto; }
+
+        .esg-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 9px;
+            border-radius: 7px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--red);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .snap-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 5px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.05);
+            font-family: 'Space Mono', monospace;
+        }
+
+        .snap-row:last-child { border-bottom: none; }
+        .snap-row .preco-down { color: var(--green); }
+        .snap-row .preco-up { color: var(--red); }
+
         .card-footer {
             display: flex;
             justify-content: space-between;
@@ -1879,6 +1944,8 @@
         };
 
         const DATA = { ranking: null, brutos: null, validos: null };
+        let DATA_PRECOS = { ranking: {}, brutos: {}, validos: {} };
+        let modalPrecoChart = null;
         let charts = {};
 
         const $ = id => document.getElementById(id);
@@ -1911,8 +1978,17 @@
                 const resp = await fetch(`/api/dados?origem=${origem}`);
                 const payload = await resp.json();
                 DATA[origem] = payload.eventos || [];
+                DATA_PRECOS[origem] = payload.precos || {};
             }
             return DATA[origem];
+        }
+
+        function precosDe(id) {
+            for (const k of Object.keys(DATA_PRECOS)) {
+                const serie = (DATA_PRECOS[k] || {})[id];
+                if (serie && serie.length) return serie;
+            }
+            return null;
         }
 
         /* ==================== FILTRAGEM ==================== */
@@ -2062,14 +2138,70 @@
             return v >= 7 ? 'v-score-high' : (v >= 5 ? 'v-score-mid' : 'v-score-low');
         }
 
+        function deltaInfo(serie) {
+            const pts = (serie || []).filter(s => s.p != null);
+            if (pts.length < 2) return null;
+            const p0 = pts[0].p, p1 = pts[pts.length - 1].p;
+            if (!p0 || p1 === p0) return null;
+            return { p0, p1, pct: (1 - p1 / p0) * 100 };
+        }
+
+        function radarRowHTML(ev, serie) {
+            const d = deltaInfo(serie);
+            const delta = d
+                ? (d.pct < 0
+                    ? `<span class="delta-badge delta-down"><i class="fas fa-arrow-trend-down"></i> -${Math.abs(d.pct).toFixed(1)}%</span>`
+                    : `<span class="delta-badge delta-up"><i class="fas fa-arrow-trend-up"></i> +${d.pct.toFixed(1)}%</span>`)
+                : '<span></span>';
+            return `
+            <div class="card-preco-row">
+                ${delta}
+                <canvas data-spark="${esc(ev.id)}" width="110" height="30" title="Evolução de preço (radar)"></canvas>
+            </div>`;
+        }
+
+        function drawSpark(cv, serie) {
+            const ctx = cv.getContext('2d');
+            const pts = serie.map(s => s.p).filter(p => p != null);
+            if (pts.length < 2) return;
+            const w = cv.width, h = cv.height, pad = 4;
+            const min = Math.min(...pts), max = Math.max(...pts);
+            const range = (max - min) || 1;
+            const down = pts[pts.length - 1] < pts[0];
+            const cor = down ? '#10b981' : '#ef4444';
+            ctx.clearRect(0, 0, w, h);
+            ctx.strokeStyle = cor;
+            ctx.lineWidth = 2;
+            ctx.lineJoin = 'round';
+            ctx.beginPath();
+            let lx = 0, ly = 0;
+            serie.forEach((s, i) => {
+                if (s.p == null) return;
+                lx = pad + i * (w - 2 * pad) / (serie.length - 1);
+                ly = pad + (h - 2 * pad) * (1 - (s.p - min) / range);
+                if (i === 0) ctx.moveTo(lx, ly); else ctx.lineTo(lx, ly);
+            });
+            ctx.stroke();
+            ctx.fillStyle = cor;
+            ctx.beginPath();
+            ctx.arc(lx, ly, 2.6, 0, 7);
+            ctx.fill();
+        }
+
         function cardHTML(ev, g) {
             const img = ev.imagem
                 ? `<img src="${esc(ev.imagem)}" loading="lazy" onerror="this.remove()">`
                 : '<i class="fas fa-music"></i>';
+            const serie = precosDe(ev.id) || [];
+            const comPreco = serie.filter(s => s.p != null);
+            const ultimoP = comPreco.length ? comPreco[comPreco.length - 1].p : null;
+            const esgAgora = serie.length ? (serie[serie.length - 1].esg || serie[serie.length - 1].c) : false;
             const badges = [];
             if (ev.compra_agressiva) badges.push('<span class="hot-badge"><i class="fas fa-fire"></i> HOT</span>');
             if (g.n > 1) badges.push(`<span class="grupo-badge" data-grupo><i class="fas fa-clone"></i> ${g.n} fontes</span>`);
-            const preco = ev.preco != null && ev.preco > 0 ? `R$ ${Math.round(ev.preco)}` : '—';
+            if (esgAgora) badges.push('<span class="esg-badge"><i class="fas fa-ban"></i> ESGOTADO</span>');
+            const precoVal = ultimoP != null ? ultimoP : ev.preco;
+            const preco = precoVal != null && precoVal > 0 ? `R$ ${Math.round(precoVal)}` : '—';
             const acao = ev.acao || '';
             const temAcao = !!acao;
             const scores = [];
@@ -2102,6 +2234,7 @@
                     ${ev.local ? `<span><i class="fas fa-location-dot"></i>${esc(ev.local)}</span>` : ''}
                 </div>
                 ${scores.length ? `<div class="card-scores">${scores.join('')}</div>` : ''}
+                ${comPreco.length >= 2 ? radarRowHTML(ev, serie) : ''}
                 <div class="card-footer">
                     ${temAcao ? `<span class="action-tag action-${esc(acao.toLowerCase())}">${esc(acao)}</span>` : '<span></span>'}
                     <div class="card-actions">
@@ -2156,6 +2289,12 @@
                     const ev = acharPorId(card.dataset.id);
                     if (ev) abrirModal(ev);
                 });
+            });
+
+            // sparklines do radar de preços
+            area.querySelectorAll('canvas[data-spark]').forEach(cv => {
+                const serie = precosDe(cv.dataset.spark);
+                if (serie) drawSpark(cv, serie);
             });
 
             atualizarStats(filtrados);
@@ -2366,6 +2505,35 @@
                     <div class="kv-row"><span>Fonte</span><span class="metric-value">${esc(ev.fonte || '—')}</span></div>
                 </div>`;
 
+            // Evolução de preço (radar)
+            const serieModal = precosDe(ev.id) || [];
+            let secaoEvol = '';
+            if (serieModal.length) {
+                const comPreco = serieModal.filter(s => s.p != null);
+                const d = deltaInfo(serieModal);
+                const esgUlt = serieModal[serieModal.length - 1];
+                const statusUlt = esgUlt.esg ? '🚫 esgotado' : (esgUlt.c ? '⛔ cancelado' : '✅ à venda');
+                const deltaLinha = d
+                    ? `<div class="kv-row"><span>Variação</span><span class="metric-value ${d.pct < 0 ? 'v-score-high' : 'v-score-low'}">${d.pct < 0 ? '-' : '+'}${Math.abs(d.pct).toFixed(1)}% (R$ ${d.p0.toFixed(0)} → R$ ${d.p1.toFixed(0)})</span></div>`
+                    : '';
+                const snaps = serieModal.slice(-14).reverse().map((s, i, arr) => {
+                    const prev = arr[i + 1];
+                    const cls = prev && prev.p != null && s.p != null
+                        ? (s.p < prev.p ? 'preco-down' : (s.p > prev.p ? 'preco-up' : ''))
+                        : '';
+                    const flag = s.esg ? ' <span class="esg-badge">esgotado</span>' : (s.c ? ' <span class="esg-badge">cancelado</span>' : '');
+                    return `<div class="snap-row"><span>${fmtT(s.t)}</span><span class="${cls}">${s.p != null ? 'R$ ' + s.p.toFixed(2) : 'sem preço'}${flag}</span></div>`;
+                }).join('');
+                secaoEvol = `
+                    <div class="modal-section full">
+                        <h4><i class="fas fa-chart-line"></i> Evolução de Preço (radar)</h4>
+                        ${comPreco.length >= 2 ? '<div style="height:190px;"><canvas id="precoEvolChart"></canvas></div>' : ''}
+                        ${deltaLinha}
+                        <div class="kv-row"><span>Status na última checagem</span><span class="metric-value">${statusUlt}</span></div>
+                        ${snaps ? `<div style="margin-top:10px;">${snaps}</div>` : ''}
+                    </div>`;
+            }
+
             // Plataformas (precos_encontrados)
             let plataformasHTML = '';
             if (ev.precos_encontrados && ev.precos_encontrados.length) {
@@ -2401,6 +2569,7 @@
 
             $('modalGrid').innerHTML = `
                 ${secaoAnalise}${secaoPrevisao}${secaoArb}${secaoLocal}
+                ${secaoEvol}
                 ${plataformasHTML}${grupoHTML}
                 ${ev.descricao ? `<div class="modal-section full"><h4><i class="fas fa-align-left"></i> Descrição</h4><div class="modal-texto">${esc(ev.descricao)}</div></div>` : ''}
                 ${ev.justificativa ? `<div class="modal-section full"><h4><i class="fas fa-robot"></i> Justificativa da IA</h4><div class="modal-texto">${esc(ev.justificativa)}</div></div>` : ''}
@@ -2421,9 +2590,54 @@
             $('modalFooter').innerHTML = footer.join('');
 
             $('modalOverlay').classList.add('open');
+            initModalPrecoChart(serieModal);
         }
 
-        function fecharModal() { $('modalOverlay').classList.remove('open'); }
+        function fmtT(iso) {
+            const d = new Date(iso);
+            if (isNaN(d)) return '—';
+            const dd = String(d.getDate()).padStart(2, '0');
+            const mm = String(d.getMonth() + 1).padStart(2, '0');
+            const hh = String(d.getHours()).padStart(2, '0');
+            const mi = String(d.getMinutes()).padStart(2, '0');
+            return `${dd}/${mm} ${hh}:${mi}`;
+        }
+
+        function initModalPrecoChart(serie) {
+            if (modalPrecoChart) { modalPrecoChart.destroy(); modalPrecoChart = null; }
+            const cv = $('precoEvolChart');
+            if (!cv) return;
+            const pts = serie.filter(s => s.p != null);
+            if (pts.length < 2) return;
+            modalPrecoChart = new Chart(cv.getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: pts.map(s => fmtT(s.t)),
+                    datasets: [{
+                        data: pts.map(s => s.p),
+                        borderColor: '#a855f7',
+                        backgroundColor: 'rgba(168,85,247,0.15)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#c084fc'
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { color: GRID_COLOR }, ticks: { color: TICK_COLOR, font: { size: 10 }, maxTicksLimit: 7 } },
+                        y: { grid: { color: GRID_COLOR }, ticks: { color: TICK_COLOR, callback: v => 'R$ ' + v } }
+                    }
+                }
+            });
+        }
+
+        function fecharModal() {
+            $('modalOverlay').classList.remove('open');
+            if (modalPrecoChart) { modalPrecoChart.destroy(); modalPrecoChart = null; }
+        }
         $('modalClose').addEventListener('click', fecharModal);
         $('modalOverlay').addEventListener('click', e => { if (e.target === $('modalOverlay')) fecharModal(); });
         document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharModal(); });

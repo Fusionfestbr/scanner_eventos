@@ -287,10 +287,27 @@ def api_dados():
         eventos = anotar_grupos(eventos)
 
     dados = [_achatar(it) for it in eventos]
+
+    # Séries de preço do monitor (para sparklines no client)
+    precos_payload = {}
+    try:
+        from core.monitor_precos import carregar_precos, MAX_PONTOS_PAYLOAD
+        precos_all = carregar_precos()
+        for d in dados:
+            serie = precos_all.get(str(d["id"])) or []
+            if serie:
+                precos_payload[str(d["id"])] = [
+                    {"t": s.get("t"), "p": s.get("p"), "esg": bool(s.get("esg")), "c": bool(s.get("c"))}
+                    for s in serie[-MAX_PONTOS_PAYLOAD:]
+                ]
+    except Exception:
+        precos_payload = {}
+
     return jsonify({
         "origem": origem,
         "total": len(dados),
         "eventos": dados,
+        "precos": precos_payload,
         "timestamp": datetime.now().isoformat()
     })
 
@@ -524,6 +541,34 @@ def health_check():
     }
     
     return jsonify(health_data)
+
+
+@app.route("/api/monitor/status")
+@require_auth
+def api_monitor_status():
+    """Resumo do radar de preços (histórico, última rodada, status de execução)."""
+    try:
+        from core.monitor_precos import resumo_monitor
+        return jsonify(resumo_monitor())
+    except Exception as e:
+        return jsonify({"erro": str(e)[:200]}), 500
+
+
+@app.route("/api/monitor/verificar", methods=["POST"])
+@require_auth
+def api_monitor_verificar():
+    """Dispara uma rodada do radar de preços em background.
+
+    Body opcional: {"force": true} ignora o dedupe de 20h.
+    """
+    try:
+        from core.monitor_precos import rodar_monitor_background, resumo_monitor
+        body = request.get_json(silent=True) or {}
+        force = bool(body.get("force"))
+        rodar_monitor_background(force=force)
+        return jsonify({"status": "iniciado", "force": force, "info": resumo_monitor()})
+    except Exception as e:
+        return jsonify({"status": "erro", "erro": str(e)[:200]}), 500
 
 
 def _check_lm_studio() -> bool:

@@ -297,6 +297,14 @@ def executar_loop(intervalo_minutos: int | None = None, reavaliar_horas: int = 6
             except Exception as e:
                 print(f"  [ERRO] Ciclo falhou: {e}")
                 time.sleep(60)
+
+            # Radar de preços (dedupe interno evita verificações repetidas)
+            if running:
+                try:
+                    from core.monitor_precos import rodar_monitor_background
+                    rodar_monitor_background()
+                except Exception as e:
+                    print(f"  [AVISO] Monitor de preços: {e}")
                 
     finally:
         release_lock()
