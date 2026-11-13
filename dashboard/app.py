@@ -309,6 +309,9 @@ def api_dados():
     except Exception:
         precos_payload = {}
 
+    # Esgotado consolidado (snapshot mais recente do radar) para o painel
+    _anotar_esgotado(dados, precos_payload)
+
     return jsonify({
         "origem": origem,
         "total": len(dados),
@@ -316,6 +319,17 @@ def api_dados():
         "precos": precos_payload,
         "timestamp": datetime.now().isoformat()
     })
+
+
+def _anotar_esgotado(dados: dict, precos_payload: dict) -> None:
+    """Flag consolidado de esgotado por evento (in-place).
+
+    Fonte: snapshot mais recente do radar (esg = esgotado, c = cancelado).
+    O painel usa para o badge e para desabilitar o botão de compra.
+    """
+    for d in dados:
+        serie = precos_payload.get(str(d["id"])) or []
+        d["esgotado"] = bool(serie and (serie[-1].get("esg") or serie[-1].get("c")))
 
 
 @app.route("/")

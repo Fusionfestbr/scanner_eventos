@@ -49,7 +49,8 @@ def _transform_event(item: dict) -> dict:
         estado=location.get("state", ""),
         local=location.get("name", ""),
         imagem=banner,
-        url=f"https://zig.tickets/event/{item.get('slug', '')}",
+        # A rota real do site é /eventos/ (com "s"): /event/{slug} dá 404
+        url=f"https://zig.tickets/eventos/{item.get('slug', '')}",
         fonte="zigtickets",
         event_id=str(item.get("id", "")),
     )

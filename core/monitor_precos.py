@@ -212,7 +212,19 @@ def extrair_esgotado(texto: str, nome: str = None) -> bool:
 
 
 def verificar_url(url: str, nome: str = None) -> dict:
-    """Baixa a página e extrai {preco, esgotado, cancelado, status, erro}."""
+    """Baixa a página e extrai {preco, esgotado, cancelado, status, erro}.
+
+    Plataformas com adaptador específico (zig via Markdown, SPAs via
+    Playwright) são resolvidas em core/adaptadores_precos.py; o restante
+    usa a camada estática abaixo (JSON-LD > itemprop > regex).
+    """
+    try:
+        from core.adaptadores_precos import verificar_evento
+        res = verificar_evento(url, nome)
+        if res is not None:
+            return res
+    except ImportError:
+        pass  # adaptadores indisponível: segue no caminho estático
     resultado = {"preco": None, "esgotado": False, "cancelado": False,
                  "status": None, "erro": None}
     try:

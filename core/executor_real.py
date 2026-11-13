@@ -307,9 +307,18 @@ def gerar_execucao_real(
         qt = plano_acao["quantidade"]
         quantidade = qt.get("recomendado", qt.get("min", 1))
     
-    links_revenda = buscar_links_revenda(nome)
-    
-    melhor_link = selecionar_melhor_link(oficial_url, links_revenda)
+    # Compra = página oficial do evento (nas bilheterias zig/q2/ingresse/
+    # eventim ela já É a página de ingressos, com lotes e checkout).
+    # Antes o link_direto vinha de scraping de busca no viagogo/buyticket,
+    # que frequentemente apontava para evento errado — revenda fica fora.
+    melhor_link = {
+        "url": oficial_url,
+        "plataforma": "oficial",
+        "preco": 0,
+        "tipo": "oficial",
+        "valido": bool(oficial_url),
+    }
+    links_revenda: List[dict] = []
     
     prioridade = determinar_prioridade(nota, score, prob_esgotar)
     

@@ -1487,6 +1487,14 @@
             border: none;
         }
         .card-btn.buy:hover { transform: scale(1.08); }
+        .card-btn.buy.esgotado {
+            background: var(--surface);
+            color: var(--red);
+            border: 1px solid var(--border);
+            cursor: not-allowed;
+            opacity: 0.75;
+        }
+        .card-btn.buy.esgotado:hover { transform: none; }
 
         /* ===== Grupo expandido ===== */
         .grupo-expandido {
@@ -2559,7 +2567,7 @@
             const serie = precosDe(ev.id) || [];
             const comPreco = serie.filter(s => s.p != null);
             const ultimoP = comPreco.length ? comPreco[comPreco.length - 1].p : null;
-            const esgAgora = serie.length ? (serie[serie.length - 1].esg || serie[serie.length - 1].c) : false;
+            const esgAgora = ev.esgotado || (serie.length ? (serie[serie.length - 1].esg || serie[serie.length - 1].c) : false);
             const badges = [];
             if (ev.compra_agressiva) badges.push('<span class="hot-badge"><i class="fas fa-fire"></i> HOT</span>');
             if (g.n > 1) badges.push(`<span class="grupo-badge" data-grupo><i class="fas fa-clone"></i> ${g.n} fontes</span>`);
@@ -2574,9 +2582,11 @@
             if (ev.prob_esgotar != null) scores.push(`<div class="score-pill"><span class="v ${scoreClass(ev.prob_esgotar / 10)}">${Math.round(ev.prob_esgotar)}%</span><span class="l">Esgotar</span></div>`);
             scores.push(`<div class="score-pill"><span class="v v-preco">${esc(preco)}</span><span class="l">Preço</span></div>`);
 
-            const linkCompra = ev.acao === 'COMPRAR' && ev.execucao && ev.execucao.link_direto
-                ? `<a class="card-btn buy" href="${esc(ev.execucao.link_direto)}" target="_blank" title="Ir para compra" onclick="event.stopPropagation()"><i class="fas fa-shopping-cart"></i></a>`
-                : (ev.url ? `<a class="card-btn" href="${esc(ev.url)}" target="_blank" title="Abrir página do evento" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>` : '');
+            const linkCompra = esgAgora
+                ? `<span class="card-btn buy esgotado" title="Evento esgotado - compra indisponível"><i class="fas fa-ban"></i></span>`
+                : (ev.acao === 'COMPRAR' && ev.execucao && ev.execucao.link_direto
+                    ? `<a class="card-btn buy" href="${esc(ev.execucao.link_direto)}" target="_blank" title="Ir para compra" onclick="event.stopPropagation()"><i class="fas fa-shopping-cart"></i></a>`
+                    : (ev.url ? `<a class="card-btn" href="${esc(ev.url)}" target="_blank" title="Abrir página do evento" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a>` : ''));
 
             return `
             <div class="event-card acao-${esc((acao || 'neutro').toLowerCase())}" data-id="${esc(ev.id)}">
@@ -3180,7 +3190,11 @@
             `;
 
             const footer = [];
-            if (ev.execucao && ev.execucao.link_direto) {
+            const serieModal = precosDe(ev.id) || [];
+            const esgModal = ev.esgotado || (serieModal.length ? (serieModal[serieModal.length - 1].esg || serieModal[serieModal.length - 1].c) : false);
+            if (esgModal) {
+                footer.push(`<span class="btn-link buy esgotado" style="cursor:not-allowed; opacity:.75;"><i class="fas fa-ban"></i> Esgotado - compra indisponível</span>`);
+            } else if (ev.execucao && ev.execucao.link_direto) {
                 footer.push(`<a class="btn-link buy" href="${esc(ev.execucao.link_direto)}" target="_blank"><i class="fas fa-shopping-cart"></i> Ir para compra</a>`);
             }
             footer.push(`<button class="btn-link" data-op-kanban="${esc(ev.id)}"><i class="fas fa-cart-plus"></i> Criar operação</button>`);
