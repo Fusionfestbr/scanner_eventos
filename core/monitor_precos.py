@@ -438,6 +438,13 @@ def rodar_monitor(force: bool = False) -> dict:
         summary["alertas"] = alertas
         summary["concluido"] = datetime.now().isoformat()
 
+        # Feedback automático pós-evento (julga passados sem operação)
+        try:
+            from core.feedback import rodar_feedback
+            summary["feedback"] = rodar_feedback()
+        except Exception as e:
+            logger.warning(f"[FEEDBACK] Falhou: {e}")
+
         _status["ultimo_summary"] = summary
         _status["ultima_rodada"] = agora.isoformat()
         logger.info(f"[MONITOR] Rodada concluída: {summary}")

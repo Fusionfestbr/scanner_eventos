@@ -122,6 +122,12 @@ try:
 except ImportError:
     CONSOLIDADOR_AVAILABLE = False
 
+try:
+    from core import operacoes as ops_mod
+    OPERACOES_AVAILABLE = True
+except ImportError:
+    OPERACOES_AVAILABLE = False
+
 
 def carregar_json(filepath):
     """Carrega arquivo JSON genérico."""
@@ -569,6 +575,86 @@ def api_monitor_verificar():
         return jsonify({"status": "iniciado", "force": force, "info": resumo_monitor()})
     except Exception as e:
         return jsonify({"status": "erro", "erro": str(e)[:200]}), 500
+
+
+# ==================== KANBAN DE OPERAÇÕES ====================
+
+def _evento_achatado_por_id(ev_id: str):
+    """Procura evento (achatado) por id no ranking e nos brutos."""
+    if not ev_id:
+        return None
+    for fonte in (carregar_ranking(), carregar_json(RAW_FILE)):
+        for item in fonte:
+            d = _achatar(item)
+            if d["id"] == str(ev_id):
+                return d
+    return None
+
+
+@app.route("/api/operacoes")
+@require_auth
+def api_operacoes():
+    """Lista de operações do Kanban + resumo financeiro."""
+    if not OPERACOES_AVAILABLE:
+        return jsonify({"ops": [], "resumo": {}, "erro": "modulo indisponivel"}), 503
+    return jsonify({"ops": ops_mod.carregar(), "resumo": ops_mod.resumo()})
+
+
+@app.route("/api/operacoes", methods=["POST"])
+@require_auth
+def api_operacoes_criar():
+    """Cria operação a partir de um evento. Body: {event_id, qtd?, preco_compra?, notas?}"""
+    if not OPERACOES_AVAILABLE:
+        return jsonify({"erro": "modulo indisponivel"}), 503
+    body = request.get_json(silent=True) or {}
+    ev = _evento_achatado_por_id(body.get("event_id"))
+    if not ev:
+        return jsonify({"erro": "evento nao encontrado"}), 404
+    try:
+        op = ops_mod.criar_op(
+            ev,
+            qtd=body.get("qtd") or 1,
+            preco_compra=body.get("preco_compra"),
+            notas=body.get("notas") or "",
+        )
+        return jsonify({"op": op, "resumo": ops_mod.resumo()})
+    except Exception as e:
+        return jsonify({"erro": str(e)[:200]}), 500
+
+
+@app.route("/api/operacoes/<op_id>", methods=["POST"])
+@require_auth
+def api_operacoes_mover(op_id):
+    """Move operação de etapa. Body: {etapa, preco_venda?, taxa?, qtd?, notas?}"""
+    if not OPERACOES_AVAILABLE:
+        return jsonify({"erro": "modulo indisponivel"}), 503
+    body = request.get_json(silent=True) or {}
+    try:
+        op = ops_mod.mover(
+            op_id,
+            etapa=body.get("etapa") or "",
+            preco_venda=body.get("preco_venda"),
+            taxa=body.get("taxa"),
+            qtd=body.get("qtd"),
+            notas=body.get("notas"),
+        )
+        if not op:
+            return jsonify({"erro": "operacao nao encontrada ou transicao invalida "
+                                    "(vendido exige preco_venda > 0)"}), 400
+        return jsonify({"op": op, "resumo": ops_mod.resumo()})
+    except Exception as e:
+        return jsonify({"erro": str(e)[:200]}), 500
+
+
+@app.route("/api/operacoes/<op_id>", methods=["DELETE"])
+@require_auth
+def api_operacoes_remover(op_id):
+    """Remove operação do Kanban."""
+    if not OPERACOES_AVAILABLE:
+        return jsonify({"erro": "modulo indisponivel"}), 503
+    if ops_mod.remover(op_id):
+        return jsonify({"status": "removida", "resumo": ops_mod.resumo()})
+    return jsonify({"erro": "operacao nao encontrada"}), 404
 
 
 def _check_lm_studio() -> bool:

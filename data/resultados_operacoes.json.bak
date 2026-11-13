@@ -1,0 +1,21 @@
+[
+  {
+    "evento_id": "Rock_in_Rio_2026_2026-09-15",
+    "nome_evento": "Rock in Rio 2026",
+    "artista": "Various Artists",
+    "data_evento": "2026-09-15",
+    "data_compra": "2026-04-01",
+    "data_venda": "2026-04-15",
+    "preco_compra": 800.0,
+    "preco_venda": 1200.0,
+    "lucro": 400.0,
+    "lucro_percentual": 50.0,
+    "tempo_venda_dias": 14,
+    "nota_decisao": 8.5,
+    "estrategia": "conservativa",
+    "resultado": "sucesso",
+    "fonte_compra": "ticketmaster",
+    "fonte_venda": "viagogo",
+    "data_registro": "2026-04-03T17:30:17.903280"
+  }
+]
