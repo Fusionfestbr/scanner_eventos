@@ -176,6 +176,8 @@ def _jsonld_dados(texto: str) -> dict:
 def _preco_regex(texto: str):
     """Fallback: menor 'R$ ...' plausível; se algum valor se repete
     (preço real aparece em vários lotes/menções), preferir os repetidos."""
+    # sites separam o cifrão do valor com tags ("<span>R$</span> 15,00")
+    texto = re.sub(r"<[^>]+>", " ", texto)
     candidatos = []
     for match in _RE_RS.finditer(texto):
         p = _parse_br(match.group(1))
