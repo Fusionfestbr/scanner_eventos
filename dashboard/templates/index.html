@@ -3190,7 +3190,7 @@
             `;
 
             const footer = [];
-            const serieModal = precosDe(ev.id) || [];
+            // usa a "serieModal" declarada na seção Evolução (mesmo escopo)
             const esgModal = ev.esgotado || (serieModal.length ? (serieModal[serieModal.length - 1].esg || serieModal[serieModal.length - 1].c) : false);
             if (esgModal) {
                 footer.push(`<span class="btn-link buy esgotado" style="cursor:not-allowed; opacity:.75;"><i class="fas fa-ban"></i> Esgotado - compra indisponível</span>`);
