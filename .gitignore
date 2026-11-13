@@ -36,5 +36,7 @@ build/
 .DS_Store
 Thumbs.db
 
-# Test files
-tests/
+# Debug manual da usuária (não fazem parte do suite pytest)
+tests/debug_tm.py
+tests/inspect_pages.py
+tests/inspect_structure.py

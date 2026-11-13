@@ -397,7 +397,12 @@ def run_pipeline():
             pipeline_status = get_pipeline_status()
             coleta_status["etapas"] = pipeline_status.get("etapas", [])
             coleta_status["cache_stats"] = cache_stats
-            
+
+            # Estatísticas de IA da rodada: o frontend usa para avisar
+            # quando a coleta terminou sem enriquecimento (LM Studio off)
+            from core.enricher import get_ia_stats
+            coleta_status["ia"] = get_ia_stats()
+
             coleta_status["mensagem"] = f"Processado: {qtd_coletados} coletados, {qtd_finais} decisões ({cache_stats.get('cache_hits', 0)} do cache)"
             
             coleta_status["mensagem"] = f"Processado: {qtd_coletados} coletados, {qtd_finais} decisões"
@@ -740,6 +745,8 @@ def _iniciar_auto_coleta(minutos):
                 coleta_status["mensagem"] = "Auto-coleta em andamento..."
                 from core.orchestrator import executar_pipeline
                 result = executar_pipeline()
+                from core.enricher import get_ia_stats
+                coleta_status["ia"] = get_ia_stats()
                 coleta_status["ativo"] = False
                 coleta_status["ultima_coleta"] = datetime.now().isoformat()
         except Exception as e:

@@ -2905,12 +2905,12 @@
         }
 
         /* ---- toast ---- */
-        function toast(msg, ok = true) {
+        function toast(msg, ok = true, dur = 2800) {
             const t = $('toast');
             t.textContent = msg;
             t.className = 'toast show ' + (ok ? 'ok' : 'err');
             clearTimeout(toast._t);
-            toast._t = setTimeout(() => t.classList.remove('show'), 2800);
+            toast._t = setTimeout(() => t.classList.remove('show'), dur);
         }
 
         /* ==================== STATS + GRÁFICOS ==================== */
@@ -3607,6 +3607,14 @@
 
                     if (status.progresso >= 100) {
                         clearInterval(interval);
+                        // Aviso quando a coleta rodou sem IA (LM Studio desligado)
+                        if (status.ia && status.ia.pedidas > 0 && status.ia.ok < status.ia.pedidas) {
+                            if (status.ia.ok === 0) {
+                                toast(`Coleta concluída SEM IA: ${status.ia.pedidas} evento(s) precisavam — ligue o LM Studio e recolete`, false, 9000);
+                            } else {
+                                toast(`IA parcial: ${status.ia.ok}/${status.ia.pedidas} enriquecidos — o LM Studio caiu no meio?`, false, 9000);
+                            }
+                        }
                         setTimeout(() => {
                             progressBar.classList.remove('active');
                             pipelineTracker.classList.remove('active');

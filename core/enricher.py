@@ -211,13 +211,25 @@ def enriquecer_evento(evento: dict) -> dict:
     return evento
 
 
+# Estatísticas de IA da última rodada de enriquecimento.
+# pedidas > 0 com ok == 0 => IA (LM Studio) não respondeu; o dashboard
+# usa isso para avisar o usuário de que a coleta rodou sem enriquecimento.
+_ia_stats = {"pedidas": 0, "ok": 0}
+
+
+def get_ia_stats() -> dict:
+    """Chamadas de IA pedidas vs concluídas na última rodada."""
+    return dict(_ia_stats)
+
+
 def enriquecer_eventos(eventos: list[dict]) -> list[dict]:
     """
     Enriquece em paralelo (mesmo pool de workers do analista).
     Eventos que não precisam de IA são enriquecidos por regras.
     """
-    global _contador
+    global _contador, _ia_stats
     _contador = 0
+    _ia_stats = {"pedidas": 0, "ok": 0}
     total = len(eventos)
     if total == 0:
         return eventos
@@ -226,6 +238,7 @@ def enriquecer_eventos(eventos: list[dict]) -> list[dict]:
         futures = {}
         for idx, evento in enumerate(eventos):
             if _precisa_ia(evento):
+                _ia_stats["pedidas"] += 1
                 futures[executor.submit(_enriquecer_com_log, idx, evento)] = idx
             else:
                 eventos[idx] = enriquecer_evento(evento)
@@ -233,6 +246,8 @@ def enriquecer_eventos(eventos: list[dict]) -> list[dict]:
         for future in as_completed(futures):
             idx, enriquecido = future.result()
             eventos[idx] = enriquecido
+            if enriquecido.get("enriquecido_ia"):
+                _ia_stats["ok"] += 1
 
     return eventos
 
