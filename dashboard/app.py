@@ -105,6 +105,7 @@ try:
         filtrar_por_periodo,
         filtrar_por_escopo,
         filtrar_por_categoria,
+        filtrar_por_estado,
         filtrar_por_cidade,
         filtrar_por_artista,
         buscar,
@@ -114,6 +115,12 @@ try:
     FILTROS_AVAILABLE = True
 except ImportError:
     FILTROS_AVAILABLE = False
+
+try:
+    from core.consolidador import anotar_grupos
+    CONSOLIDADOR_AVAILABLE = True
+except ImportError:
+    CONSOLIDADOR_AVAILABLE = False
 
 
 def carregar_json(filepath):
@@ -179,6 +186,63 @@ def carregar_ranking():
         return []
 
 
+def _achatar(item: dict) -> dict:
+    """Achata item (nested ranking/final ou flat raw/clean) para o client-side."""
+    ev = item.get("evento") if isinstance(item.get("evento"), dict) else item
+    analise = item.get("analise") or {}
+    auditoria = item.get("auditoria") or {}
+    previsao = item.get("previsao") or {}
+    plano = item.get("plano_acao") or {}
+    execucao = item.get("execucao") or {}
+    arb = item.get("arbitragem") or {}
+    ev_id = ev.get("event_id") or item.get("id") or f"{ev.get('nome')}_{ev.get('data')}"
+    return {
+        "id": str(ev_id),
+        "nome": ev.get("nome") or "",
+        "artista": ev.get("artista") or "",
+        "data": ev.get("data") or "",
+        "cidade": ev.get("cidade") or "",
+        "estado": ev.get("estado") or "",
+        "genero": ev.get("genero") or "",
+        "categoria": ev.get("categoria") or "",
+        "categoria_fonte": ev.get("categoria_fonte") or "",
+        "local": ev.get("local") or "",
+        "preco": ev.get("preco"),
+        "imagem": ev.get("imagem") or "",
+        "url": ev.get("url") or "",
+        "fonte": ev.get("fonte") or "",
+        "tipo_geografico": ev.get("tipo_geografico") or "",
+        "pais": ev.get("pais") or "",
+        "descricao": ev.get("descricao") or "",
+        "acao": item.get("acao_final") or "",
+        "razao": item.get("razao") or "",
+        "compra_agressiva": bool(item.get("compra_agressiva")),
+        "posicao": item.get("posicao"),
+        "nota": analise.get("nota_final"),
+        "hype": analise.get("hype"),
+        "escassez": analise.get("escassez"),
+        "publico": analise.get("publico"),
+        "potencial_revenda": analise.get("potencial_revenda"),
+        "justificativa": analise.get("justificativa") or "",
+        "decisao": auditoria.get("decisao") or "",
+        "confianca": auditoria.get("confianca"),
+        "comentario": auditoria.get("comentario") or "",
+        "erro_detectado": bool(auditoria.get("erro_detectado")),
+        "score": previsao.get("score_valorizacao"),
+        "prob_esgotar": previsao.get("probabilidade_esgotar"),
+        "recomendacao_volume": previsao.get("recomendacao_volume") or "",
+        "plano": plano,
+        "execucao": execucao,
+        "arbitragem": arb,
+        "precos_encontrados": ev.get("precos_encontrados") or [],
+        "from_cache": bool(item.get("from_cache")),
+        "grupo_id": item.get("grupo_id"),
+        "grupo_count": item.get("grupo_count", 1),
+        "grupo_repr": item.get("grupo_repr", True),
+        "grupo_membros": item.get("grupo_membros") or [],
+    }
+
+
 
 
 
@@ -204,47 +268,46 @@ def calcular_estatisticas(eventos):
     }
 
 
+@app.route("/api/dados")
+@require_auth
+def api_dados():
+    """Payload único para o client-side: eventos achatados + grupos de duplicatas.
+
+    origem: ranking (padrão) | brutos (raw.json) | validos (clean.json)
+    """
+    origem = request.args.get("origem", "ranking")
+    if origem == "brutos":
+        eventos = carregar_json(RAW_FILE)
+    elif origem == "validos":
+        eventos = carregar_json(CLEAN_FILE)
+    else:
+        eventos = carregar_ranking()
+
+    if CONSOLIDADOR_AVAILABLE:
+        eventos = anotar_grupos(eventos)
+
+    dados = [_achatar(it) for it in eventos]
+    return jsonify({
+        "origem": origem,
+        "total": len(dados),
+        "eventos": dados,
+        "timestamp": datetime.now().isoformat()
+    })
+
+
 @app.route("/")
 @require_auth
 def index():
-    """Página principal com lista de eventos."""
-    filtro_acao = request.args.get("acao", "todos")
-    filtro_periodo = request.args.get("periodo", "todos")
-    filtro_escopo = request.args.get("escopo", "todos")
-    filtro_categoria = request.args.get("categoria", "todos")
-    filtro_cidade = request.args.get("cidade", "")
-    filtro_artista = request.args.get("artista", "")
-    filtro_busca = request.args.get("busca", "")
+    """Shell da página principal (eventos renderizados client-side via /api/dados)."""
     aba = request.args.get("aba", "oportunidades")
-    
-    eventos = carregar_ranking()
-    
-    eventos = filtrar_por_periodo(eventos, filtro_periodo)
-    
-    if filtro_escopo != "todos" and FILTROS_AVAILABLE:
-        eventos = filtrar_por_escopo(eventos, filtro_escopo)
-    
-    if filtro_categoria != "todos" and FILTROS_AVAILABLE:
-        eventos = filtrar_por_categoria(eventos, filtro_categoria)
-    
-    if filtro_cidade and FILTROS_AVAILABLE:
-        eventos = filtrar_por_cidade(eventos, filtro_cidade)
-    
-    if filtro_artista and FILTROS_AVAILABLE:
-        eventos = filtrar_por_artista(eventos, filtro_artista)
-    
-    if filtro_busca and FILTROS_AVAILABLE:
-        eventos = buscar(eventos, filtro_busca)
-    
-    estatisticas = calcular_estatisticas(eventos)
-    
+
     cache_stats = {}
     if CACHE_AVAILABLE:
         try:
             cache_stats = get_cache_stats()
         except Exception:
             cache_stats = {}
-    
+
     learning_stats = {}
     if LEARNING_AVAILABLE:
         try:
@@ -257,27 +320,12 @@ def index():
             }
         except Exception:
             learning_stats = {}
-    
-    if filtro_acao != "todos":
-        eventos = [e for e in eventos if e.get("acao_final") == filtro_acao]
-    
-    if aba == "oportunidades":
-        eventos = [e for e in eventos if e.get("acao_final") == "COMPRAR"]
-    
+
     return render_template(
         "index.html",
-        eventos=eventos,
-        estatisticas=estatisticas,
+        aba=aba,
         cache_stats=cache_stats if cache_stats else None,
         cache_available=CACHE_AVAILABLE,
-        filtro_acao=filtro_acao,
-        filtro_periodo=filtro_periodo,
-        filtro_escopo=filtro_escopo,
-        filtro_categoria=filtro_categoria,
-        filtro_cidade=filtro_cidade,
-        filtro_artista=filtro_artista,
-        filtro_busca=filtro_busca,
-        aba=aba,
         coleta_status=coleta_status,
         learning_stats=learning_stats if learning_stats else None,
         learning_available=LEARNING_AVAILABLE
@@ -287,75 +335,15 @@ def index():
 @app.route("/brutos")
 @require_auth
 def brutos():
-    """Página de eventos brutos (antes de qualquer filtro)."""
-    eventos_brutos = carregar_json(RAW_FILE)
-    
-    if FILTROS_AVAILABLE:
-        eventos_brutos = ordenar_por_data(eventos_brutos, crescente=True)
-    
-    estatisticas = {
-        "total": len(eventos_brutos),
-        "comprar": 0,
-        "monitorar": 0,
-        "ignorar": 0,
-        "nota_media": 0
-    }
-    
-    return render_template(
-        "index.html",
-        eventos=eventos_brutos,
-        estatisticas=estatisticas,
-        cache_stats=None,
-        cache_available=CACHE_AVAILABLE,
-        filtro_acao="todos",
-        filtro_periodo="todos",
-        filtro_escopo="todos",
-        filtro_categoria="todos",
-        filtro_cidade="",
-        filtro_artista="",
-        filtro_busca="",
-        aba="brutos",
-        coleta_status=coleta_status,
-        learning_stats=None,
-        learning_available=LEARNING_AVAILABLE
-    )
+    """Redireciona para a aba de brutos (client-side)."""
+    return redirect(url_for("index", aba="brutos"))
 
 
 @app.route("/validos")
 @require_auth
 def validos():
-    """Página de eventos válidos (após validação)."""
-    eventos_validos = carregar_json(CLEAN_FILE)
-    
-    if FILTROS_AVAILABLE:
-        eventos_validos = ordenar_por_data(eventos_validos, crescente=True)
-    
-    estatisticas = {
-        "total": len(eventos_validos),
-        "comprar": 0,
-        "monitorar": 0,
-        "ignorar": 0,
-        "nota_media": 0
-    }
-    
-    return render_template(
-        "index.html",
-        eventos=eventos_validos,
-        estatisticas=estatisticas,
-        cache_stats=None,
-        cache_available=CACHE_AVAILABLE,
-        filtro_acao="todos",
-        filtro_periodo="todos",
-        filtro_escopo="todos",
-        filtro_categoria="todos",
-        filtro_cidade="",
-        filtro_artista="",
-        filtro_busca="",
-        aba="validos",
-        coleta_status=coleta_status,
-        learning_stats=None,
-        learning_available=LEARNING_AVAILABLE
-    )
+    """Redireciona para a aba de válidos (client-side)."""
+    return redirect(url_for("index", aba="validos"))
 
 
 @app.route("/run-pipeline", methods=["POST"])

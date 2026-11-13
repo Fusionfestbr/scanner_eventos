@@ -158,6 +158,39 @@ def filtrar_por_cidade(eventos: List[dict], cidade: str) -> List[dict]:
     return ordenar_por_data(filtrados, crescente=True)
 
 
+def filtrar_por_estado(eventos: List[dict], estados) -> List[dict]:
+    """
+    Filtra eventos por estado/UF (lista ou "SP,RJ", match parcial case-insensitive).
+
+    Args:
+        eventos: Lista de eventos
+        estados: Lista de UFs ou string separada por vírgula ("SP,RJ")
+
+    Returns:
+        Lista filtrada e ordenada por data crescente
+    """
+    if estados is None:
+        return ordenar_por_data(eventos, crescente=True)
+    if isinstance(estados, str):
+        estados = [e.strip() for e in estados.split(",") if e.strip()]
+    if not estados:
+        return ordenar_por_data(eventos, crescente=True)
+
+    ufs = [str(e).upper() for e in estados]
+    filtrados = []
+    for evento in eventos:
+        uf = evento.get("estado", "")
+        if not uf:
+            uf = evento.get("evento", {}).get("estado", "")
+        uf = (uf or "").strip().upper()
+        # aceita "SP", "São Paulo - SP" (pega token final de 2 letras)
+        token = uf.split()[-1] if uf and len(uf.split()) > 1 and len(uf.split()[-1]) == 2 else uf
+        if token in ufs or uf in ufs:
+            filtrados.append(evento)
+
+    return ordenar_por_data(filtrados, crescente=True)
+
+
 def filtrar_por_artista(eventos: List[dict], artista: str) -> List[dict]:
     """
     Filtra eventos por nome do artista (busca parcial, case-insensitive).
