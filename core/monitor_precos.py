@@ -200,14 +200,13 @@ def extrair_preco(texto: str):
 
 
 def extrair_esgotado(texto: str, nome: str = None) -> bool:
-    """Keyword match — só confia se o NOME do evento aparece na página
-    (evita falso positivo do catálogo i18n de SPA shells). Nomes curtos
-    (<4 letras, ex.: 'SEX', 'DOM') desativam o keyword path: 'sex' bate
-    em qualquer palavra."""
-    if nome:
-        n = _norm(nome)
-        if len(n) < 4 or n not in _norm(texto):
-            return False
+    """Keyword match — só confia se o NOME do evento (>=4 letras) aparece na
+    página: evita falso positivo do catálogo i18n de SPA shells e de páginas
+    sem identificação. Nomes curtos (<4 letras, ex.: 'SEX', 'DOM') desativam
+    o keyword path: 'sex' bate em qualquer palavra."""
+    n = _norm(nome or "")
+    if len(n) < 4 or n not in _norm(texto):
+        return False
     t = _norm(texto)
     return any(_norm(palavra) in t for palavra in PALAVRAS_ESGOTADO)
 

@@ -87,6 +87,24 @@
             cursor: not-allowed;
         }
 
+        .collect-btn.radar-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            box-shadow: none;
+        }
+
+        .collect-btn.radar-btn:hover {
+            color: var(--cyan);
+            border-color: var(--cyan);
+        }
+
+        .collect-btn.radar-btn.loading {
+            background: var(--bg-card);
+            color: var(--cyan);
+            cursor: not-allowed;
+        }
+
         .progress-bar {
             position: fixed;
             top: 0;
@@ -1729,6 +1747,10 @@
                 </div>
             </div>
             <div class="header-right">
+                <button class="collect-btn radar-btn" id="radarBtn" title="Re-checar preços e disponibilidade dos eventos-alvo agora">
+                    <i class="fas fa-satellite-dish"></i>
+                    <span>Verificar Preços</span>
+                </button>
                 <button class="collect-btn" id="collectBtn">
                     <i class="fas fa-play"></i>
                     <span>Iniciar Coleta</span>
@@ -3494,6 +3516,52 @@
             } catch (error) {
                 console.error('Erro ao iniciar coleta:', error);
                 resetCollectButton();
+            }
+        });
+
+        /* ==================== RADAR DE PREÇOS ==================== */
+        const radarBtn = $('radarBtn');
+        let radarPoll = null;
+        const radarBtnHTML = radarBtn.innerHTML;
+
+        radarBtn.addEventListener('click', async () => {
+            if (radarPoll) return;
+            radarBtn.classList.add('loading');
+            radarBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Verificando...</span>';
+            let viuRodando = false, ticks = 0;
+            try {
+                await fetch('/api/monitor/verificar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: '{"force":true}'
+                });
+                radarPoll = setInterval(async () => {
+                    try {
+                        const st = await (await fetch('/api/monitor/status')).json();
+                        if (st.rodando) { viuRodando = true; return; }
+                        if (!viuRodando) return; // a rodada ainda não começou de fato
+                        clearInterval(radarPoll);
+                        radarPoll = null;
+                        radarBtn.classList.remove('loading');
+                        radarBtn.innerHTML = radarBtnHTML;
+                        const s = st.ultimo_summary || {};
+                        toast(`Radar: ${s.verificados || 0} verificados · ${s.com_sinal || 0} com sinal · ${s.esgotados || 0} esgotados · ${s.erros || 0} erros`);
+                        const origem = ORIGEM_POR_ABA[F.aba] || 'ranking';
+                        await carregarDados(origem, true);
+                        if (F.aba === 'operacoes') await carregarOperacoes();
+                        aplicar();
+                    } catch (e) { /* tenta no próximo tick */ }
+                }, 3000);
+                setTimeout(() => { // rede travada: solta o botão
+                    if (radarPoll) { clearInterval(radarPoll); radarPoll = null; }
+                    radarBtn.classList.remove('loading');
+                    radarBtn.innerHTML = radarBtnHTML;
+                }, 8 * 60 * 1000);
+            } catch (e) {
+                if (radarPoll) { clearInterval(radarPoll); radarPoll = null; }
+                radarBtn.classList.remove('loading');
+                radarBtn.innerHTML = radarBtnHTML;
+                toast('Falha ao iniciar o radar', false);
             }
         });
 
